@@ -1,3 +1,4 @@
+import ConfigParser
 import os
 
 import music21
@@ -103,4 +104,11 @@ def create_measure_files():
         file_counter += 1
 
 if __name__ == '__main__':
-    create_measure_files()
+    config = ConfigParser.ConfigParser()
+    with open('params.ini') as param_fh:
+        config.readfp(param_fh)
+    musicxml_dir = config.get('Analysis', 'musicxml_dir')
+    rhythm_measures_dir = config.get('Analysis', 'intermediate_rhythm_measures_dir')
+    print(musicxml_dir)
+    print(rhythm_measures_dir)
+    #create_measure_files()
