@@ -6,24 +6,6 @@ def time_signature_equality(a, b):
     return a.numerator == b.numerator and a.denominator == b.denominator
 
 
-def measure_equality(a, b):
-    """Determine whether two simplified measures are equal. This is required
-    because music21 does not have an implementation for measure equality
-    (creating two new measures and checking for equality gives False as a
-    result)."""
-    if len(a) != len(b):
-        return False
-    else:
-        for index in range(0, len(a)):
-            if(isinstance(a[index], music21.meter.TimeSignature) and
-               isinstance(b[index], music21.meter.TimeSignature) and
-               time_signature_equality(a[index], b[index])):
-                   continue
-            if a[index] != b[index]:
-                return False
-    return True
-
-
 def rhythms(song_path, sig):
     """Traverse the file whose handle is supplied and return a collection of
     usable rhythms.
@@ -57,6 +39,7 @@ def rhythms(song_path, sig):
             measure_replacement.offset = 0
             discovered_rhythms.add(measure_replacement)
     return discovered_rhythms
+
 
 def time_signature(path):
     """Return the time signature of a piece.
@@ -92,8 +75,8 @@ def time_signature(path):
     else:
         return 'unknown'
 
-def create_measure_files():
 
+def create_measure_files():
     # all input is in the same folder, but separate rhythms by time signature
     in_folder = '../../../data/inputs/musicXML corpus'
     out_folder_root = '../../../data/intermediate_results/rhythm_measures'
