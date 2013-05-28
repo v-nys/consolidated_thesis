@@ -77,11 +77,18 @@ def time_signature(path):
         return 'unknown'
 
 
-def create_measure_files():
-    # all input is in the same folder, but separate rhythms by time signature
-    in_folder = '../../../data/inputs/musicXML corpus'
-    out_folder_root = '../../../data/intermediate_results/rhythm_measures'
-    
+def create_measure_files(in_folder, out_folder_root):
+    r"""
+    Given the path the source MusicXML files as `in_folder` and the desired
+    output location for subfolders containing extracted rhythms organized
+    per time signature as `out_folder_root`, create a MusicXML file for each
+    meaningful rhythm.
+
+    This function does not eliminate duplicate rhythms and it does not leave
+    out rhythms played by non-guitar instruments, nor does it ignore
+    whole-note rests. Such postprocessing is handled by consumer functions.
+    """
+    # TODO verify whether description is entirely accurate
     # for each file, extract the rhythms inside each measure
     file_counter = 1
     for filename in os.listdir(in_folder):
@@ -109,6 +116,4 @@ if __name__ == '__main__':
         config.readfp(param_fh)
     musicxml_dir = config.get('Analysis', 'musicxml_dir')
     rhythm_measures_dir = config.get('Analysis', 'intermediate_rhythm_measures_dir')
-    print(musicxml_dir)
-    print(rhythm_measures_dir)
-    #create_measure_files()
+    create_measure_files(musicxml_dir, rhythm_measures_dir)
