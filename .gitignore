@@ -7,4 +7,6 @@ python_env/lib
 
 *.log
 *.pyc
+*.swn
+*.swo
 *.swp
