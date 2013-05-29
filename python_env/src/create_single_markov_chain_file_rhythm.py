@@ -4,6 +4,7 @@ import os
 import pickle
 
 import music21
+import music21.converter.parse as parse21
 import pykov
 
 def _txt2pickle_chain(chain_path):
@@ -18,13 +19,13 @@ def _txt2pickle_chain(chain_path):
     pickle.dump(chain, '../../../data/intermediate_results/pickle_of_' + chain_path)
 
 
-def _create_chain(sig, in_folder, out_path):
+def _create_chain(sig, in_root, out_path):
     r"""
     Transform a collection of single-measure rhythms into a textual
     representation of Markov chain input.
 
     `sig` defines the time signature for the rhythm model to be represented.
-    `in_folder` is the root folder for rhythm measures, containing subfolders
+    `in_root` is the root folder for rhythm measures, containing subfolders
     of which at least one should be named `sig`.
     `out_path` determines the desired output location for the plain text chain.
 
@@ -34,28 +35,29 @@ def _create_chain(sig, in_folder, out_path):
     **Also note that these chains ignore empty measures, as those do not
     represent meaningful rhythms.**
     """
-    in_folder = '../../../data/intermediate_results/rhythm measures' + '/' + sig
-    
+    # TODO discard empty measures
+    in_folder = '{in_root}{os.sep}{sig}'.format(**locals()) # specific to sig
     for filename in os.listdir(in_folder):
-        measure = music21.converter.parse(in_folder + os.sep + filename)[1][1]
-        values = [(0, None)]
-        for index in range(1, len(measure)):
+        measure_path = '{in_folder}{os.sep}{filename}'.format(**locals())
+        measure = parse21(measure_path)[1][1]
+        values = [(0, None)]  # FIXME value for what?
+        for index in range(1, len(measure)):  # FIXME why 1-len?
             print(str(measure[index]))
             if isinstance(measure[index], music21.note.Note):
-                print("Found a note")
+                print("Found a note")  # FIXME log or remove
                 note = measure[index]
                 values.append((str(note.offset + 1),
                               str(note.quarterLength),
                               True))
             elif isinstance(measure[index], music21.note.Rest):
-                print("Found a rest")
+                print("Found a rest")  # FIXME log or remove
                 rest = measure[index]
                 values.append((str(rest.offset + 1),
                               str(rest.quarterLength),
                               False))
                               
     with open('{out_path}_{sig}'.format(**locals()), mode='w') as fh:
-         for value in values:
+        for value in values:
             fh.write(str(value) + '\n')
         fh.write('END_OF_MEASURE' + '\n')
 
