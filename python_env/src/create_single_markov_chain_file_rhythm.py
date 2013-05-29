@@ -17,7 +17,7 @@ def _txt2pickle_chain(chain_path):
     pickle.dump(chain, '../../../data/intermediate_results/pickle_of_' + chain_path)
 
 
-def create_chain_for_signature(sig, in_folder, out_folder):
+def _create_chain_for_signature(sig, in_folder, out_folder):
     # FIXME overlap between sig and folder
     in_folder = '../../../data/intermediate_results/rhythm measures' + '/' + sig
     out_folder = '../../../data'
@@ -45,15 +45,12 @@ def create_chain_for_signature(sig, in_folder, out_folder):
             fh.write(str(value) + '\n')
         fh.write('END_OF_MEASURE' + '\n')
 
-def _create_markov_chain_file(sig):
-    create_chain_for_signature('common')
-    create_chain_for_signature('128')
 
 if __name__=='__main__':
     config = ConfigParser.ConfigParser()
     with open('params.ini') as param_fh:
         config.readfp(param_fh)
 
-    _create_markov_chain_file()
+    _create_chain_for_signature('common')
     _txt2pickle_chain('../../../data/rhythm_chain_common')
     _txt2pickle_chain('../../../data/rhythm_chain_128')
