@@ -39,9 +39,12 @@ def _create_chain(sig, in_root, out_path):
     in_folder = '{in_root}{os.sep}{sig}'.format(**locals()) # specific to sig
     for filename in os.listdir(in_folder):
         measure_path = '{in_folder}{os.sep}{filename}'.format(**locals())
+        # while only one measure, technically we have a piece, so extract
         measure = parse21(measure_path)[1][1]
+        # values are 3-tuples: offset, quarterLength and sound
+
         values = [(0, None)]  # FIXME value for what?
-        for index in range(1, len(measure)):  # FIXME why 1-len?
+        for index in measure:  # Check types! Also contains TimeSig, Clef,...
             print(str(measure[index]))
             if isinstance(measure[index], music21.note.Note):
                 print("Found a note")  # FIXME log or remove
