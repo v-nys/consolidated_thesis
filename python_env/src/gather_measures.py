@@ -89,26 +89,23 @@ def create_measure_files(in_folder, out_folder_root):
     whole-note rests.** Such postprocessing is handled by consumer functions.
     """
     for file_entry in enumerate(os.listdir(in_folder)):
-        measure_set = set()
-        counter = 1
-        path = in_folder + os.sep + file_entry[1]
-        sig = time_signature(path) # common, 128 or unknown
+        source_path = in_folder + os.sep + file_entry[1]
+        sig = time_signature(source_path) # common, 128 or unknown
         if sig == 'unknown':
             continue
         out_folder = out_folder_root + os.sep + sig
-        
-        song_rhythms = rhythms(path, sig)
-        for rhythm in song_rhythms:
-            measure_set.add(rhythm)
-        for measure in measure_set:
-            measure.write(fmt='musicxml', 
-                          fp=out_folder + os.sep + str(file_entry[0]) + '_' + str(counter) + '.xml')
-            counter += 1
+        sep = os.sep
+        file_num = file_entry[0]
+        for entry in enumerate(rhythms(source_path, sig)):
+            rhythm_num = entry[0]
+            out_path = '{out_folder}{sep}{file_num}_{rhythm_num}.xml'
+            entry[1].write(fmt='musicxml', fp=out_path.format(**locals()))
 
 if __name__ == '__main__':
     config = ConfigParser.ConfigParser()
     with open('params.ini') as param_fh:
         config.readfp(param_fh)
     musicxml_dir = config.get('Analysis', 'musicxml_dir')
-    rhythm_measures_dir = config.get('Analysis', 'intermediate_rhythm_measures_dir')
+    rhythm_measures_dir = config.get('Analysis',
+                                     'intermediate_rhythm_measures_dir')
     create_measure_files(musicxml_dir, rhythm_measures_dir)
