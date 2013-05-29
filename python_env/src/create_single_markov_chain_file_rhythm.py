@@ -6,7 +6,13 @@ import pickle
 import music21
 import pykov
 
-def read_and_pickle_chain(chain_path):
+def _txt2pickle_chain(chain_path):
+    r"""
+    Given a chain that is specified by a text file make a pickle of its Pykov
+    representation.
+    
+    The result will be read much more quickly than a text file.
+    """
     chain = pykov.readtrj(chain_path)
     pickle.dump(chain, '../../../data/intermediate_results/pickle_of_' + chain_path)
 
@@ -39,7 +45,7 @@ def create_chain_for_signature(sig, in_folder, out_folder):
             fh.write(str(value) + '\n')
         fh.write('END_OF_MEASURE' + '\n')
 
-def create_markov_chain_file(sig):
+def _create_markov_chain_file(sig):
     create_chain_for_signature('common')
     create_chain_for_signature('128')
 
@@ -48,6 +54,6 @@ if __name__=='__main__':
     with open('params.ini') as param_fh:
         config.readfp(param_fh)
 
-    create_markov_chain_file()
-    read_and_pickle_chain('../../../data/rhythm_chain_common')
-    read_and_pickle_chain('../../../data/rhythm_chain_128')
+    _create_markov_chain_file()
+    _txt2pickle_chain('../../../data/rhythm_chain_common')
+    _txt2pickle_chain('../../../data/rhythm_chain_128')
