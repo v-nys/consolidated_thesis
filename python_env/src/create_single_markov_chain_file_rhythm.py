@@ -30,9 +30,11 @@ def _create_chain(sig, in_folder, out_path):
 
     **Note that `out_path` is not itself the output location, because _`sig`
     will be appended to it.**
+
+    **Also note that these chains ignore empty measures, as those do not
+    represent meaningful rhythms.**
     """
     in_folder = '../../../data/intermediate_results/rhythm measures' + '/' + sig
-    out_path = '../../../data'
     
     for filename in os.listdir(in_folder):
         measure = music21.converter.parse(in_folder + os.sep + filename)[1][1]
@@ -52,7 +54,7 @@ def _create_chain(sig, in_folder, out_path):
                               str(rest.quarterLength),
                               False))
                               
-    with open(out_folder + os.sep + 'rhythm_chain_' + sig, mode='w') as fh:
+    with open('{out_path}_{sig}'.format(**locals()), mode='w') as fh:
          for value in values:
             fh.write(str(value) + '\n')
         fh.write('END_OF_MEASURE' + '\n')
