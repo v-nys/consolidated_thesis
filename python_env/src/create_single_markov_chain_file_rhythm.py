@@ -14,13 +14,25 @@ def _txt2pickle_chain(chain_path):
     The result will be read much more quickly than a text file.
     """
     chain = pykov.readtrj(chain_path)
+    # FIXME configure the output location!
     pickle.dump(chain, '../../../data/intermediate_results/pickle_of_' + chain_path)
 
 
-def _create_chain_for_signature(sig, in_folder, out_folder):
-    # FIXME overlap between sig and folder
+def _create_chain(sig, in_folder, out_path):
+    r"""
+    Transform a collection of single-measure rhythms into a textual
+    representation of Markov chain input.
+
+    `sig` defines the time signature for the rhythm model to be represented.
+    `in_folder` is the root folder for rhythm measures, containing subfolders
+    of which at least one should be named `sig`.
+    `out_path` determines the desired output location for the plain text chain.
+
+    **Note that `out_path` is not itself the output location, because _`sig`
+    will be appended to it.**
+    """
     in_folder = '../../../data/intermediate_results/rhythm measures' + '/' + sig
-    out_folder = '../../../data'
+    out_path = '../../../data'
     
     for filename in os.listdir(in_folder):
         measure = music21.converter.parse(in_folder + os.sep + filename)[1][1]
@@ -50,7 +62,8 @@ if __name__=='__main__':
     config = ConfigParser.ConfigParser()
     with open('params.ini') as param_fh:
         config.readfp(param_fh)
+    chain_txt_path = config.get('Analysis', 'intermediate_rhythm_unified')
+    rhythm_measures_dir = config.get('Analysis', 'intermediate_rhythm_measures_dir')
 
-    _create_chain_for_signature('common')
-    _txt2pickle_chain('../../../data/rhythm_chain_common')
-    _txt2pickle_chain('../../../data/rhythm_chain_128')
+    _create_chain('common', rhythm_measures_dir, chain_txt_path)
+    _txt2pickle_chain(common_chain_txt_path)
