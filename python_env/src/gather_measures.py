@@ -12,8 +12,7 @@ def rhythms(song_path, sig):
     usable rhythms.
     
     This method will look at all the rhythms that are in the piece, so not just
-    the guitar voice. At the moment, it assumes input is strictly in common
-    time without a pickup measure. It will also discard ghost notes. The result
+    the guitar voice. It will discard ghost notes. The result
     may contain duplicates, which will need to be filtered out later on."""
     if sig == '128':
         sig = music21.meter.TimeSignature('12/8')
@@ -22,7 +21,7 @@ def rhythms(song_path, sig):
     else:
         sig = None
     assert sig is not None
-    discovered_rhythms = set()
+    discovered_rhythms = []
     song_score = music21.converter.parse(song_path)
     for part in song_score.getElementsByClass(music21.stream.Part):
         for measure in part.getElementsByClass(music21.stream.Measure):
@@ -38,7 +37,7 @@ def rhythms(song_path, sig):
                 else:
                     measure_replacement.append(measure[index])
             measure_replacement.offset = 0
-            discovered_rhythms.add(measure_replacement)
+            discovered_rhythms.append(measure_replacement)
     return discovered_rhythms
 
 
