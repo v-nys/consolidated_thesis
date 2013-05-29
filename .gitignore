@@ -1,4 +1,6 @@
+data
 python_env/bin
+python_env/build
 python_env/include
 python_env/local
 python_env/lib
