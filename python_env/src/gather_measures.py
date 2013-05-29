@@ -84,20 +84,16 @@ def create_measure_files(in_folder, out_folder_root):
     per time signature as `out_folder_root`, create a MusicXML file for each
     meaningful rhythm.
 
-    This function does not eliminate duplicate rhythms and it does not leave
+    **This function does not eliminate duplicate rhythms and it does not leave
     out rhythms played by non-guitar instruments, nor does it ignore
-    whole-note rests. Such postprocessing is handled by consumer functions.
+    whole-note rests.** Such postprocessing is handled by consumer functions.
     """
-    # TODO verify whether description is entirely accurate
-    # for each file, extract the rhythms inside each measure
-    file_counter = 1
-    for filename in os.listdir(in_folder):
+    for file_entry in enumerate(os.listdir(in_folder)):
         measure_set = set()
         counter = 1
-        path = in_folder + os.sep + filename
+        path = in_folder + os.sep + file_entry[1]
         sig = time_signature(path) # common, 128 or unknown
         if sig == 'unknown':
-            file_counter += 1
             continue
         out_folder = out_folder_root + os.sep + sig
         
@@ -106,9 +102,8 @@ def create_measure_files(in_folder, out_folder_root):
             measure_set.add(rhythm)
         for measure in measure_set:
             measure.write(fmt='musicxml', 
-                          fp=out_folder + os.sep + str(file_counter) + '_' + str(counter) + '.xml')
+                          fp=out_folder + os.sep + str(file_entry[0]) + '_' + str(counter) + '.xml')
             counter += 1
-        file_counter += 1
 
 if __name__ == '__main__':
     config = ConfigParser.ConfigParser()
