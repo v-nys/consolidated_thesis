@@ -1,4 +1,5 @@
 import argparse
+import ConfigParser
 import os
 import pickle
 
@@ -10,7 +11,8 @@ def read_and_pickle_chain(chain_path):
     pickle.dump(chain, '../../../data/intermediate_results/pickle_of_' + chain_path)
 
 
-def create_chain_for_signature(sig):
+def create_chain_for_signature(sig, in_folder, out_folder):
+    # FIXME overlap between sig and folder
     in_folder = '../../../data/intermediate_results/rhythm measures' + '/' + sig
     out_folder = '../../../data'
     
@@ -42,6 +44,10 @@ def create_markov_chain_file(sig):
     create_chain_for_signature('128')
 
 if __name__=='__main__':
+    config = ConfigParser.ConfigParser()
+    with open('params.ini') as param_fh:
+        config.readfp(param_fh)
+
     create_markov_chain_file()
     read_and_pickle_chain('../../../data/rhythm_chain_common')
     read_and_pickle_chain('../../../data/rhythm_chain_128')
