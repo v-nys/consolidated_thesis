@@ -7,6 +7,7 @@ import music21
 import music21.converter.parse as parse21
 import pykov
 
+
 def _silent_measure(measure):
     r"""
     Given a Music21 measure, determine whether it is completely silent.
@@ -19,16 +20,15 @@ def _silent_measure(measure):
     return True
 
 
-def _txt2pickle_chain(chain_path):
+def _txt2pickle_chain(txt_path, pickle_path):
     r"""
-    Given a chain that is specified by a text file make a pickle of its Pykov
-    representation.
+    Given a chain that is specified in `txt_path`, make a pickle of its Pykov
+    representation and store it in `pickle_path`.
     
     The result will be read much more quickly than a text file.
     """
-    chain = pykov.readtrj(chain_path)
-    # FIXME configure the output location!
-    pickle.dump(chain, '../../../data/intermediate_results/pickle_of_' + chain_path)
+    chain = pykov.readtrj(txt_path)
+    pickle.dump(chain, pickle_path)
 
 
 def _create_chain(sig, in_root, out_path):
@@ -47,14 +47,15 @@ def _create_chain(sig, in_root, out_path):
     **Also note that these chains ignore empty measures, as those do not
     represent meaningful rhythms.**
     """
-    # TODO discard empty measures
     in_folder = '{in_root}{os.sep}{sig}'.format(**locals()) # specific to sig
     for filename in os.listdir(in_folder):
         measure_path = '{in_folder}{os.sep}{filename}'.format(**locals())
         # while only one measure, technically we have a piece, so extract
         measure = parse21(measure_path)[1][1]
-        # values are 3-tuples: offset, quarterLength and sound
+        if _silent_measure(measure):
+            continue
 
+        # values are 3-tuples: offset, quarterLength and sound
         values = [(0, None)]  # FIXME value for what?
         for index in measure:  # Check types! Also contains TimeSig, Clef,...
             print(str(measure[index]))
