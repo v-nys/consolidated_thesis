@@ -74,15 +74,13 @@ def _create_chain(sig, in_root, out_path):
             #print(str(measure[index]))
             if isinstance(element, music21.note.Note):
                 logger.debug("Found a note")
-                note = element
-                values.append((str(note.offset + 1),
-                              str(note.quarterLength),
+                values.append((str(element.offset + 1),
+                              str(element.quarterLength),
                               True))
             elif isinstance(element, music21.note.Rest):
                 logger.debug("Found a rest")
-                rest = element
-                values.append((str(rest.offset + 1),
-                              str(rest.quarterLength),
+                values.append((str(element.offset + 1),
+                              str(element.quarterLength),
                               False))
                               
     with open('{out_path}_{sig}'.format(**locals()), mode='w') as fh:
