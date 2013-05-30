@@ -11,7 +11,7 @@ import pykov
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler())
-logger.setLevel(logging.DEBUG)  # acceptable because this is just a script
+logger.setLevel(logging.INFO)  # acceptable because this is just a script
 
 
 def _silent_measure(measure):
@@ -84,6 +84,7 @@ def _create_chain(sig, in_root, out_path):
                               False))
                               
     with open('{out_path}_{sig}'.format(**locals()), mode='w') as fh:
+        logger.info("Writing out {num} values".format(num=len(values)))
         for value in values:
             fh.write(str(value) + '\n')
         fh.write('END_OF_MEASURE' + '\n')
