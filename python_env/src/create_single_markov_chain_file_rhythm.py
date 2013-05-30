@@ -7,6 +7,18 @@ import music21
 import music21.converter.parse as parse21
 import pykov
 
+def _silent_measure(measure):
+    r"""
+    Given a Music21 measure, determine whether it is completely silent.
+    """
+    # note that this function takes simplified rhythm measures as its input
+    # therefore, it only checks for notes as elements with sound
+    for element in measure:
+        if isinstance(element, music21.note.Note):
+            return False
+    return True
+
+
 def _txt2pickle_chain(chain_path):
     r"""
     Given a chain that is specified by a text file make a pickle of its Pykov
