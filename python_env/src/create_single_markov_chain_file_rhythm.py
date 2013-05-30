@@ -11,7 +11,7 @@ import pykov
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.StreamHandler())
-logger.setLevel(logging.INFO)  # acceptable because this is just a script
+logger.setLevel(logging.DEBUG)  # acceptable because this is just a script
 
 
 def _silent_measure(measure):
@@ -34,7 +34,8 @@ def _txt2pickle_chain(txt_path, pickle_path):
     The result will be read much more quickly than a text file.
     """
     chain = pykov.readtrj(txt_path)
-    pickle.dump(chain, pickle_path)
+    with open(pickle_path, mode='w') as pickle_fh:
+        pickle.dump(chain, pickle_fh)
 
 
 def _create_chain(sig, in_root, out_path):
@@ -91,8 +92,9 @@ if __name__=='__main__':
     # FIXME now this only works when running from same folder
     with open('params.ini') as param_fh:
         config.readfp(param_fh)
-    chain_txt_path = config.get('Analysis', 'intermediate_rhythm_unified')
-    rhythm_measures_dir = config.get('Analysis', 'intermediate_rhythm_measures_dir')
+    txt_path = config.get('Analysis', 'intermediate_rhythm_unified')
+    pickle_path = config.get('Analysis', 'intermediate_rhythm_unified_pickle')
+    measures_dir = config.get('Analysis', 'intermediate_rhythm_measures_dir')
 
-    _create_chain('common', rhythm_measures_dir, chain_txt_path)
-    #_txt2pickle_chain(common_chain_txt_path)
+    _create_chain('common', measures_dir, txt_path)
+    _txt2pickle_chain(txt_path + '_common', pickle_path)
