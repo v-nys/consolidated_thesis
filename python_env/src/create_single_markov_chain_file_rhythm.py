@@ -71,7 +71,6 @@ def _append_txt_chain(measure, fh):
     append the values describing the rhythm of `measure` to the file.
     """
     # values are 3-tuples: offset, quarterLength and sound
-    values = [(0, None, None)]
     fh.write(str((0, None, None)) + '\n')
     for element in measure:  # Check types! Also contains TimeSig, Clef,...
         if isinstance(element, music21.note.Note):
@@ -80,7 +79,10 @@ def _append_txt_chain(measure, fh):
         elif isinstance(element, music21.note.Rest):
             logger.debug("Found a rest")
             value = (element.offset + 1, element.quarterLength, False)
-        fh.write(str(value) + '\n')
+        else:
+            value = None
+        if value:
+            fh.write(str(value) + '\n')
     fh.write('END_OF_MEASURE' + '\n')
 
 
