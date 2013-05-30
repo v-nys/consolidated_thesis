@@ -102,7 +102,9 @@ def create_measure_files(in_folder, out_folder_root):
 
 if __name__ == '__main__':
     config = ConfigParser.ConfigParser()
-    with open('params.ini') as param_fh:
+    here = os.path.dirname(os.path.abspath(__file__))
+    param_path = os.sep.join((here, 'params.ini'))
+    with open(param_path) as param_fh:
         config.readfp(param_fh)
     musicxml_dir = config.get('Analysis', 'musicxml_dir')
     rhythm_measures_dir = config.get('Analysis',

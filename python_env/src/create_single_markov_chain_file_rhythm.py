@@ -74,14 +74,13 @@ def _append_txt_chain(measure, fh):
     # values are 3-tuples: offset, quarterLength and sound
     fh.write(str((0, None, None)) + '\n')
     for element in measure:  # Check types! Also contains TimeSig, Clef,...
+        value = None
         if isinstance(element, music21.note.Note):
             logger.debug("Found a note")
             value = (element.offset + 1, element.quarterLength, True)
         elif isinstance(element, music21.note.Rest):
             logger.debug("Found a rest")
             value = (element.offset + 1, element.quarterLength, False)
-        else:
-            value = None
         if value:
             fh.write(str(value) + '\n')
     fh.write('END_OF_MEASURE' + '\n')
@@ -89,8 +88,9 @@ def _append_txt_chain(measure, fh):
 
 if __name__=='__main__':
     config = ConfigParser.ConfigParser()
-    # FIXME now this only works when running from same folder
-    with open('params.ini') as param_fh:
+    here = os.path.dirname(os.path.abspath(__file__))
+    param_path = os.sep.join((here, 'params.ini'))
+    with open(param_path) as param_fh:
         config.readfp(param_fh)
     txt_path = config.get('Analysis', 'intermediate_rhythm_unified')
     pickle_path = config.get('Analysis', 'intermediate_rhythm_unified_pickle')
