@@ -70,17 +70,17 @@ def _create_chain(sig, in_root, out_path):
 
         # values are 3-tuples: offset, quarterLength and sound
         values = [(0, None)]  # FIXME value for what?
-        for index in measure:  # Check types! Also contains TimeSig, Clef,...
+        for element in measure:  # Check types! Also contains TimeSig, Clef,...
             #print(str(measure[index]))
-            if isinstance(measure[index], music21.note.Note):
-                print("Found a note")  # FIXME log or remove
-                note = measure[index]
+            if isinstance(element, music21.note.Note):
+                logger.debug("Found a note")
+                note = element
                 values.append((str(note.offset + 1),
                               str(note.quarterLength),
                               True))
-            elif isinstance(measure[index], music21.note.Rest):
-                print("Found a rest")  # FIXME log or remove
-                rest = measure[index]
+            elif isinstance(element, music21.note.Rest):
+                logger.debug("Found a rest")
+                rest = element
                 values.append((str(rest.offset + 1),
                               str(rest.quarterLength),
                               False))
