@@ -1,11 +1,17 @@
 import argparse
 import ConfigParser
+import logging
 import os
 import pickle
 
 import music21
-import music21.converter.parse as parse21
+from music21.converter import parse as parse21
 import pykov
+
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.StreamHandler())
+logger.setLevel(logging.DEBUG)  # acceptable because this is just a script
 
 
 def _silent_measure(measure):
@@ -47,18 +53,25 @@ def _create_chain(sig, in_root, out_path):
     **Also note that these chains ignore empty measures, as those do not
     represent meaningful rhythms.**
     """
-    in_folder = '{in_root}{os.sep}{sig}'.format(**locals()) # specific to sig
+    sep = os.sep
+    in_folder = '{in_root}{sep}{sig}'.format(**locals()) # specific to sig
     for filename in os.listdir(in_folder):
-        measure_path = '{in_folder}{os.sep}{filename}'.format(**locals())
-        # while only one measure, technically we have a piece, so extract
+        logger.debug("Adding to text chain: {filename}".format(**locals()))
+        measure_path = '{in_folder}{sep}{filename}'.format(**locals())
+        # technically we have a piece, so extract measure
         measure = parse21(measure_path)[1][1]
         if _silent_measure(measure):
+            logger.debug("Skipping silent measure.")
             continue
+
+        # FIXME this doesn't actually work, does it?
+        # values is only written out at the end
+        # but it is reset at every measure???
 
         # values are 3-tuples: offset, quarterLength and sound
         values = [(0, None)]  # FIXME value for what?
         for index in measure:  # Check types! Also contains TimeSig, Clef,...
-            print(str(measure[index]))
+            #print(str(measure[index]))
             if isinstance(measure[index], music21.note.Note):
                 print("Found a note")  # FIXME log or remove
                 note = measure[index]
@@ -80,10 +93,11 @@ def _create_chain(sig, in_root, out_path):
 
 if __name__=='__main__':
     config = ConfigParser.ConfigParser()
+    # FIXME now this only works when running from same folder
     with open('params.ini') as param_fh:
         config.readfp(param_fh)
     chain_txt_path = config.get('Analysis', 'intermediate_rhythm_unified')
     rhythm_measures_dir = config.get('Analysis', 'intermediate_rhythm_measures_dir')
 
     _create_chain('common', rhythm_measures_dir, chain_txt_path)
-    _txt2pickle_chain(common_chain_txt_path)
+    #_txt2pickle_chain(common_chain_txt_path)
