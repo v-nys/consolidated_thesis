@@ -72,20 +72,14 @@ def _append_txt_chain(measure, fh):
     """
     # values are 3-tuples: offset, quarterLength and sound
     values = [(0, None, None)]
+    fh.write(str((0, None, None)) + '\n')
     for element in measure:  # Check types! Also contains TimeSig, Clef,...
         if isinstance(element, music21.note.Note):
             logger.debug("Found a note")
-            values.append((str(element.offset + 1),
-                          str(element.quarterLength),
-                          True))
+            value = (element.offset + 1, element.quarterLength, True)
         elif isinstance(element, music21.note.Rest):
             logger.debug("Found a rest")
-            values.append((str(element.offset + 1),
-                          str(element.quarterLength),
-                          False))
-                              
-    logger.info("Writing out {num} values".format(num=len(values)))
-    for value in values:
+            value = (element.offset + 1, element.quarterLength, False)
         fh.write(str(value) + '\n')
     fh.write('END_OF_MEASURE' + '\n')
 
