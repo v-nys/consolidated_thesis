@@ -55,39 +55,39 @@ def _create_chain(sig, in_root, out_path):
     """
     sep = os.sep
     in_folder = '{in_root}{sep}{sig}'.format(**locals()) # specific to sig
-    for filename in os.listdir(in_folder):
-        logger.debug("Adding to text chain: {filename}".format(**locals()))
-        measure_path = '{in_folder}{sep}{filename}'.format(**locals())
-        # technically we have a piece, so extract measure
-        measure = parse21(measure_path)[1][1]
-        if _silent_measure(measure):
-            logger.debug("Skipping silent measure.")
-            continue
-
-        # FIXME this doesn't actually work, does it?
-        # values is only written out at the end
-        # but it is reset at every measure???
-
-        # values are 3-tuples: offset, quarterLength and sound
-        values = [(0, None)]  # FIXME value for what?
-        for element in measure:  # Check types! Also contains TimeSig, Clef,...
-            #print(str(measure[index]))
-            if isinstance(element, music21.note.Note):
-                logger.debug("Found a note")
-                values.append((str(element.offset + 1),
-                              str(element.quarterLength),
-                              True))
-            elif isinstance(element, music21.note.Rest):
-                logger.debug("Found a rest")
-                values.append((str(element.offset + 1),
-                              str(element.quarterLength),
-                              False))
-                              
     with open('{out_path}_{sig}'.format(**locals()), mode='w') as fh:
-        logger.info("Writing out {num} values".format(num=len(values)))
-        for value in values:
-            fh.write(str(value) + '\n')
-        fh.write('END_OF_MEASURE' + '\n')
+        for filename in os.listdir(in_folder):
+            logger.debug("Adding to text chain: {filename}".format(**locals()))
+            measure_path = '{in_folder}{sep}{filename}'.format(**locals())
+            # technically we have a piece, so extract measure
+            measure = parse21(measure_path)[1][1]
+            if not _silent_measure(measure):
+                _append_txt_chain(measure, fh)
+
+
+def _append_txt_chain(measure, fh):
+    r"""
+    Given a rhythm measure `measure` and a write-mode file handle `fh`,
+    append the values describing the rhythm of `measure` to the file.
+    """
+    # values are 3-tuples: offset, quarterLength and sound
+    values = [(0, None, None)]
+    for element in measure:  # Check types! Also contains TimeSig, Clef,...
+        if isinstance(element, music21.note.Note):
+            logger.debug("Found a note")
+            values.append((str(element.offset + 1),
+                          str(element.quarterLength),
+                          True))
+        elif isinstance(element, music21.note.Rest):
+            logger.debug("Found a rest")
+            values.append((str(element.offset + 1),
+                          str(element.quarterLength),
+                          False))
+                              
+    logger.info("Writing out {num} values".format(num=len(values)))
+    for value in values:
+        fh.write(str(value) + '\n')
+    fh.write('END_OF_MEASURE' + '\n')
 
 
 if __name__=='__main__':
