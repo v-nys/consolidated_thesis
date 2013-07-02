@@ -5,8 +5,10 @@ python_env/include
 python_env/local
 python_env/lib
 
+*.bak
 *.log
 *.pyc
 *.swn
 *.swo
 *.swp
+*~
