@@ -1,0 +1,334 @@
+wholechars abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_
+
+context default
+
+keyword '*' magenta/9
+keyword "*" magenta/9
+keyword whole :-\schrism red/
+keyword whole :-\schr_type red/
+keyword :- brightgreen/
+keyword ?- brightgreen/16
+keyword <=> brightgreen/16
+keyword ==> brightgreen/16
+keyword <==> cyan/14
+keyword ===> cyan/14
+keyword \\ brightgreen/16
+keyword whole times yellow/24
+keyword whole chrism brightred/18
+keyword whole show_sw brightblue/22
+keyword whole sample brightblue/22
+keyword whole learn brightblue/22
+keyword whole prob brightblue/22
+keyword whole probf brightblue/22
+keyword whole viterbi brightblue/22
+keyword whole viterbif brightblue/22
+keyword whole ccall brightblue/22
+keyword whole msw brightblue/22
+keyword whole soft_msw brightblue/22
+keyword whole values brightblue/22
+keyword whole values_x brightblue/22
+keyword whole set_sw brightblue/22
+
+keyword whole op red/
+keyword whole option red/
+keyword whole constraints red/
+keyword whole chr_constraint red/
+keyword whole chr_type red/
+keyword ---> brightred/18
+keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\]/\{0123456789\}\[0123456789\] cyan/14
+keyword whole handler brightred/18
+keyword linestart \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.-_()\s\t\]@ brightblue/22
+keyword \{abcdefghijklmnopqrstuvwxyz0123456789.\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._\]\[\s\t\]?? brightblue/22
+keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\](*)\[\s\t\]?? brightblue/22
+keyword ?? brightblue/
+#keyword linestart \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.=-_()\s\t\]?? brightblue/22
+#keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.=-_()\s\t\]?? brightblue/22
+keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\]( brightmagenta/9/24
+keyword whole cond cyan/14
+keyword \[0123456789\].\[0123456789\] yellow/24
+keyword whole \{0123456789\}\[0123456789\] yellow/24
+keyword whole \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] magenta/9/24
+keyword whole \{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] white/24
+keyword whole _\{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] gray/24
+keyword whole _ gray/6
+
+keyword { brightcyan/14
+keyword } brightcyan/14
+keyword ( brightmagenta/9/15
+keyword ) brightmagenta/9/15
+keyword , brightmagenta/9/15
+keyword . brightgreen/16
+
+keyword [ cyan/14
+keyword ] cyan/14
+keyword | cyan/14
+
+
+
+context ' ' green/9
+
+context % \n gray/
+context /\* \*/ brown/22
+
+
+context exclusive :-\schrism . red/8
+    keyword ( brightred/
+    keyword ) brightred/
+    keyword , brightred/
+    keyword \+ brightmagenta/
+    keyword - brightmagenta/
+    keyword \? brightmagenta/
+    keyword / gray/
+    keyword whole int brightcyan/
+    keyword whole float brightcyan/
+    keyword whole number brightcyan/
+    keyword whole natural brightcyan/
+    keyword whole any brightcyan/
+    keyword \{1234567890\} magenta/
+    keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\]( brightred/
+
+context exclusive :-\schr_type . red/8
+    keyword ---> brightred/18
+    keyword ; brightred/18
+    keyword == brightred/18
+    keyword ( brown/
+    keyword ) brown/
+    keyword , brightred/
+    keyword \+ brightmagenta/
+    keyword - brightmagenta/
+    keyword \? brightmagenta/
+    keyword / gray/
+    keyword whole int brightcyan/
+    keyword whole float brightcyan/
+    keyword whole number brightcyan/
+    keyword whole natural brightcyan/
+    keyword whole any brightcyan/
+    keyword [ cyan/14
+    keyword ] cyan/14
+    keyword | cyan/14
+    keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\]( brown/
+keyword whole \{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] yellow/
+
+context exclusive :- . lightgray/19
+    keyword whole times yellow/24
+    keyword <==> cyan/14
+    keyword ===> cyan/14
+    keyword whole show_sw brightblue/22
+    keyword whole sample brightblue/22
+    keyword whole learn brightblue/22
+    keyword whole prob brightblue/22
+    keyword whole probf brightblue/22
+    keyword whole viterbi brightblue/22
+    keyword whole viterbif brightblue/22
+    keyword whole ccall brightblue/22
+    keyword "*" magenta/9
+    keyword %*\n brown/22
+    keyword whole set_prism_flag red/
+    keyword whole chrism red/
+    keyword whole constraints red/
+    keyword whole chr_constraint red/
+    keyword whole chr_type red/
+    keyword ---> brightred/18
+    keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\]/\{0123456789\}\[0123456789\] cyan/14
+    keyword whole use_module brightred/18
+    keyword whole module brightred/18
+    keyword whole library(*) red/8
+    keyword whole append yellow/24
+    keyword whole arg yellow/24
+    keyword whole findall yellow/24
+    keyword whole atom yellow/24
+    keyword whole repeat yellow/24
+    keyword whole functor yellow/24
+    keyword whole call yellow/24
+    keyword whole is yellow/24
+    keyword whole nl yellow/24
+    keyword whole nonvar yellow/24
+    keyword whole number yellow/24  
+    keyword whole true yellow/24
+    keyword whole var yellow/24
+    keyword whole compound yellow/24
+    keyword whole once yellow/24
+    keyword whole write yellow/24
+    keyword whole op yellow/24
+    keyword whole fail yellow/24
+    keyword whole length yellow/24
+    keyword whole member yellow/24
+    keyword whole writeln yellow/24
+    keyword whole format yellow/24
+    keyword ! brightred/18
+
+    keyword whole \{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] white/24
+    keyword whole _\{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] gray/24
+    keyword whole _ gray/6
+    keyword \[0123456789\].\{0123456789\}\[0123456789\] yellow/24
+    keyword whole \{0123456789\}\[0123456789\] yellow/24
+
+    keyword , brightcyan/14
+    keyword -> brightgreen/16
+    keyword ; brightred/18
+    keyword == brightred/18
+    keyword > yellow/24
+    keyword < yellow/24
+    keyword \+ yellow/24
+    keyword - yellow/24
+    keyword ? yellow/24
+    keyword : yellow/24
+    keyword \\ yellow/24
+    keyword / yellow/24
+    keyword \* yellow/24
+    keyword =.. yellow/24
+    keyword = yellow/24
+    keyword { brightcyan/14
+    keyword } brightcyan/14
+    keyword ( brightcyan/15
+    keyword ) brightcyan/15
+    keyword [ cyan/14
+    keyword ] cyan/14
+    keyword | cyan/14
+keyword whole msw brightblue/22
+keyword whole soft_msw brightblue/22
+keyword whole set_sw brightblue/22
+
+
+
+context exclusive ==> . lightgray/19
+    keyword ?? brightblue/
+    keyword :\[0123456789.\] cyan/
+    keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.=-_()\s\t\]?? brightblue/22
+    keyword '*' magenta/9
+    keyword "*" magenta/9
+    keyword %*\n brown/22
+    keyword whole constraints brightred/18
+    keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\]/\{0123456789\}\[0123456789\] cyan/14
+    keyword whole use_module brightred/18
+    keyword whole module brightred/18
+    keyword whole library(*) red/8
+    keyword whole append yellow/24
+    keyword whole arg yellow/24
+    keyword whole findall yellow/24
+    keyword whole atom yellow/24
+    keyword whole repeat yellow/24
+    keyword whole functor yellow/24
+    keyword whole call yellow/24
+    keyword whole is yellow/24
+    keyword whole nl yellow/24
+    keyword whole nonvar yellow/24
+    keyword whole number yellow/24  
+    keyword whole true yellow/24
+    keyword whole var yellow/24
+    keyword whole compound yellow/24
+    keyword whole once yellow/24
+    keyword whole write yellow/24
+    keyword whole op yellow/24
+    keyword whole fail yellow/24
+    keyword whole length yellow/24
+    keyword whole member yellow/24
+    keyword whole writeln yellow/24
+    keyword whole format yellow/24
+    keyword ! brightred/18
+
+    keyword whole \{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] white/24
+    keyword whole _\{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] gray/24
+    keyword whole _ gray/6
+    keyword \[0123456789\].\{0123456789\}\[0123456789\] yellow/24
+    keyword whole \{0123456789\}\[0123456789\] yellow/24
+
+    keyword , brightcyan/14
+    keyword -> brightgreen/16
+    keyword ; brightblue/22
+    keyword > yellow/24
+    keyword < yellow/24
+    keyword \+ yellow/24
+    keyword - yellow/24
+    keyword ? yellow/24
+    keyword : yellow/24
+    keyword \\ yellow/24
+    keyword / yellow/24
+    keyword \* yellow/24
+    keyword =.. yellow/24
+    keyword = yellow/24
+    keyword { brightcyan/14
+    keyword } brightcyan/14
+    keyword ( brightcyan/15
+    keyword ) brightcyan/15
+    keyword [ cyan/14
+    keyword ] cyan/14
+
+    keyword | brightgreen/16
+    keyword pragma\s brightgreen/16
+    keyword whole passive(*) green/6
+keyword whole msw brightblue/22
+keyword whole soft_msw brightblue/22
+
+
+context exclusive <=> . lightgray/19
+    keyword ?? brightblue/
+    keyword :\[0123456789.\] cyan/
+
+    keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.=-_()\s\t\]?? brightblue/22
+
+    keyword '*' magenta/9
+    keyword "*" magenta/9
+    keyword %*\n brown/22
+    keyword whole constraints brightred/18
+    keyword \{abcdefghijklmnopqrstuvwxyz\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\]/\{0123456789\}\[0123456789\] cyan/14
+    keyword whole use_module brightred/18
+    keyword whole module brightred/18
+    keyword whole library(*) red/8
+    keyword whole append yellow/24
+    keyword whole arg yellow/24
+    keyword whole findall yellow/24
+    keyword whole atom yellow/24
+    keyword whole repeat yellow/24
+    keyword whole functor yellow/24
+    keyword whole call yellow/24
+    keyword whole is yellow/24
+    keyword whole nl yellow/24
+    keyword whole nonvar yellow/24
+    keyword whole number yellow/24  
+    keyword whole true yellow/24
+    keyword whole var yellow/24
+    keyword whole compound yellow/24
+    keyword whole once yellow/24
+    keyword whole write yellow/24
+    keyword whole op yellow/24
+    keyword whole fail yellow/24
+    keyword whole length yellow/24
+    keyword whole member yellow/24
+    keyword whole writeln yellow/24
+    keyword whole format yellow/24
+    keyword ! brightred/18
+
+    keyword whole \{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] white/24
+    keyword whole _\{ABCDEFGHIJKLMNOPQRSTUVWXYZ\}\[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\] gray/24
+    keyword whole _ gray/6
+    keyword \[0123456789\].\{0123456789\}\[0123456789\] yellow/24
+    keyword whole \{0123456789\}\[0123456789\] yellow/24
+
+    keyword , brightcyan/14
+    keyword -> brightgreen/16
+    keyword ; brightblue/22
+    keyword > yellow/24
+    keyword < yellow/24
+    keyword \+ yellow/24
+    keyword - yellow/24
+    keyword ? yellow/24
+    keyword : yellow/24
+    keyword \\ yellow/24
+    keyword / yellow/24
+    keyword \* yellow/24
+    keyword =.. yellow/24
+    keyword = yellow/24
+    keyword { brightcyan/14
+    keyword } brightcyan/14
+    keyword ( brightcyan/15
+    keyword ) brightcyan/15
+    keyword [ cyan/14
+    keyword ] cyan/14
+
+    keyword | brightgreen/16
+    keyword pragma\s brightgreen/16
+    keyword whole passive(*) green/6
+keyword whole msw brightblue/22
+keyword whole soft_msw brightblue/22
+

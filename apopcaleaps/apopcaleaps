@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd music/gui
+
+if [ -a "music" ]
+then
+        ./music
+else
+        echo "First compile the GUI: type ./install"
+fi
+
+cd ../..

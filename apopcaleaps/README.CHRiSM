@@ -1,0 +1,31 @@
+   ________    _____   _____ ___________      ___??    ________  ____    ____
+  /   ___  \   \   (___)   / \    ___   \    (. .)    / ______/  |   \  /   |
+ /   /   \_/__  |   ___   |   |  |___)   )   _\-/_    \____  \   |    \/    |
+ \   \_____/  \ |  (   )  |   |   ___   (   /|___|\  /\____\  \  |  (\__/)  |
+  \___________//____\ /____\ /____\  \___\  _|/ \|_ /_________/ /____\  /____\
+     CHRiSM 0.3 beta                (C) Jon Sneyers, K.U.Leuven, 2009-2010 
+
+
+CHRiSM is a rule-based probabilistic logic programming language, based on:
+
+  * B-Prolog Version 7.2 #1, (C) Afany Software 1994-2008
+  * PRISM 2.0 beta 1, (C) Sato Lab, Tokyo Institute of Technology, Aug 2009
+  * Leuven CHR system, (C) Tom Schrijvers et al, K.U.Leuven, 2003-2009
+
+
+The following files and directories are included:
+
+    chrism              ... Shell script to execute a CHRiSM program
+    chrism.pl           ... Prolog program to convert CHRiSM to CHR(PRISM)
+    aux_chrism_files/   ... Auxiliary files for the CHRiSM system
+    leuven_chr_system/  ... B-Prolog port of the K.U.Leuven CHR system
+    prism/              ... parts of the PRISM system (includes parts of B-Prolog)
+    examples/           ... Small example programs
+
+    music/              ... CHRiSM application: an automatic pop music generator
+    music/gui/          ... Graphical user interface
+
+
+Known issues:
+- CHRiSM programs are restricted to having only constraints with ground arguments
+

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+cd music/gui
+
+echo ====== BUILDING FLTK ========
+./build_fltk
+
+echo ====== BUILDING GUI ========
+./build
+
+cd ..
+echo ====== BUILDING APOPCALEAPS ========
+./compile
+
+cd ..
+
+cat <<EOF
+============================================================
+ INSTALLATION DONE
+
+ Type "./apopcaleaps" to start APOPCALEAPS.
+============================================================
+EOF

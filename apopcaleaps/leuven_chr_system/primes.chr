@@ -1,0 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Sieve of eratosthenes to compute primes
+%% thom fruehwirth 920218-20, 980311
+%% christian holzbaur 980207 for Sicstus CHR
+%%
+%% ported to hProlog by Tom Schrijvers 
+:- use_module(library(chr)).
+:- chr_option(debug,off).
+:- chr_option(optimize,full).
+
+:- chr_constraint candidate(+). % mode declaration
+:- chr_constraint prime(+). % mode declaration
+
+candidate(1) <=> true.
+candidate(N) <=> prime(N), N1 is N - 1, candidate(N1).
+
+absorb @ prime(Y) \ prime(X) <=> 0 =:= X mod Y | true.
+
+main :-
+	main(2500).
+
+main(N):-
+	cputime(X),
+	candidate(N),
+	cputime( Now),
+	Time is Now-X,
+	write(bench(primes ,N,Time,0,hprolog)), write('.'),nl.
+
+cputime(X):-X is cputime.

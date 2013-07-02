@@ -1,0 +1,26 @@
+
+INSTALLATION INSTRUCTIONS FOR APOPCALEAPS
+=========================================
+
+
+Just run ./install to install APOPCALEAPS. This will first compile FLTK 1.1.10,
+then it generates the user interface source code and compiles it.
+
+
+
+
+The following software is assumed to be installed:
+
+  * GNU LilyPond 2.12.1
+        a music sheet typesetting program with export to MIDI
+        (apt-get install lilypond)
+
+  * TiMidity++
+        a good MIDI player
+        (apt-get install timidity timidity-patches)
+        (if you want to use a different MIDI player, change programs.conf)
+
+  * GV
+        a viewer for PostScript files
+        (apt-get install gv)
+        (if you want to use a different viewer, change programs.conf)

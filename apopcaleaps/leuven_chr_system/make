@@ -1,0 +1,2 @@
+../prism/bin/prism -g "cl(make),s7"
+../prism/bin/prism -g "cl(make),cl(chr_translate)"

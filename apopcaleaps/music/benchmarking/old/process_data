@@ -1,0 +1,3 @@
+#!/bin/bash
+
+../../bp -g '[process_data],run'

@@ -1,0 +1,684 @@
+% Copyright 2009-2010, Jon Sneyers
+% 
+% This file is part of APOPCALEAPS.
+% 
+% APOPCALEAPS is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% 
+% APOPCALEAPS is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License
+% along with APOPCALEAPS.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+% This CHRiSM program generates music.
+
+
+% TODO/IDEAS:
+% -----------
+% todo: handle rests separately (not just as an option in note selection)
+% todo: add some global structure by adding a repetitiveness factor
+%               (randomly copies (parts of) measures)
+% todo: add explicit global structure beyond repeats/1: something like 
+%         structure([a,a,b,a,b,a,b,variant(b),a,end])
+
+:- set_prism_flag(data_source,file('gui/training_set/training_set.dat')). %'
+:- set_prism_flag(log_scale,on).
+:- set_prism_flag(default_sw_h,1.0e-3).
+
+:- include(benchmarks).
+
+
+% debug output:
+phase(X) ==> debugwrite(', '), debugwrite(X).
+wfail(Reason) :- debugwriteln(failing(Reason)), fail.
+
+debugwrite(W) :- (ddd(on) -> write(W) ; true).
+debugwriteln(W) :- (ddd(on) -> writeln(W) ; true).
+
+dodebug :- retractall(ddd(_)), assert(ddd(on)).
+nodebug :- retractall(ddd(_)), assert(ddd(off)).
+
+:- dynamic ddd/1.
+%ddd(off).
+ddd(on).
+
+
+/*****************************
+*                            *
+*     Early-fail rules       *
+*                            *
+******************************/
+
+
+% early-fail rules to speed up explanation search
+% nr: never-removed (observable)
+% nrc: never-removed (chords)
+% nri: never-removed (internal)
+% s: surviving
+% u: user-defined
+
+:- chrism fra, frna, fro.
+fra <=> failrules([nr,nrc,nri,s,u]).
+frna <=> failrules([nr,nrc,s,u]).
+fro <=> failrules([nr,s,u]).
+
+:- chrism failrules/1.
+failrules([]) <=> true.
+failrules([X|Xs]) <=> failrules(X), failrules(Xs).
+
+:- chrism resultnote/5, resultanote/5, resultoctave/5, resultbeat/5, check_resultbeat/5, resultmchord/2, resulttied/4, check_resulttied/4.
+result(note(A,B,C,D,N)) <=> resultnote(A,B,C,D,N).
+result(tied(A,B,C,D)) <=> resulttied(A,B,C,D).
+result(anote(A,B,C,D,N)) <=> resultanote(A,B,C,D,N).
+result(octave(A,B,C,D,N)) <=> resultoctave(A,B,C,D,N).
+result(beat(A,B,C,D,N)) <=> resultbeat(A,B,C,D,N).
+result(mchord(A,B)) <=> resultmchord(A,B).
+
+:- chrism check/1, check2/1.
+failrules(nr), note(A,B,C,D,N) ==> check(note(A,B,C,D,N)).
+failrules(nri), anote(A,B,C,D,N) ==> check(anote(A,B,C,D,N)).
+failrules(nr), octave(A,B,C,D,N) ==> check(octave(A,B,C,D,N)).
+failrules(nrc), mchord(A,B) ==> check(mchord(A,B)).
+failrules(nr), tied(A,B,C,D) ==> check(tied(A,B,C,D)).
+
+resultnote(A,B,C,D,N) \ check(note(A,B,C,D,N)) <=> true.
+resulttied(A,B,C,D) \ check(tied(A,B,C,D)) <=> true.
+resultanote(A,B,C,D,N) \ check(anote(A,B,C,D,N)) <=> true.
+resultoctave(A,B,C,D,N) \ check(octave(A,B,C,D,N)) <=> true.
+resultmchord(A,B) \ check(mchord(A,B)) <=> true.
+
+failrules(s), beat(A,B,C,D,N) ==> check2(beat(A,B,C,D,N)).
+
+resultbeat(A,B,C,D,_) \ check(beat(A,B,C,D,_)) <=> true.
+resultbeat(A,B,C,D,Y) \ check2(beat(A,B,C,D,X)) <=> Y >= X | debugwriteln(added_beat(A,B,C,D,X)-desired(A,B,C,D,Y)-ok).
+
+failrules(u), phase(split_beats(V,NM,NN,NX)), beat(V,M,N,X,D), next_beat(V,M,N,X,NM,NN,NX) ==> 
+        check_resultbeat(V,M,N,X,D).
+
+failrules(u), phase(join_notes(M)), resulttied(A,B,C,D) ==> 
+        B is M-1 | check_resulttied(A,B,C,D).
+
+resultbeat(A,B,C,D,Y) \ check_resultbeat(A,B,C,D,Y) <=>  true.
+check_resultbeat(A,B,C,D,Y) <=> wfail(check_resultbeat_not_desired(A,B,C,D,Y)).
+
+tied(A,B,C,D) \ check_resulttied(A,B,C,D) <=>  true.
+check_resulttied(A,B,C,D) <=> wfail(check_resulttied_not_desired(A,B,C,D)).
+
+check(X) <=> wfail(check_not_desired(X)).
+check2(X) <=> wfail(check_not_desired(X)).
+
+cleanup \ failrules(_) <=> true.
+cleanup \ resultnote(_,_,_,_,_) <=> true.
+cleanup \ resulttied(_,_,_,_) <=> true.
+cleanup \ resultanote(_,_,_,_,_) <=> true.
+cleanup \ resultoctave(_,_,_,_,_) <=> true.
+cleanup \ resultbeat(_,_,_,_,_) <=> true.
+cleanup \ resultmchord(_,_) <=> true.
+
+
+
+
+/*****************************
+*                            *
+*        Main program        *
+*                            *
+******************************/
+
+% inputs
+:- chrism  measures(+int), meter(+int,+duration), repeats(+int),
+                key(+key), shortest_duration(+voice,+duration), tempo(+int),
+                voice(+voice), range(+voice,+note,+int,+note,+int), max_jump(+voice,+int),
+                instrument(+voice,+), chord_style(+cstyle), max_repeat(+voice,+int), start.
+:- chr_type key ---> major ; minor.
+:- chr_type voice ---> melody ; chords ; bass ; drums.
+:- chr_type note ---> c ; d ; e ; f ; g ; a ; b ; cis; dis ; fis ; gis ; ais ; r.
+:- chr_type duration ---> 2 ; 4 ; 8 ; 16 ; 32.
+:- chr_type cstyle ---> offbeat ; long ; onbeat.
+
+% outputs
+:- chrism  measure(+measure), mchord(+int,+chord),
+                   beat(+voice,+measure,+int,+float,+duration),
+                   note(+voice,+measure,+int,+float,+note),
+                   octave(+voice,+measure,+int,+float,+),
+                   tied(+voice,+measure,+int,+float).
+:- chr_type chord ---> c ; d ; e ; f ; g ; a ; b ; 
+                       cm ; dm ; em ; fm ; gm ; am ; bm.
+:- chr_type measure == int.
+
+% internals
+:- chrism  make_measures(+int), next_measure(+measure,+measure),
+                   make_beats(+int,+duration,+measure,+voice),
+                   next_beat(+voice,+measure,+int,+float,+measure,+int,+float),
+                   anote(+voice,+measure,+int,+float,+),
+                   phase(+), chord(+,+,+,+,+),
+                   octave_d(+voice,+measure,+int,+float,+),
+                   octave_rangecheck(+voice,+measure,+int,+float,+),
+                   same_note_counter(+voice,+measure,+int,+float,+int),
+                   make_notes_measure(+int), find_octave_d(+,+,+,+,+).
+
+
+mchord(A,C) ==> debugwriteln(mchord(A,C)).
+
+key(major), measure(1) ==> mchord(1,c).
+key(major), measures(N) ==> mchord(N,c).
+key(minor), measure(1) ==> mchord(1,am).
+key(minor), measures(N) ==> mchord(N,am).
+
+measures(N) \ start <=> debugwrite('[MUSIC GENERATOR] startup'), 
+                make_measures(N).
+make_measures(0) <=> phase(split_beats).
+make_measures(N) <=> N>0 | measure(N), N1 is N-1, next_measure(N1,N), make_measures(N1).
+
+
+% simple Markov chain chord progression
+mchord(A,Chord), next_measure(A,B), measures(M) ==> B < M |
+            msw(chord_choice(Chord),NextChord),
+            mchord(B,NextChord).
+
+% create one beat per beat
+meter(N,D), voice(V), measure(M) ==> make_beats(N,D,M,V).
+make_beats(0,_D,_M,_V) <=> true.
+make_beats(N,D,M,V) <=> N > 0 | N1 is N-1, next_beat(V,M,N1,0,M,N,0),
+                                beat(V,M,N1,0,D), make_beats(N1,D,M,V).
+
+meter(N,D), next_measure(M,M2) \ next_beat(V,A,B,C,M,N,E) <=> next_beat(V,A,B,C,M2,0,0).
+
+phase(split_beats), voice(V) ==> phase(split_beats(V,1,0,0)).
+phase(split_beats) <=> phase(make_notes).
+
+% split some of the beats in two
+split_beat(V) ?? meter(_,OD), 
+         shortest_duration(V,SD), measures(LastM)
+    \ beat(V,M,N,X,D), next_beat(V,M,N,X,NM,NN,NX), phase(split_beats(V,M,N,X))
+    <=> 
+    D<SD, 
+%    M \== LastM,         % last measure: no splitting
+% last beat (no next_beat): no splitting
+    debugwriteln(considering_splitbeat(V,M,N,X,D))
+    |
+    D2 is D*2, X2 is X+1/(D2/OD),
+    debugwriteln(doing_splitbeat(V,M,N,X,D)),
+    next_beat(V,M,N,X,M,N,X2), next_beat(V,M,N,X2,NM,NN,NX),
+    beat(V,M,N,X,D2), beat(V,M,N,X2,D2), phase(split_beats(V,M,N,X)).
+
+
+
+next_beat(V,M,N,X,NM,NN,NX) \ phase(split_beats(V,M,N,X)) <=> phase(split_beats(V,NM,NN,NX)).
+phase(split_beats(_,_,_,_)) <=> true.
+
+% initialize first octave in middle of voice range
+range(V,_,L,_,U) ==> Octave is (L+U)//2, octave(V,1,0,0,Octave).
+max_repeat(V,_), voice(V) ==> same_note_counter(V,1,0,0,0).
+
+
+
+% compute next octave given previous and delta
+octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) \ octave_d(V,M,N,X,Delta) <=>
+    NO is OO+Delta, octave_rangecheck(V,M,N,X,NO).
+
+% clip octave to the required voice range
+range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | wfail(lowO). %octave(V,M,N,X,LO).
+range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | wfail(highO). %octave(V,M,N,X,UO).
+range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,LO)
+    <=> Note \== r, note_below(Note,LN) | wfail(low). %LO1 is LO+1, octave(V,M,N,X,LO1).
+range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
+    <=> Note \== r, note_above(Note,UN) | wfail(high). %UO1 is UO-1, octave(V,M,N,X,UO1).
+octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
+
+
+% check max_jump constraint - fail (and backtrack) if it is violated
+phase(make_notes),
+max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
+note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
+    interval(ON,OO,NN,NO,Int), Int > MInt | wfail(jumpup(Int)).
+phase(make_notes),
+max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
+note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
+    interval(ON,OO,NN,NO,Int), Int < -MInt | wfail(jumpdown(Int)).
+
+% maintain same_note_counter
+phase(make_notes),
+octave(V,M1,N1,X1,Octave), note(V,M1,N1,X1,Note), next_beat(V,M1,N1,X1,M,N,X),
+octave(V,M,N,X,NOctave), note(V,M,N,X,NNote) \ same_note_counter(V,M1,N1,X1,Count) <=>
+    (Octave == NOctave, Note == NNote ->
+        C1 is Count+1, same_note_counter(V,M,N,X,C1)
+    ;
+        same_note_counter(V,M,N,X,0)
+    ).
+% check max_repeat constraint - fail (and backtrack) if it is violated
+phase(make_notes),max_repeat(V,N), same_note_counter(V,A,B,C,N) <=> wfail(repeat(V,N)).
+
+
+
+% approach notes should be followed by other approach notes or chord notes
+anote(V,M1,N1,X1,approach), next_beat(V,M1,N1,X1,M,N,X), anote(V,M,N,X,Next)
+==> member(Next,[approach,tonic,mediant,dominant]).
+
+% approach notes should be followed by a note that is nearby (at most 2 half tones distance)
+octave(V,M1,N1,X1,OO), anote(V,M1,N1,X1,approach), note(V,M1,N1,X1,ON),
+note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X), octave(V,M,N,X,NO) ==>
+    interval(ON,OO,NN,NO,Int), Int >= -2, Int =< 2.
+%, Int =\= 0.
+% (but not the same note!)      % changed this: also allow approach note followed by same note
+
+
+phase(make_notes) ==> make_notes_measure(1).
+
+% choose first note
+make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
+    V \== drums, V \== chords |
+    abstract_beat(1,0,0,AB),
+    soft_msw(note_choice(V,AB),ANote),
+    debugwriteln(picked(note_choice(V,AB),ANote)),
+    pick_concrete_note(V,C,ANote,Note),
+    debugwriteln(    concrete_note(V,C,ANote,Note)),
+    anote(V,1,0,0,ANote),
+    note(V,1,0,0,Note).
+
+% choose next note and octave
+make_notes_measure(M), beat(V,M,N,X,D), mchord(M,C),
+octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
+    V \== drums, V \== chords |
+    abstract_beat(M,N,X,AB),
+    soft_msw(note_choice(V,AB),ANote),
+    debugwriteln(picked(note_choice(V,AB),ANote)),
+    pick_concrete_note(V,C,ANote,Note),
+    debugwriteln(    concrete_note(V,C,ANote,Note)),
+    anote(V,M,N,X,ANote),
+    note(V,M,N,X,Note),
+    (Note == r ->
+        octave_d(V,M,N,X,0)
+    ;
+        find_octave_d(V,M,N,X,OO)
+    ).
+
+range(V,_,Lower,_,Upper) \ find_octave_d(V,M,N,X,OO) <=>
+    octave_compare(Lower,OO,Upper,Position),
+    soft_msw(octave_choice(Position),Octave_Delta),
+    debugwriteln(octave_choice(Position,Octave_Delta)),
+    octave_d(V,M,N,X,Octave_Delta).
+find_octave_d(V,M,N,X,OO) <=> writeln(oops-no-range-for(V)).
+
+octave_compare(L,L,_,low).
+octave_compare(_,U,U,high).
+octave_compare(L,X,U,mid) :- L < X, X < U.
+
+
+% force measure-per-measure note filling for search efficiency
+measures(Last) \ make_notes_measure(N) <=> N < Last | N1 is N+1,
+        debugwriteln(measure(N1)), make_notes_measure(N1).
+measures(N) \ make_notes_measure(N) <=> true.
+
+
+phase(make_notes), beat(drums,M,N,X,D) ==>
+    abstract_beat(M,N,X,AB), 
+    msw(drum_choice(AB),Note), 
+    debugwriteln(msw(drum_choice(AB),Note)),
+    note(drums,M,N,X,Note).
+
+phase(make_notes), chord_style(Style), beat(chords,M,N,X,D), mchord(M,C) ==>
+    abstract_beat(M,N,X,AB), msw(chord_type(Style,AB),Chord), 
+    debugwriteln(msw(chord_type(Style,AB),Chord)),
+    chord(C,M,N,X,Chord).
+
+chord(C,M,N,X,r) <=> note(chords,M,N,X,r).
+chord(c,M,N,X,0) <=> note(chords,M,N,X,c).
+chord(g,M,N,X,0) <=> note(chords,M,N,X,g).
+chord(f,M,N,X,0) <=> note(chords,M,N,X,f).
+chord(am,M,N,X,0) <=> note(chords,M,N,X,a+':m').
+chord(em,M,N,X,0) <=> note(chords,M,N,X,e+':m').
+chord(dm,M,N,X,0) <=> note(chords,M,N,X,d+':m').
+chord(c,M,N,X,7)  <=> note(chords,M,N,X,c+':7').
+chord(g,M,N,X,7)  <=> note(chords,M,N,X,g+':7').
+chord(f,M,N,X,7)  <=> note(chords,M,N,X,f+':7').
+chord(am,M,N,X,7) <=> note(chords,M,N,X,a+':m7').
+chord(em,M,N,X,7) <=> note(chords,M,N,X,e+':m7').
+chord(dm,M,N,X,7) <=> note(chords,M,N,X,d+':m7').
+
+phase(make_notes) <=> phase(join_notes(1)).
+
+% two successive notes of the same pitch can be joined
+join_notes(V,cond M=M2,cond N=N2) ??
+    phase(join_notes(M)), note(V,M,N,X,Note),
+    next_beat(V,M,N,X,M2,N2,X2), note(V,M2,N2,X2,Note)
+        ==> V \== drums |
+        debugwriteln(join_notes(V,M,N,X,Note,M2,N2,X2)),
+        tied(V,M,N,X),
+        debugwriteln(joined(Note)).
+
+measures(M) \ phase(join_notes(M)) <=> phase(done_join_notes).
+phase(join_notes(M)) <=> M1 is M+1, phase(join_notes(M1)).
+
+is_rest(r).
+%is_rest(r + ' ~').
+
+play \ phase(done_join_notes) <=> phase(output).
+show \ phase(done_join_notes) <=> phase(output).
+phase(done_join_notes) <=> debugwriteln(foundCANDIDATE_SOLUTION).
+
+
+/*****************************
+*                            *
+*  Auxiliary predicates      *
+*                            *
+******************************/
+
+% we use an abstracted beat position (first,strong,weak,prestrong,weakest)
+% instead of the concrete positions
+:- chrism abstract_beat(+,+,+,+).
+
+measures(N) \ abstract_beat(N,_,_,AB) <=> AB=first.
+meter(M,_) \ abstract_beat(Measure,Beat,Pos,AB) <=> abstract_beat1(M,Beat,Pos,AB).
+abstract_beat(_,_,_,_) <=> writeln(error_abstract_beat-measure_or_meter_missing).
+
+% abstract_beat1(+meter1, +Beat, +SubBeat, -AbstractBeat)
+abstract_beat1(_,0,0,first) :- !.
+
+
+abstract_beat1(M,N,0,strong) :- 0 is M mod 2, N is M//2, !.     % binary meter: middle is strong
+abstract_beat1(3,1,0,strong) :- !.      % X X X
+abstract_beat1(3,2,0,strong) :- !.
+abstract_beat1(5,3,0,strong) :- !.      % X - - X -
+abstract_beat1(7,2,0,strong) :- !.      % X - X - X - -
+abstract_beat1(7,4,0,strong) :- !.
+                                        % 0 1 2 3 4 5 6 7 8 9 10 11
+abstract_beat1(9,3,0,strong) :- !.      % X - - X - - X - -
+abstract_beat1(9,6,0,strong) :- !.
+abstract_beat1(12,3,0,strong) :- !.     % X - - X - - X - - X - -
+abstract_beat1(12,9,0,strong) :- !.     % X - - X - - X - - X - -
+
+abstract_beat1(2,_,0.75,prestrong) :- !.
+abstract_beat1(3,2,0.5,prestrong) :- !.
+abstract_beat1(4,1,0.5,prestrong) :- !.
+abstract_beat1(N,M,0.5,prestrong) :- N =:= M+1, !.
+abstract_beat1(N,M,0,prestrong) :- N =:= M+1, N>6, !.
+
+abstract_beat1(2,0,0.5,weak) :- !.
+abstract_beat1(2,1,0.5,weak) :- !.
+abstract_beat1(3,_,0.5,weak) :- !.
+abstract_beat1(_,_,0,weak) :- !.
+
+
+abstract_beat1(_,_,_,weakest) :- !.
+
+%values(note_choice(_,_,_),[rest,tonic,mediant,dominant,approach,color,otherscale,nonscale]).
+
+pick_concrete_note(V,C,R,N) :-
+        msw(concrete(V,C,R),N).
+
+
+% note_below(X,Y) should succeed iff X is below Y
+note_below(X,Y) :- note_dbelow(X,Y).
+note_below(X,Y) :- note_dbelow(X,Z), note_below(Z,Y).
+note_above(X,Y) :- note_below(Y,X).
+note_dbelow(c,d).
+note_dbelow(d,e).
+note_dbelow(e,f).
+note_dbelow(f,g).
+note_dbelow(g,a).
+note_dbelow(a,b).
+
+
+% interval(+note1,+octave1,+note2,+octave2,-interval) :
+%   returns the interval (in semitones) between two pitches
+interval(N1a,O1,N2a,O2,Int) :- 
+        pure_pitch(N1a,N1),
+        pure_pitch(N2a,N2),
+        debugwriteln(interval(N1,O1,N2,O2,Int)),
+        OctInt is 12*(O2-O1), 
+        interval(N1,N2,NoteInt), Int is OctInt + NoteInt.
+
+%pure_pitch(P+' ~',P).
+pure_pitch(P,P) :- member(P,[c,cis,d,dis,e,f,fis,g,gis,a,ais,b]).
+
+dinterval(c,cis,1).
+dinterval(cis,d,1).
+dinterval(d,dis,1).
+dinterval(dis,e,1).
+dinterval(e,f,1).
+dinterval(f,fis,1).
+dinterval(fis,g,1).
+dinterval(g,gis,1).
+dinterval(gis,a,1).
+dinterval(a,ais,1).
+dinterval(ais,b,1).
+dinterval(b,c,-11).
+
+pinterval(A,B,I) :- dinterval(A,B,I).
+pinterval(A,B,I) :- dinterval(A,C,AC), pinterval(C,B,CB), I is AC+CB.
+
+interval(A,A,0) :- !.
+interval(A,B,I)  :- pinterval(A,B,I), !.
+
+%interval(A,B,-I) :- pinterval(B,A,I).
+
+
+% given a central note (Note,Oct), a negative number of semitones L
+%    and a positive number of semitones U, compute the right range/5.
+set_range(V,Note,Oct,L,U) :- 
+    add(L,Note,Oct,LN,LO),
+    add(U,Note,Oct,UN,UO),
+    range(V,LN,LO,UN,UO).
+
+add(X,N,O,N2,O2) :- X > 11,!, X1 is X-12, O1 is O+1, add(X1,N,O1,N2,O2).
+add(X,N,O,N2,O2) :- X < 0,!, X1 is X+12, O1 is O-1, add(X1,N,O1,N2,O2).
+add(X,N,O,N2,O2) :- X>0, dinterval(N,N1,1),!, NX is X-1, add(NX,N1,O,N2,O2).
+add(1,b,O,c,O1) :- !,O1 is O+1.
+%add(1,N,O,N,O). % roundoff
+add(0,N,O,N,O).
+
+
+
+% Backtrackable switch
+% this is based on the definition of msw/2, but rewritten so that
+% the probabilistic choice is not committed to.
+soft_msw(Sw,Val) :-
+%    $pp_get_distribution(Sw,Values,Pbs), !,
+    $pp_get_parameters(Sw,Values,Pbs), !,
+    zip(Values,Pbs,Candidates),
+    soft_choose(Candidates,Val).
+
+zip([],[],[]).
+zip([Val|Vals],[Prob|Probs],[Val-Prob|Rest]) :- zip(Vals,Probs,Rest).
+
+soft_choose([],Val) :- !, fail.
+soft_choose(Candidates,V) :-
+    zip(Vals,Probs,Candidates),
+    sumlist(Probs,Sum),
+    Sum > 0,
+    random_uniform(Sum,R),
+    $pp_choose(Probs,R,Vals,Val,Prob),
+    delete(Candidates,Val-Prob,OtherOptions),
+    (V=Val ; soft_choose(OtherOptions,V)).
+
+
+/******************************
+*                             *
+*  Output to LilyPond format  *
+*                             *
+*******************************/
+
+:- chrism write_notes, show(+,+,+), show_notes(+,+,+,+), voice_header(+), voice_footer(+), color, maybe_change_color(+,+,+,+),
+                  maybe_close_bracket, show_note(+), show_mods(+), maybe_show_octave(+,+,+,+).
+
+%write_notes ==> writeln(tiens).
+measures(N), meter(A,B), write_notes, voice(V) ==>
+    voice_header(V),
+    write('\\time '), write(A), write('/'), write(B), nl, show(V,1,N),
+    maybe_close_bracket,
+    writeln('}').
+write_notes <=> true.
+show(V,N,M) <=> N>M | true.
+show(V,N,M) <=> N=<M | write('    '),show_notes(V,N,0,0), write(' |'), nl, N1 is N+1, show(V,N1,M).
+
+note(V,M,P,X,N), beat(V,M,P,X,D), show_notes(V,M,P,X) ==>
+    maybe_change_color(V,M,P,X),
+    show_note(N), maybe_show_octave(V,M,P,X), write(D), show_mods(N), write(' ').
+tied(V,M,P,X), show_notes(V,M,P,X) ==>
+    write(' ~ ').
+next_beat(V,M,P,X,M,P2,X2) \ show_notes(V,M,P,X) <=> show_notes(V,M,P2,X2).
+show_notes(V,M,P,X) <=> true.
+
+show_note(Note+Mods) <=> show_note(Note).
+show_note(Note) <=> write(Note).
+show_mods(Note+Mods) <=> show_mods(Note), write(Mods).
+show_mods(Note) <=> true.
+
+color, anote(V,M,P,X,A) \ maybe_change_color(V,M,P,X) <=> change_color(A).
+maybe_change_color(_V,_M,_P,_X) <=> true.
+
+change_color(A) :-
+        nl, write('\\override NoteHead #\'color = #'),
+        coloring(A,Color) ->  write(Color), nl.
+coloring(rest,black).
+coloring(tonic,black).
+coloring(mediant,darkblue).
+coloring(dominant,darkblue).
+coloring(approach,darkyellow).
+coloring(color,green).
+coloring(blues,blue).
+coloring(scale,grey).
+coloring(nonscale,red).
+coloring(_,darkred).
+
+note(V,M,P,X,Rest) \ maybe_show_octave(V,M,P,X) <=> is_rest(Rest) | true.
+octave(V,M,P,X,O) \ maybe_show_octave(V,M,P,X) <=> octave_notation(O,Notation), write(Notation).
+maybe_show_octave(_,_,_,_) <=> true.
+
+octave_notation(7,'\'\'\'\'').
+octave_notation(6,'\'\'\'').   %' syntax highlighter messes up
+octave_notation(5,'\'\'').
+octave_notation(4,'\'').       %' syntax highlighter messes up
+octave_notation(3,'').
+octave_notation(2,',').
+octave_notation(1,',,').
+octave_notation(0,',,,').
+
+:- chrism tempo_declaration.
+
+meter(_,Unit), tempo(T) \ tempo_declaration <=> format('  \\tempo ~w=~w\n',[Unit,T]).
+tempo_declaration <=> format('  \\tempo 4=80\n',[]).
+
+voice_header(melody) ==> writeln('Melody = {'),
+                         tempo_declaration,
+			 writeln('  \\clef treble').
+voice_header(bass) ==> writeln('Bass = {'),
+                         tempo_declaration,
+			 writeln('  \\clef \"bass_8\"').
+voice_header(chords) ==> writeln('Chords = \\chordmode {'),
+                         tempo_declaration,
+			 writeln('  \\clef treble').
+voice_header(drums) ==> writeln('Drums = \\drummode {'),
+                         tempo_declaration.
+repeats(N), voice_header(_) ==> write('  \\repeat unfold '),write(N),writeln(' {').
+voice_header(_) <=> true.
+repeats(_) \ maybe_close_bracket <=> writeln('  }').
+maybe_close_bracket <=> true.
+
+:- chrism play, show.
+
+failrules(_) \ phase(output) <=> true, debugwriteln(foundCANDIDATEfdsfdf).
+
+
+phase(output) <=>
+    tell('temp.ly'),
+    header,
+    write_notes,
+    footer,
+    show_footer,
+    play_footer,
+    end_footer,
+    told,
+    tell('temp.result'),
+    css2,
+    told.
+
+/*    ,
+    lilypond,
+    writeln('Invoking TiMidity++...'),
+    system('timidity -iaqqq temp.midi 2>/dev/null &'),
+    system('sleep 1'),  % give timidity some startup time
+    writeln('Invoking GV...'),
+    system('gv -presentation temp.ps &').
+*/
+
+
+phase(output) <=> true, debugwriteln(foundCANDIDATE).
+
+%phase(X) <=> writeln(should_not_happen(X)).
+
+
+lilypond :-
+    writeln('Invoking GNU Lilypond...'),
+    system('lilypond temp.ly 2>/dev/null').
+%    system('lilypond temp.ly').
+%'
+
+header :-
+    writeln('\\version "2.12.1"').
+footer :-
+    writeln('\\score{'),
+    writeln('  <<'),
+    show_voice_footers,
+    writeln('  >>').
+
+:- chrism play_footer, show_footer.
+play \ play_footer <=> writeln('  \\midi {}').
+play_footer <=> true.
+show \ show_footer <=> writeln('  \\layout {}').
+show_footer <=> true.
+end_footer  :- writeln('}').
+
+:- chrism show_voice_footers.
+show_voice_footers, voice(V) ==> voice_footer(V).
+show_voice_footers <=> true.
+
+instrument(melody,I) \ voice_footer(melody) <=> write('    \\new Staff \\with {midiInstrument = #\"'),write(I),writeln('\"} \\Melody').
+instrument(chords,I) \ voice_footer(chords) <=> write('    \\new Staff \\with {midiInstrument = #\"'),write(I),writeln('\"} \\Chords').
+instrument(bass,I) \ voice_footer(bass) <=> write('    \\new Staff \\with {midiInstrument = #\"'),write(I),writeln('\"} \\Bass').
+
+voice_footer(melody) <=> writeln('    \\new Staff \\with {midiInstrument = #\"soprano sax\"} \\Melody').
+voice_footer(chords) <=> writeln('    \\new Staff \\with {midiInstrument = #\"acoustic guitar (steel)\"} \\Chords').
+voice_footer(bass) <=> writeln('    \\new Staff \\with {midiInstrument = #\"baritone sax\"} \\Bass').
+voice_footer(drums) <=> writeln('    \\new DrumStaff \\Drums').
+
+
+
+chaos(X,Chaos) :-
+        chaos_group(X,Names),
+        add_chaos(Names,Chaos).
+
+add_chaos([],_).
+add_chaos([Exp|Rest],Chaos) :-
+        findall(Exp-Vals,get_sw(Exp,[_,_,Vals]),List),
+        add_chaos2(List,Chaos),
+        add_chaos(Rest,Chaos).
+add_chaos2([],_).
+add_chaos2([Exp-Vals|Rest],Chaos) :-
+        length(Vals,N),
+        add_chaos(Vals,N,Chaos,NewVals),
+        debugwriteln(adding_chaos(Chaos,Exp,Vals,NewVals)),
+        set_sw(Exp,NewVals),
+        add_chaos2(Rest,Chaos).
+
+add_chaos([],_,_,[]).
+add_chaos([V|Vs],N,Chaos,[X|Xs]) :-
+        X is ((100-Chaos)*V + Chaos/N)/100,
+        add_chaos(Vs,N,Chaos,Xs).
+
+
+% include msw/2 declarations and set_sw/2 statements
+
+:- include(values).
+%:- include(distributions).
+:- include('gui/saved_parameters.pl').
+:- include('gui/param_tuning/save_params.pl').
+
+

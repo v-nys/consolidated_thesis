@@ -1,0 +1,3 @@
+../prism/bin/prism -g "[make],s5"
+../prism/bin/prism -g "[make],s4"
+./make

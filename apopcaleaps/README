@@ -1,0 +1,22 @@
+
+This tarball contains (parts of) the following software:
+
+  * APOPCALEAPS v0.3, (C) Jon Sneyers, K.U.Leuven, 2009-2010
+        a pop music generation program - learning has not been implemented yet
+        ---> to run this program, type "./apopcaleaps"
+
+  * CHRiSM v0.3, (C) Jon Sneyers, K.U.Leuven, 2009-2010
+        essentially syntactic sugar for CHR(PRISM)
+        ---> to run a CHRiSM program, type "./chrism <program>"
+
+  * Leuven CHR system, (C) Tom Schrijvers et al, K.U.Leuven, 2003-2009
+        efficient implementation of Constraint Handling Rules (CHR)
+
+  * PRISM 2.0 beta 1, (C) Sato Lab, Tokyo Institute of Technology, Aug 2009
+        probabilistic-logic programming language based on B-Prolog
+
+  * B-Prolog Version 7.2 #1, (C) Afany Software 1994-2008
+        an efficient Prolog system
+
+
+

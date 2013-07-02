@@ -1,0 +1,382 @@
+#!/bin/bash
+
+# Copyright 2009-2010, Jon Sneyers
+# 
+# This file is part of CHRiSM.
+# 
+# CHRiSM is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+# 
+# CHRiSM is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with CHRiSM.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+
+
+
+
+
+##############################################################################
+#
+# CHRiSM SHELL SCRIPT   - use this to run CHRiSM programs
+#
+##############################################################################
+
+# location of stuff
+CURRENTDIR=`pwd`
+cd `dirname $0`
+MYDIR=`pwd`
+cd $CURRENTDIR
+AUXDIR=$MYDIR/aux_chrism_files
+PRISM=$MYDIR/prism/bin/prism
+CHR=$MYDIR/leuven_chr_system
+ANALYSIS=$MYDIR/analysis
+
+# defaults
+QUIET=/dev/stdout
+VERBOSE=no
+KEEP=no
+FORCE=no
+NO_DEBUG=no
+TRANSLATE_ONLY=no
+
+
+usage() {
+    echo "Usage:"
+    echo "   chrism [options] <chrism-program>"
+    echo
+    echo "Options:"
+    echo "  -s, --speed         make (faster?) compiled code"
+    echo "  -d, --debug         make (slower?) interpreted code that works for debugging"
+    echo "  -h, --help          usage information"
+    echo "  --version           version information"
+    echo "  -k, --keep          keep intermediate files"
+    echo "  -r, --refresh       redo translation even if source did not change"
+    echo "  -t, --trans-only    only translate the program and exit"
+    echo "  -q, --quiet         do not display banner"
+    echo "  -v, --verbose       show output of conversion process"
+    exit 0
+}
+header() {
+    echo  "   ________    _____   _____ ___________      ___??    ________  ____    ____" >$QUIET
+    echo  "  /   ___  \   \   (___)   / \    ___   \    (. .)    / ______/  |   \  /   |" >$QUIET
+    echo  " /   /   \_/__  |   ___   |   |  |___)   )   _\-/_    \____  \   |    \/    |" >$QUIET
+    echo  " \   \_____/  \ |  (   )  |   |   ___   (   /|___|\  /\____\  \  |  (\__/)  |" >$QUIET
+    echo  "  \___________//____\ /____\ /____\  \___\  _|/ \|_ /_________/ /____\  /____\\">$QUIET
+    echo  "     CHRiSM 0.3 beta 10.06.11          (C) Jon Sneyers, K.U.Leuven, 2009-2010" >$QUIET
+}
+version() {
+    header
+}
+version2() {
+    echo
+    echo " CHRiSM 0.3, (C) Jon Sneyers, K.U.Leuven, 2009-2010"
+    echo " based on:"
+    echo "  * B-Prolog Version 7.2 #1, (C) Afany Software 1994-2008"
+    echo "  * PRISM 2.0 beta 1, (C) Sato Lab, Tokyo Institute of Technology, Aug 2009"
+    echo "  * Leuven CHR system, (C) Tom Schrijvers et al, K.U.Leuven, 2003-2009"
+}
+# errors during translation:
+error() {
+#   echo    "    ___    "
+    echo    "   (x x) "
+    echo    "  \_\O/_/   "
+    echo    "   |___|    CHRiSM: Error happened during translation:"
+    echo -n "  _|/ \|_     "
+    echo $@
+    echo
+}
+# other errors
+error2() {
+#   echo    "    ___ "
+    echo    "  /(o o) ??"
+    echo    "  \_\-/_    CHRiSM error:"
+    echo -n "   |___|)     "
+    echo $1
+    shift
+    echo -n "  _|/ \|_     "
+    echo $@
+    echo
+}
+syntax_error() {
+#   echo    "    ___    "
+    echo    "   (@ @) "
+    echo    "   _\~/_    "
+    echo    "  /|___|)   CHRiSM: Syntax error at this location:"
+    echo    "  _|/ \|_    "
+    echo    "            $@"
+    echo
+}
+happy() {
+#   echo    "    ___"
+    echo    "   (^ ^)  "
+    echo -n "   _\-/_      " ;    echo $@
+    echo    "  (|___|)   "
+    echo    "  _|/ \|_   "
+}
+kulchr_banner() {
+    echo
+    echo "Leuven CHR System, (C) Tom Schrijvers et al, K.U.Leuven, 2003-2009"
+}
+run_prism() {
+if [ "$NO_DEBUG" == "yes" ]
+then
+    $PRISM $INFILE.psm.out
+else
+#    echo
+#    echo "Use this command to load your program:"
+#    echo "      prism('$INFILE.psm')"
+    kulchr_banner
+#    $PRISM -g "set_prolog_flag(warning,off),prism('$INFILE.psm'),main_loop"
+    $PRISM -g "set_prolog_flag(warning,off),prism('$INFILE.psm'),\$bp_top_level"
+fi
+}
+
+
+if [[ $# -eq 0 ]]
+then
+        header
+        usage
+fi
+
+
+while [ $# -gt 0 ]           # loop over all parameters
+do
+    case "$1" in
+        --version)
+            version
+            version2
+            exit 0
+            ;;
+        -h)
+            usage
+            ;;
+        --help)
+            usage
+            ;;
+        -v)
+            VERBOSE=yes
+            shift
+            ;;
+        --verbose)
+            VERBOSE=yes
+            shift
+            ;;
+        --quiet)
+            QUIET=/dev/null
+            shift
+            ;;
+        -q)
+            QUIET=/dev/null
+            shift
+            ;;
+        --keep)
+            KEEP=yes
+            shift
+            ;;
+        -k)
+            KEEP=yes
+            shift
+            ;;
+        --reload)
+            FORCE=yes
+            shift
+            ;;
+        -r)
+            FORCE=yes
+            shift
+            ;;
+        -s)
+            NO_DEBUG=yes
+            shift
+            ;;
+        --sample)
+            NO_DEBUG=yes
+            shift
+            ;;
+        -d)
+            NO_DEBUG=no
+            shift
+            ;;
+        --debug)
+            NO_DEBUG=no
+            shift
+            ;;
+        -t)
+            TRANSLATE_ONLY=yes
+            shift
+            ;;
+        --trans-only)
+            TRANSLATE_ONLY=yes
+            shift
+            ;;
+        -*)
+            error2 "Unrecognized option: $1"
+            usage
+            shift
+            ;;
+        *)
+            PROGNAME=`basename $1 .chrism`
+            cd `dirname $1`
+            INFILE=`pwd`/$PROGNAME
+            cd $CURRENTDIR
+            shift
+            ;;
+    esac
+done
+
+if [ "$INFILE" == "" ]
+then
+        usage
+fi
+
+if [ -a "$INFILE.chrism" ]
+then
+    header
+    echo       "    ___"
+    echo -n -e "          -=[ Translating [$PROGNAME]: " >$QUIET
+else
+    echo    "    ___ "
+    error2 "Program input file not found" "  (looked here: '$INFILE')"
+    exit 0
+fi
+
+if [ "$VERBOSE" == "yes" ]
+then
+        LOGFILE=/dev/stderr
+        ERRFILE=/dev/stderr
+        NEWLINE="\n"
+else
+        LOGFILE=$INFILE.log
+        ERRFILE=$INFILE.err
+        NEWLINE=""
+fi
+
+if [ "$FORCE" == "no" -a "$INFILE.chrism" -ot "$INFILE.psm.out" ]
+then
+
+    echo "skipping, program not modified ]=-" >$QUIET
+    run_prism
+
+else
+
+echo -n -e "CHRiSM -> CHR$NEWLINE" >$QUIET
+
+$PRISM -g "cl('$MYDIR/chrism'),chrism_compile('$INFILE.chrism','$INFILE.chr'), halt" >$LOGFILE
+
+
+if [ -a "chrism_fatal_error" ]
+then
+        echo >/dev/stderr
+        error `cat chrism_fatal_error` >/dev/stderr
+        rm chrism_fatal_error
+        exit 1
+fi
+if [ -a "chrism_syntax_error" ]
+then
+        echo -e -n " (error) ]=-\r" >/dev/stderr
+        syntax_error `tail -n 1 chrism_syntax_error` >/dev/stderr
+        rm chrism_syntax_error
+        exit 1
+fi
+
+echo -n -e " -> CHR$NEWLINE" >$QUIET
+
+cat $AUXDIR/chr_header.pl $INFILE.chr $AUXDIR/chr_footer.pl > $INFILE-1.chr
+if [ "$KEEP" == "no" ]
+then
+        rm $INFILE.chr
+fi
+
+if [ -a "$INFILE-1.psm" ]
+then
+    rm $INFILE-1.psm
+fi
+
+
+# Future work: automated analysis for result-directed execution
+#cd $ANALYSIS
+#$PRISM make.out -g "chr_compile('$INFILE-1.chr','$INFILE-1.psm')" >$LOGFILE.foo 2>$ERRFILE
+
+
+echo -n -e " -> PRISM$NEWLINE" >$QUIET
+
+cd $CHR
+#$PRISM -g "cl('make'),chr_compile('$INFILE-1.chr','$INFILE-1.psm')" >$LOGFILE 2>$ERRFILE
+$PRISM make.out -g "chr_compile('$INFILE-1.chr','$INFILE-1.psm'), halt" >$LOGFILE 2>$ERRFILE
+cd $CURRENTDIR
+
+if [ -a "$INFILE-1.psm" ]
+then
+    cd $CURRENTDIR
+    # (nop)
+else
+    echo -n -e " (error) ]=-\r" >/dev/stderr
+    if [ "$VERBOSE" == "yes" ]
+    then
+        error "A fatal error happened during CHR compilation - check above" >/dev/stderr
+    else
+        error "A fatal error happened during CHR compilation - check below:" >/dev/stderr
+        cat $LOGFILE >/dev/stderr
+        cat $ERRFILE >/dev/stderr
+    fi
+    exit 1
+fi
+
+echo -n -e " -> B-Prolog$NEWLINE" >$QUIET
+
+if [ "$NO_DEBUG" == "yes" ]
+then
+    CHRISM_DEFS=chrism_defs_sampling.pl
+else
+    CHRISM_DEFS=chrism_defs_learning.pl
+fi
+
+cat  $AUXDIR/chr_aux_preds.pl $AUXDIR/$CHRISM_DEFS  $INFILE-1.psm> $INFILE.psm
+
+if [ "$KEEP" == "no" ]
+then
+        rm $INFILE-1.chr
+        rm $INFILE-1.psm
+fi
+
+
+
+if [ "$NO_DEBUG" == "yes" ]
+then
+    $PRISM -g "prism('$INFILE.psm'), halt" >$LOGFILE
+fi
+
+echo -n -e " ]=-\r"  >$QUIET
+happy "Done!" >$QUIET
+
+if [ "$TRANSLATE_ONLY" == "no" ]
+then
+run_prism
+else
+    $PRISM -g "set_prolog_flag(warning,off),prism('$INFILE.psm'), halt"
+fi
+
+
+if [ "$KEEP" == "no" ]
+then
+#        rm $INFILE.psm
+#        rm $INFILE.psm.out
+        if [ "$VERBOSE" == "no" ]
+        then
+                rm $LOGFILE
+                rm $ERRFILE
+        fi
+fi
+
+
+
+fi

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# location of stuff
+CURRENTDIR=`pwd`
+cd `dirname $0`
+MYDIR=`pwd`
+cd $CURRENTDIR
+PRISM=$MYDIR/prism/bin/prism
+
+
+$PRISM $@

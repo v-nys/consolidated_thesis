@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% simple constraint solver for inequalities between variables
+%% thom fruehwirth ECRC 950519, LMU 980207, 980311
+%%
+%% ported to hProlog by Tom Schrijvers 
+
+:- module(leq,[main/0,main/1]).
+:- use_module(library(chr)).
+:- chr_option(debug,off).
+:- chr_option(optimize,full).
+
+:- constraints leq/2.
+reflexivity  @ leq(X,X) <=> true.
+antisymmetry @ leq(X,Y), leq(Y,X) <=> X = Y.
+idempotence  @ leq(X,Y) \ leq(X,Y) <=> true.
+transitivity @ leq(X,Y), leq(Y,Z) ==> % writeln((leq(X,Y),leq(Y,Z)==>leq(X,Z))),
+                   leq(X,Z).
+
+main :-
+	main(60).
+%	main(15).
+
+main(N):-
+	cputime(X),
+	length(L,N),
+       genleq(L,Last,Eqs),
+       geneq(Eqs),
+	L=[First|_],
+	leq(Last,First),
+       writeln(L),
+	cputime( Now),
+	Time is Now-X,
+	write(bench(leq ,N,Time,0,bp_ar)), write('.'),nl.
+
+genleq([Last],Last,[]) :- ! .
+genleq([X,Y|Xs],Last,[(Y1,Y)|Eqs]):-
+	leq(X,Y1),
+	genleq([Y|Xs],Last,Eqs).
+
+geneq([]):-!.
+geneq([(X,X)|Eqs]):-
+    geneq(Eqs).
+
+cputime(X):-X is cputime.

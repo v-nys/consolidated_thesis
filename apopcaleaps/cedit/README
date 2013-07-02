@@ -1,0 +1,16 @@
+
+If you happen to use cedit, the internal file editor of Midnight Commander,
+then you may want to use the syntax highlighting for CHRiSM.
+Install it by copying the file "prolog.syntax" to ~/.mc/cedit/,
+and then adding the following two lines to the file ~/.mc/cedit/Syntax :
+
+-------------------------------------------------------------          
+file ..\*\\.(pl|chr|psm|chrism)$ Prolog\sprogram
+include prolog.syntax
+-------------------------------------------------------------          
+
+
+The syntax highlighting is not perfect but it is better than nothing.
+Also you may want to adjust the colors of your terminal, because I'm
+using a quite nonstandard color scheme and if you're using the default,
+things are gonna look ugly.
