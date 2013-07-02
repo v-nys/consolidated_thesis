@@ -303,7 +303,7 @@ cleanup \ resultmchord(_,_) <=> debugwriteln('DEBUG: cleaning up resultmchord'),
 initial <=> phase(select_chords).
 
 % Note that this can only be triggered if the "initial" constraint is used!
-phase(select_chords) <=> chord_scheme(a) : 0.5 ; chord_scheme(b) : 0.5.
+phase(select_chords) <=> chord_scheme(a).
 
 chord_scheme(X) ==> debugwrite('DEBUG: chord scheme: '),
                     debugwriteln(X).
@@ -311,21 +311,11 @@ chord_scheme(X) ==> debugwrite('DEBUG: chord scheme: '),
 % make it easy to determine the order between unspecified measures
 % unspecified_successor(0,X) gives the first unspecified measure, max_unspecified gives the last (requires input!)
 % V: note that this must be reset later on when measures are duplicated
-unspecified_measure(M) ==> debugwrite('DEBUG: '),
-                           debugwriteln(unspecified_successor(0,M)),
-                           unspecified_successor(0,M).
 
-unspecified_successor(A,B) \ unspecified_successor(A,C) <=> B<C | debugwrite('DEBUG: removing constraint: '),
-                                                                  debugwriteln(unspecified_successor(A,C)),
-                                                                  true.
-
+unspecified_measure(M) ==> unspecified_successor(0,M).
+unspecified_successor(A,B) \ unspecified_successor(A,C) <=> B<C | true.
 unspecified_measure(A), unspecified_measure(B) ==> A<B | unspecified_successor(A,B).
-
-unspecified_successor(X,Y) \ max_unspecified(X) <=> debugwrite('DEBUG: removing constraint:'),
-                                                    debugwriteln(max_unspecified(X)),
-                                                    debugwrite('DEBUG: '),
-                                                    debugwriteln(max_unspecified(Y)),
-                                                    max_unspecified(Y).
+unspecified_successor(X,Y) \ max_unspecified(X) <=> max_unspecified(Y).
 
 measure(1), key(major) \ chord_scheme(a) <=> debugwriteln('DEBUG: using first major progression'),
                                              theme_boundary(u,8),
@@ -527,16 +517,12 @@ first_theme_end(_,_) \ phase(first_theme_occurrences), all_occurrences, all_dupl
 %---------end transposition phase: first theme occurrences-----------------%
 
 %------------transposition phase: remove old beat structure----------------%
-phase(removing_old_structure), duplicated_measure(M) \ beat(A,M,B,C,D) <=> debugwrite('DEBUG: removing: '), debugwriteln(beat(A,M,B,C,D)).
-phase(removing_old_structure), duplicated_measure(M) \ next_beat(A,M,B,C,D,E,F) <=> debugwrite('DEBUG: removing: '), debugwriteln(next_beat(A,M,B,C,D,E,F)).
+phase(removing_old_structure), duplicated_measure(M) \ beat(A,M,B,C,D) <=> debugwrite('REMOVING: '), debugwriteln(beat(A,M,B,C,D)).
+phase(removing_old_structure), duplicated_measure(M) \ next_beat(A,M,B,C,D,E,F) <=> debugwrite('REMOVING: '), debugwriteln(next_beat(A,M,B,C,D,E,F)).
 % note: next_beat for the preceding measure is *not* removed, because first beat of a measure always starts at (0,0)
 %--------end transposition phase: remove old beat structure----------------%
 
 phase(split_beats(_)) \ phase(removing_old_structure) <=> true.
-
-max_unspecified(X) ==> debugwrite('DEBUG: MAX:'), debugwriteln(max_unspecified(X)).
-
-phase(split_beats(X)), max_unspecified(X) ==> true.
 
 measures(N) ==> debugwriteln('[MUSIC GENERATOR] startup'), 
                 make_measures(N).
@@ -570,16 +556,12 @@ split_beat(V) ?? meter(_,OD), phase(split_beats(M)),
 
 
 %------------transposition phase: copy beat structure----------------------%
-% note: this has to occur before beat joining because notes are instantiated before joining
-% how to make sure this really executes before transition to note making phase??
-max_unspecified(M), phase(split_beats(M)), first_theme_occurrence(N,T,R,M2), first_theme_occurrence(N,T,0,M3), beat(V,M3,C,F,D) ==> debugwrite('DEBUG: adding: '), debugwriteln(beat(V,M2,C,F,D)), beat(V,M2,C,F,D).
-
-max_unspecified(M), phase(split_beats(M)),
-first_theme_occurrence(N,T,R,M2), first_theme_occurrence(N,T,0,M3), next_beat(V,M3,C,F,M4,C2,F2) ==> D is M4-M3, M5 is M2+D | debugwrite('DEBUG: adding: '), debugwriteln(next_beat(V,M2,C,F,M5,C2,F2)), next_beat(V,M2,C,F,M5,C2,F2).
+max_unspecified(M), phase(split_beats(M)), first_theme_occurrence(N,T,R,M2), first_theme_occurrence(N,T,0,M3), beat(V,M3,C,F,D) ==> beat(V,M2,C,F,D).
+max_unspecified(M), phase(split_beats(M)), first_theme_occurrence(N,T,R,M2), first_theme_occurrence(N,T,0,M3), next_beat(V,M3,C,F,M4,C2,F2) ==> D is M4-M3, M5 is M2+D | next_beat(V,M2,C,F,M5,C2,F2).
 %--------end transposition phase: copy beat structure----------------------%
 
 
-max_unspecified(M) \ phase(split_beats(M)) <=> debugwriteln('DEBUG: making notes.'), phase(make_notes).
+max_unspecified(M) \ phase(split_beats(M)) <=> phase(make_notes).
 
 unspecified_successor(M,M1) \ phase(split_beats(M)) <=> phase(split_beats(M1)).
 
@@ -600,9 +582,6 @@ range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
     <=> Note \== r, note_above(Note,UN) | wfail(high). %UO1 is UO-1, octave(V,M,N,X,UO1).
 octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
 
-% V: 2/4
-% kan zijn dat dit interessant is, kan zijn van niet -> fases worden uitdrukkelijk gebruikt...
-%/*
 % check max_jump constraint - fail (and backtrack) if it is violated
 phase(make_notes),
 max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
@@ -657,8 +636,7 @@ make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
 make_notes_measure(M), beat(V,M,N,X,D), mchord(M,C),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
     V \== drums, V \== chords |
-    debugwrite('DEBUG: Making note for measure '),
-    debugwriteln(M),
+    debugwriteln('DEBUG: Making notes for some measure'),
     abstract_beat(M,N,X,AB),
     soft_msw(note_choice(V,AB),ANote),
     debugwriteln(picked(note_choice(V,AB),ANote)),
