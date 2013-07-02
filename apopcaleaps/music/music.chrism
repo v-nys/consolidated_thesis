@@ -303,7 +303,7 @@ cleanup \ resultmchord(_,_) <=> debugwriteln('DEBUG: cleaning up resultmchord'),
 initial <=> phase(select_chords).
 
 % Note that this can only be triggered if the "initial" constraint is used!
-phase(select_chords) <=> chord_scheme(a).
+phase(select_chords) <=> chord_scheme(a) : 0.5 ; chord_scheme(b) : 0.5.
 
 chord_scheme(X) ==> debugwrite('DEBUG: chord scheme: '),
                     debugwriteln(X).
@@ -365,8 +365,8 @@ measure(1), key(minor) \ chord_scheme(a) <=> debugwriteln('DEBUG: using first mi
                                              theme_boundary(a,0),
                                              mchord(1,am),
                                              mchord(2,am),
-                                             mchord(3,am),
-                                             mchord(4,am),
+                                             mchord(3,dm),
+                                             mchord(4,dm),
                                              mchord(5,dm),
                                              mchord(6,dm),
                                              mchord(7,am),
