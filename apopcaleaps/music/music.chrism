@@ -303,7 +303,7 @@ cleanup \ resultmchord(_,_) <=> debugwriteln('DEBUG: cleaning up resultmchord'),
 initial <=> phase(select_chords).
 
 % Note that this can only be triggered if the "initial" constraint is used!
-phase(select_chords) <=> chord_scheme(a).
+phase(select_chords) <=> chord_scheme(a) : 0.5 ; chord_scheme(b) : 0.5.
 
 chord_scheme(X) ==> debugwrite('DEBUG: chord scheme: '),
                     debugwriteln(X).
@@ -370,14 +370,11 @@ measure(1), key(major) \ chord_scheme(b) <=> debugwriteln('DEBUG: using second m
 
 measure(1), key(minor) \ chord_scheme(a) <=> debugwriteln('DEBUG: using first minor progression'),
                                              theme_boundary(u,6),
-                                             theme_boundary(b,5),
                                              theme_boundary(b,4),
-                                             theme_boundary(b,3),
-                                             theme_boundary(u,2),
-                                             theme_boundary(a,1),
+                                             theme_boundary(a,2),
                                              theme_boundary(a,0),
                                              mchord(1,am),
-                                             mchord(2,dm),
+                                             mchord(2,am),
                                              mchord(3,am),
                                              mchord(4,am),
                                              mchord(5,dm),
@@ -537,9 +534,6 @@ phase(removing_old_structure), duplicated_measure(M) \ next_beat(A,M,B,C,D,E,F) 
 
 phase(split_beats(_)) \ phase(removing_old_structure) <=> true.
 
-% V: test to see why this stops when beats in measure 13 should be split
-phase(split_beats(M)) ==> M is 13 | debugwriteln('DEBUG: HELP!').
-
 max_unspecified(X) ==> debugwrite('DEBUG: MAX:'), debugwriteln(max_unspecified(X)).
 
 phase(split_beats(X)), max_unspecified(X) ==> true.
@@ -640,22 +634,10 @@ note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X), octave(V,M,N,X,NO) ==>
 
 % restrict notes to the scale of the main chord (C or Am)
 
-% onefficiente formulering (introduceert exponentieel aantal redundante verklaringen):
 scale(V) ?? phase(make_notes), note(V,M,N,X,Note) ==> V \== drums, V \== chords |
                         debugwriteln(checking_scale(V,M,N,X,Note)),
                         member(Note,[r,c,d,e,f,g,a,b]),
                         debugwriteln(ok).
-
-% betere formulering:
-%phase(make_notes), note(V,M,N,X,Note) ==> V \== drums, V \== chords |
-%                        debugwriteln(checking_scale(V,M,N,X,Note)),
-%                        (member(Note,[r,c,d,e,f,g,a,b]) ->
-%                                true
-%                        ;
-%                                msw(scale(V),no)
-%                        ),
-%                        debugwriteln(ok).
-
 
 phase(make_notes), unspecified_successor(0,X) ==> make_notes_measure(X).
 
@@ -672,11 +654,11 @@ make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
     note(V,1,0,0,Note).
 
 % choose next note and octave
-% V: note the use of octave and next_beat constraints...
 make_notes_measure(M), beat(V,M,N,X,D), mchord(M,C),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
     V \== drums, V \== chords |
-    debugwriteln('DEBUG: Making notes for some measure'),
+    debugwrite('DEBUG: Making note for measure '),
+    debugwriteln(M),
     abstract_beat(M,N,X,AB),
     soft_msw(note_choice(V,AB),ANote),
     debugwriteln(picked(note_choice(V,AB),ANote)),
@@ -691,7 +673,15 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
     ).
 
 %--------transposition phase: copy and instantiate anotes----%
-first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2), anote(V,M,Count,F,Anote), mchord(M2,Chord) ==> R > 0 | anote(V,M2,Count,F,Anote), pick_concrete_note(V,Chord,Anote,Note), note(V,M2,Count,F,Note).
+first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2),
+octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M2,Count,F),
+anote(V,M,Count,F,Anote), mchord(M2,Chord) ==>
+    R > 0 | anote(V,M2,Count,F,Anote), pick_concrete_note(V,Chord,Anote,Note), note(V,M2,Count,F,Note),% octave(V,M2,Count,F,OO).
+    (Note == r ->
+        octave_d(V,M2,Count,F,0)
+    ;
+        find_octave_d(V,M2,Count,F,OO)
+    ).
 %----end transposition phase: copy and instantiate anotes----%
 
 range(V,_,Lower,_,Upper) \ find_octave_d(V,M,N,X,OO) <=>
