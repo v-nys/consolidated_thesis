@@ -605,6 +605,7 @@ note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
  
 % maintain same_note_counter
 phase(make_notes),
+unspecified_measure(M1), unspecified_measure(M),
 octave(V,M1,N1,X1,Octave), note(V,M1,N1,X1,Note), next_beat(V,M1,N1,X1,M,N,X),
 octave(V,M,N,X,NOctave), note(V,M,N,X,NNote) \ same_note_counter(V,M1,N1,X1,Count) <=>
     (Octave == NOctave, Note == NNote ->
