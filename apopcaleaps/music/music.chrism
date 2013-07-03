@@ -652,6 +652,9 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
     ).
 
 %--------transposition phase: copy and instantiate anotes----%
+% original occurrence of theme measure in M
+% repeated occurrence of theme measure in M2
+% octave preceding a note in M2 is known
 first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M2,Count,F),
 anote(V,M,Count,F,Anote), mchord(M2,Chord) ==>
@@ -684,6 +687,7 @@ phase(make_notes), beat(drums,M,N,X,D), unspecified_measure(M) ==>
     debugwriteln(msw(drum_choice(AB),Note)),
     note(drums,M,N,X,Note).
 
+% treat duplicated measures same as unspecified for this purpose: melody is main focus
 phase(make_notes), beat(drums,M,N,X,D), duplicated_measure(M) ==>
     abstract_beat(M,N,X,AB), 
     msw(drum_choice(AB),Note), 
