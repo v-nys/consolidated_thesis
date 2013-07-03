@@ -580,7 +580,7 @@ unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangec
     <=> Note \== r, note_below(Note,LN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(low). %LO1 is LO+1, octave(V,M,N,X,LO1).
 unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
     <=> Note \== r, note_above(Note,UN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(high). %UO1 is UO-1, octave(V,M,N,X,UO1).
-octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
+unspecified_measure(M) \ octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
 
 % check max_jump constraint - fail (and backtrack) if it is violated
 % should only apply to measures that have not yet been fully specified - predefined structure takes precedence
@@ -604,6 +604,7 @@ note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
     interval(ON,OO,NN,NO,Int), Int < -MInt | debugwrite('DEBUG: '), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)), wfail(jumpdown(Int)).
  
 % maintain same_note_counter
+% note that this is only maintained for unspecified measures - specified measures are considered pregenerated phrases
 phase(make_notes),
 unspecified_measure(M1), unspecified_measure(M),
 octave(V,M1,N1,X1,Octave), note(V,M1,N1,X1,Note), next_beat(V,M1,N1,X1,M,N,X),
