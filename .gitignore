@@ -1,4 +1,8 @@
 data
+
+apopcaleaps/music/music-1.chr
+apopcaleaps/music/music.err
+
 python_env/bin
 python_env/build
 python_env/include
