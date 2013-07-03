@@ -593,10 +593,12 @@ octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
 
 phase(make_notes),
 max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
+unspecified_measure(M1), unspecified_measure(M),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
     interval(ON,OO,NN,NO,Int), Int > MInt | debugwrite('DEBUG: '), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)), wfail(jumpup(Int)).
 
 phase(make_notes),
+unspecified_measure(M1), unspecified_measure(M),
 max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
     interval(ON,OO,NN,NO,Int), Int < -MInt | debugwrite('DEBUG: '), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)), wfail(jumpdown(Int)).
