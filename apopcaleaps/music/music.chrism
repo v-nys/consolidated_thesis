@@ -574,23 +574,23 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) \ octave_d(V,M,N,X,Delta) <=>
     NO is OO+Delta, octave_rangecheck(V,M,N,X,NO).
 
 % clip octave to the required voice range
-range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | wfail(lowO), debugwriteln(octave_rangecheck(V,M,N,X,O)). %octave(V,M,N,X,LO).
-range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | wfail(highO), debugwriteln(octave_rangecheck(V,M,N,X,O)). %octave(V,M,N,X,UO).
+range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(lowO). %octave(V,M,N,X,LO).
+range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(highO). %octave(V,M,N,X,UO).
 range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,LO)
-    <=> Note \== r, note_below(Note,LN) | wfail(low), debugwriteln(octave_rangecheck(V,M,N,X,O)). %LO1 is LO+1, octave(V,M,N,X,LO1).
+    <=> Note \== r, note_below(Note,LN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(low). %LO1 is LO+1, octave(V,M,N,X,LO1).
 range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
-    <=> Note \== r, note_above(Note,UN) | wfail(high), debugwriteln(octave_rangecheck(V,M,N,X,O)). %UO1 is UO-1, octave(V,M,N,X,UO1).
+    <=> Note \== r, note_above(Note,UN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(high). %UO1 is UO-1, octave(V,M,N,X,UO1).
 octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
 
 % check max_jump constraint - fail (and backtrack) if it is violated
 phase(make_notes),
 max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
-    interval(ON,OO,NN,NO,Int), Int > MInt | wfail(jumpup(Int)), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)).
+    interval(ON,OO,NN,NO,Int), Int > MInt | debugwrite('DEBUG: '), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)), wfail(jumpup(Int)).
 phase(make_notes),
 max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
-    interval(ON,OO,NN,NO,Int), Int < -MInt | wfail(jumpdown(Int)), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)).
+    interval(ON,OO,NN,NO,Int), Int < -MInt | debugwrite('DEBUG: '), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)), wfail(jumpdown(Int)).
 
 % maintain same_note_counter
 phase(make_notes),
