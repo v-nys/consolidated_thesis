@@ -636,7 +636,8 @@ make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
 make_notes_measure(M), beat(V,M,N,X,D), mchord(M,C),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
     V \== drums, V \== chords |
-    debugwriteln('DEBUG: Making notes for some measure'),
+    debugwrite('DEBUG: Making notes for measure'),
+    debugwriteln(make_notes_measure(M)),
     abstract_beat(M,N,X,AB),
     soft_msw(note_choice(V,AB),ANote),
     debugwriteln(picked(note_choice(V,AB),ANote)),
