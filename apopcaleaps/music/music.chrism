@@ -671,12 +671,14 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
 first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M2,Count,F),
 anote(V,M,Count,F,Anote), mchord(M2,Chord) ==>
-    R > 0 | anote(V,M2,Count,F,Anote), pick_concrete_note(V,Chord,Anote,Note), note(V,M2,Count,F,Note),% octave(V,M2,Count,F,OO).
-    (Note == r ->
-        octave_d(V,M2,Count,F,0)
-    ;
-        find_octave_d(V,M2,Count,F,OO)
-    ).
+    R > 0 | debugwriteln('copying abstract note'), debugwriteln(anote(V,M,Count,F,Anote)),
+            anote(V,M2,Count,F,Anote), pick_concrete_note(V,Chord,Anote,Note),
+            note(V,M2,Count,F,Note), octave(V,M2,Count,F,OO).
+%    (Note == r ->
+%        octave_d(V,M2,Count,F,0)
+%    ;
+%        find_octave_d(V,M2,Count,F,OO)
+%    ).
 %----end transposition phase: copy and instantiate anotes----%
 
 range(V,_,Lower,_,Upper) \ find_octave_d(V,M,N,X,OO) <=>
