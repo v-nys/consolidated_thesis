@@ -571,16 +571,19 @@ max_repeat(V,_), voice(V) ==> same_note_counter(V,1,0,0,0).
 
 % compute next octave given previous and delta
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) \ octave_d(V,M,N,X,Delta) <=>
+    debugwrite('Computing next octave given following: '),
+    debugwrite(octave(V,M1,N1,X1,OO)),
+    debugwriteln(octave_d(V,M,N,X,Delta)),
     NO is OO+Delta, octave_rangecheck(V,M,N,X,NO).
 
 % clip octave to the required voice range
-unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(lowO). %octave(V,M,N,X,LO).
-unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(highO). %octave(V,M,N,X,UO).
-unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,LO)
+range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(lowO). %octave(V,M,N,X,LO).
+range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(highO). %octave(V,M,N,X,UO).
+range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,LO)
     <=> Note \== r, note_below(Note,LN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(low). %LO1 is LO+1, octave(V,M,N,X,LO1).
-unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
+range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
     <=> Note \== r, note_above(Note,UN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(high). %UO1 is UO-1, octave(V,M,N,X,UO1).
-unspecified_measure(M) \ octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
+octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
 
 % check max_jump constraint - fail (and backtrack) if it is violated
 % should only apply to measures that have not yet been fully specified - predefined structure takes precedence
