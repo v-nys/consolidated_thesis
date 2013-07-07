@@ -654,8 +654,8 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
     abstract_beat(M,N,X,AB),
     soft_msw(note_choice(V,AB),ANote),
     debugwriteln(picked(note_choice(V,AB),ANote)),
+
     pick_concrete_note(V,C,ANote,Note),
-    debugwriteln(concrete_note(V,C,ANote,Note)),
     anote(V,M,N,X,ANote),
     note(V,M,N,X,Note),
     (Note == r ->
@@ -672,18 +672,21 @@ first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M2,Count,F),
 anote(V,M,Count,F,Anote), mchord(M2,Chord) ==>
     R > 0 | debugwriteln('copying abstract note'), debugwriteln(anote(V,M,Count,F,Anote)),
-            anote(V,M2,Count,F,Anote), pick_concrete_note(V,Chord,Anote,Note),
-            note(V,M2,Count,F,Note), octave(V,M2,Count,F,OO).
-%    (Note == r ->
-%        octave_d(V,M2,Count,F,0)
-%    ;
-%        find_octave_d(V,M2,Count,F,OO)
-%    ).
+            pick_concrete_note(V,Chord,Anote,Note),
+            anote(V,M2,Count,F,Anote),
+            note(V,M2,Count,F,Note),
+            (Note == r ->
+                octave_d(V,M2,Count,F,0)
+            ;
+                find_octave_d(V,M2,Count,F,OO)
+            ).
 %----end transposition phase: copy and instantiate anotes----%
 
 range(V,_,Lower,_,Upper) \ find_octave_d(V,M,N,X,OO) <=>
     octave_compare(Lower,OO,Upper,Position),
     soft_msw(octave_choice(Position),Octave_Delta),
+    debugwrite('DEBUG: removing: '),
+    debugwriteln(find_octave_d(V,M,N,X,00)),
     debugwriteln(octave_choice(Position,Octave_Delta)),
     octave_d(V,M,N,X,Octave_Delta).
 find_octave_d(V,M,N,X,OO) <=> writeln(oops-no-range-for(V)).
