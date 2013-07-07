@@ -627,6 +627,9 @@ phase(make_notes),max_repeat(V,N), same_note_counter(V,A,B,C,N) <=> wfail(repeat
 % approach notes should be followed by a note that is nearby (at most 2 half tones distance)
 octave(V,M1,N1,X1,OO), anote(V,M1,N1,X1,approach), note(V,M1,N1,X1,ON),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X), octave(V,M,N,X,NO) ==>
+    debugwriteln('Rule involving approach notes'),
+    debugwriteln(anote(V,M1,N1,X1,approach)),
+    debugwriteln(next_beat(V,M1,N1,X1,M,N,X)),
     interval(ON,OO,NN,NO,Int), Int >= -2, Int =< 2.
 
 % restrict notes to the scale of the main chord (C or Am)
