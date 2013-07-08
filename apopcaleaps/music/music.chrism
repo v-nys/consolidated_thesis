@@ -694,7 +694,9 @@ anote(V,M,Count,F,Anote), mchord(M2,Chord) ==>
 %--------transposition phase: derive octave deltas-----------%
 
 % for initial beat, search as before
-derive_octave_d(V,M,C,F,OO) <=> C is 0, F is 0 | find_octave_d(V,M,C,F,OO).
+first_theme_occurrence(N,T,0,M1),
+first_theme_occurrence(N,T,R,M) \
+derive_octave_d(V,M,C,F,OO) <=> R > 0, N is 1, C is 0, F is 0 | find_octave_d(V,M,C,F,OO).
 
 % for anything other than initial beat, derive based on previous info
 first_theme_occurrence(N,T,R,M2),
