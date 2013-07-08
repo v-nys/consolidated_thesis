@@ -676,6 +676,7 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
 % original occurrence of theme measure in M
 % repeated occurrence of theme measure in M2
 % octave preceding a note in M2 is known
+:- chrism derive_octave_d/5.
 first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M2,Count,F),
 anote(V,M,Count,F,Anote), mchord(M2,Chord) ==>
@@ -686,18 +687,23 @@ anote(V,M,Count,F,Anote), mchord(M2,Chord) ==>
             (Note == r ->
                 octave_d(V,M2,Count,F,0)
             ;
-                derive_octave_d(V,M2,Count,F)
+                derive_octave_d(V,M2,Count,F,OO)
             ).
 %----end transposition phase: copy and instantiate anotes----%
 
 %--------transposition phase: derive octave deltas-----------%
-first_theme_occurrence(N,T,0,M),
+
+% for initial beat, search as before
+derive_octave_d(V,M,C,F,OO) <=> C is 0, F is 0 | find_octave_d(V,M,C,F,OO).
+
+% for anything other than initial beat, derive based on previous info
 first_theme_occurrence(N,T,R,M2),
 octave(V,M,Count,F,Octave),
 next_beat(V,M1,N1,X1,M,Count,F),
 octave(V,M1,N1,X1,Octave1) \
-derive_octave_d(V,M2,Count,F) <=>
-Delta is Octave - Octave1 | octave_d(V,M2,Count,F,Delta).
+derive_octave_d(V,M2,Count,F,_) <=>
+R > 0, Delta is Octave - Octave1 | debugwriteln('Copying octave delta'), octave_d(V,M2,Count,F,Delta).
+
 %----end-transposition phase: derive octave deltas-----------%
 
 
