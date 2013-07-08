@@ -677,6 +677,7 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
 % original occurrence of theme measure in M
 % repeated occurrence of theme measure in M2
 % octave preceding a note in M2 is known
+% instead of trying octave deltas probabilistically, we derive them from earlier deltas
 :- chrism derive_octave_d/5.
 first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M2,Count,F),
