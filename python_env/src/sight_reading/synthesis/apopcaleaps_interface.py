@@ -229,7 +229,7 @@ def _parse_themes(result_path):
     return result_dict
 
 
-def _generate_with_test(gui_subpath, gui_path, total_measures, measure_num):
+def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num):
     r"""
     Generate a piece that satisfies supplied constraints.
 
@@ -248,6 +248,9 @@ def _generate_with_test(gui_subpath, gui_path, total_measures, measure_num):
         goal = _construct_goal(gui_subpath, total_measures, initial=True)
         _process_goal(goal, gui_subpath, gui_path,
                       'measure-{measure_num}'.format(measure_num=measure_num))
+    # TODO need to know about theme constraints here, rather than construct_goal
+    # reason is that we need to decide what to recycle in function of themes
+
 
 
 def compose(music_path):
@@ -257,8 +260,9 @@ def compose(music_path):
     """
     gui_path = os.path.join(music_path, 'gui')
     gui_subpath = functools.partial(os.path.join, gui_path)
+    result_path = gui_subpath(RESULT_FN)
     total_measures = 13
     _cleanup(gui_subpath, gui_path)
     for measure_num in range(1, total_measures + 1):
         # auxiliary function checks which steps need to be taken
-        _generate_with_test(gui_subpath, gui_path, total_measures, measure_num) 
+        _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num) 
