@@ -246,7 +246,8 @@ def _generate_with_test(gui_subpath, gui_path, total_measures, measure_num):
     # TODO incorporate "supplied constraints" mentioned in doc
     if measure_num == 1:
         goal = _construct_goal(gui_subpath, total_measures, initial=True)
-        _process_goal(goal, gui_subpath, gui_path, 'structure')
+        _process_goal(goal, gui_subpath, gui_path,
+                      'measure-{measure_num}'.format(measure_num=measure_num))
 
 
 def compose(music_path):
