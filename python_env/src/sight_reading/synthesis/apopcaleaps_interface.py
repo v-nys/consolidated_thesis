@@ -200,17 +200,6 @@ def _process_goal(goal, gui_subpath, gui_path, name):
     shutil.copy(midi_path, gui_subpath(name + '.midi'))
 
 
-def _generate_structure(gui_subpath, gui_path, total_measures):
-    r"""
-    Perform an APOPCALEAPS run which will generate the structure for
-    a new piece.
-
-    Specifically, make sure that theme boundaries and underlying
-    chords are generated.
-    """
-    goal = _construct_goal(gui_subpath, total_measures, initial=True)
-    _process_goal(goal, gui_subpath, gui_path, 'structure')
-
 def _parse_themes(result_path):
     r"""
     Scan the results of an initial run of APOPCALEAPS.
@@ -240,49 +229,24 @@ def _parse_themes(result_path):
     return result_dict
 
 
-def _generate_undefined_themes(gui_subpath, gui_path, total_measures):
+def _generate_with_test(gui_subpath, gui_path, total_measures, measure_num):
     r"""
-    Generate measures that are not structured as a theme.
+    Generate a piece that satisfies supplied constraints.
 
-    Takes the measures to be generated as input.
-    """ 
-    for measure in range(1, total_measures + 1):
-        remaining = range(measure, total_measures + 1)
-        goal = _construct_goal(gui_subpath,
-                               total_measures,
-                               unspecified = remaining)
-        _process_goal(goal, gui_subpath, gui_path, str(measure))
-        shutil.copyfile(gui_subpath(RESULT_FN),
-                        gui_subpath('{measure}-undefined.result'.format(**locals())))
+    Specifically, recycle information from measures < `measure_num`.
+    Also recycle information from duplicated measures >= `measure_num`
+    if the last measure of the first repetition of the theme under
+    consideration < `measure_num`.
 
-
-def _generate_defined_themes(themes, gui_subpath, gui_path, total_measures):
-    r"""
-    Generate measures that are structured as a theme.
-
-    `themes` is a dictionary-like object that maps named themes to an
-    ordered sequence of "runs" defining which measures are generated in
-    function of the theme, e.g.
-    {'a' : [(1, 1), (2, 2)],
-     'b' : [(3, 6), (7, 10)],
-     'u' : [(11, 11), (12, 12), (13, 13)]}
-    This indicates that the first two measures have the same structure,
-    as do measures 3 through 6 and 7 through 10, while the rest is
-    unstructured, i.e. there is no connection between these single-measure
-    runs.
+    If a generated piece does not meet the supplied constraints,
+    this function will try to generate the new measure again.
+    Therefore, it will eventually return as long as the supplied constraints
+    can be met.
     """
-    defined_themes = [theme for theme in themes.keys() if theme != 'u']
-    for theme in defined_themes:
-        theme_runs = themes[theme]
-        first_run = theme_runs[0]
-        goal = _construct_goal(gui_subpath, total_measures,
-                               unspecified=first_run)
-        _process_goal(goal, gui_subpath, gui_path,
-                      'redefinition{0}-{1}'.format(first_run[0], first_run[1]))
-        shutil.copyfile(gui_subpath(RESULT_FN),
-                        gui_subpath('{theme}-defined.result'.format(**locals())))
-        # TODO copy abstract structure to later occurrences of theme
-        # note that it might be better to do this in APOPCALEAPS itself...
+    # TODO incorporate "supplied constraints" mentioned in doc
+    if measure_num == 1:
+        goal = _construct_goal(gui_subpath, total_measures, initial=True)
+        _process_goal(goal, gui_subpath, gui_path, 'structure')
 
 
 def compose(music_path):
@@ -292,21 +256,8 @@ def compose(music_path):
     """
     gui_path = os.path.join(music_path, 'gui')
     gui_subpath = functools.partial(os.path.join, gui_path)
-
     total_measures = 13
-    
     _cleanup(gui_subpath, gui_path)
-    _generate_structure(gui_subpath, gui_path, total_measures)
- 
-    themes = _parse_themes(result_path)
-
-    if 'u' in themes:
-        LOG.info("Generating undefined themes.") 
-        _generate_undefined_themes(gui_subpath, gui_path, total_measures)
-
-    some_defined = any([x != 'u' for x in themes])
-    if some_defined:
-        LOG.info("Generating defined themes.")
-        _generate_defined_themes(themes, gui_subpath, gui_path, total_measures)
-
-    note.show()
+    for measure_num in range(1, total_measures + 1):
+        # auxiliary function checks which steps need to be taken
+        _generate_with_test(gui_subpath, gui_path, total_measures, measure_num) 
