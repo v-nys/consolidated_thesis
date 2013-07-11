@@ -566,7 +566,9 @@ max_unspecified(M) \ phase(split_beats(M)) <=> phase(make_notes).
 unspecified_successor(M,M1) \ phase(split_beats(M)) <=> phase(split_beats(M1)).
 
 % initialize first octave in middle of voice range
-range(V,_,L,_,U) ==> Octave is (L+U)//2, octave(V,1,0,0,Octave).
+:- chrism middle_octave/2.
+range(V,_,L,_,U) ==> Octave is (L+U)//2, middle_octave(V,Octave).
+range(V,_,L,_,U), middle_octave(V,Middle) ==> octave(V,1,0,0,Middle).
 max_repeat(V,_), voice(V) ==> same_note_counter(V,1,0,0,0).
 
 % compute next octave given previous and delta
@@ -596,6 +598,8 @@ octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
 % if the interval between the (note, octave) pairs is greater than the largest allowed interval
 % forget the octave that was assigned to B and backtrack
 
+% constraints on jump up / jump down only hold in or between two unspecified measures
+% transpositions automatically lead to greater jumps than simple sequences
 phase(make_notes),
 max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
 unspecified_measure(M1), unspecified_measure(M),
