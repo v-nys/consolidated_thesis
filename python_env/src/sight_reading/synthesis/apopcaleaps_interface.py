@@ -298,14 +298,13 @@ def compose(music_path):
     _cleanup(gui_subpath, gui_path)
     _generate_structure(gui_subpath, gui_path, total_measures)
  
-    # themes = _parse_themes(result_path) TODO use this later
-    themes = {'u' : [(1, 1), (2, 2), (3,3)] + [(n, n) for n in range(5,14)],
-              'a' : [(4,4)]}
+    themes = _parse_themes(result_path)
+
     if 'u' in themes:
         LOG.info("Generating undefined themes.") 
         _generate_undefined_themes(gui_subpath, gui_path, total_measures)
 
-    some_defined = reduce(lambda x, y: x or (y != 'u'), themes.keys(), False)
+    some_defined = any([x != 'u' for x in themes])
     if some_defined:
         LOG.info("Generating defined themes.")
         _generate_defined_themes(themes, gui_subpath, gui_path, total_measures)
