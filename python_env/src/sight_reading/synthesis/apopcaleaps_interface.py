@@ -247,7 +247,6 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
     Therefore, it will eventually return as long as the supplied constraints
     can be met.
     """
-    # TODO incorporate "supplied constraints" mentioned in doc
     if measure_num == 1:
         goal = _construct_goal(gui_subpath, total_measures, initial=True)
         _process_goal(goal, gui_subpath, gui_path,
@@ -256,8 +255,28 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
         # thematic structure determines what to recycle
         # recycle measures >= `measure_num` if they are transpositions
         thematic_structure = _parse_themes(result_path, total_measures)
-        # construct goal much as before, but specify duplicate measures
 
+        # if we're past one instantiation of full theme, we know the duplicates
+        completed_themes = set()
+        for key in thematic_structure:
+            for theme_range in thematic_structure[key]:
+                if theme_range[1] < measure_num:
+                    completed_themes.add(key)
+                    break
+
+        duplicated_measures = set()
+        for key in completed_themes:
+            for theme_range in thematic_structure[key]:
+                duplicated_measures = duplicated_measures | set(range(theme_range[0], theme_range[1] + 1))
+
+        # measures can be completed through iteration or duplication
+        completed_measures = set(range(1, measure_num)) | set(duplicated_measures)
+
+        unspecified = set(range(1, total_measures + 1)) - completed_measures
+        LOG.debug("Remaining unspecified measures: {0}".format(unspecified))
+        goal = _construct_goal(gui_subpath, total_measures,
+                              initial=False, unspecified=unspecified)
+        # TODO incorporate "supplied constraints" mentioned in doc
 
 def compose(music_path):
     r"""
