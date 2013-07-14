@@ -8,8 +8,6 @@ import re
 import shutil
 import subprocess
 
-import sight_reading.conversion.file_conversion
-
 MEASURES_RE = re.compile(r"""^(?P<preceding_rules>.*)(?P<measures_constraint>measures\((?P<num_measures>[0-9]+)\))(?P<following_rules>.*)$""")
 GOAL_REDEF_RE = re.compile(r"""^(?P<pre_unspecified>.*(chaos\(chords,0\), ))(?P<post_unspecified>.*)$""")
 MCHORD_RE = re.compile(r"""^(?P<constraint>mchord\((?P<measure_num>[0-9]+),(?P<chord>.*)\))$""")
@@ -24,6 +22,7 @@ GOAL_FN = 'goal'
 MIDI_FN = 'temp.midi'
 RESULT_FN = 'temp.result'
 
+# TODO cleanup: this makes output dependent on cwd
 _here = os.path.dirname(__file__)
 runtime_path = _here.replace('src','runtime') + os.sep
 logfile_path = os.path.join(runtime_path, 'logging.conf')
@@ -36,7 +35,7 @@ def _joinit(iterable, delimiter):
     Auxiliary function used to intersperse an iterable with a
     delimiter.
            
-    >>> _joinit([1, 2, 3, 4], 0)
+    >>> list(_joinit([1, 2, 3, 4], 0))
     [1, 0, 2, 0, 3, 0, 4]
     """
     it = iter(iterable)
@@ -216,6 +215,7 @@ def _parse_themes(result_path, total_measures):
     representing undefined runs have identical first and second elements.
     """
     result_dict = collections.defaultdict(list)
+    # FIXME representation of 'u' measures!
     latest_entry = None # e.g. ('a', 0)
     with open(result_path) as result_fh:
         for result_line in result_fh.readlines():
@@ -249,34 +249,47 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
     """
     if measure_num == 1:
         goal = _construct_goal(gui_subpath, total_measures, initial=True)
-        _process_goal(goal, gui_subpath, gui_path,
-                      'measure-{measure_num}'.format(measure_num=measure_num))
     else:
-        # thematic structure determines what to recycle
-        # recycle measures >= `measure_num` if they are transpositions
         thematic_structure = _parse_themes(result_path, total_measures)
-
-        # if we're past one instantiation of full theme, we know the duplicates
-        completed_themes = set()
-        for key in thematic_structure:
-            for theme_range in thematic_structure[key]:
-                if theme_range[1] < measure_num:
-                    completed_themes.add(key)
-                    break
-
-        duplicated_measures = set()
-        for key in completed_themes:
-            for theme_range in thematic_structure[key]:
-                duplicated_measures = duplicated_measures | set(range(theme_range[0], theme_range[1] + 1))
-
-        # measures can be completed through iteration or duplication
-        completed_measures = set(range(1, measure_num)) | set(duplicated_measures)
-
+        completed_measures = _completed_measures(thematic_structure, measure_num)
         unspecified = set(range(1, total_measures + 1)) - completed_measures
-        LOG.debug("Remaining unspecified measures: {0}".format(unspecified))
         goal = _construct_goal(gui_subpath, total_measures,
                               initial=False, unspecified=unspecified)
-        # TODO incorporate "supplied constraints" mentioned in doc
+        LOG.info("Goal for {measure_num}: {goal}".format(**locals()))
+
+    _process_goal(goal, gui_subpath, gui_path,
+                  'measure-{measure_num}'.format(measure_num=measure_num))
+    # TODO incorporate "supplied constraints" mentioned in doc
+
+
+def _completed_measures(thematic_structure, measure_num):
+    r"""
+    Given the thematic structure of a piece and the next measure to be
+    generated, determine which measures can be safely copied from a
+    previous iteration.
+
+    Measures can be copied for two reasons: either because we have already
+    iterated past them, or because they are transpositions of previously
+    completed themes.
+
+    >>> _completed_measures({'a': [(1, 2), (5, 6)], 'b': [(3, 4)]}, 4)
+    set([1, 2, 3, 5, 6])
+    """
+    # if we're past one instantiation of full theme, we know the duplicates
+    completed_themes = set()
+    for key in thematic_structure:
+        for theme_range in thematic_structure[key]:
+            if theme_range[1] < measure_num:
+                completed_themes.add(key)
+                break
+
+    duplicated_measures = set()
+    for key in completed_themes:
+        for theme_range in thematic_structure[key]:
+            duplicated_measures = duplicated_measures | set(range(theme_range[0], theme_range[1] + 1))
+
+    return set(range(1, measure_num)) | set(duplicated_measures)
+
 
 def compose(music_path):
     r"""
@@ -291,3 +304,8 @@ def compose(music_path):
     for measure_num in range(1, total_measures + 1):
         # auxiliary function checks which steps need to be taken
         _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num) 
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
