@@ -17,7 +17,7 @@ BEAT_RE = re.compile(r"""^(?P<constraint>beat\((.+),(?P<measure_num>.+),(.+),(.+
 NOTE_RE = re.compile(r"""^(?P<constraint>note\((.+),(?P<measure_num>.+),(.+),(.+),(.+)\))$""")
 OCTAVE_RE = re.compile(r"""^(?P<constraint>octave\((.+),(?P<measure_num>.+),(.+),(.+),(.+)\))$""")
 NEXT_BEAT_RE = re.compile(r"""^(?P<constraint>next_beat\((.+),(?P<measure_num>.+),(.+),(.+),(.+),(.+),(.+)\))$""")
-THEME_BOUNDARY_RE = re.compile(r"""^(?P<constraint>theme_boundary\([a-z],[0-9][0-9]*\))$""")
+THEME_BOUNDARY_RE = re.compile(r"""^(?P<constraint>theme_boundary\((?P<theme>[a-z]),(?P<boundary>[0-9][0-9]*)\))$""")
 
 GOAL_BACKUP_FN = 'goal_backup'
 GOAL_FN = 'goal'
@@ -200,7 +200,7 @@ def _process_goal(goal, gui_subpath, gui_path, name):
     shutil.copy(midi_path, gui_subpath(name + '.midi'))
 
 
-def _parse_themes(result_path):
+def _parse_themes(result_path, total_measures):
     r"""
     Scan the results of an initial run of APOPCALEAPS.
     Return a data structure indicating which themes were created and to
@@ -217,15 +217,20 @@ def _parse_themes(result_path):
     representing undefined runs have identical first and second elements.
     """
     result_dict = collections.defaultdict(list)
+    latest_entry = None # e.g. ('a', 0)
     with open(result_path) as result_fh:
-        print(result_fh)
         for result_line in result_fh.readlines():
-            theme_match = THEME_RE.match(result_line)
-            if theme_match:
-                theme = theme_match.group('theme')
-                first_measure = int(theme_match.group('measure1'))
-                second_measure = int(theme_match.group('measure2'))
-                result_dict[theme].append((first_measure, second_measure))
+            if result_line.endswith(',\n'):
+                result_line = result_line[0:-2]
+            boundary_match = THEME_BOUNDARY_RE.match(result_line)
+            if boundary_match:
+                theme = boundary_match.group('theme')
+                boundary = int(boundary_match.group('boundary'))
+                # previous theme instance stops right before boundary
+                if latest_entry:
+                    result_dict[latest_entry[0]].append((latest_entry[1], boundary))
+                latest_entry = (theme, boundary + 1)
+        result_dict[latest_entry[0]].append((latest_entry[1], total_measures))
     return result_dict
 
 
@@ -251,7 +256,7 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
     else:
         # thematic structure determines what to recycle
         # recycle measures >= `measure_num` if they are transpositions
-        thematic_structure = _parse_themes(result_path)
+        thematic_structure = _parse_themes(result_path, total_measures)
         LOG.debug("Thematic structure is: {0}".format(thematic_structure))
 
 
