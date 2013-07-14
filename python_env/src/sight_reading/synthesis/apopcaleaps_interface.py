@@ -139,6 +139,7 @@ def _construct_goal(gui_subpath, total_measures, initial=False,
                                c not in duplicate_set and not duplicate_set.add(c)]
 
     # get the original backup goal
+    # initial goal as well as subsequent goals are extensions of original backup
     with open(gui_subpath(GOAL_BACKUP_FN)) as backup_fh:
         for line in backup_fh.readlines():
             first_goal_match = MEASURES_RE.match(line)
@@ -153,13 +154,11 @@ def _construct_goal(gui_subpath, total_measures, initial=False,
         specified = [n for n in range(1, total_measures + 1)\
                      if n not in unspecified] 
         chord_constraints = _analyze_global_result(gui_subpath, MCHORD_RE)
-        LOG.debug('Chord info: {chord_constraints}'.format(**locals()))
-        theme_constraints = _analyze_global_result(gui_subpath,
-                                                   THEME_BOUNDARY_RE)
-        LOG.debug('Theme info: {theme_constraints}'.format(**locals()))
+        theme_boundary_constraints = _analyze_global_result(gui_subpath,
+                                                            THEME_BOUNDARY_RE)
         measure_constraints = [_analyze_result_measure(gui_subpath, spec)\
                                for spec in specified]
-        global_constraints = chord_constraints + theme_constraints
+        global_constraints = chord_constraints + theme_boundary_constraints
         goal += ', '.join(global_constraints)
         goal += ', '
         for subset in measure_constraints:
@@ -231,7 +230,7 @@ def _parse_themes(result_path, total_measures):
                     result_dict[latest_entry[0]].append((latest_entry[1], boundary))
                 latest_entry = (theme, boundary + 1)
         result_dict[latest_entry[0]].append((latest_entry[1], total_measures))
-    return result_dict
+    return dict(result_dict)
 
 
 def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num):
@@ -257,7 +256,7 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
         # thematic structure determines what to recycle
         # recycle measures >= `measure_num` if they are transpositions
         thematic_structure = _parse_themes(result_path, total_measures)
-        LOG.debug("Thematic structure is: {0}".format(thematic_structure))
+        # construct goal much as before, but specify duplicate measures
 
 
 def compose(music_path):
