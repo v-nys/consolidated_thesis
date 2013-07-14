@@ -248,9 +248,11 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
         goal = _construct_goal(gui_subpath, total_measures, initial=True)
         _process_goal(goal, gui_subpath, gui_path,
                       'measure-{measure_num}'.format(measure_num=measure_num))
-    # TODO need to know about theme constraints here, rather than construct_goal
-    # reason is that we need to decide what to recycle in function of themes
-
+    else:
+        # thematic structure determines what to recycle
+        # recycle measures >= `measure_num` if they are transpositions
+        thematic_structure = _parse_themes(result_path)
+        LOG.debug("Thematic structure is: {0}".format(thematic_structure))
 
 
 def compose(music_path):
