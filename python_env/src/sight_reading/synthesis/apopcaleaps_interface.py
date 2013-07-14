@@ -22,8 +22,7 @@ GOAL_FN = 'goal'
 MIDI_FN = 'temp.midi'
 RESULT_FN = 'temp.result'
 
-# TODO cleanup: this makes output dependent on cwd
-_here = os.path.dirname(__file__)
+_here = os.path.abspath(os.path.dirname(__file__))
 runtime_path = _here.replace('src','runtime') + os.sep
 logfile_path = os.path.join(runtime_path, 'logging.conf')
 logging.config.fileConfig(logfile_path,
@@ -301,9 +300,14 @@ def compose(music_path):
     result_path = gui_subpath(RESULT_FN)
     total_measures = 13
     _cleanup(gui_subpath, gui_path)
-    for measure_num in range(1, total_measures + 1):
-        # auxiliary function checks which steps need to be taken
-        _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num) 
+
+    # don't loop from 1 because we can save work when using themes
+    _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1) 
+    thematic_structure = _parse_themes(result_path, total_measures)
+
+    for measure_num in range(2, total_measures + 1):
+        if measure_num not in _completed_measures(thematic_structure, measure_num):
+            _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num) 
 
 
 if __name__ == '__main__':
