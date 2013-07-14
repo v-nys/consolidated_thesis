@@ -440,7 +440,12 @@ max_unspecified(_) \ phase(length_succession) <=> phase(count_and_start).
 phase(count_and_start), unspecified_successor(0,M), theme_boundary(T,Mminus), boundary_list([[T,A]|B]) ==> T \== u, Mminus is M-1, length([[T,A]|B],C) | debugwrite('DEBUG: '), debugwriteln(theme_boundary_count(T,C)), theme_boundary_count(T,C).
 
 % FIXME this does not apply if themes are generated measure-per-measure
-phase(count_and_start), theme_boundary_count(T,_), unspecified_successor(0,M) ==> debugwrite('DEBUG: '), debugwriteln(first_theme_start(T,M)), first_theme_start(T,M).
+% could be unspecified_successor(0,M+1), or (0,M+2),...
+% general way to state this: (largest theme boundary < M) + 1 (< because 0 means theme starts in M 1)
+phase(count_and_start),
+theme_boundary_count(T,_),
+unspecified_successor(0,M) ==> debugwrite('DEBUG: '), debugwriteln(first_theme_start(T,M)), first_theme_start(T,M).
+
 phase(count_and_start), first_theme_start(T,_) ==> debugwrite('DEBUG: '), debugwriteln(first_theme(T)), first_theme(T).
 %---------end transposition phase: count and start------------------%
 
