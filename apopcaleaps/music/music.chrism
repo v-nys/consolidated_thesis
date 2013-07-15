@@ -412,10 +412,19 @@ theme_boundary(_,0) ==> phase(length_succession).
 % boundary_list/1: a list of the boundaries associated with a theme
 % takes the form `boundary_list([[a,theme_boundary(a,6)],[a,theme_boundary(a,4)],[a,theme_boundary(a,2)]])`
 boundary_of([T,C]) :- functor(C,theme_boundary,2), arg(1,C,T).
-phase(length_succession), theme_boundary(T,_) ==> theme_boundaries(T).
+
+phase(length_succession), theme_boundary(T,B) ==> debugwrite('DEBUG: adding to theme boundaries: '), debugwriteln(theme_boundary(T,B)), theme_boundaries(T).
+
 theme_boundaries(T) :- findall([T,C],find_chr_constraint(C),TCs), filter(boundary_of,TCs,TBs), boundary_list(TBs).
-boundary_list([[L1H|L1T]|L1s]) \ boundary_list([[L2H|L2T]|L2s]) <=> L1H == L2H, length([[L1H|L1T]|L1s],Len1), length([[L2H|L2T]|L2s],Len2), Len1 > Len2 | true.
-boundary_list(L) \ boundary_list(L) <=> debugwrite('DEBUG: removing: '), debugwriteln(boundary_list(L)). % need to filter duplicates because this is generated once for each boundary of a theme
+
+boundary_list([[L1H|L1T]|L1s]) \ boundary_list([[L2H|L2T]|L2s]) <=> L1H == L2H,
+                                                                    length([[L1H|L1T]|L1s],Len1),
+                                                                    length([[L2H|L2T]|L2s],Len2),
+                                                                    Len1 > Len2 |
+                                                                        true.
+
+boundary_list(L) \ boundary_list(L) <=> debugwrite('DEBUG: removing: '),
+                                        debugwriteln(boundary_list(L)). % this is generated once for each boundary of a theme...
 
 % theme length: how long is the supplied non-undefined theme
 phase(length_succession),
