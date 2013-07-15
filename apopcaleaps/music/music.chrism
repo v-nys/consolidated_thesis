@@ -445,10 +445,6 @@ theme_boundary_count(T,_),
 unspecified_successor(0,M),
 theme_boundary(T,M1) ==> M1 < M, M1plus is M1+1 | debugwrite('DEBUG: '), debugwriteln(first_theme_start(T,M1plus)), first_theme_start(T,M1plus).
 
-% simplify: we need the largest boundary of an actual theme preceding an unspecified measure
-% FIXME potential problem if unspecified measure has unspecified theme and largest boundary is from way back?
-first_theme_start(_,M1) \ first_theme_start(_,M2) <=> M2 < M1 | true.
-
 phase(count_and_start), first_theme_start(T,_) ==> debugwrite('DEBUG: '), debugwriteln(first_theme(T)), first_theme(T).
 %---------end transposition phase: count and start------------------%
 
