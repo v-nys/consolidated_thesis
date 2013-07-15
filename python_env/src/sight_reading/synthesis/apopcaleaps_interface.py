@@ -152,8 +152,11 @@ def _construct_goal(gui_subpath, total_measures, initial=False,
         specified = [n for n in range(1, total_measures + 1)\
                      if n not in unspecified] 
         chord_constraints = _analyze_global_result(gui_subpath, MCHORD_RE)
+        # boundary constraints must be added starting with the highest boundary
+        # otherwise, rules fire too soon
         theme_boundary_constraints = _analyze_global_result(gui_subpath,
                                                             THEME_BOUNDARY_RE)
+        theme_boundary_constraints = list(reversed(theme_boundary_constraints))
         measure_constraints = [_analyze_result_measure(gui_subpath, spec)\
                                for spec in specified]
         global_constraints = chord_constraints + theme_boundary_constraints
