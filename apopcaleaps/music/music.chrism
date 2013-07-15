@@ -441,7 +441,8 @@ max_unspecified(_) \ phase(length_succession) <=> phase(count_and_start).
 % trying to find out why rule does not fire
 phase(count_and_start),
 unspecified_successor(0,M),
-theme_boundary(T,LessThanM) ==> LessThanM < M | debugwrite('So far, so good:'), debugwriteln(theme_boundary(T,LessThanM)).
+theme_boundary(T,LessThanM),
+theme_length(T,L) ==> LessThanM < M | debugwrite('So far, so good: '), debugwrite(theme_boundary(T,LessThanM)), debugwriteln(theme_length(T,L)).
 
 % note that there is no need to check T \== because that is implied by theme_length
 phase(count_and_start),
