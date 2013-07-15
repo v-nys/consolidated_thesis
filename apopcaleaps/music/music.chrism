@@ -418,8 +418,18 @@ boundary_list([[L1H|L1T]|L1s]) \ boundary_list([[L2H|L2T]|L2s]) <=> L1H == L2H, 
 boundary_list(L) \ boundary_list(L) <=> debugwrite('DEBUG: removing: '), debugwriteln(boundary_list(L)). % need to filter duplicates because this is generated once for each boundary of a theme
 
 % theme length: how long is the supplied non-undefined theme
-phase(length_succession), theme_boundary(T,M), theme_boundary(_,M2) ==> T \== u, M2 > M, L is M2-M | debugwrite('DEBUG: '), debugwriteln(theme_length(T,L)), theme_length(T,L).
-phase(length_succession), theme_length(T,L) \ theme_length(T,L2) <=> L =< L2 | debugwrite('DEBUG: removing: '), debugwriteln(theme_length(T,L2)), true.
+phase(length_succession),
+theme_boundary(T,M),
+theme_boundary(_,M2) ==> T \== u, M2 > M, L is M2-M |
+                             debugwrite('DEBUG: '),
+                             debugwriteln(theme_length(T,L)),
+                             theme_length(T,L).
+
+phase(length_succession),
+theme_length(T,L) \ theme_length(T,L2) <=> L =< L2 |
+                                               debugwrite('DEBUG: removing: '),
+                                               debugwriteln(theme_length(T,L2)),
+                                               true.
 
 % next_theme_instance: which measure introduces the next repetition of a theme
 phase(length_succession), theme_boundary(T,M1), theme_boundary(T,M2) ==> M2 > M1 | debugwrite('DEBUG: '), debugwriteln(next_theme_instance(T,M1,M2)), next_theme_instance(T,M1,M2).
