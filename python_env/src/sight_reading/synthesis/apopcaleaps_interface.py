@@ -83,7 +83,7 @@ def _analyze_result_measure(gui_subpath, measure):
         for result_line in result_fh.readlines():
             if result_line.endswith(',\n'):
                 result_line = result_line[0:-2]
-            recent_matchers = [BEAT_RE, NEXT_BEAT_RE, NOTE_RE, OCTAVE_RE]
+            recent_matchers = [BEAT_RE, NEXT_BEAT_RE, ANOTE_RE, NOTE_RE, OCTAVE_RE]
             constraint_match = None
             for matcher in recent_matchers:
                 constraint_match = matcher.match(result_line)
