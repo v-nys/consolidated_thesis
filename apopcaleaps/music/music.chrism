@@ -423,7 +423,7 @@ boundary_list([[L1H|L1T]|L1s]) \ boundary_list([[L2H|L2T]|L2s]) <=> L1H == L2H,
                                                                     Len1 > Len2 |
                                                                         true.
 
-boundary_list(L) \ boundary_list(L) <=> debugwrite('DEBUG: removing: '),
+boundary_list(L) \ boundary_list(L) <=> debugwrite('DEBUG: removing boundary list copy: '),
                                         debugwriteln(boundary_list(L)). % this is generated once for each boundary of a theme...
 
 % theme length: how long is the supplied non-undefined theme
