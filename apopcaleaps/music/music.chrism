@@ -433,7 +433,7 @@ phase(length_succession), next_theme_instance(T,M1,M2) \ next_theme_instance(T,M
 :- chrism first_theme/1.
 
 % first_theme_start: the first undefined measure (M) is the first measure of the first non-undefined theme (T)
-% theme_boundary_count: how many times the first theme occurs in the piece (including 0th repetition)
+% theme_boundary_count: how many times the first theme occurs in the piece (including 0th repetition) - only for non-u themes
 % first_theme gives us the first non-undefined theme
 
 max_unspecified(_) \ phase(length_succession) <=> phase(count_and_start).
