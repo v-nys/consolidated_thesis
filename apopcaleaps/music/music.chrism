@@ -450,7 +450,8 @@ boundary_list([[T,A]|B]) ==> LessThanM < M, NextBoundary is LessThanM + L, NextB
 phase(count_and_start),
 theme_boundary_count(T,_),
 unspecified_successor(0,M),
-theme_boundary(T,M1) ==> M1 < M, M1plus is M1+1 | debugwrite('DEBUG: '), debugwriteln(first_theme_start(T,M1plus)), first_theme_start(T,M1plus).
+theme_length(T,L),
+theme_boundary(T,LessThanM) ==> LessThanM < M, M1plus is LessThanM+1 | debugwrite('DEBUG: '), debugwriteln(first_theme_start(T,M1plus)), first_theme_start(T,M1plus).
 
 phase(count_and_start), first_theme_start(T,_) ==> debugwrite('DEBUG: '), debugwriteln(first_theme(T)), first_theme(T).
 %---------end transposition phase: count and start------------------%
