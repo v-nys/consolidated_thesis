@@ -437,9 +437,15 @@ phase(length_succession), next_theme_instance(T,M1,M2) \ next_theme_instance(T,M
 % first_theme gives us the first non-undefined theme
 
 max_unspecified(_) \ phase(length_succession) <=> phase(count_and_start).
-phase(count_and_start), unspecified_successor(0,M), theme_boundary(T,Mminus), boundary_list([[T,A]|B]) ==> T \== u, Mminus is M-1, length([[T,A]|B],C) | debugwrite('DEBUG: '), debugwriteln(theme_boundary_count(T,C)), theme_boundary_count(T,C).
 
-% general way to state this: (largest theme boundary < M) + 1 (< because 0 means theme starts in M 1)
+% FIXME rule should be applied on multiple iterations (i.e. not just at exact start of theme)
+phase(count_and_start),
+unspecified_successor(0,M),
+theme_boundary(T,Mminus),
+boundary_list([[T,A]|B]) ==> T \== u, Mminus is M-1, length([[T,A]|B],C) |
+                             debugwrite('DEBUG: '), debugwriteln(theme_boundary_count(T,C)), theme_boundary_count(T,C).
+
+% FIXME rule should be applied on multiple iterations (i.e. not just at exact start of theme)
 phase(count_and_start),
 theme_boundary_count(T,_),
 unspecified_successor(0,M),
