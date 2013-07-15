@@ -438,6 +438,10 @@ phase(length_succession), next_theme_instance(T,M1,M2) \ next_theme_instance(T,M
 
 max_unspecified(_) \ phase(length_succession) <=> phase(count_and_start).
 
+% trying to find out why rule does not fire
+phase(count_and_start),
+unspecified_successor(0,M) ==> debugwrite('So far, so good.').
+
 % note that there is no need to check T \== because that is implied by theme_length
 phase(count_and_start),
 unspecified_successor(0,M),
