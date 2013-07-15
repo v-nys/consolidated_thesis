@@ -425,6 +425,7 @@ theme_boundary(_,M2) ==> T \== u, M2 > M, L is M2-M |
                              debugwriteln(theme_length(T,L)),
                              theme_length(T,L).
 
+% the only correct answer is the shortest interval between boundaries
 phase(length_succession),
 theme_length(T,L) \ theme_length(T,L2) <=> L =< L2 |
                                                debugwrite('DEBUG: removing: '),
@@ -449,6 +450,9 @@ phase(length_succession), next_theme_instance(T,M1,M2) \ next_theme_instance(T,M
 max_unspecified(_) \ phase(length_succession) <=> phase(count_and_start).
 
 % trying to find out why rule does not fire
+phase(count_and_start),
+theme_length(A,B) ==> debugwrite('DEBUG: '), debugwriteln(theme_length(A,B)).
+
 phase(count_and_start),
 unspecified_successor(0,M),
 theme_boundary(T,LessThanM),
