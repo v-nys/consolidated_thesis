@@ -620,6 +620,8 @@ range(V,_,L,_,U), middle_octave(V,Middle) ==> octave(V,1,0,0,Middle).
 max_repeat(V,_), voice(V) ==> same_note_counter(V,1,0,0,0).
 
 % compute next octave for measures that follow a non-undefined theme - overrules general rule
+% FIXME only need to apply this after genuine transposition - otherwise range should be manageable
+% use first_theme_occurrence(N,T,R,M)
 middle_octave(V,MO),
 theme_boundary(T,M1),
 boundary_successor(M1,M2) \
