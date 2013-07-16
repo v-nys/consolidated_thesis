@@ -687,6 +687,7 @@ phase(make_notes),max_repeat(V,N), same_note_counter(V,A,B,C,N) <=> wfail(repeat
 
 
 % approach notes should be followed by a note that is nearby (at most 2 half tones distance)
+% FIXME should not apply when octave is reset...
 octave(V,M1,N1,X1,OO), anote(V,M1,N1,X1,approach), note(V,M1,N1,X1,ON),
 unspecified_measure(M1),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X), octave(V,M,N,X,NO) ==>
