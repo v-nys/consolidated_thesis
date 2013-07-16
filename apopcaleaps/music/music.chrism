@@ -619,14 +619,13 @@ range(V,_,L,_,U) ==> Octave is (L+U)//2, middle_octave(V,Octave).
 range(V,_,L,_,U), middle_octave(V,Middle) ==> octave(V,1,0,0,Middle).
 max_repeat(V,_), voice(V) ==> same_note_counter(V,1,0,0,0).
 
-% compute next octave for measures that follow a non-undefined theme - overrules general rule
-% FIXME only need to apply this after genuine transposition - otherwise range should be manageable
-% use first_theme_occurrence(N,T,R,M)
+% compute next octave for measures that follow repeated, non-undefined theme - overrules general rule
 middle_octave(V,MO),
 theme_boundary(T,M1),
+first_theme_occurrence(_,T,R,M1),
 boundary_successor(M1,M2) \
     octave_d(V,M2plus,0,0,Delta) <=>
-        T \== u, M2plus is M2+1 |
+        T \== u, M2plus is M2+1, R > 0 |
             debugwriteln('APPLYING FIX'),
             debugwriteln(octave(V,M2plus,0,0,MO)),
             octave(V,M2plus,0,0,MO).
@@ -689,9 +688,8 @@ phase(make_notes),max_repeat(V,N), same_note_counter(V,A,B,C,N) <=> wfail(repeat
 
 
 % approach notes should be followed by a note that is nearby (at most 2 half tones distance)
-% FIXME should not apply when octave is reset...
 octave(V,M1,N1,X1,OO), anote(V,M1,N1,X1,approach), note(V,M1,N1,X1,ON),
-unspecified_measure(M1),
+unspecified_measure(M), unspecified_measure(M1),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X), octave(V,M,N,X,NO) ==>
     debugwriteln('Rule involving approach notes'),
     debugwriteln(anote(V,M1,N1,X1,approach)),
