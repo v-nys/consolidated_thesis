@@ -628,8 +628,6 @@ first_theme_occurrence(_,_,R,M2),
 boundary_successor(M1,M2) \
     octave_d(V,M2plus,0,0,Delta) <=>
         T \== u, M2plus is M2+1, R > 0 |
-            debugwriteln('APPLYING FIX'),
-            debugwriteln(octave(V,M2plus,0,0,MO)),
             octave(V,M2plus,0,0,MO).
 
 % compute next octave given previous and delta
@@ -705,7 +703,7 @@ scale(V) ?? phase(make_notes), note(V,M,N,X,Note) ==> V \== drums, V \== chords 
                         member(Note,[r,c,d,e,f,g,a,b]),
                         debugwriteln(ok).
 
-phase(make_notes), unspecified_successor(0,X) ==> make_notes_measure(X).
+phase(make_notes), unspecified_successor(0,X) ==> debugwrite('DEBUG: adding make_notes_measure'), debugwriteln(make_notes_measure(X)), make_notes_measure(X).
 
 % choose first note
 make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
