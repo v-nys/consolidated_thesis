@@ -703,7 +703,7 @@ scale(V) ?? phase(make_notes), note(V,M,N,X,Note) ==> V \== drums, V \== chords 
                         member(Note,[r,c,d,e,f,g,a,b]),
                         debugwriteln(ok).
 
-phase(make_notes), unspecified_successor(0,X) ==> debugwrite('DEBUG: adding make_notes_measure'), debugwriteln(make_notes_measure(X)), make_notes_measure(X).
+phase(make_notes), unspecified_successor(0,X) ==> debugwrite('DEBUG: adding make_notes_measure: '), debugwriteln(make_notes_measure(X)), make_notes_measure(X).
 
 % choose first note
 make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
@@ -788,7 +788,7 @@ octave_compare(_,U,U,high).
 octave_compare(L,X,U,mid) :- L < X, X < U.
 
 % force measure-per-measure note filling for search efficiency
-measures(Last), unspecified_successor(N,N1) \ make_notes_measure(N) <=> debugwrite('DEBUG: '), debugwriteln(make_notes_measure(N1)), make_notes_measure(N1).
+measures(Last), unspecified_successor(N,N1) \ make_notes_measure(N) <=> debugwrite('REMOVING: '), debugwriteln(make_notes_measure(N)), debugwrite('DEBUG: '), debugwriteln(make_notes_measure(N1)), make_notes_measure(N1).
 max_unspecified(N) \ make_notes_measure(N) <=> debugwriteln('DEBUG: done making notes for last unspecified measure'), true.
 
 phase(make_notes), beat(drums,M,N,X,D), unspecified_measure(M) ==>
