@@ -1067,27 +1067,16 @@ maybe_close_bracket <=> true.
 % see 'auxiliary chrism files'!
 phase(output) <=>
     tell('temp.ly'),
-    debugwriteln('telling temp.ly'),
     header,
-    debugwriteln('generated header'),
     write_notes,
-    debugwriteln('written notes'),
     footer,
-    debugwriteln('generated footer'),
     show_footer,
-    debugwriteln('shown footer'),
     play_footer,
-    debugwriteln('played footer'),
     end_footer,
-    debugwriteln('ended footer'),
     told,
-    debugwriteln('told'),
     tell('temp.result'),
-    debugwriteln('telling temp.result'),
     css2,
-    debugwriteln('css2d'),
-    told,
-    debugwriteln('told').
+    told.
 
 /*    ,
     lilypond,
