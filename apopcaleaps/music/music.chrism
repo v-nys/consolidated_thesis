@@ -721,12 +721,11 @@ make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
 make_notes_measure(M), beat(V,M,N,X,D), mchord(M,C),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
     V \== drums, V \== chords |
-    debugwrite('DEBUG: Making notes for measure'),
+    debugwriteln('DEBUG: Making notes for measure'),
     debugwriteln(make_notes_measure(M)),
     abstract_beat(M,N,X,AB),
     soft_msw(note_choice(V,AB),ANote),
     debugwriteln(picked(note_choice(V,AB),ANote)),
-
     pick_concrete_note(V,C,ANote,Note),
     anote(V,M,N,X,ANote),
     note(V,M,N,X,Note),
@@ -999,12 +998,12 @@ soft_choose(Candidates,V) :-
 :- chrism write_notes, show(+,+,+), show_notes(+,+,+,+), voice_header(+), voice_footer(+), 
                   maybe_close_bracket, show_note(+), show_mods(+), maybe_show_octave(+,+,+,+).
 
-%write_notes ==> writeln(tiens).
 measures(N), meter(A,B), write_notes, voice(V) ==>
-    voice_header(V),
+    voice_header(V), % dit lukt nog
+    % nl staat waarschijnlijk voor newline
     write('\\time '), write(A), write('/'), write(B), nl, show(V,1,N),
     maybe_close_bracket,
-    writeln('}').
+    writeln('}'). % tot hier raakt hij alvast niet
 write_notes <=> true.
 show(V,N,M) <=> N>M | true.
 show(V,N,M) <=> N=<M | write('    '),show_notes(V,N,0,0), write(' |'), nl, N1 is N+1, show(V,N1,M).
