@@ -645,9 +645,17 @@ unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangec
 unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
     <=> Note \== r, note_above(Note,UN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(high).
 
-% even transpositions need to stick within range that can be represented by Lilypond
+% add intrinsic limitations of guitar fretboard
+note(melody,M,N,X,Note) \ octave_rangecheck(melody,M,N,X,3)
+    <=> Note \== r, note_below(Note,e) | debugwrite('DEBUG: '), wfail(low).
+note(melody,M,N,X,Note) \ octave_rangecheck(melody,M,N,X,7)
+    <=> Note \== r, note_above(Note,d) | debugwrite('DEBUG: '), wfail(high).
+
+
+% even transpositions need to stick within range that can be represented by Lilypond / that are playable on guitar
 octave_rangecheck(V,M,N,X,O) <=> O > 7 | wfail(highO).
-octave_rangecheck(V,M,N,X,O) <=> O < 0 | wfail(low0).
+octave_rangecheck(melody,M,N,X,0) <=> 0 < 2 | wfail(lowO).
+octave_rangecheck(V,M,N,X,O) <=> O < 0 | wfail(lowO).
 
 % because rules above are not checked for unspecified measures, range checks always lead directly to octaves there
 octave_rangecheck(V,M,N,X,O) <=> octave(V,M,N,X,O).
