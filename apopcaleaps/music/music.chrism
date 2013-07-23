@@ -175,7 +175,6 @@ v <=>     meter(2,4), %repeats(1),
                 measures(3).
 
 % debug output:
-phase(X) ==> debugwriteln(''), debugwrite('NEW PHASE: '), debugwrite(X), debugwriteln('').
 wfail(Reason) :- debugwriteln(failing(Reason)),                  fail.
 
 
@@ -188,8 +187,6 @@ nodebug :- retractall(ddd(_)), assert(ddd(off)).
 ddd(on).
 
 
-%beat(A,B,C,D,N) ==> debugwriteln(adding_beat(A,B,C,D,N)).
-
 result((A,B)) <=> result(A), result(B).
 
 :- chrism failrules/1.
@@ -200,7 +197,7 @@ result(tied(A,B,C,D)) <=> resulttied(A,B,C,D).
 result(anote(A,B,C,D,N)) <=> resultanote(A,B,C,D,N).
 result(octave(A,B,C,D,N)) <=> resultoctave(A,B,C,D,N).
 result(beat(A,B,C,D,N)) <=> resultbeat(A,B,C,D,N).
-result(mchord(A,B)) <=> debugwrite('DEBUG: '), debugwriteln(resultmchord(A,B)), resultmchord(A,B).
+result(mchord(A,B)) <=> resultmchord(A,B).
 
 failrules([]) <=> true.
 failrules([X|Xs]) <=> failrules(X), failrules(Xs).
@@ -210,14 +207,14 @@ failrules([X|Xs]) <=> failrules(X), failrules(Xs).
 failrules(nr), note(A,B,C,D,N) ==> check(note(A,B,C,D,N)).
 failrules(nr), anote(A,B,C,D,N) ==> check(anote(A,B,C,D,N)).
 failrules(nr), octave(A,B,C,D,N) ==> check(octave(A,B,C,D,N)).
-failrules(nr), mchord(A,B) ==> debugwrite('DEBUG: '), debugwriteln(check(mchordA,B)), check(mchord(A,B)).
+failrules(nr), mchord(A,B) ==> check(mchord(A,B)).
 failrules(nr), tied(A,B,C,D) ==> check(tied(A,B,C,D)).
 
 resultnote(A,B,C,D,N) \ check(note(A,B,C,D,N)) <=> true.
 resulttied(A,B,C,D) \ check(tied(A,B,C,D)) <=> true.
 resultanote(A,B,C,D,N) \ check(anote(A,B,C,D,N)) <=> true.
 resultoctave(A,B,C,D,N) \ check(octave(A,B,C,D,N)) <=> true.
-resultmchord(A,B) \ check(mchord(A,B)) <=> debugwrite('DEBUG: '), debugwriteln('Simpagation rule with resultchord'), true.
+resultmchord(A,B) \ check(mchord(A,B)) <=> true.
 
 
 failrules(s), beat(A,B,C,D,N) ==> check2(beat(A,B,C,D,N)).
@@ -243,7 +240,7 @@ cleanup \ resulttied(_,_,_,_) <=> true.
 cleanup \ resultanote(_,_,_,_,_) <=> true.
 cleanup \ resultoctave(_,_,_,_,_) <=> true.
 cleanup \ resultbeat(_,_,_,_,_) <=> true.
-cleanup \ resultmchord(_,_) <=> debugwriteln('DEBUG: cleaning up resultmchord'), true.
+cleanup \ resultmchord(_,_) <=> true.
 
 
 
@@ -304,9 +301,6 @@ initial <=> phase(select_chords).
 
 % Note that this can only be triggered if the "initial" constraint is used!
 phase(select_chords) <=> chord_scheme(a) : 1.0 ; chord_scheme(b) : 0.0.
-
-chord_scheme(X) ==> debugwrite('DEBUG: chord scheme: '),
-                    debugwriteln(X).
 
 % make it easy to determine the order between unspecified measures
 % unspecified_successor(0,X) gives the first unspecified measure, max_unspecified gives the last (requires input!)
@@ -402,7 +396,7 @@ theme_boundary(_,0) ==> phase(length_succession).
 % takes the form `boundary_list([[a,theme_boundary(a,6)],[a,theme_boundary(a,4)],[a,theme_boundary(a,2)]])`
 boundary_of([T,C]) :- functor(C,theme_boundary,2), arg(1,C,T).
 
-phase(length_succession), theme_boundary(T,B) ==> debugwrite('DEBUG: adding to theme boundaries: '), debugwriteln(theme_boundary(T,B)), theme_boundaries(T).
+phase(length_succession), theme_boundary(T,B) ==> theme_boundaries(T).
 
 theme_boundaries(T) :- findall([T,C],find_chr_constraint(C),TCs), filter(boundary_of,TCs,TBs), boundary_list(TBs).
 
@@ -412,27 +406,22 @@ boundary_list([[L1H|L1T]|L1s]) \ boundary_list([[L2H|L2T]|L2s]) <=> L1H == L2H,
                                                                     Len1 > Len2 |
                                                                         true.
 
-boundary_list(L) \ boundary_list(L) <=> debugwrite('DEBUG: removing boundary list copy: '),
-                                        debugwriteln(boundary_list(L)). % this is generated once for each boundary of a theme...
+boundary_list(L) \ boundary_list(L) <=> true. % this is generated once for each boundary of a theme...
 
 % theme length: how long is the supplied non-undefined theme
 phase(length_succession),
 theme_boundary(T,M),
 theme_boundary(_,M2) ==> T \== u, M2 > M, L is M2-M |
-                             debugwrite('DEBUG: '),
-                             debugwriteln(theme_length(T,L)),
                              theme_length(T,L).
 
 % the only correct answer is the shortest interval between boundaries
 phase(length_succession),
 theme_length(T,L) \ theme_length(T,L2) <=> L =< L2 |
-                                               debugwrite('DEBUG: removing: '),
-                                               debugwriteln(theme_length(T,L2)),
                                                true.
 
 % next_theme_instance: which measure introduces the next repetition of a theme
-phase(length_succession), theme_boundary(T,M1), theme_boundary(T,M2) ==> M2 > M1 | debugwrite('DEBUG: '), debugwriteln(next_theme_instance(T,M1,M2)), next_theme_instance(T,M1,M2).
-phase(length_succession), next_theme_instance(T,M1,M2) \ next_theme_instance(T,M1,M3) <=> M3 > M2 | debugwrite('DEBUG: removing: '), debugwriteln(next_theme_instance(T,M1,M3)).
+phase(length_succession), theme_boundary(T,M1), theme_boundary(T,M2) ==> M2 > M1 | next_theme_instance(T,M1,M2).
+phase(length_succession), next_theme_instance(T,M1,M2) \ next_theme_instance(T,M1,M3) <=> M3 > M2 | true.
 %---------end transposition phase: length and succession------------------%
 
 
@@ -447,14 +436,10 @@ phase(length_succession), next_theme_instance(T,M1,M2) \ next_theme_instance(T,M
 
 max_unspecified(_) \ phase(length_succession) <=> phase(count_and_start).
 
-% trying to find out why rule does not fire
-phase(count_and_start),
-theme_length(A,B) ==> debugwrite('DEBUG: '), debugwriteln(theme_length(A,B)).
-
 phase(count_and_start),
 unspecified_successor(0,M),
 theme_boundary(T,LessThanM),
-theme_length(T,L) ==> LessThanM < M | debugwrite('So far, so good: '), debugwrite(theme_boundary(T,LessThanM)), debugwriteln(theme_length(T,L)).
+theme_length(T,L) ==> LessThanM < M | true.
 
 % note that there is no need to check T \== because that is implied by theme_length
 phase(count_and_start),
@@ -462,15 +447,15 @@ unspecified_successor(0,M),
 theme_boundary(T,LessThanM),
 theme_length(T,L),
 boundary_list([[T,A]|B]) ==> LessThanM < M, NextBoundary is LessThanM + L, NextBoundary >= M, length([[T,A]|B],C) |
-                             debugwrite('DEBUG: '), debugwriteln(theme_boundary_count(T,C)), theme_boundary_count(T,C).
+                             theme_boundary_count(T,C).
 
 phase(count_and_start),
 theme_boundary_count(T,_),
 unspecified_successor(0,M),
 theme_length(T,L),
-theme_boundary(T,LessThanM) ==> LessThanM < M, NextBoundary is LessThanM + L, M1plus is LessThanM+1, NextBoundary >= M | debugwrite('DEBUG: '), debugwriteln(first_theme_start(T,M1plus)), first_theme_start(T,M1plus).
+theme_boundary(T,LessThanM) ==> LessThanM < M, NextBoundary is LessThanM + L, M1plus is LessThanM+1, NextBoundary >= M | first_theme_start(T,M1plus).
 
-phase(count_and_start), first_theme_start(T,_) ==> debugwrite('DEBUG: '), debugwriteln(first_theme(T)), first_theme(T).
+phase(count_and_start), first_theme_start(T,_) ==> first_theme(T).
 %---------end transposition phase: count and start------------------%
 
 
@@ -508,10 +493,10 @@ phase(first_theme_repetitions) \ num_first_theme_repeats(T,N), increment_first_t
 % occurrence_count: Total number of measures accounted for - all occurrences are known when we have accounted for theme length * repetitions of theme
 num_first_theme_repeats(T,Nminus), theme_boundary_count(T,N) \ phase(first_theme_repetitions) <=> Nminus is N-1 | phase(first_theme_occurrences).
 phase(first_theme_occurrences) ==> occurrence_count(0).
-phase(first_theme_occurrences), first_theme_repetition(T,R,M) ==> debugwrite('DEBUG: '), debugwriteln(first_theme_occurrence(1,T,R,M)), first_theme_occurrence(1,T,R,M), increment_occurrences.
-phase(first_theme_occurrences), first_theme_occurrence(N,T,R,M), theme_length(T,L) ==> N < L, Nplus is N+1, Mplus is M+1 | debugwrite('DEBUG: '), debugwriteln(first_theme_occurrence(Nplus,T,R,Mplus)), first_theme_occurrence(Nplus,T,R,Mplus), increment_occurrences.
-phase(first_theme_occurrences) \ occurrence_count(N), increment_occurrences <=> Nplus is N+1 | debugwrite('DEBUG: '), debugwriteln(occurrence_count(Nplus)), occurrence_count(Nplus).
-phase(first_theme_occurrences), first_theme_start(T,_), theme_length(T,L), theme_boundary_count(T,C) \ occurrence_count(LxC) <=> LxC is L*C | debugwrite('DEBUG: '), debugwriteln(all_occurrences), all_occurrences.
+phase(first_theme_occurrences), first_theme_repetition(T,R,M) ==> first_theme_occurrence(1,T,R,M), increment_occurrences.
+phase(first_theme_occurrences), first_theme_occurrence(N,T,R,M), theme_length(T,L) ==> N < L, Nplus is N+1, Mplus is M+1 | first_theme_occurrence(Nplus,T,R,Mplus), increment_occurrences.
+phase(first_theme_occurrences) \ occurrence_count(N), increment_occurrences <=> Nplus is N+1 | occurrence_count(Nplus).
+phase(first_theme_occurrences), first_theme_start(T,_), theme_length(T,L), theme_boundary_count(T,C) \ occurrence_count(LxC) <=> LxC is L*C | all_occurrences.
 
 % first_theme_end: first theme ends in measure M
 % only applies to the 0 repetition
@@ -539,7 +524,7 @@ phase(first_theme_occurrences), number_duplicates(N), number_duplicated_measures
 %- because Y is duplicated, it has an unspecified predecessor
 %*/
 phase(first_theme_occurrences), duplicated_measure(Y) \ unspecified_successor(X,Y), unspecified_successor(Y,Z) <=> unspecified_successor(X,Z), removed_unspecified_successor.
-phase(first_theme_occurrences), duplicated_measure(M) \ max_unspecified(M), unspecified_successor(X,M) <=> debugwriteln('DEBUG: removing: '), debugwriteln(max_unspecified(M)), debugwriteln(unspecified_successor(X,M)), debugwriteln('DEBUG: adding: '), debugwriteln(max_unspecified(X)), removed_unspecified_successor, max_unspecified(X).
+phase(first_theme_occurrences), duplicated_measure(M) \ max_unspecified(M), unspecified_successor(X,M) <=> removed_unspecified_successor, max_unspecified(X).
 phase(first_theme_occurrences) ==> number_removed_unspecified_successors(0).
 phase(first_theme_occurrences) \ number_removed_unspecified_successors(N), removed_unspecified_successor <=> Nplus is N+1 | number_removed_unspecified_successors(Nplus).
 phase(first_theme_occurrences), number_removed_unspecified_successors(N), number_duplicates(N) ==> restored_unspec.
@@ -548,8 +533,8 @@ first_theme_end(_,_) \ phase(first_theme_occurrences), all_occurrences, all_dupl
 %---------end transposition phase: first theme occurrences-----------------%
 
 %------------transposition phase: remove old beat structure----------------%
-phase(removing_old_structure), duplicated_measure(M) \ beat(A,M,B,C,D) <=> debugwrite('REMOVING: '), debugwriteln(beat(A,M,B,C,D)).
-phase(removing_old_structure), duplicated_measure(M) \ next_beat(A,M,B,C,D,E,F) <=> debugwrite('REMOVING: '), debugwriteln(next_beat(A,M,B,C,D,E,F)).
+phase(removing_old_structure), duplicated_measure(M) \ beat(A,M,B,C,D) <=> true.
+phase(removing_old_structure), duplicated_measure(M) \ next_beat(A,M,B,C,D,E,F) <=> true.
 % note: next_beat for the preceding measure is *not* removed, because first beat of a measure always starts at (0,0)
 %--------end transposition phase: remove old beat structure----------------%
 
@@ -558,13 +543,13 @@ phase(split_beats(_)) \ phase(removing_old_structure) <=> true.
 measures(N) ==> debugwriteln('[MUSIC GENERATOR] startup'), 
                 make_measures(N).
 unspecified_successor(0,X) \ make_measures(0) <=> phase(split_beats(X)).
-make_measures(N) <=> N>0 | debugwrite('DEBUG: '), debugwriteln(measure(N)), measure(N), 
+make_measures(N) <=> N>0 | measure(N), 
                            N1 is N-1,
-                           debugwrite('DEBUG: '), debugwriteln(next_measure(N1,N)), next_measure(N1,N),
-                           debugwrite('DEBUG: '), debugwriteln(make_measures(N1)), make_measures(N1).
+                           next_measure(N1,N),
+                           make_measures(N1).
 
 % create one beat per beat
-meter(N,D), voice(V), measure(M), unspecified_measure(M) ==> debugwriteln(make_beats(N,D,M,V)), make_beats(N,D,M,V).
+meter(N,D), voice(V), measure(M), unspecified_measure(M) ==> make_beats(N,D,M,V).
 make_beats(0,_D,_M,_V) <=> true. % included because we work our way down from numerator to 0
 make_beats(N,D,M,V) <=> N > 0 | N1 is N-1, next_beat(V,M,N1,0,M,N,0),
                                 beat(V,M,N1,0,D), make_beats(N1,D,M,V).
@@ -578,10 +563,8 @@ split_beat(V) ?? meter(_,OD), phase(split_beats(M)),
     \ beat(V,M,N,X,D), next_beat(V,M,N,X,NM,NN,NX)
     <=> 
     D<SD, M \== LastM
-    ,debugwriteln(considering_splitbeat(V,M,N,X,D))
     |
     D2 is D*2, X2 is X+1/(D2/OD),
-    debugwriteln(doing_splitbeat(V,M,N,X,D)),
     next_beat(V,M,N,X,M,N,X2), next_beat(V,M,N,X2,NM,NN,NX),
     beat(V,M,N,X,D2), beat(V,M,N,X2,D2).
 
@@ -615,24 +598,21 @@ boundary_successor(M1,M2) \
 
 % compute next octave given previous and delta
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) \ octave_d(V,M,N,X,Delta) <=>
-    debugwrite('Computing next octave given following: '),
-    debugwrite(octave(V,M1,N1,X1,OO)),
-    debugwriteln(octave_d(V,M,N,X,Delta)),
     NO is OO+Delta, octave_rangecheck(V,M,N,X,NO).
 
 % clip octave to the required voice range
-unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(lowO).
-unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(highO).
+unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | wfail(lowO).
+unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | wfail(highO).
 unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,LO)
-    <=> Note \== r, note_below(Note,LN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(low).
+    <=> Note \== r, note_below(Note,LN) | wfail(low).
 unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
-    <=> Note \== r, note_above(Note,UN) | debugwrite('DEBUG: '), debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(high).
+    <=> Note \== r, note_above(Note,UN) | wfail(high).
 
 % add intrinsic limitations of guitar fretboard
 note(melody,M,N,X,Note) \ octave_rangecheck(melody,M,N,X,3)
-    <=> Note \== r, note_below(Note,e) | debugwrite('DEBUG: note below E3'), wfail(low).
+    <=> Note \== r, note_below(Note,e) | wfail(low).
 note(melody,M,N,X,Note) \ octave_rangecheck(melody,M,N,X,7)
-    <=> Note \== r, note_above(Note,d) | debugwrite('DEBUG: note above D7'), wfail(high).
+    <=> Note \== r, note_above(Note,d) | wfail(high).
 
 
 % even transpositions need to stick within range that can be represented by Lilypond / that are playable on guitar
@@ -658,13 +638,13 @@ phase(make_notes),
 max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
 unspecified_measure(M1), unspecified_measure(M),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
-    interval(ON,OO,NN,NO,Int), Int > MInt | debugwriteln('DEBUG: jumpup'), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)), wfail(jumpup(Int)).
+    interval(ON,OO,NN,NO,Int), Int > MInt | wfail(jumpup(Int)).
 
 phase(make_notes),
 unspecified_measure(M1), unspecified_measure(M),
 max_jump(V,MInt), octave(V,M1,N1,X1,OO), note(V,M1,N1,X1,ON),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X) \ octave(V,M,N,X,NO) <=>
-    interval(ON,OO,NN,NO,Int), Int < -MInt | debugwriteln('DEBUG: jumpdown'), debugwriteln(note(V,M1,N1,X1,ON)), debugwriteln(note(V,M,N,X,NN)), wfail(jumpdown(Int)).
+    interval(ON,OO,NN,NO,Int), Int < -MInt | wfail(jumpdown(Int)).
  
 % maintain same_note_counter
 % note that this is only maintained for unspecified measures - specified measures are considered pregenerated phrases
@@ -686,29 +666,16 @@ phase(make_notes),max_repeat(V,N), same_note_counter(V,A,B,C,N) <=> wfail(repeat
 octave(V,M1,N1,X1,OO), anote(V,M1,N1,X1,approach), note(V,M1,N1,X1,ON),
 unspecified_measure(M), unspecified_measure(M1),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X), octave(V,M,N,X,NO) ==>
-    debugwriteln('Rule involving approach notes'),
-    debugwriteln(anote(V,M1,N1,X1,approach)),
-    debugwriteln(next_beat(V,M1,N1,X1,M,N,X)),
     interval(ON,OO,NN,NO,Int), Int >= -2, Int =< 2.
 
-% restrict notes to the scale of the main chord (C or Am)
-
-scale(V) ?? phase(make_notes), note(V,M,N,X,Note) ==> V \== drums, V \== chords |
-                        debugwriteln(checking_scale(V,M,N,X,Note)),
-                        member(Note,[r,c,d,e,f,g,a,b]),
-                        debugwriteln(ok).
-
-phase(make_notes), unspecified_successor(0,X) ==> debugwrite('DEBUG: adding make_notes_measure: '), debugwriteln(make_notes_measure(X)), make_notes_measure(X).
+phase(make_notes), unspecified_successor(0,X) ==> make_notes_measure(X).
 
 % choose first note
 make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
     V \== drums, V \== chords |
-    debugwriteln('DEBUG: Making notes for first measure.'),
     abstract_beat(1,0,0,AB),
     soft_msw(note_choice(V,AB),ANote),
-    debugwriteln(picked(note_choice(V,AB),ANote)),
     pick_concrete_note(V,C,ANote,Note),
-    debugwriteln(concrete_note(V,C,ANote,Note)),
     anote(V,1,0,0,ANote),
     note(V,1,0,0,Note).
 
@@ -716,11 +683,8 @@ make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
 make_notes_measure(M), beat(V,M,N,X,D), mchord(M,C),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
     V \== drums, V \== chords |
-    debugwriteln('DEBUG: Making notes for measure'),
-    debugwriteln(make_notes_measure(M)),
     abstract_beat(M,N,X,AB),
     soft_msw(note_choice(V,AB),ANote),
-    debugwriteln(picked(note_choice(V,AB),ANote)),
     pick_concrete_note(V,C,ANote,Note),
     anote(V,M,N,X,ANote),
     note(V,M,N,X,Note),
@@ -739,8 +703,7 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
 first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M2,Count,F),
 anote(V,M,Count,F,Anote), mchord(M2,Chord) ==>
-    R > 0 | debugwriteln('copying abstract note'), debugwriteln(anote(V,M,Count,F,Anote)),
-            pick_concrete_note(V,Chord,Anote,Note),
+    R > 0 | pick_concrete_note(V,Chord,Anote,Note),
             anote(V,M2,Count,F,Anote),
             note(V,M2,Count,F,Note),
             (Note == r ->
@@ -763,7 +726,7 @@ octave(V,M,Count,F,Octave),
 next_beat(V,M1,N1,X1,M,Count,F),
 octave(V,M1,N1,X1,Octave1) \
 derive_octave_d(V,M2,Count,F,_) <=>
-R > 0, Delta is Octave - Octave1 | debugwriteln('Copying octave delta'), octave_d(V,M2,Count,F,Delta).
+R > 0, Delta is Octave - Octave1 | octave_d(V,M2,Count,F,Delta).
 
 %----end-transposition phase: derive octave deltas-----------%
 
@@ -771,9 +734,6 @@ R > 0, Delta is Octave - Octave1 | debugwriteln('Copying octave delta'), octave_
 range(V,_,Lower,_,Upper) \ find_octave_d(V,M,N,X,OO) <=>
     octave_compare(Lower,OO,Upper,Position),
     soft_msw(octave_choice(Position),Octave_Delta),
-    debugwrite('DEBUG: removing: '),
-    debugwriteln(find_octave_d(V,M,N,X,00)),
-    debugwriteln(octave_choice(Position,Octave_Delta)),
     octave_d(V,M,N,X,Octave_Delta).
 find_octave_d(V,M,N,X,OO) <=> writeln(oops-no-range-for(V)).
 
@@ -782,34 +742,26 @@ octave_compare(_,U,U,high).
 octave_compare(L,X,U,mid) :- L < X, X < U.
 
 % force measure-per-measure note filling for search efficiency
-measures(Last), unspecified_successor(N,N1) \ make_notes_measure(N) <=> debugwrite('REMOVING: '), debugwriteln(make_notes_measure(N)), debugwrite('DEBUG: '), debugwriteln(make_notes_measure(N1)), make_notes_measure(N1).
-max_unspecified(N) \ make_notes_measure(N) <=> debugwriteln('DEBUG: done making notes for last unspecified measure'), true.
+measures(Last), unspecified_successor(N,N1) \ make_notes_measure(N) <=> make_notes_measure(N1).
+max_unspecified(N) \ make_notes_measure(N) <=> true.
 
 phase(make_notes), beat(drums,M,N,X,D), unspecified_measure(M) ==>
     abstract_beat(M,N,X,AB), 
     msw(drum_choice(AB),Note), 
-    debugwriteln(msw(drum_choice(AB),Note)),
     note(drums,M,N,X,Note).
 
 % treat duplicated measures same as unspecified for this purpose: melody is main focus
 phase(make_notes), beat(drums,M,N,X,D), duplicated_measure(M) ==>
     abstract_beat(M,N,X,AB), 
     msw(drum_choice(AB),Note), 
-    debugwriteln(msw(drum_choice(AB),Note)),
     note(drums,M,N,X,Note).
 
 phase(make_notes), chord_style(Style), beat(chords,M,N,X,D), mchord(M,C), unspecified_measure(M) ==>
     abstract_beat(M,N,X,AB), msw(chord_type(Style,AB),Chord),
-    debugwrite('DEBUG: making notes: '),
-    debugwriteln(mchord(M,C)), 
-    debugwriteln(msw(chord_type(Style,AB),Chord)),
     chord(C,M,N,X,Chord).
 
 phase(make_notes), chord_style(Style), beat(chords,M,N,X,D), mchord(M,C), duplicated_measure(M) ==>
     abstract_beat(M,N,X,AB), msw(chord_type(Style,AB),Chord),
-    debugwrite('DEBUG: making notes: '),
-    debugwriteln(mchord(M,C)), 
-    debugwriteln(msw(chord_type(Style,AB),Chord)),
     chord(C,M,N,X,Chord).
 
 chord(C,M,N,X,r) <=> note(chords,M,N,X,r).
@@ -836,9 +788,7 @@ join_notes(V,cond M=M2,cond N=N2) ??
     unspecified_measure(M2), note(V,M,N,X,Note),
     next_beat(V,M,N,X,M2,N2,X2), note(V,M2,N2,X2,Note)
         ==> V \== drums |
-        debugwriteln(join_notes(V,M,N,X,Note,M2,N2,X2)),
-        tied(V,M,N,X),
-        debugwriteln(joined(Note)).
+        tied(V,M,N,X).
 
 % this instance of the rule applies to a single measure
 join_notes(V,cond M=M2, cond N=N2) ??
@@ -846,9 +796,7 @@ join_notes(V,cond M=M2, cond N=N2) ??
     unspecified_measure(M),
     note(V,M,N,X,Note),
     next_beat(V,M,N,X,M,N2,X2), note(V,M,N2,X2,Note)
-        ==> V \== drums | debugwriteln(join_notes(V,M,N,X,Note,M,N2,X2)),
-    tied(V,M,N,X),
-    debugwriteln(joined(Note)).
+        ==> V \== drums | tied(V,M,N,X).
 
 is_rest(r).
 is_rest(r + ' ~').
