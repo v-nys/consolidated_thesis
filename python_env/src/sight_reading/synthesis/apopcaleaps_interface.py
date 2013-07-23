@@ -196,9 +196,9 @@ def _process_goal(goal, gui_subpath, gui_path, name):
     proc = subprocess.Popen(gui_subpath('handler2'), cwd=gui_path)
     proc.wait()
     # create .ly and .midi files
-    proc = subprocess.Popen(gui_subpath('handler3'), cwd=gui_path)
-    proc.wait()
-    shutil.copy(midi_path, gui_subpath(name + '.midi'))
+#    proc = subprocess.Popen(gui_subpath('handler3'), cwd=gui_path)
+#    proc.wait()
+    #shutil.copy(midi_path, gui_subpath(name + '.midi'))
 
 
 def _parse_themes(result_path, total_measures):
