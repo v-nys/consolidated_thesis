@@ -318,12 +318,7 @@ unspecified_measure(A), unspecified_measure(B) ==> A<B | unspecified_successor(A
 unspecified_successor(X,Y) \ max_unspecified(X) <=> max_unspecified(Y).
 
 measure(1), key(major) \ chord_scheme(a) <=> debugwriteln('DEBUG: using first major progression'),
-                                             theme_boundary(u,8),
-                                             theme_boundary(b,6),
-                                             theme_boundary(b,4),
-                                             theme_boundary(u,2),
-                                             theme_boundary(a,1),
-                                             theme_boundary(a,0),
+                                             theme_boundary(u,0),
                                              mchord(1,c),
                                              mchord(2,f),
                                              mchord(3,c),
@@ -339,11 +334,7 @@ measure(1), key(major) \ chord_scheme(a) <=> debugwriteln('DEBUG: using first ma
                                              mchord(13,c).
 
 measure(1), key(major) \ chord_scheme(b) <=> debugwriteln('DEBUG: using second major progression'),
-                                             theme_boundary(u,8),
-                                             theme_boundary(a,6),
-                                             theme_boundary(u,2),
-                                             theme_boundary(a,1),
-                                             theme_boundary(a,0),
+                                             theme_boundary(u,0),
                                              mchord(1,c),
                                              mchord(2,c),
                                              mchord(3,c),
@@ -359,10 +350,7 @@ measure(1), key(major) \ chord_scheme(b) <=> debugwriteln('DEBUG: using second m
                                              mchord(13,c).
 
 measure(1), key(minor) \ chord_scheme(a) <=> debugwriteln('DEBUG: using first minor progression'),
-                                             theme_boundary(u,6),
-                                             theme_boundary(b,4),
-                                             theme_boundary(a,2),
-                                             theme_boundary(a,0),
+                                             theme_boundary(u,0),
                                              mchord(1,am),
                                              mchord(2,am),
                                              mchord(3,dm),
@@ -378,12 +366,7 @@ measure(1), key(minor) \ chord_scheme(a) <=> debugwriteln('DEBUG: using first mi
                                              mchord(13,am).
 
 measure(1), key(minor) \ chord_scheme(b) <=> debugwriteln('DEBUG: using second minor progression'),
-                                             theme_boundary(u,8),
-                                             theme_boundary(b,6),
-                                             theme_boundary(b,4),
-                                             theme_boundary(u,2),
-                                             theme_boundary(a,1),
-                                             theme_boundary(a,0),
+                                             theme_boundary(u,0),
                                              mchord(1,am),
                                              mchord(2,dm),
                                              mchord(3,am),
@@ -647,9 +630,9 @@ unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangec
 
 % add intrinsic limitations of guitar fretboard
 note(melody,M,N,X,Note) \ octave_rangecheck(melody,M,N,X,3)
-    <=> Note \== r, note_below(Note,e) | debugwrite('DEBUG: '), wfail(low).
+    <=> Note \== r, note_below(Note,e) | debugwrite('DEBUG: note below E3'), wfail(low).
 note(melody,M,N,X,Note) \ octave_rangecheck(melody,M,N,X,7)
-    <=> Note \== r, note_above(Note,d) | debugwrite('DEBUG: '), wfail(high).
+    <=> Note \== r, note_above(Note,d) | debugwrite('DEBUG: note above D7'), wfail(high).
 
 
 % even transpositions need to stick within range that can be represented by Lilypond / that are playable on guitar
