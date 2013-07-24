@@ -294,10 +294,18 @@ def _completed_measures(thematic_structure, measure_num):
     return set(range(1, measure_num)) | set(duplicated_measures)
 
 
-def compose(music_path):
+def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r):
     r"""
-    Given the location of the APOPCALEAPS 'music' folder, compose a new
-    piece in an iterative fashion.
+    Compose a new piece in an iterative fashion.
+
+    Several pieces of information are required:
+
+       #. `music_path`: the path to the APOPCALEAPS folder with music.chrism
+       #. `rhythm_chain`: a Pykov chain to assess probability of rhythm
+       #. `rhythm_percentiles`: a sequence of *log* rhythm probabilities, e.g.
+          [-2.30, -4.60] if easier half has log probability greater than -2.30
+       #. `percentile_r`: the index of the desired percentile, e.g. 1 if the
+          0 for the easier half and 1 for the more difficult half
     """
     gui_path = os.path.join(music_path, 'gui')
     gui_subpath = functools.partial(os.path.join, gui_path)
@@ -313,6 +321,24 @@ def compose(music_path):
         if measure_num not in _completed_measures(thematic_structure, measure_num):
             _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num) 
 
+
+def compose_samples(music_path, number_samples):
+    r"""
+    Compose a number of samples of APOPCALEAPS output.
+
+    This function does not work iteratively.
+    It performs one run for each sample.
+    """
+    gui_path = os.path.join(music_path, 'gui')
+    gui_subpath = functools.partial(os.path.join, gui_path)
+    result_path = gui_subpath(RESULT_FN)
+    total_measures = 13
+    _cleanup(gui_subpath, gui_path)
+
+    for i in range(1, number_samples + 1):
+        _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1) 
+        shutil.copy(gui_subpath('measure-1.midi'), gui_subpath(str(i) + '.midi'))
+     
 
 if __name__ == '__main__':
     import doctest
