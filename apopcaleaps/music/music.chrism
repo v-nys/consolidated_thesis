@@ -790,10 +790,25 @@ join_notes(V,cond M=M2,cond N=N2) ??
         ==> V \== drums |
         tied(V,M,N,X).
 
+join_notes(V,cond M=M2,cond N=N2) ??
+    phase(join_notes), duplicated_measure(M),
+    duplicated_measure(M2), note(V,M,N,X,Note),
+    next_beat(V,M,N,X,M2,N2,X2), note(V,M2,N2,X2,Note)
+        ==> V \== drums |
+        tied(V,M,N,X).
+
 % this instance of the rule applies to a single measure
+% only apply this in unspecified or duplicated measures
 join_notes(V,cond M=M2, cond N=N2) ??
     phase(join_notes),
     unspecified_measure(M),
+    note(V,M,N,X,Note),
+    next_beat(V,M,N,X,M,N2,X2), note(V,M,N2,X2,Note)
+        ==> V \== drums | tied(V,M,N,X).
+
+join_notes(V,cond M=M2, cond N=N2) ??
+    phase(join_notes),
+    duplicated_measure(M),
     note(V,M,N,X,Note),
     next_beat(V,M,N,X,M,N2,X2), note(V,M,N2,X2,Note)
         ==> V \== drums | tied(V,M,N,X).
