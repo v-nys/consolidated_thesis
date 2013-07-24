@@ -306,6 +306,9 @@ def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r):
           [-2.30, -4.60] if easier half has log probability greater than -2.30
        #. `percentile_r`: the index of the desired percentile, e.g. 1 if the
           0 for the easier half and 1 for the more difficult half
+       #. `melodic_chain`: a Pykov chain to assess probability of melody
+       #. `melody_percentiles`: analogous with `rhythm_percentiles`
+       #. `percentile_m`: analogous with `percentile_r`
     """
     gui_path = os.path.join(music_path, 'gui')
     gui_subpath = functools.partial(os.path.join, gui_path)
