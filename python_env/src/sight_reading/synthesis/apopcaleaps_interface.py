@@ -250,19 +250,25 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
     Therefore, it will eventually return as long as the supplied constraints
     can be met.
     """
-    if measure_num == 1:
-        goal = _construct_goal(gui_subpath, total_measures, initial=True)
-    else:
-        thematic_structure = _parse_themes(result_path, total_measures)
-        completed_measures = _completed_measures(thematic_structure, measure_num)
-        unspecified = set(range(1, total_measures + 1)) - completed_measures
-        goal = _construct_goal(gui_subpath, total_measures,
-                              initial=False, unspecified=unspecified)
-        LOG.info("Goal for {measure_num}: {goal}".format(**locals()))
+    while True:
+        if measure_num == 1:
+            goal = _construct_goal(gui_subpath, total_measures, initial=True)
+        else:
+            thematic_structure = _parse_themes(result_path, total_measures)
+            completed_measures = _completed_measures(thematic_structure, measure_num)
+            unspecified = set(range(1, total_measures + 1)) - completed_measures
+            goal = _construct_goal(gui_subpath, total_measures,
+                                  initial=False, unspecified=unspecified)
+            LOG.info("Goal for {measure_num}: {goal}".format(**locals()))
 
-    _process_goal(goal, gui_subpath, gui_path,
-                  'measure-{measure_num}'.format(measure_num=measure_num))
-    # TODO incorporate "supplied constraints" mentioned in doc
+        _process_goal(goal, gui_subpath, gui_path,
+                      'measure-{measure_num}'.format(measure_num=measure_num))
+        thematic_structure = _parse_themes(result_path, total_measures)
+        if _satisfies_rhythm(generated_measures, rhythm_chain,
+                             rhythm_percentiles, percentile_r) and \
+           _satisfies_melody(generated_measures, melodic_chain,
+                             melody_percentiles, percentile_m):
+            return
 
 
 def _completed_measures(thematic_structure, measure_num):
