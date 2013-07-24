@@ -294,7 +294,8 @@ def _completed_measures(thematic_structure, measure_num):
     return set(range(1, measure_num)) | set(duplicated_measures)
 
 
-def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r):
+def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
+            melodic_chain, melody_percentiles, percentile_m):
     r"""
     Compose a new piece in an iterative fashion.
 
