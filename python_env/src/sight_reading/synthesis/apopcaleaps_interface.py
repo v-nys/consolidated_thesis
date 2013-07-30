@@ -8,6 +8,8 @@ import re
 import shutil
 import subprocess
 
+import find_sample_difficulties
+
 MEASURES_RE = re.compile(r"""^(?P<preceding_rules>.*)(?P<measures_constraint>measures\((?P<num_measures>[0-9]+)\))(?P<following_rules>.*)$""")
 GOAL_REDEF_RE = re.compile(r"""^(?P<pre_unspecified>.*(chaos\(chords,0\), ))(?P<post_unspecified>.*)$""")
 MCHORD_RE = re.compile(r"""^(?P<constraint>mchord\((?P<measure_num>[0-9]+),(?P<chord>.*)\))$""")
@@ -236,7 +238,7 @@ def _parse_themes(result_path, total_measures):
     return dict(result_dict)
 
 
-def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num):
+def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, test=True):
     r"""
     Generate a piece that satisfies supplied constraints.
 
@@ -250,7 +252,10 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
     Therefore, it will eventually return as long as the supplied constraints
     can be met.
     """
+    # TODO make sure right chain combination is used for checks
+    LOG.debug('GENERATING WITH TEST: {num}'.format(num=measure_num))
     while True:
+        LOG.debug('COMMENCING GENERATION')
         if measure_num == 1:
             goal = _construct_goal(gui_subpath, total_measures, initial=True)
         else:
@@ -263,11 +268,40 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
 
         _process_goal(goal, gui_subpath, gui_path,
                       'measure-{measure_num}'.format(measure_num=measure_num))
-        thematic_structure = _parse_themes(result_path, total_measures)
-        if _satisfies_rhythm(generated_measures, rhythm_chain,
-                             rhythm_percentiles, percentile_r) and \
-           _satisfies_melody(generated_measures, melodic_chain,
-                             melody_percentiles, percentile_m):
+
+        if test and measure_num != 13:
+            LOG.debug('COMMENCING TEST')
+            thematic_structure = _parse_themes(result_path, total_measures)
+            measures = find_sample_difficulties._assemble_measures(gui_subpath(MIDI_FN))
+
+            generated_measures = [measures[index] for index in _to_be_generated(thematic_structure, measure_num)]
+
+            generated_rhythm_percentiles = []
+            generated_melody_percentiles = []
+
+            for measure in generated_measures:
+
+                rhythm_entries = [str(rhythm) for rhythm in find_sample_difficulties._measure_rhythms(measure)]
+                LOG.debug('Rhythm entries: {r}'.format(r=rhythm_entries))
+                melody_entries = [str(melody) for melody in find_sample_difficulties._measure_melodies(measure)]
+                LOG.debug('Melody entries: {m}'.format(m=melody_entries))
+
+                rhythm_likelihoods = find_sample_difficulties._log_likelihood(rhythm_entries, rhythm_chain)
+                LOG.debug('Rhythm likelihoods: {r}'.format(r=rhythm_likelihoods))
+                melody_likelihoods = find_sample_difficulties._log_likelihood(melody_entries, melody_chain)
+                LOG.debug('Melody likelihoods: {m}'.format(m=melody_likelihoods))
+
+                generated_rhythm_percentiles.append(belongs_to_percentile(rhythm_likelihoods, rhythm_percentiles))
+                generated_melody_percentiles.append(belongs_to_percentile(melody_likelihoods, melody_percentiles))
+
+            right_rhythm = all((percentile == percentile_rhythm for percentile in generated_rhythm_percentiles))
+            right_melody = all((percentile == percentile_melody for percentile in generated_melody_percentiles))
+
+            if right_rhythm and right_melody:
+                LOG.info('Accepting rhythm and melody for all generated measures.')
+                return
+        else:
+            # don't check (typically easy) closing measure
             return
 
 
@@ -283,21 +317,75 @@ def _completed_measures(thematic_structure, measure_num):
 
     >>> _completed_measures({'a': [(1, 2), (5, 6)], 'b': [(3, 4)]}, 4)
     set([1, 2, 3, 5, 6])
+    >>> _completed_measures({'a': [(1, 2), (5, 6)], 'b': [(3, 4)]}, 5)
+    set([1, 2, 3, 4, 5, 6])
+    >>> _completed_measures({'a': [(1, 2), (5, 6)], 'b': [(3, 4)]}, 1)
+    set([])
+    >>> _completed_measures({'a': [(1, 2), (5, 6)], 'b': [(3, 4)]}, 2)
+    set([1, 5])
     """
-    # if we're past one instantiation of full theme, we know the duplicates
-    completed_themes = set()
-    for key in thematic_structure:
-        for theme_range in thematic_structure[key]:
-            if theme_range[1] < measure_num:
-                completed_themes.add(key)
-                break
+    through_themes = set()
+    for theme in (theme for theme in thematic_structure if theme != 'u'):
+        for instantiation in thematic_structure[theme]:
+            if instantiation[1] < measure_num:
+                for inst in thematic_structure[theme]:
+                    through_themes = through_themes | set(range(inst[0], inst[1] + 1))
+            elif instantiation[0] < measure_num:
+                diff = measure_num - instantiation[0]
+                for inst in thematic_structure[theme]:
+                    through_themes = through_themes | set(range(inst[0], inst[0] + diff))
 
-    duplicated_measures = set()
-    for key in completed_themes:
-        for theme_range in thematic_structure[key]:
-            duplicated_measures = duplicated_measures | set(range(theme_range[0], theme_range[1] + 1))
+    return set(range(1, measure_num)) | set(through_themes)
+        
 
-    return set(range(1, measure_num)) | set(duplicated_measures)
+#     # everything less than measure_num has always been generated
+# 
+# 
+#         
+# 
+#     ###OLD VERSION WHERE ONLY COMPLETE THEMES WERE COPIED###
+#     completed_themes = set()
+#     for key in thematic_structure:
+#         for theme_range in thematic_structure[key]:
+#             if theme_range[1] < measure_num:
+#                 completed_themes.add(key)
+#                 break
+# 
+#     duplicated_measures = set()
+#     for key in completed_themes:
+#         for theme_range in thematic_structure[key]:
+#             duplicated_measures = duplicated_measures | set(range(theme_range[0], theme_range[1] + 1))
+# 
+#     return set(range(1, measure_num)) | set(duplicated_measures)
+# 
+
+def _to_be_generated(thematic_structure, measure_num):
+    r"""
+    >>> _to_be_generated({'a': [(1, 2), (5, 6)], 'b': [(3, 4)]}, 1)
+    set([1, 5])
+    >>> _to_be_generated({'a': [(1, 2), (5, 6)], 'b': [(3, 4)]}, 5)
+    set([])
+    """
+    return _completed_measures(thematic_structure, measure_num + 1) - _completed_measures(thematic_structure, measure_num)
+
+
+def belongs_to_percentile(log_likelihood, percentiles):
+    r"""
+    Given a list of percentile boundaries that go from most likely to least
+    likely (i.e. from near-zero log likelihood to more negative)
+    determine to which category the supplied log_likelihood belongs.
+
+    If the supplied likelihood is more negative than the last boundary, an
+    imaginary -Inf boundary is used for the n+1st percentile.
+    >>> belongs_to_percentile(0.0, [-2.0, -4.0])
+    0
+    >>> belongs_to_percentile(-10.0, [-2.0, -4.0])
+    2
+    """
+    for boundary_index in range(0, len(percentiles)):
+        if log_likelihood > percentiles[boundary_index]:
+            return boundary_index
+    return len(percentiles)
 
 
 def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
@@ -312,7 +400,10 @@ def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
        #. `rhythm_percentiles`: a sequence of *log* rhythm probabilities, e.g.
           [-2.30, -4.60] if easier half has log probability greater than -2.30
        #. `percentile_r`: the index of the desired percentile, e.g. 1 if the
-          0 for the easier half and 1 for the more difficult half
+          0 for the easier half and 1 for the more difficult half.
+          Also note that it is permitted to supply the value 2 to attempt to
+          obtain a piece whose rhythms are more difficult than any seen in the
+          corpus on which percentiles are based.
        #. `melodic_chain`: a Pykov chain to assess probability of melody
        #. `melody_percentiles`: analogous with `rhythm_percentiles`
        #. `percentile_m`: analogous with `percentile_r`
@@ -324,12 +415,12 @@ def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
     _cleanup(gui_subpath, gui_path)
 
     # don't loop from 1 because we can save work when using themes
-    _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1) 
+    _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, test=True) 
     thematic_structure = _parse_themes(result_path, total_measures)
 
     for measure_num in range(2, total_measures + 1):
         if measure_num not in _completed_measures(thematic_structure, measure_num):
-            _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num) 
+            _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, test=True) 
 
 
 def compose_samples(music_path, number_samples):
@@ -346,8 +437,8 @@ def compose_samples(music_path, number_samples):
     _cleanup(gui_subpath, gui_path)
 
     for i in range(1, number_samples + 1):
-        _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1) 
-        shutil.copy(gui_subpath('measure-1.midi'), gui_subpath(str(i) + '.midi'))
+        _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, None, None, None, None, None, None, test=False) 
+        shutil.copy(gui_subpath('measure-1.midi'), gui_subpath('sample-' + str(i) + '.midi'))
      
 
 if __name__ == '__main__':

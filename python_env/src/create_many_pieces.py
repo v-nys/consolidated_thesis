@@ -3,7 +3,7 @@ import ConfigParser
 import os
 import shutil
 
-from compose import compose
+from sight_reading.synthesis.apopcaleaps_interface import compose_samples
 
 if __name__ == '__main__':
 
@@ -13,10 +13,7 @@ if __name__ == '__main__':
 
     config = ConfigParser.ConfigParser()
     config.read(parameter_path)
-    gui_path = config.get('APOPCALEAPS', 'gui_folder')
-    sample_corpus_path = config.get('APOPCALEAPS', 'sample_corpus_folder')
+    gui_path = config.get('APOPCALEAPS', 'music_folder')
 
-    for i in range(1, 2001):
-        destination = os.path.join(sample_corpus_path, str(i) + '.midi')
-        compose()
-        shutil.copy(os.path.join(gui_path, 'temp.midi'), destination) 
+    num_samples = 2000
+    compose_samples(gui_path, num_samples)
