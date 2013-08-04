@@ -19,13 +19,6 @@ def _get_dependencies(mode):
     music_path = config.get('APOPCALEAPS', 'music_folder')
     data_path = config.get('Analysis', 'data_root')
 
-    if mode == 'Temperley':
-        notelist_path = config.get('Temperley', 'notelist_path')
-        melprob_path = config.get('Temperley', 'melprob_path')
-    else:
-        notelist_path = None
-        melprob_path = None
-
     with open(os.path.join(data_path, 'pickled_rhythm')) as fh:
         r_chain = pickle.load(fh)
         _, P = maximum_likelihood_probabilities(r_chain)
@@ -50,7 +43,7 @@ def _get_dependencies(mode):
             _, P = maximum_likelihood_probabilities(m_chain)
             m_chain = P
 
-    return music_path, r_chain, r_percentiles, m_chain, m_percentiles, notelist_path, melprob_path
+    return music_path, r_chain, r_percentiles, m_chain, m_percentiles
 
 
 def multi_compose():
@@ -64,7 +57,7 @@ def multi_compose():
     [((0, 0), 1.0), ((0, 1), 1.0)]
     """
     from time import clock
-    music_path, r_chain, r_percentiles, m_chain, m_percentiles, notelist_path, melprob_path = _get_dependencies(mode)
+    music_path, r_chain, r_percentiles, m_chain, m_percentiles= _get_dependencies(mode)
     r_sections = range(1, len(r_percentiles) + 1)
     m_sections = range(1, len(m_percentiles) + 1)
     results = []
@@ -73,17 +66,17 @@ def multi_compose():
         compose(music_path,
                 r_chain, r_percentiles, section_r,
                 m_chain, m_percentiles_m, section_m,
-                mode, notelist_path, melprob_path)
+                mode)
         end_time = clock
         results.append(((section_r, section_m), end_time - start_time))
     return results
 
 
 def make_composition(mode, r_section, m_section):
-    music_path, r_chain, r_percentiles, m_chain, m_percentiles, notelist_path, melprob_path = _get_dependencies(mode)
+    music_path, r_chain, r_percentiles, m_chain, m_percentiles, = _get_dependencies(mode)
     compose(music_path, r_chain, r_percentiles, r_section,
             m_chain, m_percentiles, m_section, mode,
-            notelist_path, melprob_path)
+            )
 
 
 if __name__ == '__main__':
