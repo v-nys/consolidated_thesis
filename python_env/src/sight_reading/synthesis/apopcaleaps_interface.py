@@ -291,7 +291,7 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
     LOG.debug('As history: {history_measures}'.format(**locals()))
 
     tested_indices = [history_nums.index(num) for num in generated_nums]
-    LOG.debug('Testing measures: {tested_indices}'.format(**locals()))
+    LOG.debug('Testing measures with indices: {tested_indices}'.format(**locals()))
 
     rhythm_entries_sequence = [[str(rhythm) for rhythm in _measure_rhythms(measure)] for measure in history_measures]
     rhythm_likelihoods = list(_multi_log_likelihoods(rhythm_entries_sequence, rhythm_chain))
@@ -314,6 +314,7 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
                                            temp_midi_path=temp_midi_path)
             melody_likelihoods.append(likelihood)
             LOG.debug("Adding (Temperley's) likelihood: {l}".format(l=likelihood))
+        tested_m_likelihoods = melody_likelihoods  # no linear combinations...
     else:
         if mode == 'Relative':
             melody_entries_sequence = [[str(melody) for melody in _measure_melodies(measure)] for measure in history_measures]
@@ -321,7 +322,7 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
             raise NotImplemented
             melody_entries_sequence = [[str(melody) for melody in _measure_melodies_mixed(measure)] for measure in history_measures]
         melody_likelihoods = list(_multi_log_likelihoods(melody_entries_sequence, melody_chain))
-    tested_m_likelihoods = [melody_likelihoods[i] for i in tested_indices]
+        tested_m_likelihoods = [melody_likelihoods[i] for i in tested_indices]
 #-----------------------------------------------------------------#
 
     LOG.debug('Likelihoods for tested rhythms: {tested_r_likelihoods}'.format(**locals()))
