@@ -285,8 +285,10 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
     # set up stage to check last measure - rest is included in "_multi"
     recent_measure = max(generated_nums)
     existing = completed_measures | set([m for m in generated_nums if m <= recent_measure])
+    LOG.debug('Existing measures, i.e. old plus new: {existing}'.format(**locals()))
     history_nums = sorted(list(existing))
     history_measures = [measures[index - 1] for index in history_nums]
+    LOG.debug('As history: {history_measures}'.format(**locals()))
 
     tested_indices = [history_nums.index(num) for num in generated_nums]
     LOG.debug('Testing measures: {tested_indices}'.format(**locals()))
@@ -298,9 +300,7 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
 #-----------------------------------------------------------------#
     if mode == 'Temperley':
         melody_likelihoods = []
-        melody_measures = extract_melody_measures(music21.converter.parse(gui_subpath(MIDI_FN)), generated_nums)
-        LOG.debug('Melody measures: {0}'.format(melody_measures))
-        LOG.debug('As list: {0}'.format(list(melody_measures)))
+        melody_measures = extract_melody_measures(music21.converter.parse(gui_subpath(MIDI_FN)), list(generated_nums))
         for measure in melody_measures:
             LOG.debug('Generated measure: {measure}'.format(**locals()))
             midi_f = streamToMidiFile(measure)

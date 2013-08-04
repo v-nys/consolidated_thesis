@@ -55,7 +55,6 @@ def extract_melody_measures(piece, measure_numbers):
     account. This is deliberate: they make the previous measure more
     difficult.
     """
-    LOG.debug('Extracted melody part')
     LOG.debug('Measure numbers: {0}'.format(measure_numbers))
     melody_part = extract_melody(piece)
     # APOCALEAPS and music21 together do not produce `Measure` objects!
