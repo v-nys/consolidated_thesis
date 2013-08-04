@@ -48,12 +48,15 @@ def _measure_rhythms(measure):
     measure_offset = None
     for element in measure:
         if isinstance(element, Note) or isinstance(element, Rest):
-            rhythms.append((element.offset + 1.0,
+            rhythms.append(((element.offset % 4.0) + 1.0,
                             element.quarterLength,
                             isinstance(element, Note)))
     # little patch to ensure consistency:
     # APOPCALEAPS output normally does not add last rests in final measure
-    if round(rhythms[-1][0] + rhythms [-1][1], 2) != 5.0:
+    # note that "inconsistency" can be due to joined notes as well
+    # therefore only correct when count is too *low*
+    if round(rhythms[-1][0] + rhythms [-1][1], 2) < 5.0:
+        LOG.warning('Correcting rhythm in measure {measure}'.format(**locals()))
         start = rhythms[-1][0] + rhythms[-1][1]
         rhythms.append((start, 5.0 - start, False))
     return ['BEGINNING_OF_MEASURE'] + rhythms + ['END_OF_MEASURE']
@@ -163,9 +166,10 @@ def _log_likelihood(entries, original_chain):
     mod_chain = alt_combine_markov_chains(original_chain, local_chain, 0.02)
     for entry in entries[1:]:
         LOG.debug('Current entry: {entry}'.format(**locals()))
-        successors = mod_chain.succ(state)
-        LOG.debug('Successors of current entry in previous chain: {0}'.format(original_chain.succ(state)))
-        LOG.debug('Successors of current entry: {successors}'.format(**locals()))
+        try:
+            successors = original_chain.succ(state)
+        except KeyError:
+            return -float("inf"), mod_chain
         log_likelihood += log(mod_chain.succ(state)[entry])
         state = entry
     return log_likelihood, mod_chain

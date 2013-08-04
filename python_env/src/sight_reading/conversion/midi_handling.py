@@ -66,6 +66,7 @@ def extract_melody_measures(piece, measure_numbers):
     for element in melody_part:
         element_offset = element.offset
         measure_num = (element_offset // 4) + 1  # count of 4.5 has offset 3.5
+        LOG.debug('Element with offset {element_offset} goes in measure number {measure_num}'.format(**locals()))
         if measure_num in measure_numbers:
             measure = measures[measure_numbers.index(measure_num)]
             measure.append(element)
