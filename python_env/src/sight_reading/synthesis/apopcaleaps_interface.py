@@ -246,6 +246,37 @@ def _parse_themes(result_path, total_measures):
     return dict(result_dict)
 
 
+def _parse_key(result_path)
+    r"""
+    Scan the results of an initial run of APOPCALEAPS.
+    Return "major" or "minor" depending on which key was used for generation.
+    """
+    with open(result_path) as result_fh:
+        lines = result_fh.readlines()
+    for result_line in result_fh.readlines():
+        if 'key(major)' in result_line:
+            return 'major'
+        elif 'key(minor)' in result_line:
+            return 'minor'
+    raise ValueError('No key constraint is present.')
+
+
+def _parse_chord(result_path, measure)
+    r"""
+    Scan the results of an initial run of APOPCALEAPS.
+    Return the chord in the supplied measure in a notation
+    that is understood by music21.
+    """
+    expression = re.compile(r"""^mchord\({measure},(?P<chord>[a-zA-Z#]+)\)$""")
+    with open(result_path) as result_fh:
+        lines = result_fh.readlines()
+    for line in lines:
+        match = exp.match(line.strip())
+        if match:
+            return music21.key.convertKeyStringToMusic21KeyString(match.group('chord'))
+    raise ValueError('No chord is known for the supplied measure.')
+
+
 def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num):
     r"""
     Generate measure `measure_num`.
@@ -319,8 +350,10 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
         if mode == 'Relative':
             melody_entries_sequence = [[str(melody) for melody in _measure_melodies(measure)] for measure in history_measures]
         elif mode == 'Mixed':
-            raise NotImplemented
-            melody_entries_sequence = [[str(melody) for melody in _measure_melodies_mixed(measure)] for measure in history_measures]
+            key = _parse_key(result_path)
+            chords = [_parse_chord(result_path, m) for m in history_nums]
+            measure_chords = zip(history_measures, chords)
+            melody_entries_sequence = [[str(melody) for melody in _measure_melodies_mixed(measure, key, chord)] for (measure, chord) in measure_chords]
         melody_likelihoods = list(_multi_log_likelihoods(melody_entries_sequence, melody_chain))
         tested_m_likelihoods = [melody_likelihoods[i] for i in tested_indices]
 #-----------------------------------------------------------------#

@@ -114,7 +114,6 @@ def mixed_sequences(data_path, output_path):
                                          'gtr' in instrument(e)) and not \
                                          'bass' in instrument(e))
         for part in guitar_parts:
-            # form of a sequence: (rel, rel, abs, key.mode, chord degree)
             current_sequence = None
             last_note = None
             measures = [elem for elem in part if isinstance(elem, Measure)]

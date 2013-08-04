@@ -64,7 +64,6 @@ def _measure_melodies(measure):
 
     #. `measure`: a music21 `Stream` directly containing notes/rests/...
     """
-    # TODO this is a variant for 'relative' approach only
     entries = []
     for element in measure:
         if isinstance(element, Note):
@@ -75,6 +74,39 @@ def _measure_melodies(measure):
             else:
                 entries.append((0, 0, 0))  # first note means no interval
             last_note = element
+    return ['BEGINNING_OF_SEQUENCE'] + entries + ['END_OF_SEQUENCE']
+
+
+def _measure_melodies_mixed(measure, key, chord):
+    r"""
+    Return a list of all the melody events (as strings) in a supplied measure.
+
+    #. `measure`: a music21 `Stream` directly containing notes/rests/...
+    """
+    entries = []
+
+    key_obj = music21.key.Key(key)
+    if key == 'minor':
+        key_pitch = music21.pitch.Pitch('a')
+    elif key == 'major':
+        key_pitch = music21.pitch.Pitch('c')
+    if chord[-1] == 'm':
+        chord = chord[:-1]
+    chord_pitch = music21.pitch.Pitch(chord)
+
+    for element in measure:
+        if isinstance(element, Note):
+            if entries:
+                prev_entry = entries[-1]
+                interval = notesToChromatic(last_note, element)
+                entry = (prev_entry[1], notestToChromatic(last_note, element).semitones,
+                         notesToChromatic(key_pitch, element).semitones, key,
+                         notesToChromatic(key_pitch, chord_pitch).semitones)
+            else:
+                entries = [(0, 0, notesToChromatic(key_pitch, element).semitones, key,
+                            notesToChromatic(key_pitch, chord_pitch).semitones)]
+        last_note = element
+
     return ['BEGINNING_OF_SEQUENCE'] + entries + ['END_OF_SEQUENCE']
 
 
