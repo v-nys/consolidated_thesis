@@ -152,4 +152,4 @@ if __name__=='__main__':
     args = arg_parser.parse_args()
 
     create_chain(args.data_path, args.output_path, args.mode)
-    read_and_pickle_chain(os.path.join(args.output_path, TEXT_CHAIN_NAME), 'pickled_melody_{m}'.format(mode))
+    read_and_pickle_chain(args.output_path, 'pickled_melody_{mode}'.format(mode=args.mode))
