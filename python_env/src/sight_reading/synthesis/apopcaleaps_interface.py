@@ -288,9 +288,10 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
     history_measures = [measures[index - 1] for index in history_nums]
 
     tested_indices = [history_nums.index(num) for num in generated_nums]
+    LOG.debug('Testing measures: {tested_indices}'.format(**locals()))
 
     rhythm_entries_sequence = [[str(rhythm) for rhythm in _measure_rhythms(measure)] for measure in history_measures]
-    rhythm_likelihoods = _multi_log_likelihoods(rhythm_entries_sequence, rhythm_chain)
+    rhythm_likelihoods = list(_multi_log_likelihoods(rhythm_entries_sequence, rhythm_chain))
     tested_r_likelihoods = [rhythm_likelihoods[i] for i in tested_indices]
 
 #-----------------------------------------------------------------#
@@ -314,12 +315,18 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
         elif mode == 'Mixed':
             raise NotImplemented
             melody_entries_sequence = [[str(melody) for melody in _measure_melodies_mixed(measure)] for measure in history_measures]
-        melody_likelihoods = _multi_log_likelihoods(melody_entries_sequence, melody_chain)
+        melody_likelihoods = list(_multi_log_likelihoods(melody_entries_sequence, melody_chain))
     tested_m_likelihoods = [melody_likelihoods[i] for i in tested_indices]
 #-----------------------------------------------------------------#
 
+    LOG.debug('Likelihoods for tested rhythms: {tested_r_likelihoods}'.format(**locals()))
+    LOG.debug('Likelihoods for tested melodies: {tested_m_likelihoods}'.format(**locals()))
+
     generated_rhythm_percentiles = [belongs_to_percentile(likelihood, rhythm_percentiles) for likelihood in tested_r_likelihoods]
     generated_melody_percentiles = [belongs_to_percentile(likelihood, melody_percentiles) for likelihood in tested_m_likelihoods]
+
+    LOG.debug('Percentile sections for rhythms: {generated_rhythm_percentiles}'.format(**locals()))
+    LOG.debug('Percentile sections for melodies: {generated_melody_percentiles}'.format(**locals()))
 
     right_rhythm = all((percentile == percentile_rhythm for percentile in generated_rhythm_percentiles))
     right_melody = all((percentile == percentile_melody for percentile in generated_melody_percentiles))

@@ -1,3 +1,4 @@
+import argparse
 import ConfigParser
 import os
 import pickle
@@ -19,6 +20,9 @@ def _get_dependencies(mode):
     music_path = config.get('APOPCALEAPS', 'music_folder')
     data_path = config.get('Analysis', 'data_root')
 
+    with open(os.path.join(data_path, 'pickled_r_percentiles')) as fh:
+        r_percentiles = pickle.load(fh)
+
     with open(os.path.join(data_path, 'pickled_rhythm')) as fh:
         r_chain = pickle.load(fh)
         _, P = maximum_likelihood_probabilities(r_chain)
@@ -33,7 +37,6 @@ def _get_dependencies(mode):
     elif mode == 'Mixed':
         m_chain_path = os.path.join(data_path, 'pickled_melody_mixed')
         m_percentiles_path  = os.path.join(data_path, 'pickled_m_percentiles_mixed')
-
     with open(m_percentiles_path, 'rb') as fh:
         m_percentiles = pickle.load(fh)
 
@@ -58,8 +61,8 @@ def multi_compose():
     """
     from time import clock
     music_path, r_chain, r_percentiles, m_chain, m_percentiles= _get_dependencies(mode)
-    r_sections = range(1, len(r_percentiles) + 1)
-    m_sections = range(1, len(m_percentiles) + 1)
+    r_sections = range(0, len(r_percentiles))
+    m_sections = range(0, len(m_percentiles))
     results = []
     for (section_r, section_m) in product(r_sections, m_sections):
         start_time = clock()
@@ -83,8 +86,8 @@ if __name__ == '__main__':
 
     arg_parser = argparse.ArgumentParser()
     explanation = "'Relative', 'Mixed' or 'Temperley' determines algorithm "\
-                  "used to evaluate melodic difficulty. Default: 'Relative'" 
-    arg_parser.add_argument('--mode', help=explanation)
+                  "used to evaluate melodic difficulty." 
+    arg_parser.add_argument('mode', help=explanation)
     args = arg_parser.parse_args()
     mode = args.mode
     if mode:
@@ -92,4 +95,4 @@ if __name__ == '__main__':
     else:
         mode = 'Relative'
 
-    make_composition(mode, 1, 1)
+    make_composition(mode, 0, 0)  # 0-indexed percentiles
