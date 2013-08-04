@@ -102,6 +102,7 @@ def _measure_melodies_mixed(measure, key, chord):
                 entry = (prev_entry[1], notesToChromatic(last_note, element).semitones,
                          notesToChromatic(key_pitch, element).semitones, key,
                          notesToChromatic(key_pitch, chord_pitch).semitones)
+                entries.append(entry)
             else:
                 entries = [(0, 0, notesToChromatic(key_pitch, element).semitones, key,
                             notesToChromatic(key_pitch, chord_pitch).semitones)]

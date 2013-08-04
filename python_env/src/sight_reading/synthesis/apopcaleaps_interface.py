@@ -356,6 +356,7 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
             chords = [_parse_chord(result_path, m) for m in history_nums]
             measure_chords = zip(history_measures, chords)
             melody_entries_sequence = [[str(melody) for melody in _measure_melodies_mixed(measure, key, chord)] for (measure, chord) in measure_chords]
+            LOG.debug('Melody entries sequence: {melody_entries_sequence}'.format(**locals()))
         melody_likelihoods = list(_multi_log_likelihoods(melody_entries_sequence, melody_chain))
         tested_m_likelihoods = [melody_likelihoods[i] for i in tested_indices]
 #-----------------------------------------------------------------#
