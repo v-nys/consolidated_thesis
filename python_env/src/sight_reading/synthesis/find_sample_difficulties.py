@@ -11,6 +11,7 @@ import pickle
 
 from math import log
 
+import music21
 from music21.converter import parse
 from music21.interval import notesToChromatic
 from music21.note import Note, Rest
@@ -84,12 +85,11 @@ def _measure_melodies_mixed(measure, key, chord):
     #. `measure`: a music21 `Stream` directly containing notes/rests/...
     """
     entries = []
-
-    key_obj = music21.key.Key(key)
     if key == 'minor':
         key_pitch = music21.pitch.Pitch('a')
     elif key == 'major':
         key_pitch = music21.pitch.Pitch('c')
+    key_obj = music21.key.Key(key_pitch)
     if chord[-1] == 'm':
         chord = chord[:-1]
     chord_pitch = music21.pitch.Pitch(chord)
@@ -99,13 +99,13 @@ def _measure_melodies_mixed(measure, key, chord):
             if entries:
                 prev_entry = entries[-1]
                 interval = notesToChromatic(last_note, element)
-                entry = (prev_entry[1], notestToChromatic(last_note, element).semitones,
+                entry = (prev_entry[1], notesToChromatic(last_note, element).semitones,
                          notesToChromatic(key_pitch, element).semitones, key,
                          notesToChromatic(key_pitch, chord_pitch).semitones)
             else:
                 entries = [(0, 0, notesToChromatic(key_pitch, element).semitones, key,
                             notesToChromatic(key_pitch, chord_pitch).semitones)]
-        last_note = element
+            last_note = element
 
     return ['BEGINNING_OF_SEQUENCE'] + entries + ['END_OF_SEQUENCE']
 

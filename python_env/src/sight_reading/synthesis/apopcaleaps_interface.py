@@ -15,7 +15,7 @@ from music21.midi.translate import streamToMidiFile
 
 from sight_reading.conversion.midi_handling import extract_melody_measures
 from sight_reading.temperley import likelihood_melody
-from sight_reading.synthesis.find_sample_difficulties import _assemble_measures, _measure_rhythms, _measure_melodies, _multi_log_likelihoods
+from sight_reading.synthesis.find_sample_difficulties import _assemble_measures, _measure_rhythms, _measure_melodies, _measure_melodies_mixed, _multi_log_likelihoods
 
 
 MEASURES_RE = re.compile(r"""^(?P<preceding_rules>.*)(?P<measures_constraint>measures\((?P<num_measures>[0-9]+)\))(?P<following_rules>.*)$""")
@@ -246,14 +246,14 @@ def _parse_themes(result_path, total_measures):
     return dict(result_dict)
 
 
-def _parse_key(result_path)
+def _parse_key(result_path):
     r"""
     Scan the results of an initial run of APOPCALEAPS.
     Return "major" or "minor" depending on which key was used for generation.
     """
     with open(result_path) as result_fh:
         lines = result_fh.readlines()
-    for result_line in result_fh.readlines():
+    for result_line in lines:
         if 'key(major)' in result_line:
             return 'major'
         elif 'key(minor)' in result_line:
@@ -261,17 +261,19 @@ def _parse_key(result_path)
     raise ValueError('No key constraint is present.')
 
 
-def _parse_chord(result_path, measure)
+def _parse_chord(result_path, measure):
     r"""
     Scan the results of an initial run of APOPCALEAPS.
     Return the chord in the supplied measure in a notation
     that is understood by music21.
     """
-    expression = re.compile(r"""^mchord\({measure},(?P<chord>[a-zA-Z#]+)\)$""")
+    expression = r"""^mchord\({m},(?P<chord>[a-zA-Z#]+)\),$""".format(m=measure)
+    LOG.debug("Regexp: {expression}".format(**locals()))
+    expression = re.compile(expression)
     with open(result_path) as result_fh:
         lines = result_fh.readlines()
     for line in lines:
-        match = exp.match(line.strip())
+        match = expression.match(line.strip())
         if match:
             return music21.key.convertKeyStringToMusic21KeyString(match.group('chord'))
     raise ValueError('No chord is known for the supplied measure.')
