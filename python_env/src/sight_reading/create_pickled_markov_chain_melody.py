@@ -68,7 +68,8 @@ def sequences(data_path, output_path, mode):
 
 def relative_sequences(data_path):
     for (number, filename) in enumerate(os.listdir(data_path), start=1):
-        print('Getting sequences for file {number}'.format(**locals()))
+        if number > 10:  # TODO remove this when generating full corpus
+            break
         piece = parse(os.path.join(data_path, filename))
         instrument = lambda x: x.getInstrument().instrumentName.lower()
         guitar_parts = (e for e in piece if isinstance (e, Part) and \
@@ -98,9 +99,9 @@ def relative_sequences(data_path):
 
 def mixed_sequences(data_path, output_path):
     for (number, filename) in enumerate(os.listdir(data_path), start=1):
+        if number > 10:  # TODO remove this when generating full corpus
+            break
         full_path = os.path.join(data_path, filename)
-        print(full_path)
-        print('Getting sequences for file {number} ({full_path})'.format(**locals()))
         piece = parse(full_path)
         temp_abspath = os.path.join(output_path, TEMP_MIDI_NAME)
         piece.write('midi', temp_abspath)
