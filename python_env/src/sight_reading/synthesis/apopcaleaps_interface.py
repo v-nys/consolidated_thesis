@@ -228,7 +228,6 @@ def _parse_themes(result_path, total_measures):
     representing undefined runs have identical first and second elements.
     """
     result_dict = collections.defaultdict(list)
-    # FIXME representation of 'u' measures!
     latest_entry = None # e.g. ('a', 0)
     with open(result_path) as result_fh:
         for result_line in result_fh.readlines():
@@ -267,7 +266,7 @@ def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measu
                   'measure-{measure_num}'.format(measure_num=measure_num))
 
 
-def _test_generated_measures(gui_subpath, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, mode='Relative', notelist_path=None, melprob_path=None):
+def _test_generated_measures(gui_subpath, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, mode='Relative'):
     r"""
     Check the quality of newly generated measures.
 
@@ -305,9 +304,7 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
             midi_f.open(midi_path, 'wb')
             midi_f.write()
             midi_f.close()
-            likelihood = likelihood_melody(notelist_path=notelist_path,
-                                           melprob_path=melprob_path,
-                                           midi_path=gui_subpath(midi_path),
+            likelihood = likelihood_melody(midi_path=gui_subpath(midi_path),
                                            temp_midi_path=temp_midi_path)
             melody_likelihoods.append(likelihood)
             LOG.debug("Adding (Temperley's) likelihood: {l}".format(l=likelihood))
@@ -330,7 +327,7 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
     return (right_rhythm and right_melody)
 
 
-def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, test=True, mode='Relative', notelist_path=None, melprob_path=None):
+def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, test=True, mode='Relative'):
     r"""
     Generate a piece that satisfies supplied constraints.
 
@@ -348,7 +345,7 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
     while True:
         _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num)
         if test and measure_num != 13:
-            if _test_generated_measures(gui_subpath, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, mode, notelist_path, melprob_path):
+            if _test_generated_measures(gui_subpath, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, mode):
                 return
         else:
             # don't check (always easy) closing measure
@@ -419,7 +416,7 @@ def belongs_to_percentile(log_likelihood, percentiles):
 
 def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
             melodic_chain, melody_percentiles, percentile_m, mode,
-            notelist_path=None, melprob_path=None):
+            ):
     r"""
     Compose a new piece in an iterative fashion.
 
@@ -446,7 +443,7 @@ def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
     _cleanup(gui_subpath, gui_path)
 
     # don't loop from 1 because we can save work when using themes
-    _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, True, mode, notelist_path, melprob_path) 
+    _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, True, mode) 
     thematic_structure = _parse_themes(result_path, total_measures)
 
     for measure_num in range(2, total_measures + 1):

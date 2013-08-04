@@ -44,6 +44,7 @@ parameter_path = os.path.join(runtime_dir, 'parameters.ini')
 config = ConfigParser.ConfigParser()
 config.read(parameter_path)
 beatlist_path = config.get('Temperley', 'beatlist_path')
+melprob_path = config.get('Temperley', 'melprob_path')
 notelist_path = config.get('Temperley', 'notelist_path')
 harmony_path = config.get('Temperley', 'harmony_path')
 key_path = config.get('Temperley', 'key_path')
@@ -115,13 +116,11 @@ def key_sequence(midi_path):
     return keys.split()
 
 
-def likelihood_melody(notelist_path, melprob_path, midi_path, temp_midi_path):
+def likelihood_melody(midi_path, temp_midi_path):
     r"""
     Given the full path to an APOPCALEAPS-generated midi file,
     return Temperley's estimation of the likelihood of the melody.
 
-    #. `notelist_path`: path to the executable that creates not lists
-    #. `melprob_path`: path to the executable for melodic probability
     #. `midi_path`: path to the midi file whose likelihood will be assessed
     #. `temp_midi_path`: a path where an intermediate file may safely be stored
 

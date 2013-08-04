@@ -75,7 +75,7 @@ def multi_compose():
 def make_composition(mode, r_section, m_section):
     music_path, r_chain, r_percentiles, m_chain, m_percentiles, = _get_dependencies(mode)
     compose(music_path, r_chain, r_percentiles, r_section,
-            m_chain, m_percentiles, m_section, mode,
+            m_chain, m_percentiles, m_section, mode
             )
 
 
