@@ -48,7 +48,7 @@ def _measure_rhythms(measure):
     measure_offset = None
     for element in measure:
         if isinstance(element, Note) or isinstance(element, Rest):
-            rhythms.append((element.offset,
+            rhythms.append((element.offset + 1.0,
                             element.quarterLength,
                             isinstance(element, Note)))
     # little patch to ensure consistency:
@@ -156,12 +156,16 @@ def _log_likelihood(entries, original_chain):
     #. `entries`: a sequence of events in the part, in string form
     #. `original_chain`: the pykov chain used to evaluate likelihood
     """
+    LOG.debug('Checking likelihood for {entries}'.format(**locals()))
     state = entries[0]
     log_likelihood = 0
     _, local_chain = maximum_likelihood_probabilities(entries)
     mod_chain = alt_combine_markov_chains(original_chain, local_chain, 0.02)
     for entry in entries[1:]:
+        LOG.debug('Current entry: {entry}'.format(**locals()))
         successors = mod_chain.succ(state)
+        LOG.debug('Successors of current entry in previous chain: {0}'.format(original_chain.succ(state)))
+        LOG.debug('Successors of current entry: {successors}'.format(**locals()))
         log_likelihood += log(mod_chain.succ(state)[entry])
         state = entry
     return log_likelihood, mod_chain
