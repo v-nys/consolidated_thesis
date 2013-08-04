@@ -9,6 +9,7 @@ import shutil
 import subprocess
 
 
+import music21
 from music21.midi.translate import streamToMidiFile
 
 
@@ -297,10 +298,14 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
 #-----------------------------------------------------------------#
     if mode == 'Temperley':
         melody_likelihoods = []
-        melody_measures = extract_melody_measures(gui_subpath(MIDI_FN), generated_nums)
+        melody_measures = extract_melody_measures(music21.converter.parse(gui_subpath(MIDI_FN)), generated_nums)
+        LOG.debug('Melody measures: {0}'.format(melody_measures))
+        LOG.debug('As list: {0}'.format(list(melody_measures)))
         for measure in melody_measures:
+            LOG.debug('Generated measure: {measure}'.format(**locals()))
             midi_f = streamToMidiFile(measure)
             midi_path = gui_subpath('temperley_measure.midi')
+            # following is not a file, but a safe output location
             temp_midi_path = gui_subpath('temp_measure.midi')
             midi_f.open(midi_path, 'wb')
             midi_f.write()
