@@ -13,7 +13,6 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "logging.h"
 #include "meter.h"
 
 /* 
@@ -35,28 +34,13 @@
    (4) Now we compute, for each pip in the sequence, an array of scores.
        The score in each element represents the quality of the solution
        involing putting a beat at this point, and putting a beat at a
-       previous point in the past (by the given period).
+       previous point in the past (by the given period).  
 
    (5) By examining the score arrays for the pips near the end of the
        sequence, we should be able to construct a good single beat
-       sequence. This does not give us a full meter structure.  We'll
+       sequence.  This does not give us a full meter structure.  We'll
        do that later on.
-*/
-
-/*
-    Vincent:
-    We actually know how long the entire piece takes (see final note-off).
-    (4) suggests that there is a two-dimensional array of the form
-    number[level][pip]. If we could set number[TACTUS_LEVEL][pip] to a high
-    value based on the known BPM and time signature... We also need to use this
-    "given period". (could be other way around!)
-    
-    Suppose pip_time is in msec. Input pieces will all be at 120 BPM and in
-    common-time. As a result, one tactus-level beat will take 500 msec. So
-    if pip_time is 50 msec, we would want to indicate a high solution quality
-    for number[TACTUS_LEVEL][0], number[TACTUS_LEVEL][10], etc. Still need to
-    find out what this "by the given period" refers to, though.
-*/
+ */
 
 void bad_param(char * line) {
     char * x;
@@ -151,19 +135,12 @@ void usage(void) {
     exit(1);
 }
 
-int main (int argc, char * argv[]) {
+void main (int argc, char * argv[]) {
     Note * nl;
     char * x;
-    int level, j, rc;
+    int level, j;
     char * parameter_file, * input_file = NULL;
     int param_file_specified = FALSE;
-
-    rc = start_log();
-    if(rc) {
-        fprintf(stderr, "Error involving logger\n");
-        exit(rc);
-    }
-    zlog_info(control_cat, "Logger initialized from main.");
 
     x = strrchr(argv[0], '/');
     if (x != NULL) x++; else x = argv[0];
@@ -212,7 +189,7 @@ int main (int argc, char * argv[]) {
     read_parameter_file(parameter_file, param_file_specified);
     
     nl = build_note_list_from_input();
-    normalize_notes(nl);//V: wat doet dit?
+    normalize_notes(nl);
     build_pip_array(nl);
     compute_tactus_level();
 
@@ -234,7 +211,4 @@ int main (int argc, char * argv[]) {
       print_metronome();
       print_standard_note_list();
     }
-
-    complete_log();
-    return 0;
 }

@@ -29,18 +29,18 @@ char this_program[20]; /* the name of this program */
 
 int verbosity = 0;
 int terse = 0;                   /* if this equals 1, terse has been declared on command line */
-int pip_time = 20;                  /* the pip time in milliseconds */
+int pip_time = 35;                  /* the pip time in milliseconds */
 double beat_interval_factor = 3.0;  /* multiplier on the penalty for the
 				       difference between successive beats */
 double note_factor = 1.0;           /* multiply the ioi by this to score
 				       a note. */
 
 
-double tactus_min   = 500;            /* the bottom of the lowest tactus range */
-double tactus_width = 1.0;            /* the width of the tactus window (max/min) */
+double tactus_min   = 400;            /* the bottom of the lowest tactus range */
+double tactus_width = 1.8;            /* the width of the tactus window (max/min) */
 double tactus_step  = 1.1;            /* The next range up is obtained by multiplying the
 					 previous range by this (both max and min) */
-double tactus_max   = 500;           /* never exceed this as the top end */
+double tactus_max   = 1600;           /* never exceed this as the top end */
 
 int beat_slop       = 35;             /* the beat interval pentalty is zero if the
 					 times of the beats differ by less than

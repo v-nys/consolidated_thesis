@@ -287,7 +287,8 @@ analyze_melody() {
 	    //else analysis_score[k][m+12-observed_mean] = .0833 * .25;
 
 	    /* Here we set higher prior P for major keys - all param sets use these values */
-	    if(k < 12) analysis_score[k][m+12-observed_mean] = .0833 * .88;
+        // Vincent: switched this to raise prior P for *minor* keys
+	    if(k >= 12) analysis_score[k][m+12-observed_mean] = .0833 * .88;
 	    else analysis_score[k][m+12-observed_mean] = .0833 * .12;
 	    
 	    /* This (below) is where we set the mean of the central pitch profile - assumed here to be 68 */

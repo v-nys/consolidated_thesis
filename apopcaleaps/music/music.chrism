@@ -344,6 +344,10 @@ measure(1), key(major) \ chord_scheme(b) <=> debugwriteln('DEBUG: using second m
                                              mchord(13,c).
 
 measure(1), key(minor) \ chord_scheme(a) <=> debugwriteln('DEBUG: using first minor progression'),
+                                             % theme_boundary(u,12),
+                                             % theme_boundary(a,10),
+                                             % theme_boundary(u,4),
+                                             % theme_boundary(a,2),
                                              theme_boundary(u,0),
                                              mchord(1,am),
                                              mchord(2,am),
@@ -601,23 +605,23 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) \ octave_d(V,M,N,X,Delta) <=>
     NO is OO+Delta, octave_rangecheck(V,M,N,X,NO).
 
 % clip octave to the required voice range
-unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | wfail(lowO).
-unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | wfail(highO).
+unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O < LO | debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(lowO).
+unspecified_measure(M), range(V,LN,LO,UN,UO) \ octave_rangecheck(V,M,N,X,O) <=> O > UO | debugwriteln(octave_rangecheck(V,M,N,X,O)), wfail(highO).
 unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,LO)
-    <=> Note \== r, note_below(Note,LN) | wfail(low).
+    <=> Note \== r, note_below(Note,LN) | debugwriteln(octave_rangecheck(V,M,N,X,LO)), wfail(low).
 unspecified_measure(M), range(V,LN,LO,UN,UO), note(V,M,N,X,Note) \ octave_rangecheck(V,M,N,X,UO)
-    <=> Note \== r, note_above(Note,UN) | wfail(high).
+    <=> Note \== r, note_above(Note,UN) | debugwriteln(octave_rangecheck(V,M,N,X,UO)), wfail(high).
 
 % add intrinsic limitations of guitar fretboard
 note(melody,M,N,X,Note) \ octave_rangecheck(melody,M,N,X,2)
-    <=> Note \== r, note_below(Note,e) | wfail(low).
+    <=> Note \== r, note_below(Note,e) | debugwriteln(octave_rangecheck(melody,M,N,X,2)), wfail(low).
+octave_rangecheck(melody,M,N,X,O) <=> O < 2 | wfail(lowO).
 note(melody,M,N,X,Note) \ octave_rangecheck(melody,M,N,X,6)
-    <=> Note \== r, note_above(Note,d) | wfail(high).
-
+    <=> Note \== r, note_above(Note,d) | debugwriteln(octave_rangecheck(melody,M,N,X,2)), wfail(high).
+octave_rangecheck(melody,M,N,X,O) <=> O > 6 | wfail(highO).
 
 % even transpositions need to stick within range that can be represented by Lilypond / that are playable on guitar
 octave_rangecheck(V,M,N,X,O) <=> O > 7 | wfail(highO).
-octave_rangecheck(melody,M,N,X,0) <=> O < 2 | wfail(lowO).
 octave_rangecheck(V,M,N,X,O) <=> O < 0 | wfail(lowO).
 
 % because rules above are not checked for unspecified measures, range checks always lead directly to octaves there
@@ -668,7 +672,7 @@ unspecified_measure(M), unspecified_measure(M1),
 note(V,M,N,X,NN), next_beat(V,M1,N1,X1,M,N,X), octave(V,M,N,X,NO) ==>
     interval(ON,OO,NN,NO,Int), Int >= -2, Int =< 2.
 
-phase(make_notes), unspecified_successor(0,X) ==> make_notes_measure(X).
+phase(make_notes), unspecified_successor(0,X) ==> debugwriteln(make_notes_measure(X)), make_notes_measure(X).
 
 % choose first note
 make_notes_measure(1), beat(V,1,0,0,D), mchord(1,C) ==>
@@ -699,6 +703,7 @@ octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M,N,X) ==>
 % repeated occurrence of theme measure in M2
 % octave preceding a note in M2 is known
 % instead of trying octave deltas probabilistically, we derive them from earlier deltas
+
 :- chrism derive_octave_d/5.
 first_theme_occurrence(N,T,0,M), first_theme_occurrence(N,T,R,M2),
 octave(V,M1,N1,X1,OO), next_beat(V,M1,N1,X1,M2,Count,F),
@@ -722,6 +727,7 @@ derive_octave_d(V,M,C,F,OO) <=> R > 0, N is 1, C is 0, F is 0 | find_octave_d(V,
 
 % for anything other than initial beat, derive based on previous info
 first_theme_occurrence(N,T,R,M2),
+first_theme_occurrence(N,T,0,M),
 octave(V,M,Count,F,Octave),
 next_beat(V,M1,N1,X1,M,Count,F),
 octave(V,M1,N1,X1,Octave1) \
@@ -784,16 +790,26 @@ phase(make_notes) <=> phase(join_notes).
 % two successive notes of the same pitch can be joined
 % this instance of the rule applies only to two different measures
 join_notes(V,cond M=M2,cond N=N2) ??
-    phase(join_notes), unspecified_measure(M),
-    unspecified_measure(M2), note(V,M,N,X,Note),
-    next_beat(V,M,N,X,M2,N2,X2), note(V,M2,N2,X2,Note)
+    phase(join_notes),
+    unspecified_measure(M),
+    unspecified_measure(M2),
+    note(V,M,N,X,Note),
+    next_beat(V,M,N,X,M2,N2,X2),
+    note(V,M2,N2,X2,Note),
+    octave(V,M,N,X,O),
+    octave(V,M2,N2,X2,O)
         ==> V \== drums |
         tied(V,M,N,X).
 
 join_notes(V,cond M=M2,cond N=N2) ??
-    phase(join_notes), duplicated_measure(M),
-    duplicated_measure(M2), note(V,M,N,X,Note),
-    next_beat(V,M,N,X,M2,N2,X2), note(V,M2,N2,X2,Note)
+    phase(join_notes),
+    duplicated_measure(M),
+    duplicated_measure(M2),
+    note(V,M,N,X,Note),
+    next_beat(V,M,N,X,M2,N2,X2),
+    note(V,M2,N2,X2,Note),
+    octave(V,M,N,X,O),
+    octave(V,M2,N2,X2,O)
         ==> V \== drums |
         tied(V,M,N,X).
 
@@ -803,14 +819,20 @@ join_notes(V,cond M=M2, cond N=N2) ??
     phase(join_notes),
     unspecified_measure(M),
     note(V,M,N,X,Note),
-    next_beat(V,M,N,X,M,N2,X2), note(V,M,N2,X2,Note)
+    next_beat(V,M,N,X,M,N2,X2),
+    note(V,M,N2,X2,Note),
+    octave(V,M,N,X,O),
+    octave(V,M,N2,X2,O)
         ==> V \== drums | tied(V,M,N,X).
 
 join_notes(V,cond M=M2, cond N=N2) ??
     phase(join_notes),
     duplicated_measure(M),
     note(V,M,N,X,Note),
-    next_beat(V,M,N,X,M,N2,X2), note(V,M,N2,X2,Note)
+    next_beat(V,M,N,X,M,N2,X2),
+    note(V,M,N2,X2,Note),
+    octave(V,M,N,X,O),
+    octave(V,M,N2,X2,O)
         ==> V \== drums | tied(V,M,N,X).
 
 is_rest(r).
@@ -914,6 +936,7 @@ interval(A,B,I)  :- pinterval(A,B,I), !.
 set_range(V,Note,Oct,L,U) :- 
     add(L,Note,Oct,LN,LO),
     add(U,Note,Oct,UN,UO),
+    debugwriteln(range(V,LN,LO,UN,UO)),
     range(V,LN,LO,UN,UO).
 
 add(X,N,O,N2,O2) :- X > 11,!, X1 is X-12, O1 is O+1, add(X1,N,O1,N2,O2).
@@ -999,7 +1022,7 @@ tempo_declaration <=> format('  \\tempo 4=80\n',[]).
 
 voice_header(melody) ==> writeln('Melody = {'),
                          tempo_declaration,
-			 writeln('  \\clef treble').
+			 writeln('  \\clef \"treble_8\"').
 voice_header(bass) ==> writeln('Bass = {'),
                          tempo_declaration,
 			 writeln('  \\clef \"bass_8\"').

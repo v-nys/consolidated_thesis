@@ -11,7 +11,9 @@ python_env/local
 python_env/lib
 
 *.bak
+*.bk
 *.log
+*.o
 *.out
 *.pyc
 *.sw*
