@@ -1,5 +1,6 @@
 import argparse
 import logging
+import logging.config
 import os
 import pickle
 
@@ -22,6 +23,11 @@ HERE = abspath(dirname(__file__))
 # don't ask for an argument for these - they're temp files
 TEXT_CHAIN_NAME = 'text_chain_melody'
 TEMP_MIDI_NAME = 'for_analysis.midi'
+
+runtime_path = HERE.replace('src', 'runtime')
+logfile_path = os.path.join(runtime_path, 'logging_chains_melody.conf')
+logging.config.fileConfig(logfile_path, defaults={'this_dir': runtime_path})
+LOG = logging.getLogger(__name__)
 
 
 def read_and_pickle_chain(output_dir, name='pickled_melody'):
@@ -69,6 +75,7 @@ def sequences(data_path, output_path, mode):
 def relative_sequences(data_path):
     for (number, filename) in enumerate(os.listdir(data_path), start=1):
         piece = parse(os.path.join(data_path, filename))
+        LOG.debug("Finding relative sequences in piece {number}: {filename}.".format(**locals()))
         instrument = lambda x: x.getInstrument().instrumentName.lower()
         guitar_parts = (e for e in piece if isinstance (e, Part) and \
                                          ('guitar' in instrument(e) or \
@@ -98,6 +105,7 @@ def relative_sequences(data_path):
 def mixed_sequences(data_path, output_path):
     for (number, filename) in enumerate(os.listdir(data_path), start=1):
         full_path = os.path.join(data_path, filename)
+        LOG.debug("Finding mixed sequences in piece {number}: {filename}.".format(**locals()))
         piece = parse(full_path)
         temp_abspath = os.path.join(output_path, TEMP_MIDI_NAME)
         piece.write('midi', temp_abspath)
@@ -106,7 +114,8 @@ def mixed_sequences(data_path, output_path):
         if len(set(keys)) > 1:
             continue  # more than one key in piece is complicated...
         else:
-            key = Key(convertKeyStringToMusic21KeyString(keys[0]))
+            key_string = convertKeyStringToMusic21KeyString(keys[0].replace('b','-'))
+            key = Key()
             key_pitch = key.getPitches()[0]
         instrument = lambda x: x.getInstrument().instrumentName.lower()
         guitar_parts = (e for e in piece if isinstance (e, Part) and \
@@ -120,7 +129,7 @@ def mixed_sequences(data_path, output_path):
             if len(chord_per_measure) != len(measures):
                 continue
             for chord, measure in zip(chord_per_measure, measures):
-                chord_pitch = music21.pitch.Pitch(chord)
+                chord_pitch = music21.pitch.Pitch(convertKeyStringToMusic21KeyString(chord))
                 for element in measure:
                     if isinstance(element, Note):
                         if not last_note:
