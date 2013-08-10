@@ -74,6 +74,7 @@ def sequences(data_path, output_path, mode):
 
 def relative_sequences(data_path):
     for (number, filename) in enumerate(os.listdir(data_path), start=1):
+        LOG.debug("Working on piece {number}".format(**locals()))
         piece = parse(os.path.join(data_path, filename))
         LOG.debug("Finding relative sequences in piece {number}: {filename}.".format(**locals()))
         instrument = lambda x: x.getInstrument().instrumentName.lower()
@@ -81,7 +82,8 @@ def relative_sequences(data_path):
                                          ('guitar' in instrument(e) or \
                                          'gtr' in instrument(e)) and not \
                                          'bass' in instrument(e))
-        for part in guitar_parts:
+        for (number, part) in enumerate(guitar_parts):
+            LOG.debug('Part number {number}'.format(**locals()))
             current_sequence = None
             last_note = None
             for measure in (elem for elem in part if isinstance(elem, Measure)):
