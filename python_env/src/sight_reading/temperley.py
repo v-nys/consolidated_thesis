@@ -51,8 +51,6 @@ harmony_path = config.get('Temperley', 'harmony_path')
 key_path = config.get('Temperley', 'key_path')
 
 LOG = logging.getLogger(__name__)
-ldebug = lambda x: LOG.debug(x.format(**locals()))
-lwarning = lambda x: LOG.warning(x.format(**locals()))
 
 
 def _read_beatlist(midi_path):
@@ -71,11 +69,11 @@ def _read_harmony(midi_path):
 
 
 def _majority_chord(chords):
-    ldebug("Looking for majority chord in {chords}")
+    LOG.debug("Looking for majority chord in {chords}".format(**locals()))
     counter = collections.Counter(chords)
     maxima = [c for c in counter if counter[c] == max(counter.values())]
     if not maxima:
-        lwarning("List of chord maxima was empty")
+        LOG.warning("List of chord maxima was empty")
     return maxima[-1]  # have to pick one, so...
 
 
@@ -111,10 +109,10 @@ def chord_per_measure(piece, midi_path):
             start = int(line_match.group('start'))
             chord = line_match.group('chord_name')
             measure = int(math.floor(start / duration_measure))
-            ldebug("Appending chord {chord} to measure {measure}")
+            LOG.debug("Appending chord {chord} to measure {measure}".format(**locals()))
             chords[measure].append(chord)
 
-    ldebug('Chord array: {chords}')
+    LOG.debug('Chord array: {chords}'.format(**locals()))
     for i in range(0, len(chords)):
         chords[i] = _majority_chord(chords[i])
     return chords
