@@ -10,6 +10,8 @@ python_env/include
 python_env/local
 python_env/lib
 
+Temperley/runtime
+
 *.bak
 *.bk
 *.log
