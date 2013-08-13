@@ -106,47 +106,50 @@ def relative_sequences(data_path):
 
 def mixed_sequences(data_path, output_path):
     for (number, filename) in enumerate(os.listdir(data_path), start=1):
-        full_path = os.path.join(data_path, filename)
-        LOG.debug("Finding mixed sequences in piece {number}: {filename}.".format(**locals()))
-        piece = parse(full_path)
-        temp_abspath = os.path.join(output_path, TEMP_MIDI_NAME)
-        piece.write('midi', temp_abspath)
-        chord_per_measure = temperley.chord_per_measure(piece, temp_abspath)
-        keys = temperley.key_sequence(temp_abspath)
-        if len(set(keys)) > 1:
-            continue  # more than one key in piece is complicated...
-        else:
-            key_string = convertKeyStringToMusic21KeyString(keys[0].replace('b','-'))
-            key = Key()
-            key_pitch = key.getPitches()[0]
-        instrument = lambda x: x.getInstrument().instrumentName.lower()
-        guitar_parts = (e for e in piece if isinstance (e, Part) and \
-                                         ('guitar' in instrument(e) or \
-                                         'gtr' in instrument(e)) and not \
-                                         'bass' in instrument(e))
-        for part in guitar_parts:
-            current_sequence = None
-            last_note = None
-            measures = [elem for elem in part if isinstance(elem, Measure)]
-            if len(chord_per_measure) != len(measures):
-                continue
-            for chord, measure in zip(chord_per_measure, measures):
-                chord_pitch = music21.pitch.Pitch(convertKeyStringToMusic21KeyString(chord))
-                for element in measure:
-                    if isinstance(element, Note):
-                        if not last_note:
-                            current_sequence = [(0, 0, notesToChromatic(key_pitch, element).semitones, key.mode, notesToChromatic(key_pitch, chord_pitch).semitones)]
-                        else:
-                            interval = notesToChromatic(last_note, element)
-                            entry = (current_sequence[-1][1], interval.semitones, notesToChromatic(key_pitch, element).semitones, key.mode, notesToChromatic(key_pitch, chord_pitch).semitones)
-                            current_sequence.append(entry)
-                        last_note = element
-                    elif isinstance(element, Rest) and element.quarterLength < 4:
-                        pass
-                    elif current_sequence:
-                        yield current_sequence
-                        current_sequence = None
-                        last_note = None
+        try:
+            full_path = os.path.join(data_path, filename)
+            LOG.debug("Finding mixed sequences in piece {number}: {filename}.".format(**locals()))
+            piece = parse(full_path)
+            temp_abspath = os.path.join(output_path, TEMP_MIDI_NAME)
+            piece.write('midi', temp_abspath)
+            chord_per_measure = temperley.chord_per_measure(piece, temp_abspath)
+            keys = temperley.key_sequence(temp_abspath)
+            if len(set(keys)) > 1:
+                continue  # more than one key in piece is complicated...
+            else:
+                key_string = convertKeyStringToMusic21KeyString(keys[0].replace('b','-'))
+                key = Key()
+                key_pitch = key.getPitches()[0]
+            instrument = lambda x: x.getInstrument().instrumentName.lower()
+            guitar_parts = (e for e in piece if isinstance (e, Part) and \
+                                             ('guitar' in instrument(e) or \
+                                             'gtr' in instrument(e)) and not \
+                                             'bass' in instrument(e))
+            for part in guitar_parts:
+                current_sequence = None
+                last_note = None
+                measures = [elem for elem in part if isinstance(elem, Measure)]
+                if len(chord_per_measure) != len(measures):
+                    continue
+                for chord, measure in zip(chord_per_measure, measures):
+                    chord_pitch = music21.pitch.Pitch(convertKeyStringToMusic21KeyString(chord))
+                    for element in measure:
+                        if isinstance(element, Note):
+                            if not last_note:
+                                current_sequence = [(0, 0, notesToChromatic(key_pitch, element).semitones, key.mode, notesToChromatic(key_pitch, chord_pitch).semitones)]
+                            else:
+                                interval = notesToChromatic(last_note, element)
+                                entry = (current_sequence[-1][1], interval.semitones, notesToChromatic(key_pitch, element).semitones, key.mode, notesToChromatic(key_pitch, chord_pitch).semitones)
+                                current_sequence.append(entry)
+                            last_note = element
+                        elif isinstance(element, Rest) and element.quarterLength < 4:
+                            pass
+                        elif current_sequence:
+                            yield current_sequence
+                            current_sequence = None
+                            last_note = None
+        except Exception:
+            LOG.warning('Encountered exception in {filename}'.format(**locals()))
     
 
 if __name__=='__main__':

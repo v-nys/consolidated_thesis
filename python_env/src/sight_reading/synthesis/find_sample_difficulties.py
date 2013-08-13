@@ -39,6 +39,7 @@ def _assemble_measures(full_path):
 
     #. `full_path`: the absolute path to the generated midi file
     """
+    LOG.debug("Path to piece: {full_path}".format(**locals()))
     piece = parse(full_path)
     # range is exclusive, so 13 + 1
     measures = [m for m in extract_melody_measures(piece, range(1, 13 + 1))]
@@ -269,10 +270,10 @@ def alt_combine_markov_chains(main, adjustment, alpha):
 if __name__ == '__main__':
 
     arg_parser = argparse.ArgumentParser()
-    arg_parser.add_argument('sample_dir', help='the directory containing samples to be analyzed')
-    arg_parser.add_argument('pickled_rhythm', help='the directory containing the pickled rhythm chain')
-    arg_parser.add_argument('pickled_melody', help='the directory containing the pickled melody chain')
-    arg_parser.add_argument('output_path', help='where to pickle the list of tuples with measure stats')
+    arg_parser.add_argument('sample_dir', help='the directory containing samples to be analyzed') # unthemed on desktop
+    arg_parser.add_argument('pickled_rhythm', help='the directory containing the pickled rhythm chain') # Desktop/temp/pickled_rhythm
+    arg_parser.add_argument('pickled_melody', help='the directory containing the pickled melody chain') # Desktop/temp/...
+    arg_parser.add_argument('output_path', help='where to pickle the list of tuples with measure stats') # Desktop/likelihood_tuple_dir
     explanation = "'Relative', 'Mixed' or 'Temperley' determines algorithm "\
                   "used to evaluate melodic difficulty. Default: 'Relative'" 
     arg_parser.add_argument('mode', help=explanation)
