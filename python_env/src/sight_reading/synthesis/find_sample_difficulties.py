@@ -62,7 +62,9 @@ def _measure_rhythms(measure):
     # APOPCALEAPS output normally does not add last rests in final measure
     # note that "inconsistency" can be due to joined notes as well
     # therefore only correct when count is too *low*
-    if round(rhythms[-1][0] + rhythms [-1][1], 2) < 5.0:
+    if rhythms == []: # this does happen (very rarely)
+        rhythms.append((1.0, 4.0, False))
+    elif round(rhythms[-1][0] + rhythms [-1][1], 2) < 5.0:
         LOG.warning('Correcting rhythm in measure {measure}'.format(**locals()))
         start = rhythms[-1][0] + rhythms[-1][1]
         rhythms.append((start, 5.0 - start, False))
