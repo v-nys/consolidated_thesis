@@ -64,7 +64,7 @@ def _measure_rhythms(measure):
     # therefore only correct when count is too *low*
     if rhythms == []: # this does happen (very rarely)
         rhythms.append((1.0, 4.0, False))
-    elif round(rhythms[-1][0] + rhythms [-1][1], 2) < 5.0:
+    if round(rhythms[-1][0] + rhythms [-1][1], 2) < 5.0:
         LOG.warning('Correcting rhythm in measure {measure}'.format(**locals()))
         start = rhythms[-1][0] + rhythms[-1][1]
         rhythms.append((start, 5.0 - start, False))
@@ -150,20 +150,23 @@ def find_difficulties(sample_dir_path, r_chain_path, m_chain_path, output_path, 
     results = []
     samples = os.listdir(sample_dir_path)
     for sample_num, sample_path in enumerate(samples, start=1):
-        LOG.info('{num} of {total}'.format(num=sample_num, total=len(samples)))
-        full_path = os.path.join(sample_dir_path, sample_path)
-        measures = _assemble_measures(full_path)
-        # note that closing measures are ignored because they are simpler
-        LOG.info(sample_path)
-        for m_count, measure in enumerate(measures[0:12], start=1):
-            LOG.info('{num} of {total}'.format(num=m_count, total=12))
-            likelihood_rhythm = _log_likelihood([str(rhythm) for rhythm in _measure_rhythms(measure)], r_chain)[0]
-            if mode != 'Temperley':
-                likelihood_melody = _log_likelihood([str(melody) for melody in _measure_melodies(measure)], m_chain)[0]
-            else:
-                measure.write('midi', '/home/vincent/temp_measure.midi')
-                likelihood_melody = sight_reading.temperley.likelihood_melody('/home/vincent/temp_measure.midi', '/home/vincent/test/temp.midi')
-            results.append((likelihood_rhythm, likelihood_melody))
+        try:
+            LOG.info('{num} of {total}'.format(num=sample_num, total=len(samples)))
+            full_path = os.path.join(sample_dir_path, sample_path)
+            measures = _assemble_measures(full_path)
+            # note that closing measures are ignored because they are simpler
+            LOG.info(sample_path)
+            for m_count, measure in enumerate(measures[0:12], start=1):
+                LOG.info('{num} of {total}'.format(num=m_count, total=12))
+                likelihood_rhythm = _log_likelihood([str(rhythm) for rhythm in _measure_rhythms(measure)], r_chain)[0]
+                if mode != 'Temperley':
+                    likelihood_melody = _log_likelihood([str(melody) for melody in _measure_melodies(measure)], m_chain)[0]
+                else:
+                    measure.write('midi', '/home/vincent/temp_measure.midi')
+                    likelihood_melody = sight_reading.temperley.likelihood_melody('/home/vincent/temp_measure.midi', '/home/vincent/test/temp.midi')
+                results.append((likelihood_rhythm, likelihood_melody))
+        except Exception as e:
+            LOG.error(e.message)
     with open(output_path, 'wb') as fh:
         pickle.dump(results, fh, pickle.HIGHEST_PROTOCOL)
 
