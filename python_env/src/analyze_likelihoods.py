@@ -30,7 +30,7 @@ def show_percentiles(tuples):
     num_tuples = len(tuples)
     num_columns = len(tuples[0])
     for column in range(0, num_columns):
-        ordered_tuples = sorted(tuples, key=lambda x: x[column])
+        ordered_tuples = sorted(tuples, key=lambda x: -x[column])
         # note: range is end-exclusive, so 101
         fractions = (p / 100.0 for p in range(percentile, 101, percentile))
         for fraction in fractions:
@@ -54,11 +54,13 @@ if __name__ == '__main__':
 
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument('percentile')
+    arg_parser.add_argument('tuples')
     args = arg_parser.parse_args()
     percentile = int(args.percentile)
+    tuples_path = args.tuples
     assert 100 % percentile == 0
 
-    with open(join(join(HERE, 'data'), 'pickled_likelihood_tuples')) as fh:
+    with open(tuples_path, 'rb') as fh:
         tuples = pickle.load(fh)
     show_percentiles(tuples)
     show_correlations(tuples)
