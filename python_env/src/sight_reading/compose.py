@@ -49,15 +49,15 @@ def _get_dependencies(mode):
     return music_path, r_chain, r_percentiles, m_chain, m_percentiles
 
 
-def multi_compose():
+def multi_compose(mode='Relative'):
     r"""
-    Compose a melody for each combination of percentiles.
+    Compose a melody for each combination of percentiles and key modes.
     
     Return the combination of percentile indices (starting at 0)
     and the execution time for each combination.
 
-    >>> multi_compose([-10.0], [-10.0, -20.0])  # NONDETERMINISTIC!
-    [((0, 0), 1.0), ((0, 1), 1.0)]
+    Example output:
+    [((0, 0, 'minor'), 1.0), ((0, 1, 'minor'), 2.0)]
     """
     from time import clock
     music_path, r_chain, r_percentiles, m_chain, m_percentiles= _get_dependencies(mode)
@@ -69,9 +69,9 @@ def multi_compose():
         compose(music_path,
                 r_chain, r_percentiles, section_r,
                 m_chain, m_percentiles_m, section_m,
-                mode)
+                mode, key_mode)
         end_time = clock
-        results.append(((section_r, section_m), end_time - start_time))
+        results.append(((section_r, section_m, key_mode), end_time - start_time))
     return results
 
 

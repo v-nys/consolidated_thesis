@@ -60,7 +60,7 @@ def _cleanup(gui_subpath, gui_path):
     r"""
     Clean up anything left over from previous runs.
     
-    This involves restoring the goal to its original state and clearing
+    This involves deleting the current goal and
     the file containing results from a previous run.
     
     `gui_subpath` given a filename, returns the full
@@ -68,7 +68,7 @@ def _cleanup(gui_subpath, gui_path):
     The other arguments are the full paths of the goal
     file and the result file.
     """
-    shutil.copyfile(gui_subpath(GOAL_BACKUP_FN), gui_subpath(GOAL_FN))
+    os.remove(gui_subpath(GOAL_FN))
     with open(gui_subpath(RESULT_FN), mode='w') as result_fh:
         pass
     for maybe_midi in os.listdir(gui_path):
@@ -130,7 +130,7 @@ def _analyze_global_result(gui_subpath, regex):
 
 
 def _construct_goal(gui_subpath, total_measures, initial=False,
-                    unspecified=None):
+                    unspecified=None, key_mode='minor'):
     r"""
     Given a set of specifications, generate the APOPCALEAPS query
     representing the desired goal.
@@ -150,7 +150,7 @@ def _construct_goal(gui_subpath, total_measures, initial=False,
 
     # get the original backup goal
     # initial goal as well as subsequent goals are extensions of original backup
-    with open(gui_subpath(GOAL_BACKUP_FN)) as backup_fh:
+    with open(gui_subpath(GOAL_BACKUP_FN+key_mode)) as backup_fh:
         for line in backup_fh.readlines():
             first_goal_match = MEASURES_RE.match(line)
 
@@ -279,7 +279,7 @@ def _parse_chord(result_path, measure):
     raise ValueError('No chord is known for the supplied measure.')
 
 
-def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num):
+def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num, key_mode):
     r"""
     Generate measure `measure_num`.
 
@@ -287,13 +287,13 @@ def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measu
     """
     LOG.debug('Commencing generation')
     if measure_num == 1:
-        goal = _construct_goal(gui_subpath, total_measures, initial=True)
+        goal = _construct_goal(gui_subpath, total_measures, initial=True, key_mode)
     else:
         thematic_structure = _parse_themes(result_path, total_measures)
         completed_measures = _completed_measures(thematic_structure, measure_num)
         unspecified = set(range(1, total_measures + 1)) - completed_measures
         goal = _construct_goal(gui_subpath, total_measures,
-                              initial=False, unspecified=unspecified)
+                              initial=False, unspecified=unspecified, key_mode)
         LOG.info("Goal for {measure_num}: {goal}".format(**locals()))
 
     _process_goal(goal, gui_subpath, gui_path,
@@ -376,7 +376,7 @@ def _test_generated_measures(gui_subpath, result_path, total_measures, measure_n
     return (right_rhythm and right_melody)
 
 
-def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, test=True, mode='Relative'):
+def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, test=True, mode='Relative', key_mode='minor'):
     r"""
     Generate a piece that satisfies supplied constraints.
 
@@ -392,7 +392,7 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
     """
     LOG.debug('Generating with test: {num}'.format(num=measure_num))
     while True:
-        _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num)
+        _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num, key_mode)
         if test and measure_num != 13:
             if _test_generated_measures(gui_subpath, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, mode):
                 return
@@ -464,7 +464,7 @@ def belongs_to_percentile(log_likelihood, percentiles):
 
 
 def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
-            melodic_chain, melody_percentiles, percentile_m, mode,
+            melodic_chain, melody_percentiles, percentile_m, mode, key_mode
             ):
     r"""
     Compose a new piece in an iterative fashion.
@@ -484,6 +484,7 @@ def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
        #. `melody_percentiles`: analogous with `rhythm_percentiles`
        #. `percentile_m`: analogous with `percentile_r`
        #. `mode`: indicates how to evaluate melodic difficulty
+       #. `key_mode`: whether to compose a minor or major piece
     """
     gui_path = os.path.join(music_path, 'gui')
     gui_subpath = functools.partial(os.path.join, gui_path)
@@ -492,12 +493,12 @@ def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
     _cleanup(gui_subpath, gui_path)
 
     # don't loop from 1 because we can save work when using themes
-    _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, True, mode) 
+    _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, True, mode, key_mode) 
     thematic_structure = _parse_themes(result_path, total_measures)
 
     for measure_num in range(2, total_measures + 1):
         if measure_num not in _completed_measures(thematic_structure, measure_num):
-            _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, test=True, mode=mode) 
+            _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, test=True, mode=mode, key_mode) 
 
 
 def compose_samples(music_path, number_samples):
@@ -514,7 +515,7 @@ def compose_samples(music_path, number_samples):
     _cleanup(gui_subpath, gui_path)
 
     for i in range(1, number_samples + 1):
-        _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, None, None, None, None, None, None, test=False) 
+        _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, None, None, None, None, None, None, test=False, key_mode='minor') 
         shutil.copy(gui_subpath('measure-1.midi'), gui_subpath('sample-' + str(i) + '.midi'))
      
 
