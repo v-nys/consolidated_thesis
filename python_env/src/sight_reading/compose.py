@@ -88,11 +88,15 @@ if __name__ == '__main__':
     explanation = "'Relative', 'Mixed' or 'Temperley' determines algorithm "\
                   "used to evaluate melodic difficulty." 
     arg_parser.add_argument('mode', help=explanation)
+    arg_parser.add_argument('percentile_rhythm', help='0-indexed percentile')
+    arg_parser.add_argument('percentile_melody', help='0-indexed percentile')
     args = arg_parser.parse_args()
     mode = args.mode
     if mode:
         assert mode in ['Relative', 'Mixed', 'Temperley']
     else:
         mode = 'Relative'
+    percentile_rhythm = int(args.percentile_rhythm)
+    percentile_melody = int(args.percentile_melody)
 
-    make_composition(mode, 0, 0)  # 0-indexed percentiles
+    make_composition(mode, percentile_rhythm, percentile_melody)  # 0-indexed percentiles
