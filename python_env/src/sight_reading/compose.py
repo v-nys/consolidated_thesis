@@ -2,6 +2,7 @@ import argparse
 import ConfigParser
 import os
 import pickle
+import time
 
 from itertools import product
 
@@ -69,10 +70,10 @@ def multi_compose(mode='Relative'):
         for (section_r, section_m) in all_combinations:
             # only consider close percentiles
             if section_r in range(section_m - 1, section_m + 2):
-                start_time = clock()
+                start_time = time.time()
                 compose(music_path, r_chain, r_percentiles, section_r, m_chain, m_percentiles, section_m, mode, key_mode)
-                end_time = clock()
-                results.append(((section_r, section_m, key_mode), end_time - start_time))
+                end_time = time.time()
+                results.append(((section_r, section_m, key_mode), int(end_time - start_time)))
     return results
 
 

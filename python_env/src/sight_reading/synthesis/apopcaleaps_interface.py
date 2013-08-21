@@ -391,14 +391,16 @@ def _generate_with_test(gui_subpath, gui_path, result_path, total_measures, meas
     can be met.
     """
     LOG.debug('Generating with test: {num}'.format(num=measure_num))
+    attempt = 1
     while True:
         _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num, key_mode)
         if test and measure_num != 13:
             if _test_generated_measures(gui_subpath, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_rhythm, percentile_melody, rhythm_chain, melody_chain, mode):
-                return
+                return attempt
         else:
             # don't check (always easy) closing measure
-            return
+            return attempt
+        attempt += 1
 
 
 def _completed_measures(thematic_structure, measure_num):
@@ -493,15 +495,21 @@ def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
     _cleanup(gui_subpath, gui_path)
 
     # don't loop from 1 because we can save work when using themes
-    _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, True, mode, key_mode) 
+    attempts_per_measure = []
+    attempts = _generate_with_test(gui_subpath, gui_path, result_path, total_measures, 1, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, True, mode, key_mode)
+    attempts_per_measure.append(attempts)
     thematic_structure = _parse_themes(result_path, total_measures)
 
     for measure_num in range(2, total_measures + 1):
         if measure_num not in _completed_measures(thematic_structure, measure_num):
-            _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, test=True, mode=mode, key_mode=key_mode) 
+            attempts = _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, test=True, mode=mode, key_mode=key_mode)
+        attempts_per_measure.append(attempts)
 
-    filename = '{percentile_r}_{percentile_m}_{key_mode}_{timestamp}.ly'
-    timestamp = int(time.time())
+    filename = '{percentile_r}_{percentile_m}_{key_mode}.ly'
+    timestamp = time.time()
+    attempts_filename = '{timestamp}_attempts.txt'.format(timestamp=timestamp)
+    with open(attempts_filename, mode='w') as fh:
+        fh.write(str(attempts_per_measure))
     shutil.copy(gui_subpath('temp.ly'), filename.format(**locals()))
 
 
