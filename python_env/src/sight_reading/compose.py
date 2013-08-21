@@ -20,7 +20,7 @@ def _get_dependencies(mode, key_mode):
     music_path = config.get('APOPCALEAPS', 'music_folder')
     data_path = config.get('Analysis', 'data_root')
 
-    with open(os.path.join(data_path, 'pickled_r_percentiles'+key_mode)) as fh:
+    with open(os.path.join(data_path, 'pickled_r_percentiles_'+key_mode)) as fh:
         r_percentiles = pickle.load(fh)
 
     with open(os.path.join(data_path, 'pickled_rhythm')) as fh:
@@ -29,7 +29,7 @@ def _get_dependencies(mode, key_mode):
         r_chain = P
 
     if mode == 'Temperley':
-        m_percentiles_path = os.path.join(data_path, 'pickled_m_percentiles_temperley'+key_mode)
+        m_percentiles_path = os.path.join(data_path, 'pickled_m_percentiles_temperley_'+key_mode)
         m_chain = None
     elif mode == 'Relative':
         m_chain_path = os.path.join(data_path, 'pickled_melody_relative')
@@ -60,20 +60,19 @@ def multi_compose(mode='Relative'):
     [((0, 0, 'minor'), 1.0), ((0, 1, 'minor'), 2.0)]
     """
     from time import clock
-    music_path, r_chain, r_percentiles, m_chain, m_percentiles= _get_dependencies(mode)
-    r_sections = range(0, len(r_percentiles))
-    m_sections = range(0, len(m_percentiles))
-    key_modes = ['major', 'minor']
     results = []
-    all_combinations = product(key_modes, product(r_sections, m_sections))
-    for (section_r, section_m, key_mode) in all_combinations:
-        start_time = clock()
-        compose(music_path,
-                r_chain, r_percentiles, section_r,
-                m_chain, m_percentiles_m, section_m,
-                mode, key_mode)
-        end_time = clock
-        results.append(((section_r, section_m, key_mode), end_time - start_time))
+    for key_mode in ['major', 'minor']:
+        music_path, r_chain, r_percentiles, m_chain, m_percentiles= _get_dependencies(mode, key_mode)
+        r_sections = range(0, len(r_percentiles))
+        m_sections = range(0, len(m_percentiles))
+        all_combinations = product(r_sections, m_sections)
+        for (section_r, section_m) in all_combinations:
+            # only consider close percentiles
+            if section_r in range(section_m - 1, section_m + 2):
+                start_time = clock()
+                compose(music_path, r_chain, r_percentiles, section_r, m_chain, m_percentiles, section_m, mode, key_mode)
+                end_time = clock()
+                results.append(((section_r, section_m, key_mode), end_time - start_time))
     return results
 
 
@@ -82,7 +81,6 @@ def make_composition(mode, r_section, m_section, key_mode):
     compose(music_path, r_chain, r_percentiles, r_section,
             m_chain, m_percentiles, m_section, mode, key_mode
             )
-
 
 if __name__ == '__main__':
 

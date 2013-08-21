@@ -7,7 +7,7 @@ import os
 import re
 import shutil
 import subprocess
-
+import time
 
 import music21
 from music21.midi.translate import streamToMidiFile
@@ -60,15 +60,15 @@ def _cleanup(gui_subpath, gui_path):
     r"""
     Clean up anything left over from previous runs.
     
-    This involves deleting the current goal and
-    the file containing results from a previous run.
+    This involves deleting the file containing results
+    from a previous run.
     
     `gui_subpath` given a filename, returns the full
     path of that file in the APOPCALEAPS GUI folder.
     The other arguments are the full paths of the goal
     file and the result file.
     """
-    os.remove(gui_subpath(GOAL_FN))
+    #os.remove(gui_subpath(GOAL_FN)) no real need
     with open(gui_subpath(RESULT_FN), mode='w') as result_fh:
         pass
     for maybe_midi in os.listdir(gui_path):
@@ -150,7 +150,7 @@ def _construct_goal(gui_subpath, total_measures, initial=False,
 
     # get the original backup goal
     # initial goal as well as subsequent goals are extensions of original backup
-    with open(gui_subpath(GOAL_BACKUP_FN+key_mode)) as backup_fh:
+    with open(gui_subpath(GOAL_BACKUP_FN+'_'+key_mode)) as backup_fh:
         for line in backup_fh.readlines():
             first_goal_match = MEASURES_RE.match(line)
 
@@ -279,7 +279,7 @@ def _parse_chord(result_path, measure):
     raise ValueError('No chord is known for the supplied measure.')
 
 
-def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num, key_mode):
+def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measure_num, key_mode='minor'):
     r"""
     Generate measure `measure_num`.
 
@@ -287,13 +287,13 @@ def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measu
     """
     LOG.debug('Commencing generation')
     if measure_num == 1:
-        goal = _construct_goal(gui_subpath, total_measures, initial=True, key_mode)
+        goal = _construct_goal(gui_subpath, total_measures, initial=True, key_mode=key_mode)
     else:
         thematic_structure = _parse_themes(result_path, total_measures)
         completed_measures = _completed_measures(thematic_structure, measure_num)
         unspecified = set(range(1, total_measures + 1)) - completed_measures
         goal = _construct_goal(gui_subpath, total_measures,
-                              initial=False, unspecified=unspecified, key_mode)
+                              initial=False, unspecified=unspecified, key_mode=key_mode)
         LOG.info("Goal for {measure_num}: {goal}".format(**locals()))
 
     _process_goal(goal, gui_subpath, gui_path,
@@ -498,7 +498,11 @@ def compose(music_path, rhythm_chain, rhythm_percentiles, percentile_r,
 
     for measure_num in range(2, total_measures + 1):
         if measure_num not in _completed_measures(thematic_structure, measure_num):
-            _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, test=True, mode=mode, key_mode) 
+            _generate_with_test(gui_subpath, gui_path, result_path, total_measures, measure_num, rhythm_percentiles, melody_percentiles, percentile_r, percentile_m, rhythm_chain, melodic_chain, test=True, mode=mode, key_mode=key_mode) 
+
+    filename = '{percentile_r}_{percentile_m}_{key_mode}_{timestamp}.ly'
+    timestamp = int(time.time())
+    shutil.copy(gui_subpath('temp.ly'), filename.format(**locals()))
 
 
 def compose_samples(music_path, number_samples):
