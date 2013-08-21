@@ -889,12 +889,17 @@ pick_concrete_note(V,C,R,N) :-
 note_below(X,Y) :- note_dbelow(X,Y).
 note_below(X,Y) :- note_dbelow(X,Z), note_below(Z,Y).
 note_above(X,Y) :- note_below(Y,X).
-note_dbelow(c,d).
-note_dbelow(d,e).
+note_dbelow(c,cis).
+note_dbelow(cis,d).
+note_dbelow(d,dis).
+note_dbelow(dis,e).
 note_dbelow(e,f).
-note_dbelow(f,g).
-note_dbelow(g,a).
-note_dbelow(a,b).
+note_dbelow(f,fis).
+note_dbelow(fis,g).
+note_dbelow(g,gis).
+note_dbelow(gis,a).
+note_dbelow(a,ais).
+note_dbelow(ais,b).
 
 
 % interval(+note1,+octave1,+note2,+octave2,-interval) :
