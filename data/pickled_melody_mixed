@@ -1,0 +1,5000 @@
+(S'BEGINNING_OF_SEQUENCE'
+p0
+S"(0, 0, -7, 'major', 0)"
+p1
+S'END_OF_SEQUENCE'
+p2
+S'BEGINNING_OF_SEQUENCE'
+p3
+S"(0, 0, 12, 'major', 0)"
+p4
+S"(0, -12, 0, 'major', 0)"
+p5
+S"(-12, -7, -7, 'major', 0)"
+p6
+S'END_OF_SEQUENCE'
+p7
+S'BEGINNING_OF_SEQUENCE'
+p8
+S"(0, 0, 12, 'major', 0)"
+p9
+S"(0, -19, -7, 'major', 0)"
+p10
+S"(-19, 0, -7, 'major', 0)"
+p11
+S"(0, 1, -6, 'major', 0)"
+p12
+S"(1, 1, -5, 'major', 0)"
+p13
+S'END_OF_SEQUENCE'
+p14
+S'BEGINNING_OF_SEQUENCE'
+p15
+S"(0, 0, 16, 'major', 0)"
+p16
+S'END_OF_SEQUENCE'
+p17
+S'BEGINNING_OF_SEQUENCE'
+p18
+S"(0, 0, 12, 'major', 0)"
+p19
+S'END_OF_SEQUENCE'
+p20
+S'BEGINNING_OF_SEQUENCE'
+p21
+S"(0, 0, 12, 'major', 0)"
+p22
+S'END_OF_SEQUENCE'
+p23
+S'BEGINNING_OF_SEQUENCE'
+p24
+S"(0, 0, 16, 'major', 0)"
+p25
+S'END_OF_SEQUENCE'
+p26
+S'BEGINNING_OF_SEQUENCE'
+p27
+S"(0, 0, 12, 'major', 0)"
+p28
+S"(0, -12, 0, 'major', 0)"
+p29
+S"(-12, 9, 9, 'major', 0)"
+p30
+S"(9, 1, 10, 'major', 0)"
+p31
+S'END_OF_SEQUENCE'
+p32
+S'BEGINNING_OF_SEQUENCE'
+p33
+S"(0, 0, 7, 'major', 0)"
+p34
+S'END_OF_SEQUENCE'
+p35
+S'BEGINNING_OF_SEQUENCE'
+p36
+S"(0, 0, 19, 'major', 0)"
+p37
+S"(0, -24, -5, 'major', 0)"
+p38
+S"(-24, 24, 19, 'major', 0)"
+p39
+S"(24, -24, -5, 'major', 0)"
+p40
+S"(-24, 16, 11, 'major', 0)"
+p41
+S'END_OF_SEQUENCE'
+p42
+S'BEGINNING_OF_SEQUENCE'
+p43
+S"(0, 0, 17, 'major', 0)"
+p44
+S"(0, -15, 2, 'major', 0)"
+p45
+S"(-15, 9, 11, 'major', 0)"
+p46
+S'END_OF_SEQUENCE'
+p47
+S'BEGINNING_OF_SEQUENCE'
+p48
+S"(0, 0, 14, 'major', 0)"
+p49
+S"(0, -14, 0, 'major', 0)"
+p50
+S'END_OF_SEQUENCE'
+p51
+S'BEGINNING_OF_SEQUENCE'
+p52
+S"(0, 0, 12, 'major', 0)"
+p53
+S'END_OF_SEQUENCE'
+p54
+S'BEGINNING_OF_SEQUENCE'
+p55
+S"(0, 0, 11, 'major', 0)"
+p56
+S'END_OF_SEQUENCE'
+p57
+S'BEGINNING_OF_SEQUENCE'
+p58
+S"(0, 0, 12, 'major', 0)"
+p59
+S"(0, -12, 0, 'major', 0)"
+p60
+S"(-12, 0, 0, 'major', 0)"
+p61
+S'END_OF_SEQUENCE'
+p62
+S'BEGINNING_OF_SEQUENCE'
+p63
+S"(0, 0, 19, 'major', 0)"
+p64
+S"(0, -3, 16, 'major', 0)"
+p65
+S"(-3, 0, 16, 'major', 0)"
+p66
+S"(0, 3, 19, 'major', 0)"
+p67
+S"(3, -3, 16, 'major', 0)"
+p68
+S"(-3, 3, 19, 'major', 0)"
+p69
+S"(3, -3, 16, 'major', 0)"
+p70
+S"(-3, -4, 12, 'major', 0)"
+p71
+S"(-4, -5, 7, 'major', 0)"
+p72
+S'END_OF_SEQUENCE'
+p73
+S'BEGINNING_OF_SEQUENCE'
+p74
+S"(0, 0, 19, 'major', 0)"
+p75
+S"(0, -3, 16, 'major', 0)"
+p76
+S"(-3, 0, 16, 'major', 0)"
+p77
+S"(0, 3, 19, 'major', 0)"
+p78
+S"(3, -3, 16, 'major', 0)"
+p79
+S"(-3, 3, 19, 'major', 0)"
+p80
+S"(3, -3, 16, 'major', 0)"
+p81
+S"(-3, -4, 12, 'major', 0)"
+p82
+S"(-4, -5, 7, 'major', 0)"
+p83
+S"(-5, -14, -7, 'major', 0)"
+p84
+S"(-14, 4, -3, 'major', 0)"
+p85
+S"(4, 18, 15, 'major', 0)"
+p86
+S"(18, -15, 0, 'major', 0)"
+p87
+S"(-15, -7, -7, 'major', 0)"
+p88
+S'END_OF_SEQUENCE'
+p89
+S'BEGINNING_OF_SEQUENCE'
+p90
+S"(0, 0, 12, 'major', 0)"
+p91
+S"(0, -12, 0, 'major', 0)"
+p92
+S"(-12, -7, -7, 'major', 0)"
+p93
+S'END_OF_SEQUENCE'
+p94
+S'BEGINNING_OF_SEQUENCE'
+p95
+S"(0, 0, 12, 'major', 0)"
+p96
+S"(0, -19, -7, 'major', 0)"
+p97
+S"(-19, -1, -8, 'major', 0)"
+p98
+S"(-1, 2, -6, 'major', 0)"
+p99
+S"(2, 1, -5, 'major', 0)"
+p100
+S'END_OF_SEQUENCE'
+p101
+S'BEGINNING_OF_SEQUENCE'
+p102
+S"(0, 0, 16, 'major', 0)"
+p103
+S"(0, -2, 14, 'major', 0)"
+p104
+S"(-2, -2, 12, 'major', 0)"
+p105
+S"(-2, 2, 14, 'major', 0)"
+p106
+S"(2, -2, 12, 'major', 0)"
+p107
+S'END_OF_SEQUENCE'
+p108
+S'BEGINNING_OF_SEQUENCE'
+p109
+S"(0, 0, 16, 'major', 0)"
+p110
+S"(0, -2, 14, 'major', 0)"
+p111
+S"(-2, -2, 12, 'major', 0)"
+p112
+S"(-2, -12, 0, 'major', 0)"
+p113
+S"(-12, 9, 9, 'major', 0)"
+p114
+S"(9, 1, 10, 'major', 0)"
+p115
+S'END_OF_SEQUENCE'
+p116
+S'BEGINNING_OF_SEQUENCE'
+p117
+S"(0, 0, 7, 'major', 0)"
+p118
+S'END_OF_SEQUENCE'
+p119
+S'BEGINNING_OF_SEQUENCE'
+p120
+S"(0, 0, 19, 'major', 0)"
+p121
+S"(0, -24, -5, 'major', 0)"
+p122
+S"(-24, 24, 19, 'major', 0)"
+p123
+S"(24, -24, -5, 'major', 0)"
+p124
+S"(-24, 16, 11, 'major', 0)"
+p125
+S'END_OF_SEQUENCE'
+p126
+S'BEGINNING_OF_SEQUENCE'
+p127
+S"(0, 0, 17, 'major', 0)"
+p128
+S"(0, -15, 2, 'major', 0)"
+p129
+S"(-15, 9, 11, 'major', 0)"
+p130
+S'END_OF_SEQUENCE'
+p131
+S'BEGINNING_OF_SEQUENCE'
+p132
+S"(0, 0, 14, 'major', 0)"
+p133
+S"(0, -14, 0, 'major', 0)"
+p134
+S'END_OF_SEQUENCE'
+p135
+S'BEGINNING_OF_SEQUENCE'
+p136
+S"(0, 0, 12, 'major', 0)"
+p137
+S'END_OF_SEQUENCE'
+p138
+S'BEGINNING_OF_SEQUENCE'
+p139
+S"(0, 0, 11, 'major', 0)"
+p140
+S'END_OF_SEQUENCE'
+p141
+S'BEGINNING_OF_SEQUENCE'
+p142
+S"(0, 0, -15, 'major', -3)"
+p143
+S'END_OF_SEQUENCE'
+p144
+S'BEGINNING_OF_SEQUENCE'
+p145
+S"(0, 0, -15, 'major', -3)"
+p146
+S'END_OF_SEQUENCE'
+p147
+S'BEGINNING_OF_SEQUENCE'
+p148
+S"(0, 0, -15, 'major', -3)"
+p149
+S'END_OF_SEQUENCE'
+p150
+S'BEGINNING_OF_SEQUENCE'
+p151
+S"(0, 0, -15, 'major', -3)"
+p152
+S'END_OF_SEQUENCE'
+p153
+S'BEGINNING_OF_SEQUENCE'
+p154
+S"(0, 0, -15, 'major', -3)"
+p155
+S'END_OF_SEQUENCE'
+p156
+S'BEGINNING_OF_SEQUENCE'
+p157
+S"(0, 0, -15, 'major', -3)"
+p158
+S'END_OF_SEQUENCE'
+p159
+S'BEGINNING_OF_SEQUENCE'
+p160
+S"(0, 0, -10, 'major', -3)"
+p161
+S'END_OF_SEQUENCE'
+p162
+S'BEGINNING_OF_SEQUENCE'
+p163
+S"(0, 0, -15, 'major', -3)"
+p164
+S'END_OF_SEQUENCE'
+p165
+S'BEGINNING_OF_SEQUENCE'
+p166
+S"(0, 0, 9, 'major', -3)"
+p167
+S"(0, 3, 12, 'major', -3)"
+p168
+S"(3, 2, 14, 'major', -3)"
+p169
+S"(2, 1, 15, 'major', -3)"
+p170
+S"(1, -1, 14, 'major', -3)"
+p171
+S"(-1, -2, 12, 'major', -3)"
+p172
+S"(-2, 2, 14, 'major', -3)"
+p173
+S"(2, -2, 12, 'major', -3)"
+p174
+S"(-2, -3, 9, 'major', -3)"
+p175
+S"(-3, 0, 9, 'major', -3)"
+p176
+S"(0, -24, -15, 'major', -3)"
+p177
+S'END_OF_SEQUENCE'
+p178
+S'BEGINNING_OF_SEQUENCE'
+p179
+S"(0, 0, -15, 'major', -3)"
+p180
+S'END_OF_SEQUENCE'
+p181
+S'BEGINNING_OF_SEQUENCE'
+p182
+S"(0, 0, -15, 'major', -3)"
+p183
+S'END_OF_SEQUENCE'
+p184
+S'BEGINNING_OF_SEQUENCE'
+p185
+S"(0, 0, -15, 'major', -3)"
+p186
+S'END_OF_SEQUENCE'
+p187
+S'BEGINNING_OF_SEQUENCE'
+p188
+S"(0, 0, -15, 'major', -3)"
+p189
+S'END_OF_SEQUENCE'
+p190
+S'BEGINNING_OF_SEQUENCE'
+p191
+S"(0, 0, -15, 'major', -3)"
+p192
+S'END_OF_SEQUENCE'
+p193
+S'BEGINNING_OF_SEQUENCE'
+p194
+S"(0, 0, -10, 'major', -3)"
+p195
+S'END_OF_SEQUENCE'
+p196
+S'BEGINNING_OF_SEQUENCE'
+p197
+S"(0, 0, -15, 'major', -3)"
+p198
+S'END_OF_SEQUENCE'
+p199
+S'BEGINNING_OF_SEQUENCE'
+p200
+S"(0, 0, 9, 'major', -3)"
+p201
+S"(0, 3, 12, 'major', -3)"
+p202
+S"(3, 2, 14, 'major', -3)"
+p203
+S"(2, 1, 15, 'major', -3)"
+p204
+S"(1, -1, 14, 'major', -3)"
+p205
+S"(-1, -2, 12, 'major', -3)"
+p206
+S"(-2, 2, 14, 'major', -3)"
+p207
+S"(2, -2, 12, 'major', -3)"
+p208
+S"(-2, -3, 9, 'major', -3)"
+p209
+S"(-3, 0, 9, 'major', -3)"
+p210
+S"(0, -24, -15, 'major', -3)"
+p211
+S'END_OF_SEQUENCE'
+p212
+S'BEGINNING_OF_SEQUENCE'
+p213
+S"(0, 0, -15, 'major', -3)"
+p214
+S'END_OF_SEQUENCE'
+p215
+S'BEGINNING_OF_SEQUENCE'
+p216
+S"(0, 0, -15, 'major', -3)"
+p217
+S'END_OF_SEQUENCE'
+p218
+S'BEGINNING_OF_SEQUENCE'
+p219
+S"(0, 0, -15, 'major', -3)"
+p220
+S'END_OF_SEQUENCE'
+p221
+S'BEGINNING_OF_SEQUENCE'
+p222
+S"(0, 0, -15, 'major', -3)"
+p223
+S'END_OF_SEQUENCE'
+p224
+S'BEGINNING_OF_SEQUENCE'
+p225
+S"(0, 0, -15, 'major', -3)"
+p226
+S'END_OF_SEQUENCE'
+p227
+S'BEGINNING_OF_SEQUENCE'
+p228
+S"(0, 0, -10, 'major', -3)"
+p229
+S'END_OF_SEQUENCE'
+p230
+S'BEGINNING_OF_SEQUENCE'
+p231
+S"(0, 0, -15, 'major', -3)"
+p232
+S'END_OF_SEQUENCE'
+p233
+S'BEGINNING_OF_SEQUENCE'
+p234
+S"(0, 0, 9, 'major', -3)"
+p235
+S"(0, 3, 12, 'major', -3)"
+p236
+S"(3, 2, 14, 'major', -3)"
+p237
+S"(2, 1, 15, 'major', -3)"
+p238
+S"(1, -1, 14, 'major', -3)"
+p239
+S"(-1, -2, 12, 'major', -3)"
+p240
+S"(-2, 2, 14, 'major', -3)"
+p241
+S"(2, -2, 12, 'major', -3)"
+p242
+S"(-2, -3, 9, 'major', -3)"
+p243
+S"(-3, 0, 9, 'major', -3)"
+p244
+S"(0, -24, -15, 'major', -3)"
+p245
+S'END_OF_SEQUENCE'
+p246
+S'BEGINNING_OF_SEQUENCE'
+p247
+S"(0, 0, -15, 'major', -3)"
+p248
+S'END_OF_SEQUENCE'
+p249
+S'BEGINNING_OF_SEQUENCE'
+p250
+S"(0, 0, -15, 'major', -3)"
+p251
+S'END_OF_SEQUENCE'
+p252
+S'BEGINNING_OF_SEQUENCE'
+p253
+S"(0, 0, -15, 'major', -3)"
+p254
+S'END_OF_SEQUENCE'
+p255
+S'BEGINNING_OF_SEQUENCE'
+p256
+S"(0, 0, -15, 'major', -3)"
+p257
+S'END_OF_SEQUENCE'
+p258
+S'BEGINNING_OF_SEQUENCE'
+p259
+S"(0, 0, -15, 'major', -3)"
+p260
+S'END_OF_SEQUENCE'
+p261
+S'BEGINNING_OF_SEQUENCE'
+p262
+S"(0, 0, -10, 'major', -3)"
+p263
+S'END_OF_SEQUENCE'
+p264
+S'BEGINNING_OF_SEQUENCE'
+p265
+S"(0, 0, -15, 'major', -3)"
+p266
+S'END_OF_SEQUENCE'
+p267
+S'BEGINNING_OF_SEQUENCE'
+p268
+S"(0, 0, 9, 'major', -3)"
+p269
+S"(0, 3, 12, 'major', -3)"
+p270
+S"(3, 2, 14, 'major', -3)"
+p271
+S"(2, 1, 15, 'major', -3)"
+p272
+S"(1, -1, 14, 'major', -3)"
+p273
+S"(-1, -2, 12, 'major', -3)"
+p274
+S"(-2, 2, 14, 'major', -3)"
+p275
+S"(2, -2, 12, 'major', -3)"
+p276
+S"(-2, -3, 9, 'major', -3)"
+p277
+S"(-3, 0, 9, 'major', -3)"
+p278
+S"(0, -24, -15, 'major', -3)"
+p279
+S'END_OF_SEQUENCE'
+p280
+S'BEGINNING_OF_SEQUENCE'
+p281
+S"(0, 0, -15, 'major', -3)"
+p282
+S'END_OF_SEQUENCE'
+p283
+S'BEGINNING_OF_SEQUENCE'
+p284
+S"(0, 0, -15, 'major', -3)"
+p285
+S'END_OF_SEQUENCE'
+p286
+S'BEGINNING_OF_SEQUENCE'
+p287
+S"(0, 0, -15, 'major', -3)"
+p288
+S'END_OF_SEQUENCE'
+p289
+S'BEGINNING_OF_SEQUENCE'
+p290
+S"(0, 0, -15, 'major', -3)"
+p291
+S'END_OF_SEQUENCE'
+p292
+S'BEGINNING_OF_SEQUENCE'
+p293
+S"(0, 0, -15, 'major', -3)"
+p294
+S'END_OF_SEQUENCE'
+p295
+S'BEGINNING_OF_SEQUENCE'
+p296
+S"(0, 0, -10, 'major', -3)"
+p297
+S'END_OF_SEQUENCE'
+p298
+S'BEGINNING_OF_SEQUENCE'
+p299
+S"(0, 0, -15, 'major', -3)"
+p300
+S'END_OF_SEQUENCE'
+p301
+S'BEGINNING_OF_SEQUENCE'
+p302
+S"(0, 0, 9, 'major', -3)"
+p303
+S"(0, 3, 12, 'major', -3)"
+p304
+S"(3, 2, 14, 'major', -3)"
+p305
+S"(2, 1, 15, 'major', -3)"
+p306
+S"(1, -1, 14, 'major', -3)"
+p307
+S"(-1, -2, 12, 'major', -3)"
+p308
+S"(-2, 2, 14, 'major', -3)"
+p309
+S"(2, -2, 12, 'major', -3)"
+p310
+S"(-2, -3, 9, 'major', -3)"
+p311
+S"(-3, 0, 9, 'major', -3)"
+p312
+S"(0, -24, -15, 'major', -3)"
+p313
+S'END_OF_SEQUENCE'
+p314
+S'BEGINNING_OF_SEQUENCE'
+p315
+S"(0, 0, -15, 'major', -3)"
+p316
+S'END_OF_SEQUENCE'
+p317
+S'BEGINNING_OF_SEQUENCE'
+p318
+S"(0, 0, -15, 'major', -3)"
+p319
+S'END_OF_SEQUENCE'
+p320
+S'BEGINNING_OF_SEQUENCE'
+p321
+S"(0, 0, -15, 'major', -3)"
+p322
+S'END_OF_SEQUENCE'
+p323
+S'BEGINNING_OF_SEQUENCE'
+p324
+S"(0, 0, -15, 'major', -3)"
+p325
+S'END_OF_SEQUENCE'
+p326
+S'BEGINNING_OF_SEQUENCE'
+p327
+S"(0, 0, -15, 'major', -3)"
+p328
+S'END_OF_SEQUENCE'
+p329
+S'BEGINNING_OF_SEQUENCE'
+p330
+S"(0, 0, -15, 'major', -3)"
+p331
+S'END_OF_SEQUENCE'
+p332
+S'BEGINNING_OF_SEQUENCE'
+p333
+S"(0, 0, -15, 'major', -3)"
+p334
+S'END_OF_SEQUENCE'
+p335
+S'BEGINNING_OF_SEQUENCE'
+p336
+S"(0, 0, -15, 'major', -3)"
+p337
+S'END_OF_SEQUENCE'
+p338
+S'BEGINNING_OF_SEQUENCE'
+p339
+S"(0, 0, -15, 'major', -3)"
+p340
+S'END_OF_SEQUENCE'
+p341
+S'BEGINNING_OF_SEQUENCE'
+p342
+S"(0, 0, -15, 'major', -3)"
+p343
+S'END_OF_SEQUENCE'
+p344
+S'BEGINNING_OF_SEQUENCE'
+p345
+S"(0, 0, -15, 'major', -3)"
+p346
+S'END_OF_SEQUENCE'
+p347
+S'BEGINNING_OF_SEQUENCE'
+p348
+S"(0, 0, -15, 'major', -3)"
+p349
+S'END_OF_SEQUENCE'
+p350
+S'BEGINNING_OF_SEQUENCE'
+p351
+S"(0, 0, -15, 'major', -3)"
+p352
+S'END_OF_SEQUENCE'
+p353
+S'BEGINNING_OF_SEQUENCE'
+p354
+S"(0, 0, 4, 'major', -3)"
+p355
+S"(0, 0, 4, 'major', -3)"
+p356
+S"(0, 0, 4, 'major', -3)"
+p357
+S"(0, 0, 4, 'major', -3)"
+p358
+S"(0, 0, 4, 'major', -3)"
+p359
+S"(0, -2, 2, 'major', -3)"
+p360
+S"(-2, 0, 2, 'major', -3)"
+p361
+S"(0, -2, 0, 'major', -3)"
+p362
+S"(-2, -3, -3, 'major', -3)"
+p363
+S"(-3, 3, 0, 'major', -3)"
+p364
+S"(3, 2, 2, 'major', -3)"
+p365
+S"(2, -2, 0, 'major', -3)"
+p366
+S"(-2, -3, -3, 'major', -3)"
+p367
+S"(-3, -2, -5, 'major', -3)"
+p368
+S"(-2, 2, -3, 'major', -3)"
+p369
+S"(2, -2, -5, 'major', -3)"
+p370
+S"(-2, 2, -3, 'major', -3)"
+p371
+S"(2, -12, -15, 'major', -3)"
+p372
+S"(-12, 5, -10, 'major', -3)"
+p373
+S"(5, 2, -8, 'major', -3)"
+p374
+S"(2, 3, -5, 'major', -3)"
+p375
+S"(3, 2, -3, 'major', -3)"
+p376
+S"(2, 7, 4, 'major', -3)"
+p377
+S"(7, 3, 7, 'major', -3)"
+p378
+S"(3, 2, 9, 'major', -3)"
+p379
+S"(2, -2, 7, 'major', -3)"
+p380
+S"(-2, 2, 9, 'major', -3)"
+p381
+S"(2, -2, 7, 'major', -3)"
+p382
+S"(-2, 2, 9, 'major', -3)"
+p383
+S"(2, 3, 12, 'major', -3)"
+p384
+S"(3, -3, 9, 'major', -3)"
+p385
+S"(-3, 3, 12, 'major', -3)"
+p386
+S"(3, 0, 12, 'major', -3)"
+p387
+S"(0, -15, -3, 'major', -3)"
+p388
+S"(-15, 0, -3, 'major', -3)"
+p389
+S"(0, 7, 4, 'major', -3)"
+p390
+S"(7, 3, 7, 'major', -3)"
+p391
+S"(3, 2, 9, 'major', -3)"
+p392
+S"(2, -2, 7, 'major', -3)"
+p393
+S"(-2, 2, 9, 'major', -3)"
+p394
+S"(2, -2, 7, 'major', -3)"
+p395
+S"(-2, 5, 12, 'major', -3)"
+p396
+S"(5, 0, 12, 'major', -3)"
+p397
+S"(0, 0, 12, 'major', -3)"
+p398
+S"(0, -3, 9, 'major', -3)"
+p399
+S"(-3, -6, 3, 'major', -3)"
+p400
+S"(-6, -1, 2, 'major', -3)"
+p401
+S"(-1, -2, 0, 'major', -3)"
+p402
+S"(-2, -3, -3, 'major', -3)"
+p403
+S"(-3, 0, -3, 'major', -3)"
+p404
+S"(0, 6, 3, 'major', -3)"
+p405
+S"(6, -1, 2, 'major', -3)"
+p406
+S"(-1, -2, 0, 'major', -3)"
+p407
+S"(-2, -3, -3, 'major', -3)"
+p408
+S"(-3, -2, -5, 'major', -3)"
+p409
+S"(-2, 9, 4, 'major', -3)"
+p410
+S"(9, -4, 0, 'major', -3)"
+p411
+S"(-4, 2, 2, 'major', -3)"
+p412
+S"(2, -5, -3, 'major', -3)"
+p413
+S"(-5, 3, 0, 'major', -3)"
+p414
+S"(3, 4, 4, 'major', -3)"
+p415
+S"(4, 3, 7, 'major', -3)"
+p416
+S"(3, 4, 11, 'major', -3)"
+p417
+S"(4, 1, 12, 'major', -3)"
+p418
+S"(1, -3, 9, 'major', -3)"
+p419
+S"(-3, -5, 4, 'major', -3)"
+p420
+S"(-5, 8, 12, 'major', -3)"
+p421
+S"(8, -3, 9, 'major', -3)"
+p422
+S"(-3, -5, 4, 'major', -3)"
+p423
+S"(-5, 0, 4, 'major', -3)"
+p424
+S"(0, 3, 7, 'major', -3)"
+p425
+S"(3, 2, 9, 'major', -3)"
+p426
+S"(2, 3, 12, 'major', -3)"
+p427
+S"(3, 2, 14, 'major', -3)"
+p428
+S"(2, -2, 12, 'major', -3)"
+p429
+S"(-2, 2, 14, 'major', -3)"
+p430
+S"(2, -5, 9, 'major', -3)"
+p431
+S"(-5, 0, 9, 'major', -3)"
+p432
+S"(0, 3, 12, 'major', -3)"
+p433
+S"(3, 2, 14, 'major', -3)"
+p434
+S"(2, 0, 14, 'major', -3)"
+p435
+S"(0, 0, 14, 'major', -3)"
+p436
+S"(0, -2, 12, 'major', -3)"
+p437
+S"(-2, -3, 9, 'major', -3)"
+p438
+S"(-3, 3, 12, 'major', -3)"
+p439
+S"(3, 2, 14, 'major', -3)"
+p440
+S"(2, 0, 14, 'major', -3)"
+p441
+S"(0, 0, 14, 'major', -3)"
+p442
+S"(0, -2, 12, 'major', -3)"
+p443
+S"(-2, 2, 14, 'major', -3)"
+p444
+S"(2, -5, 9, 'major', -3)"
+p445
+S"(-5, -7, 2, 'major', -3)"
+p446
+S"(-7, -2, 0, 'major', -3)"
+p447
+S"(-2, 2, 2, 'major', -3)"
+p448
+S"(2, -2, 0, 'major', -3)"
+p449
+S"(-2, -3, -3, 'major', -3)"
+p450
+S"(-3, 0, -3, 'major', -3)"
+p451
+S"(0, 0, -3, 'major', -3)"
+p452
+S"(0, 7, 4, 'major', -3)"
+p453
+S"(7, 7, 11, 'major', -3)"
+p454
+S"(7, 0, 11, 'major', -3)"
+p455
+S"(0, -11, 0, 'major', -3)"
+p456
+S"(-11, -3, -3, 'major', -3)"
+p457
+S"(-3, 0, -3, 'major', -3)"
+p458
+S"(0, 14, 11, 'major', -3)"
+p459
+S"(14, 0, 11, 'major', -3)"
+p460
+S"(0, 0, 11, 'major', -3)"
+p461
+S"(0, 1, 12, 'major', -3)"
+p462
+S"(1, -1, 11, 'major', -3)"
+p463
+S"(-1, -2, 9, 'major', -3)"
+p464
+S'END_OF_SEQUENCE'
+p465
+S'BEGINNING_OF_SEQUENCE'
+p466
+S"(0, 0, 12, 'major', -3)"
+p467
+S'END_OF_SEQUENCE'
+p468
+S'BEGINNING_OF_SEQUENCE'
+p469
+S"(0, 0, 19, 'major', -3)"
+p470
+S"(0, 2, 21, 'major', -3)"
+p471
+S"(2, 0, 21, 'major', -3)"
+p472
+S"(0, -2, 19, 'major', -3)"
+p473
+S"(-2, 2, 21, 'major', -3)"
+p474
+S"(2, -2, 19, 'major', -3)"
+p475
+S"(-2, 2, 21, 'major', -3)"
+p476
+S"(2, -5, 16, 'major', -3)"
+p477
+S"(-5, 3, 19, 'major', -3)"
+p478
+S"(3, 0, 19, 'major', -3)"
+p479
+S"(0, 0, 19, 'major', -3)"
+p480
+S"(0, 2, 21, 'major', -3)"
+p481
+S"(2, -2, 19, 'major', -3)"
+p482
+S"(-2, 0, 19, 'major', -3)"
+p483
+S"(0, 2, 21, 'major', -3)"
+p484
+S"(2, -2, 19, 'major', -3)"
+p485
+S"(-2, 0, 19, 'major', -3)"
+p486
+S"(0, 2, 21, 'major', -3)"
+p487
+S"(2, -2, 19, 'major', -3)"
+p488
+S"(-2, 0, 19, 'major', -3)"
+p489
+S"(0, -3, 16, 'major', -3)"
+p490
+S"(-3, -2, 14, 'major', -3)"
+p491
+S"(-2, -2, 12, 'major', -3)"
+p492
+S"(-2, 9, 21, 'major', -3)"
+p493
+S"(9, -2, 19, 'major', -3)"
+p494
+S"(-2, 5, 24, 'major', -3)"
+p495
+S"(5, 2, 26, 'major', -3)"
+p496
+S"(2, 0, 26, 'major', -3)"
+p497
+S"(0, -2, 24, 'major', -3)"
+p498
+S"(-2, 2, 26, 'major', -3)"
+p499
+S"(2, -5, 21, 'major', -3)"
+p500
+S"(-5, 3, 24, 'major', -3)"
+p501
+S"(3, -3, 21, 'major', -3)"
+p502
+S"(-3, 3, 24, 'major', -3)"
+p503
+S"(3, -5, 19, 'major', -3)"
+p504
+S"(-5, 5, 24, 'major', -3)"
+p505
+S"(5, -3, 21, 'major', -3)"
+p506
+S"(-3, 3, 24, 'major', -3)"
+p507
+S"(3, -5, 19, 'major', -3)"
+p508
+S"(-5, 5, 24, 'major', -3)"
+p509
+S"(5, -3, 21, 'major', -3)"
+p510
+S"(-3, 3, 24, 'major', -3)"
+p511
+S"(3, -10, 14, 'major', -3)"
+p512
+S"(-10, -5, 9, 'major', -3)"
+p513
+S"(-5, 3, 12, 'major', -3)"
+p514
+S"(3, 2, 14, 'major', -3)"
+p515
+S"(2, 1, 15, 'major', -3)"
+p516
+S"(1, 4, 19, 'major', -3)"
+p517
+S"(4, 0, 19, 'major', -3)"
+p518
+S"(0, -4, 15, 'major', -3)"
+p519
+S"(-4, -1, 14, 'major', -3)"
+p520
+S"(-1, -2, 12, 'major', -3)"
+p521
+S"(-2, -3, 9, 'major', -3)"
+p522
+S"(-3, 0, 9, 'major', -3)"
+p523
+S"(0, 10, 19, 'major', -3)"
+p524
+S"(10, 2, 21, 'major', -3)"
+p525
+S"(2, -2, 19, 'major', -3)"
+p526
+S"(-2, 2, 21, 'major', -3)"
+p527
+S"(2, -2, 19, 'major', -3)"
+p528
+S"(-2, 2, 21, 'major', -3)"
+p529
+S"(2, 0, 21, 'major', -3)"
+p530
+S"(0, 0, 21, 'major', -3)"
+p531
+S"(0, -4, 17, 'major', -3)"
+p532
+S"(-4, -1, 16, 'major', -3)"
+p533
+S"(-1, -2, 14, 'major', -3)"
+p534
+S"(-2, -2, 12, 'major', -3)"
+p535
+S"(-2, -3, 9, 'major', -3)"
+p536
+S"(-3, 5, 14, 'major', -3)"
+p537
+S"(5, 0, 14, 'major', -3)"
+p538
+S"(0, -2, 12, 'major', -3)"
+p539
+S"(-2, 2, 14, 'major', -3)"
+p540
+S"(2, -2, 12, 'major', -3)"
+p541
+S"(-2, -3, 9, 'major', -3)"
+p542
+S"(-3, 3, 12, 'major', -3)"
+p543
+S"(3, -3, 9, 'major', -3)"
+p544
+S"(-3, -2, 7, 'major', -3)"
+p545
+S"(-2, 2, 9, 'major', -3)"
+p546
+S"(2, -5, 4, 'major', -3)"
+p547
+S"(-5, 3, 7, 'major', -3)"
+p548
+S"(3, 2, 9, 'major', -3)"
+p549
+S"(2, 3, 12, 'major', -3)"
+p550
+S"(3, 0, 12, 'major', -3)"
+p551
+S"(0, -5, 7, 'major', -3)"
+p552
+S"(-5, 2, 9, 'major', -3)"
+p553
+S"(2, 0, 9, 'major', -3)"
+p554
+S"(0, 0, 9, 'major', -3)"
+p555
+S"(0, 3, 12, 'major', -3)"
+p556
+S"(3, -8, 4, 'major', -3)"
+p557
+S"(-8, -4, 0, 'major', -3)"
+p558
+S"(-4, -3, -3, 'major', -3)"
+p559
+S"(-3, 0, -3, 'major', -3)"
+p560
+S"(0, 3, 0, 'major', -3)"
+p561
+S"(3, -3, -3, 'major', -3)"
+p562
+S"(-3, -2, -5, 'major', -3)"
+p563
+S"(-2, 2, -3, 'major', -3)"
+p564
+S"(2, -5, -8, 'major', -3)"
+p565
+S"(-5, 3, -5, 'major', -3)"
+p566
+S"(3, -3, -8, 'major', -3)"
+p567
+S"(-3, 5, -3, 'major', -3)"
+p568
+S'END_OF_SEQUENCE'
+p569
+S'BEGINNING_OF_SEQUENCE'
+p570
+S"(0, 0, 4, 'major', -3)"
+p571
+S"(0, 8, 12, 'major', -3)"
+p572
+S"(8, -10, 2, 'major', -3)"
+p573
+S'END_OF_SEQUENCE'
+p574
+S'BEGINNING_OF_SEQUENCE'
+p575
+S"(0, 0, 4, 'major', -3)"
+p576
+S"(0, -4, 0, 'major', -3)"
+p577
+S'END_OF_SEQUENCE'
+p578
+S'BEGINNING_OF_SEQUENCE'
+p579
+S"(0, 0, 4, 'major', -3)"
+p580
+S"(0, -2, 2, 'major', -3)"
+p581
+S"(-2, -2, 0, 'major', -3)"
+p582
+S"(-2, -3, -3, 'major', -3)"
+p583
+S"(-3, 0, -3, 'major', -3)"
+p584
+S"(0, 3, 0, 'major', -3)"
+p585
+S"(3, -3, -3, 'major', -3)"
+p586
+S"(-3, 3, 0, 'major', -3)"
+p587
+S"(3, -3, -3, 'major', -3)"
+p588
+S"(-3, 7, 4, 'major', -3)"
+p589
+S"(7, -4, 0, 'major', -3)"
+p590
+S"(-4, 2, 2, 'major', -3)"
+p591
+S"(2, -2, 0, 'major', -3)"
+p592
+S"(-2, -3, -3, 'major', -3)"
+p593
+S"(-3, 0, -3, 'major', -3)"
+p594
+S"(0, 3, 0, 'major', -3)"
+p595
+S"(3, 4, 4, 'major', -3)"
+p596
+S"(4, -4, 0, 'major', -3)"
+p597
+S"(-4, 2, 2, 'major', -3)"
+p598
+S"(2, -2, 0, 'major', -3)"
+p599
+S"(-2, -3, -3, 'major', -3)"
+p600
+S"(-3, 5, 2, 'major', -3)"
+p601
+S"(5, 1, 3, 'major', -3)"
+p602
+S"(1, -1, 2, 'major', -3)"
+p603
+S"(-1, -2, 0, 'major', -3)"
+p604
+S"(-2, -3, -3, 'major', -3)"
+p605
+S"(-3, -2, -5, 'major', -3)"
+p606
+S"(-2, 9, 4, 'major', -3)"
+p607
+S"(9, 3, 7, 'major', -3)"
+p608
+S"(3, -5, 2, 'major', -3)"
+p609
+S"(-5, 1, 3, 'major', -3)"
+p610
+S"(1, -1, 2, 'major', -3)"
+p611
+S"(-1, -2, 0, 'major', -3)"
+p612
+S"(-2, 2, 2, 'major', -3)"
+p613
+S"(2, -2, 0, 'major', -3)"
+p614
+S"(-2, -3, -3, 'major', -3)"
+p615
+S"(-3, 15, 12, 'major', -3)"
+p616
+S"(15, 0, 12, 'major', -3)"
+p617
+S"(0, -3, 9, 'major', -3)"
+p618
+S"(-3, 1, 10, 'major', -3)"
+p619
+S"(1, 0, 10, 'major', -3)"
+p620
+S"(0, -1, 9, 'major', -3)"
+p621
+S"(-1, -2, 7, 'major', -3)"
+p622
+S"(-2, 2, 9, 'major', -3)"
+p623
+S"(2, 3, 12, 'major', -3)"
+p624
+S"(3, 0, 12, 'major', -3)"
+p625
+S"(0, -3, 9, 'major', -3)"
+p626
+S"(-3, -5, 4, 'major', -3)"
+p627
+S"(-5, -4, 0, 'major', -3)"
+p628
+S"(-4, 2, 2, 'major', -3)"
+p629
+S"(2, 7, 9, 'major', -3)"
+p630
+S"(7, -7, 2, 'major', -3)"
+p631
+S"(-7, -2, 0, 'major', -3)"
+p632
+S"(-2, 2, 2, 'major', -3)"
+p633
+S"(2, -2, 0, 'major', -3)"
+p634
+S"(-2, -3, -3, 'major', -3)"
+p635
+S"(-3, -2, -5, 'major', -3)"
+p636
+S"(-2, 2, -3, 'major', -3)"
+p637
+S"(2, 15, 12, 'major', -3)"
+p638
+S"(15, 0, 12, 'major', -3)"
+p639
+S"(0, -3, 9, 'major', -3)"
+p640
+S"(-3, -5, 4, 'major', -3)"
+p641
+S"(-5, 8, 12, 'major', -3)"
+p642
+S"(8, 0, 12, 'major', -3)"
+p643
+S"(0, 0, 12, 'major', -3)"
+p644
+S"(0, -8, 4, 'major', -3)"
+p645
+S"(-8, 8, 12, 'major', -3)"
+p646
+S"(8, 0, 12, 'major', -3)"
+p647
+S"(0, -3, 9, 'major', -3)"
+p648
+S"(-3, -2, 7, 'major', -3)"
+p649
+S"(-2, -3, 4, 'major', -3)"
+p650
+S"(-3, -2, 2, 'major', -3)"
+p651
+S"(-2, -2, 0, 'major', -3)"
+p652
+S"(-2, 2, 2, 'major', -3)"
+p653
+S"(2, -2, 0, 'major', -3)"
+p654
+S"(-2, -3, -3, 'major', -3)"
+p655
+S'END_OF_SEQUENCE'
+p656
+S'BEGINNING_OF_SEQUENCE'
+p657
+S"(0, 0, 4, 'major', -3)"
+p658
+S"(0, 0, 4, 'major', -3)"
+p659
+S"(0, 0, 4, 'major', -3)"
+p660
+S"(0, 0, 4, 'major', -3)"
+p661
+S"(0, 0, 4, 'major', -3)"
+p662
+S"(0, -2, 2, 'major', -3)"
+p663
+S"(-2, 0, 2, 'major', -3)"
+p664
+S"(0, -2, 0, 'major', -3)"
+p665
+S"(-2, -3, -3, 'major', -3)"
+p666
+S"(-3, 3, 0, 'major', -3)"
+p667
+S"(3, 2, 2, 'major', -3)"
+p668
+S"(2, -2, 0, 'major', -3)"
+p669
+S"(-2, -3, -3, 'major', -3)"
+p670
+S"(-3, -2, -5, 'major', -3)"
+p671
+S"(-2, 2, -3, 'major', -3)"
+p672
+S"(2, -2, -5, 'major', -3)"
+p673
+S"(-2, 2, -3, 'major', -3)"
+p674
+S"(2, -12, -15, 'major', -3)"
+p675
+S"(-12, 5, -10, 'major', -3)"
+p676
+S"(5, 2, -8, 'major', -3)"
+p677
+S"(2, 3, -5, 'major', -3)"
+p678
+S"(3, 2, -3, 'major', -3)"
+p679
+S"(2, 7, 4, 'major', -3)"
+p680
+S"(7, 3, 7, 'major', -3)"
+p681
+S"(3, 2, 9, 'major', -3)"
+p682
+S"(2, -2, 7, 'major', -3)"
+p683
+S"(-2, 2, 9, 'major', -3)"
+p684
+S"(2, -2, 7, 'major', -3)"
+p685
+S"(-2, 2, 9, 'major', -3)"
+p686
+S"(2, 3, 12, 'major', -3)"
+p687
+S"(3, -3, 9, 'major', -3)"
+p688
+S"(-3, 3, 12, 'major', -3)"
+p689
+S"(3, 0, 12, 'major', -3)"
+p690
+S"(0, -15, -3, 'major', -3)"
+p691
+S"(-15, 0, -3, 'major', -3)"
+p692
+S"(0, 7, 4, 'major', -3)"
+p693
+S"(7, 3, 7, 'major', -3)"
+p694
+S"(3, 2, 9, 'major', -3)"
+p695
+S"(2, -2, 7, 'major', -3)"
+p696
+S"(-2, 2, 9, 'major', -3)"
+p697
+S"(2, -2, 7, 'major', -3)"
+p698
+S"(-2, 5, 12, 'major', -3)"
+p699
+S"(5, 0, 12, 'major', -3)"
+p700
+S"(0, 0, 12, 'major', -3)"
+p701
+S"(0, -3, 9, 'major', -3)"
+p702
+S"(-3, -6, 3, 'major', -3)"
+p703
+S"(-6, -1, 2, 'major', -3)"
+p704
+S"(-1, -2, 0, 'major', -3)"
+p705
+S"(-2, -3, -3, 'major', -3)"
+p706
+S"(-3, 0, -3, 'major', -3)"
+p707
+S"(0, 6, 3, 'major', -3)"
+p708
+S"(6, -1, 2, 'major', -3)"
+p709
+S"(-1, -2, 0, 'major', -3)"
+p710
+S"(-2, -3, -3, 'major', -3)"
+p711
+S"(-3, -2, -5, 'major', -3)"
+p712
+S"(-2, 9, 4, 'major', -3)"
+p713
+S"(9, -4, 0, 'major', -3)"
+p714
+S"(-4, 2, 2, 'major', -3)"
+p715
+S"(2, -5, -3, 'major', -3)"
+p716
+S"(-5, 3, 0, 'major', -3)"
+p717
+S"(3, 4, 4, 'major', -3)"
+p718
+S"(4, 3, 7, 'major', -3)"
+p719
+S"(3, 4, 11, 'major', -3)"
+p720
+S"(4, 1, 12, 'major', -3)"
+p721
+S"(1, -3, 9, 'major', -3)"
+p722
+S"(-3, -5, 4, 'major', -3)"
+p723
+S"(-5, 8, 12, 'major', -3)"
+p724
+S"(8, -3, 9, 'major', -3)"
+p725
+S"(-3, -5, 4, 'major', -3)"
+p726
+S"(-5, 0, 4, 'major', -3)"
+p727
+S"(0, 3, 7, 'major', -3)"
+p728
+S"(3, 2, 9, 'major', -3)"
+p729
+S"(2, 3, 12, 'major', -3)"
+p730
+S"(3, 2, 14, 'major', -3)"
+p731
+S"(2, -2, 12, 'major', -3)"
+p732
+S"(-2, 2, 14, 'major', -3)"
+p733
+S"(2, -5, 9, 'major', -3)"
+p734
+S"(-5, 0, 9, 'major', -3)"
+p735
+S"(0, 3, 12, 'major', -3)"
+p736
+S"(3, 2, 14, 'major', -3)"
+p737
+S"(2, 0, 14, 'major', -3)"
+p738
+S"(0, 0, 14, 'major', -3)"
+p739
+S"(0, -2, 12, 'major', -3)"
+p740
+S"(-2, -3, 9, 'major', -3)"
+p741
+S"(-3, 3, 12, 'major', -3)"
+p742
+S"(3, 2, 14, 'major', -3)"
+p743
+S"(2, 0, 14, 'major', -3)"
+p744
+S"(0, 0, 14, 'major', -3)"
+p745
+S"(0, -2, 12, 'major', -3)"
+p746
+S"(-2, 2, 14, 'major', -3)"
+p747
+S"(2, -5, 9, 'major', -3)"
+p748
+S"(-5, -7, 2, 'major', -3)"
+p749
+S"(-7, -2, 0, 'major', -3)"
+p750
+S"(-2, 2, 2, 'major', -3)"
+p751
+S"(2, -2, 0, 'major', -3)"
+p752
+S"(-2, -3, -3, 'major', -3)"
+p753
+S"(-3, 0, -3, 'major', -3)"
+p754
+S"(0, 0, -3, 'major', -3)"
+p755
+S"(0, 7, 4, 'major', -3)"
+p756
+S"(7, 7, 11, 'major', -3)"
+p757
+S"(7, 0, 11, 'major', -3)"
+p758
+S"(0, -11, 0, 'major', -3)"
+p759
+S"(-11, -3, -3, 'major', -3)"
+p760
+S"(-3, 0, -3, 'major', -3)"
+p761
+S"(0, 14, 11, 'major', -3)"
+p762
+S"(14, 0, 11, 'major', -3)"
+p763
+S"(0, 0, 11, 'major', -3)"
+p764
+S"(0, 1, 12, 'major', -3)"
+p765
+S"(1, -1, 11, 'major', -3)"
+p766
+S"(-1, -2, 9, 'major', -3)"
+p767
+S'END_OF_SEQUENCE'
+p768
+S'BEGINNING_OF_SEQUENCE'
+p769
+S"(0, 0, 12, 'major', -3)"
+p770
+S'END_OF_SEQUENCE'
+p771
+S'BEGINNING_OF_SEQUENCE'
+p772
+S"(0, 0, 19, 'major', -3)"
+p773
+S"(0, 2, 21, 'major', -3)"
+p774
+S"(2, 0, 21, 'major', -3)"
+p775
+S"(0, -2, 19, 'major', -3)"
+p776
+S"(-2, 2, 21, 'major', -3)"
+p777
+S"(2, -2, 19, 'major', -3)"
+p778
+S"(-2, 2, 21, 'major', -3)"
+p779
+S"(2, -5, 16, 'major', -3)"
+p780
+S"(-5, 3, 19, 'major', -3)"
+p781
+S"(3, 0, 19, 'major', -3)"
+p782
+S"(0, 0, 19, 'major', -3)"
+p783
+S"(0, 2, 21, 'major', -3)"
+p784
+S"(2, -2, 19, 'major', -3)"
+p785
+S"(-2, 0, 19, 'major', -3)"
+p786
+S"(0, 2, 21, 'major', -3)"
+p787
+S"(2, -2, 19, 'major', -3)"
+p788
+S"(-2, 0, 19, 'major', -3)"
+p789
+S"(0, 2, 21, 'major', -3)"
+p790
+S"(2, -2, 19, 'major', -3)"
+p791
+S"(-2, 0, 19, 'major', -3)"
+p792
+S"(0, -3, 16, 'major', -3)"
+p793
+S"(-3, -2, 14, 'major', -3)"
+p794
+S"(-2, -2, 12, 'major', -3)"
+p795
+S"(-2, 9, 21, 'major', -3)"
+p796
+S"(9, -2, 19, 'major', -3)"
+p797
+S"(-2, 5, 24, 'major', -3)"
+p798
+S"(5, 2, 26, 'major', -3)"
+p799
+S"(2, 0, 26, 'major', -3)"
+p800
+S"(0, -2, 24, 'major', -3)"
+p801
+S"(-2, 2, 26, 'major', -3)"
+p802
+S"(2, -5, 21, 'major', -3)"
+p803
+S"(-5, 3, 24, 'major', -3)"
+p804
+S"(3, -3, 21, 'major', -3)"
+p805
+S"(-3, 3, 24, 'major', -3)"
+p806
+S"(3, -5, 19, 'major', -3)"
+p807
+S"(-5, 5, 24, 'major', -3)"
+p808
+S"(5, -3, 21, 'major', -3)"
+p809
+S"(-3, 3, 24, 'major', -3)"
+p810
+S"(3, -5, 19, 'major', -3)"
+p811
+S"(-5, 5, 24, 'major', -3)"
+p812
+S"(5, -3, 21, 'major', -3)"
+p813
+S"(-3, 3, 24, 'major', -3)"
+p814
+S"(3, -10, 14, 'major', -3)"
+p815
+S"(-10, -5, 9, 'major', -3)"
+p816
+S"(-5, 3, 12, 'major', -3)"
+p817
+S"(3, 2, 14, 'major', -3)"
+p818
+S"(2, 1, 15, 'major', -3)"
+p819
+S"(1, 4, 19, 'major', -3)"
+p820
+S"(4, 0, 19, 'major', -3)"
+p821
+S"(0, -4, 15, 'major', -3)"
+p822
+S"(-4, -1, 14, 'major', -3)"
+p823
+S"(-1, -2, 12, 'major', -3)"
+p824
+S"(-2, -3, 9, 'major', -3)"
+p825
+S"(-3, 0, 9, 'major', -3)"
+p826
+S"(0, 10, 19, 'major', -3)"
+p827
+S"(10, 2, 21, 'major', -3)"
+p828
+S"(2, -2, 19, 'major', -3)"
+p829
+S"(-2, 2, 21, 'major', -3)"
+p830
+S"(2, -2, 19, 'major', -3)"
+p831
+S"(-2, 2, 21, 'major', -3)"
+p832
+S"(2, 0, 21, 'major', -3)"
+p833
+S"(0, 0, 21, 'major', -3)"
+p834
+S"(0, -4, 17, 'major', -3)"
+p835
+S"(-4, -1, 16, 'major', -3)"
+p836
+S"(-1, -2, 14, 'major', -3)"
+p837
+S"(-2, -2, 12, 'major', -3)"
+p838
+S"(-2, -3, 9, 'major', -3)"
+p839
+S"(-3, 5, 14, 'major', -3)"
+p840
+S"(5, 0, 14, 'major', -3)"
+p841
+S"(0, -2, 12, 'major', -3)"
+p842
+S"(-2, 2, 14, 'major', -3)"
+p843
+S"(2, -2, 12, 'major', -3)"
+p844
+S"(-2, -3, 9, 'major', -3)"
+p845
+S"(-3, 3, 12, 'major', -3)"
+p846
+S"(3, -3, 9, 'major', -3)"
+p847
+S"(-3, -2, 7, 'major', -3)"
+p848
+S"(-2, 2, 9, 'major', -3)"
+p849
+S"(2, -5, 4, 'major', -3)"
+p850
+S"(-5, 3, 7, 'major', -3)"
+p851
+S"(3, 2, 9, 'major', -3)"
+p852
+S"(2, 3, 12, 'major', -3)"
+p853
+S"(3, 0, 12, 'major', -3)"
+p854
+S"(0, -5, 7, 'major', -3)"
+p855
+S"(-5, 2, 9, 'major', -3)"
+p856
+S"(2, 0, 9, 'major', -3)"
+p857
+S"(0, 0, 9, 'major', -3)"
+p858
+S"(0, 3, 12, 'major', -3)"
+p859
+S"(3, -8, 4, 'major', -3)"
+p860
+S"(-8, -4, 0, 'major', -3)"
+p861
+S"(-4, -3, -3, 'major', -3)"
+p862
+S"(-3, 0, -3, 'major', -3)"
+p863
+S"(0, 3, 0, 'major', -3)"
+p864
+S"(3, -3, -3, 'major', -3)"
+p865
+S"(-3, -2, -5, 'major', -3)"
+p866
+S"(-2, 2, -3, 'major', -3)"
+p867
+S"(2, -5, -8, 'major', -3)"
+p868
+S"(-5, 3, -5, 'major', -3)"
+p869
+S"(3, -3, -8, 'major', -3)"
+p870
+S"(-3, 5, -3, 'major', -3)"
+p871
+S'END_OF_SEQUENCE'
+p872
+S'BEGINNING_OF_SEQUENCE'
+p873
+S"(0, 0, 4, 'major', -3)"
+p874
+S"(0, 8, 12, 'major', -3)"
+p875
+S"(8, -10, 2, 'major', -3)"
+p876
+S'END_OF_SEQUENCE'
+p877
+S'BEGINNING_OF_SEQUENCE'
+p878
+S"(0, 0, 4, 'major', -3)"
+p879
+S"(0, -4, 0, 'major', -3)"
+p880
+S'END_OF_SEQUENCE'
+p881
+S'BEGINNING_OF_SEQUENCE'
+p882
+S"(0, 0, 4, 'major', -3)"
+p883
+S"(0, -2, 2, 'major', -3)"
+p884
+S"(-2, -2, 0, 'major', -3)"
+p885
+S"(-2, -3, -3, 'major', -3)"
+p886
+S"(-3, 0, -3, 'major', -3)"
+p887
+S"(0, 3, 0, 'major', -3)"
+p888
+S"(3, -3, -3, 'major', -3)"
+p889
+S"(-3, 3, 0, 'major', -3)"
+p890
+S"(3, -3, -3, 'major', -3)"
+p891
+S"(-3, 7, 4, 'major', -3)"
+p892
+S"(7, -4, 0, 'major', -3)"
+p893
+S"(-4, 2, 2, 'major', -3)"
+p894
+S"(2, -2, 0, 'major', -3)"
+p895
+S"(-2, -3, -3, 'major', -3)"
+p896
+S"(-3, 0, -3, 'major', -3)"
+p897
+S"(0, 3, 0, 'major', -3)"
+p898
+S"(3, 4, 4, 'major', -3)"
+p899
+S"(4, -4, 0, 'major', -3)"
+p900
+S"(-4, 2, 2, 'major', -3)"
+p901
+S"(2, -2, 0, 'major', -3)"
+p902
+S"(-2, -3, -3, 'major', -3)"
+p903
+S"(-3, 5, 2, 'major', -3)"
+p904
+S"(5, 1, 3, 'major', -3)"
+p905
+S"(1, -1, 2, 'major', -3)"
+p906
+S"(-1, -2, 0, 'major', -3)"
+p907
+S"(-2, -3, -3, 'major', -3)"
+p908
+S"(-3, -2, -5, 'major', -3)"
+p909
+S"(-2, 9, 4, 'major', -3)"
+p910
+S"(9, 3, 7, 'major', -3)"
+p911
+S"(3, -5, 2, 'major', -3)"
+p912
+S"(-5, 1, 3, 'major', -3)"
+p913
+S"(1, -1, 2, 'major', -3)"
+p914
+S"(-1, -2, 0, 'major', -3)"
+p915
+S"(-2, 2, 2, 'major', -3)"
+p916
+S"(2, -2, 0, 'major', -3)"
+p917
+S"(-2, -3, -3, 'major', -3)"
+p918
+S"(-3, 15, 12, 'major', -3)"
+p919
+S"(15, 0, 12, 'major', -3)"
+p920
+S"(0, -3, 9, 'major', -3)"
+p921
+S"(-3, 1, 10, 'major', -3)"
+p922
+S"(1, 0, 10, 'major', -3)"
+p923
+S"(0, -1, 9, 'major', -3)"
+p924
+S"(-1, -2, 7, 'major', -3)"
+p925
+S"(-2, 2, 9, 'major', -3)"
+p926
+S"(2, 3, 12, 'major', -3)"
+p927
+S"(3, 0, 12, 'major', -3)"
+p928
+S"(0, -3, 9, 'major', -3)"
+p929
+S"(-3, -5, 4, 'major', -3)"
+p930
+S"(-5, -4, 0, 'major', -3)"
+p931
+S"(-4, 2, 2, 'major', -3)"
+p932
+S"(2, 7, 9, 'major', -3)"
+p933
+S"(7, -7, 2, 'major', -3)"
+p934
+S"(-7, -2, 0, 'major', -3)"
+p935
+S"(-2, 2, 2, 'major', -3)"
+p936
+S"(2, -2, 0, 'major', -3)"
+p937
+S"(-2, -3, -3, 'major', -3)"
+p938
+S"(-3, -2, -5, 'major', -3)"
+p939
+S"(-2, 2, -3, 'major', -3)"
+p940
+S"(2, 15, 12, 'major', -3)"
+p941
+S"(15, 0, 12, 'major', -3)"
+p942
+S"(0, -3, 9, 'major', -3)"
+p943
+S"(-3, -5, 4, 'major', -3)"
+p944
+S"(-5, 8, 12, 'major', -3)"
+p945
+S"(8, 0, 12, 'major', -3)"
+p946
+S"(0, 0, 12, 'major', -3)"
+p947
+S"(0, -8, 4, 'major', -3)"
+p948
+S"(-8, 8, 12, 'major', -3)"
+p949
+S"(8, 0, 12, 'major', -3)"
+p950
+S"(0, -3, 9, 'major', -3)"
+p951
+S"(-3, -2, 7, 'major', -3)"
+p952
+S"(-2, -3, 4, 'major', -3)"
+p953
+S"(-3, -2, 2, 'major', -3)"
+p954
+S"(-2, -2, 0, 'major', -3)"
+p955
+S"(-2, 2, 2, 'major', -3)"
+p956
+S"(2, -2, 0, 'major', -3)"
+p957
+S"(-2, -3, -3, 'major', -3)"
+p958
+S'END_OF_SEQUENCE'
+p959
+S'BEGINNING_OF_SEQUENCE'
+p960
+S"(0, 0, 7, 'major', 0)"
+p961
+S'END_OF_SEQUENCE'
+p962
+S'BEGINNING_OF_SEQUENCE'
+p963
+S"(0, 0, 7, 'major', 0)"
+p964
+S'END_OF_SEQUENCE'
+p965
+S'BEGINNING_OF_SEQUENCE'
+p966
+S"(0, 0, 26, 'major', 0)"
+p967
+S"(0, 2, 28, 'major', 0)"
+p968
+S"(2, -7, 21, 'major', 0)"
+p969
+S"(-7, -2, 19, 'major', 0)"
+p970
+S"(-2, 5, 24, 'major', 0)"
+p971
+S"(5, 2, 26, 'major', 0)"
+p972
+S"(2, 2, 28, 'major', 0)"
+p973
+S"(2, -7, 21, 'major', 0)"
+p974
+S"(-7, -2, 19, 'major', 0)"
+p975
+S"(-2, 5, 24, 'major', 0)"
+p976
+S"(5, 2, 26, 'major', 0)"
+p977
+S"(2, 2, 28, 'major', 0)"
+p978
+S"(2, -7, 21, 'major', 0)"
+p979
+S"(-7, -2, 19, 'major', 0)"
+p980
+S"(-2, 5, 24, 'major', 0)"
+p981
+S"(5, 0, 24, 'major', 0)"
+p982
+S"(0, -2, 22, 'major', 0)"
+p983
+S"(-2, -3, 19, 'major', 0)"
+p984
+S"(-3, -2, 17, 'major', 0)"
+p985
+S"(-2, -2, 15, 'major', 0)"
+p986
+S"(-2, 1, 16, 'major', 0)"
+p987
+S"(1, -4, 12, 'major', 0)"
+p988
+S"(-4, -2, 10, 'major', 0)"
+p989
+S"(-2, 14, 24, 'major', 0)"
+p990
+S"(14, -2, 22, 'major', 0)"
+p991
+S"(-2, -3, 19, 'major', 0)"
+p992
+S"(-3, -2, 17, 'major', 0)"
+p993
+S"(-2, -1, 16, 'major', 0)"
+p994
+S"(-1, 3, 19, 'major', 0)"
+p995
+S"(3, 5, 24, 'major', 0)"
+p996
+S"(5, -2, 22, 'major', 0)"
+p997
+S"(-2, -3, 19, 'major', 0)"
+p998
+S"(-3, -2, 17, 'major', 0)"
+p999
+S"(-2, -2, 15, 'major', 0)"
+p1000
+S"(-2, 1, 16, 'major', 0)"
+p1001
+S"(1, -4, 12, 'major', 0)"
+p1002
+S'END_OF_SEQUENCE'
+p1003
+S'BEGINNING_OF_SEQUENCE'
+p1004
+S"(0, 0, 12, 'major', 0)"
+p1005
+S'END_OF_SEQUENCE'
+p1006
+S'BEGINNING_OF_SEQUENCE'
+p1007
+S"(0, 0, 12, 'major', 0)"
+p1008
+S"(0, -12, 0, 'major', 0)"
+p1009
+S"(-12, -1, -1, 'major', 0)"
+p1010
+S"(-1, -1, -2, 'major', 0)"
+p1011
+S"(-1, -1, -3, 'major', 0)"
+p1012
+S"(-1, -1, -4, 'major', 0)"
+p1013
+S"(-1, -1, -5, 'major', 0)"
+p1014
+S"(-1, -4, -9, 'major', 0)"
+p1015
+S"(-4, 2, -7, 'major', 0)"
+p1016
+S'END_OF_SEQUENCE'
+p1017
+S'BEGINNING_OF_SEQUENCE'
+p1018
+S"(0, 0, -3, 'major', 0)"
+p1019
+S"(0, -2, -5, 'major', 0)"
+p1020
+S'END_OF_SEQUENCE'
+p1021
+S'BEGINNING_OF_SEQUENCE'
+p1022
+S"(0, 0, -3, 'major', 0)"
+p1023
+S"(0, -2, -5, 'major', 0)"
+p1024
+S'END_OF_SEQUENCE'
+p1025
+S'BEGINNING_OF_SEQUENCE'
+p1026
+S"(0, 0, -3, 'major', 0)"
+p1027
+S"(0, -2, -5, 'major', 0)"
+p1028
+S'END_OF_SEQUENCE'
+p1029
+S'BEGINNING_OF_SEQUENCE'
+p1030
+S"(0, 0, -3, 'major', 0)"
+p1031
+S"(0, -2, -5, 'major', 0)"
+p1032
+S'END_OF_SEQUENCE'
+p1033
+S'BEGINNING_OF_SEQUENCE'
+p1034
+S"(0, 0, 2, 'major', 0)"
+p1035
+S"(0, -2, 0, 'major', 0)"
+p1036
+S'END_OF_SEQUENCE'
+p1037
+S'BEGINNING_OF_SEQUENCE'
+p1038
+S"(0, 0, 2, 'major', 0)"
+p1039
+S"(0, -2, 0, 'major', 0)"
+p1040
+S'END_OF_SEQUENCE'
+p1041
+S'BEGINNING_OF_SEQUENCE'
+p1042
+S"(0, 0, -3, 'major', 0)"
+p1043
+S"(0, -2, -5, 'major', 0)"
+p1044
+S'END_OF_SEQUENCE'
+p1045
+S'BEGINNING_OF_SEQUENCE'
+p1046
+S"(0, 0, -3, 'major', 0)"
+p1047
+S"(0, -2, -5, 'major', 0)"
+p1048
+S'END_OF_SEQUENCE'
+p1049
+S'BEGINNING_OF_SEQUENCE'
+p1050
+S"(0, 0, 4, 'major', 0)"
+p1051
+S"(0, -2, 2, 'major', 0)"
+p1052
+S'END_OF_SEQUENCE'
+p1053
+S'BEGINNING_OF_SEQUENCE'
+p1054
+S"(0, 0, 2, 'major', 0)"
+p1055
+S"(0, -2, 0, 'major', 0)"
+p1056
+S'END_OF_SEQUENCE'
+p1057
+S'BEGINNING_OF_SEQUENCE'
+p1058
+S"(0, 0, -3, 'major', 0)"
+p1059
+S"(0, -2, -5, 'major', 0)"
+p1060
+S'END_OF_SEQUENCE'
+p1061
+S'BEGINNING_OF_SEQUENCE'
+p1062
+S"(0, 0, -3, 'major', 0)"
+p1063
+S"(0, -2, -5, 'major', 0)"
+p1064
+S'END_OF_SEQUENCE'
+p1065
+S'BEGINNING_OF_SEQUENCE'
+p1066
+S"(0, 0, -3, 'major', 0)"
+p1067
+S"(0, -2, -5, 'major', 0)"
+p1068
+S'END_OF_SEQUENCE'
+p1069
+S'BEGINNING_OF_SEQUENCE'
+p1070
+S"(0, 0, -3, 'major', 0)"
+p1071
+S"(0, -2, -5, 'major', 0)"
+p1072
+S'END_OF_SEQUENCE'
+p1073
+S'BEGINNING_OF_SEQUENCE'
+p1074
+S"(0, 0, -3, 'major', 0)"
+p1075
+S"(0, -2, -5, 'major', 0)"
+p1076
+S'END_OF_SEQUENCE'
+p1077
+S'BEGINNING_OF_SEQUENCE'
+p1078
+S"(0, 0, 2, 'major', 0)"
+p1079
+S"(0, -2, 0, 'major', 0)"
+p1080
+S'END_OF_SEQUENCE'
+p1081
+S'BEGINNING_OF_SEQUENCE'
+p1082
+S"(0, 0, 2, 'major', 0)"
+p1083
+S"(0, -2, 0, 'major', 0)"
+p1084
+S'END_OF_SEQUENCE'
+p1085
+S'BEGINNING_OF_SEQUENCE'
+p1086
+S"(0, 0, -3, 'major', 0)"
+p1087
+S"(0, -2, -5, 'major', 0)"
+p1088
+S'END_OF_SEQUENCE'
+p1089
+S'BEGINNING_OF_SEQUENCE'
+p1090
+S"(0, 0, -3, 'major', 0)"
+p1091
+S"(0, -2, -5, 'major', 0)"
+p1092
+S'END_OF_SEQUENCE'
+p1093
+S'BEGINNING_OF_SEQUENCE'
+p1094
+S"(0, 0, 4, 'major', 0)"
+p1095
+S"(0, -2, 2, 'major', 0)"
+p1096
+S'END_OF_SEQUENCE'
+p1097
+S'BEGINNING_OF_SEQUENCE'
+p1098
+S"(0, 0, 2, 'major', 0)"
+p1099
+S"(0, -2, 0, 'major', 0)"
+p1100
+S'END_OF_SEQUENCE'
+p1101
+S'BEGINNING_OF_SEQUENCE'
+p1102
+S"(0, 0, -3, 'major', 0)"
+p1103
+S"(0, -2, -5, 'major', 0)"
+p1104
+S'END_OF_SEQUENCE'
+p1105
+S'BEGINNING_OF_SEQUENCE'
+p1106
+S"(0, 0, 21, 'major', 9)"
+p1107
+S'END_OF_SEQUENCE'
+p1108
+S'BEGINNING_OF_SEQUENCE'
+p1109
+S"(0, 0, 14, 'major', 9)"
+p1110
+S"(0, -2, 12, 'major', 9)"
+p1111
+S"(-2, 9, 21, 'major', 9)"
+p1112
+S"(9, -2, 19, 'major', 9)"
+p1113
+S"(-2, 0, 19, 'major', 9)"
+p1114
+S"(0, 2, 21, 'major', 9)"
+p1115
+S'END_OF_SEQUENCE'
+p1116
+S'BEGINNING_OF_SEQUENCE'
+p1117
+S"(0, 0, 21, 'major', 9)"
+p1118
+S"(0, -2, 19, 'major', 9)"
+p1119
+S"(-2, 2, 21, 'major', 9)"
+p1120
+S"(2, -12, 9, 'major', 9)"
+p1121
+S'END_OF_SEQUENCE'
+p1122
+S'BEGINNING_OF_SEQUENCE'
+p1123
+S"(0, 0, 21, 'major', 9)"
+p1124
+S'END_OF_SEQUENCE'
+p1125
+S'BEGINNING_OF_SEQUENCE'
+p1126
+S"(0, 0, 14, 'major', 9)"
+p1127
+S"(0, -2, 12, 'major', 9)"
+p1128
+S"(-2, 9, 21, 'major', 9)"
+p1129
+S"(9, -2, 19, 'major', 9)"
+p1130
+S"(-2, 0, 19, 'major', 9)"
+p1131
+S"(0, 2, 21, 'major', 9)"
+p1132
+S'END_OF_SEQUENCE'
+p1133
+S'BEGINNING_OF_SEQUENCE'
+p1134
+S"(0, 0, 21, 'major', 9)"
+p1135
+S"(0, -2, 19, 'major', 9)"
+p1136
+S"(-2, 2, 21, 'major', 9)"
+p1137
+S"(2, -12, 9, 'major', 9)"
+p1138
+S'END_OF_SEQUENCE'
+p1139
+S'BEGINNING_OF_SEQUENCE'
+p1140
+S"(0, 0, 21, 'major', 9)"
+p1141
+S'END_OF_SEQUENCE'
+p1142
+S'BEGINNING_OF_SEQUENCE'
+p1143
+S"(0, 0, 12, 'major', 9)"
+p1144
+S"(0, 9, 21, 'major', 9)"
+p1145
+S"(9, -7, 14, 'major', 9)"
+p1146
+S'END_OF_SEQUENCE'
+p1147
+S'BEGINNING_OF_SEQUENCE'
+p1148
+S"(0, 0, 14, 'major', 9)"
+p1149
+S'END_OF_SEQUENCE'
+p1150
+S'BEGINNING_OF_SEQUENCE'
+p1151
+S"(0, 0, 14, 'major', 9)"
+p1152
+S"(0, 5, 19, 'major', 9)"
+p1153
+S"(5, -5, 14, 'major', 9)"
+p1154
+S"(-5, 0, 14, 'major', 9)"
+p1155
+S"(0, -2, 12, 'major', 9)"
+p1156
+S"(-2, 2, 14, 'major', 9)"
+p1157
+S'END_OF_SEQUENCE'
+p1158
+S'BEGINNING_OF_SEQUENCE'
+p1159
+S"(0, 0, 12, 'major', 9)"
+p1160
+S"(0, 0, 12, 'major', 9)"
+p1161
+S"(0, 9, 21, 'major', 9)"
+p1162
+S"(9, 0, 21, 'major', 9)"
+p1163
+S"(0, 0, 21, 'major', 9)"
+p1164
+S"(0, -2, 19, 'major', 9)"
+p1165
+S"(-2, -3, 16, 'major', 9)"
+p1166
+S"(-3, -2, 14, 'major', 9)"
+p1167
+S"(-2, -2, 12, 'major', 9)"
+p1168
+S"(-2, -3, 9, 'major', 9)"
+p1169
+S"(-3, -5, 4, 'major', 9)"
+p1170
+S"(-5, 12, 16, 'major', 9)"
+p1171
+S'END_OF_SEQUENCE'
+p1172
+S'BEGINNING_OF_SEQUENCE'
+p1173
+S"(0, 0, 16, 'major', 9)"
+p1174
+S'END_OF_SEQUENCE'
+p1175
+S'BEGINNING_OF_SEQUENCE'
+p1176
+S"(0, 0, 16, 'major', 9)"
+p1177
+S'END_OF_SEQUENCE'
+p1178
+S'BEGINNING_OF_SEQUENCE'
+p1179
+S"(0, 0, 16, 'major', 9)"
+p1180
+S"(0, -2, 14, 'major', 9)"
+p1181
+S"(-2, -2, 12, 'major', 9)"
+p1182
+S"(-2, 2, 14, 'major', 9)"
+p1183
+S"(2, -2, 12, 'major', 9)"
+p1184
+S"(-2, -3, 9, 'major', 9)"
+p1185
+S"(-3, 0, 9, 'major', 9)"
+p1186
+S'END_OF_SEQUENCE'
+p1187
+S'BEGINNING_OF_SEQUENCE'
+p1188
+S"(0, 0, 16, 'major', 9)"
+p1189
+S'END_OF_SEQUENCE'
+p1190
+S'BEGINNING_OF_SEQUENCE'
+p1191
+S"(0, 0, 16, 'major', 9)"
+p1192
+S'END_OF_SEQUENCE'
+p1193
+S'BEGINNING_OF_SEQUENCE'
+p1194
+S"(0, 0, 9, 'major', 9)"
+p1195
+S'END_OF_SEQUENCE'
+p1196
+S'BEGINNING_OF_SEQUENCE'
+p1197
+S"(0, 0, 16, 'major', 9)"
+p1198
+S'END_OF_SEQUENCE'
+p1199
+S'BEGINNING_OF_SEQUENCE'
+p1200
+S"(0, 0, 16, 'major', 9)"
+p1201
+S'END_OF_SEQUENCE'
+p1202
+S'BEGINNING_OF_SEQUENCE'
+p1203
+S"(0, 0, 9, 'major', 9)"
+p1204
+S'END_OF_SEQUENCE'
+p1205
+S'BEGINNING_OF_SEQUENCE'
+p1206
+S"(0, 0, 16, 'major', 9)"
+p1207
+S'END_OF_SEQUENCE'
+p1208
+S'BEGINNING_OF_SEQUENCE'
+p1209
+S"(0, 0, 16, 'major', 9)"
+p1210
+S'END_OF_SEQUENCE'
+p1211
+S'BEGINNING_OF_SEQUENCE'
+p1212
+S"(0, 0, 9, 'major', 9)"
+p1213
+S'END_OF_SEQUENCE'
+p1214
+S'BEGINNING_OF_SEQUENCE'
+p1215
+S"(0, 0, 16, 'major', 9)"
+p1216
+S'END_OF_SEQUENCE'
+p1217
+S'BEGINNING_OF_SEQUENCE'
+p1218
+S"(0, 0, 16, 'major', 9)"
+p1219
+S'END_OF_SEQUENCE'
+p1220
+S'BEGINNING_OF_SEQUENCE'
+p1221
+S"(0, 0, 14, 'major', 9)"
+p1222
+S'END_OF_SEQUENCE'
+p1223
+S'BEGINNING_OF_SEQUENCE'
+p1224
+S"(0, 0, 14, 'major', 9)"
+p1225
+S'END_OF_SEQUENCE'
+p1226
+S'BEGINNING_OF_SEQUENCE'
+p1227
+S"(0, 0, 14, 'major', 9)"
+p1228
+S'END_OF_SEQUENCE'
+p1229
+S'BEGINNING_OF_SEQUENCE'
+p1230
+S"(0, 0, 14, 'major', 9)"
+p1231
+S'END_OF_SEQUENCE'
+p1232
+S'BEGINNING_OF_SEQUENCE'
+p1233
+S"(0, 0, 16, 'major', 9)"
+p1234
+S'END_OF_SEQUENCE'
+p1235
+S'BEGINNING_OF_SEQUENCE'
+p1236
+S"(0, 0, 16, 'major', 9)"
+p1237
+S'END_OF_SEQUENCE'
+p1238
+S'BEGINNING_OF_SEQUENCE'
+p1239
+S"(0, 0, 9, 'major', 9)"
+p1240
+S'END_OF_SEQUENCE'
+p1241
+S'BEGINNING_OF_SEQUENCE'
+p1242
+S"(0, 0, 16, 'major', 9)"
+p1243
+S'END_OF_SEQUENCE'
+p1244
+S'BEGINNING_OF_SEQUENCE'
+p1245
+S"(0, 0, 16, 'major', 9)"
+p1246
+S'END_OF_SEQUENCE'
+p1247
+S'BEGINNING_OF_SEQUENCE'
+p1248
+S"(0, 0, 16, 'major', 9)"
+p1249
+S'END_OF_SEQUENCE'
+p1250
+S'BEGINNING_OF_SEQUENCE'
+p1251
+S"(0, 0, 9, 'major', 9)"
+p1252
+S"(0, -2, 7, 'major', 9)"
+p1253
+S'END_OF_SEQUENCE'
+p1254
+S'BEGINNING_OF_SEQUENCE'
+p1255
+S"(0, 0, 16, 'major', 9)"
+p1256
+S'END_OF_SEQUENCE'
+p1257
+S'BEGINNING_OF_SEQUENCE'
+p1258
+S"(0, 0, 16, 'major', 9)"
+p1259
+S'END_OF_SEQUENCE'
+p1260
+S'BEGINNING_OF_SEQUENCE'
+p1261
+S"(0, 0, 14, 'major', 9)"
+p1262
+S"(0, -5, 9, 'major', 9)"
+p1263
+S'END_OF_SEQUENCE'
+p1264
+S'BEGINNING_OF_SEQUENCE'
+p1265
+S"(0, 0, 16, 'major', 9)"
+p1266
+S'END_OF_SEQUENCE'
+p1267
+S'BEGINNING_OF_SEQUENCE'
+p1268
+S"(0, 0, 16, 'major', 9)"
+p1269
+S'END_OF_SEQUENCE'
+p1270
+S'BEGINNING_OF_SEQUENCE'
+p1271
+S"(0, 0, 9, 'major', 9)"
+p1272
+S'END_OF_SEQUENCE'
+p1273
+S'BEGINNING_OF_SEQUENCE'
+p1274
+S"(0, 0, 16, 'major', 9)"
+p1275
+S'END_OF_SEQUENCE'
+p1276
+S'BEGINNING_OF_SEQUENCE'
+p1277
+S"(0, 0, 16, 'major', 9)"
+p1278
+S'END_OF_SEQUENCE'
+p1279
+S'BEGINNING_OF_SEQUENCE'
+p1280
+S"(0, 0, 9, 'major', 9)"
+p1281
+S'END_OF_SEQUENCE'
+p1282
+S'BEGINNING_OF_SEQUENCE'
+p1283
+S"(0, 0, 16, 'major', 9)"
+p1284
+S'END_OF_SEQUENCE'
+p1285
+S'BEGINNING_OF_SEQUENCE'
+p1286
+S"(0, 0, 16, 'major', 9)"
+p1287
+S'END_OF_SEQUENCE'
+p1288
+S'BEGINNING_OF_SEQUENCE'
+p1289
+S"(0, 0, 9, 'major', 9)"
+p1290
+S'END_OF_SEQUENCE'
+p1291
+S'BEGINNING_OF_SEQUENCE'
+p1292
+S"(0, 0, 16, 'major', 9)"
+p1293
+S'END_OF_SEQUENCE'
+p1294
+S'BEGINNING_OF_SEQUENCE'
+p1295
+S"(0, 0, 16, 'major', 9)"
+p1296
+S'END_OF_SEQUENCE'
+p1297
+S'BEGINNING_OF_SEQUENCE'
+p1298
+S"(0, 0, 9, 'major', 9)"
+p1299
+S'END_OF_SEQUENCE'
+p1300
+S'BEGINNING_OF_SEQUENCE'
+p1301
+S"(0, 0, 16, 'major', 9)"
+p1302
+S'END_OF_SEQUENCE'
+p1303
+S'BEGINNING_OF_SEQUENCE'
+p1304
+S"(0, 0, 16, 'major', 9)"
+p1305
+S'END_OF_SEQUENCE'
+p1306
+S'BEGINNING_OF_SEQUENCE'
+p1307
+S"(0, 0, 9, 'major', 9)"
+p1308
+S'END_OF_SEQUENCE'
+p1309
+S'BEGINNING_OF_SEQUENCE'
+p1310
+S"(0, 0, 16, 'major', 9)"
+p1311
+S'END_OF_SEQUENCE'
+p1312
+S'BEGINNING_OF_SEQUENCE'
+p1313
+S"(0, 0, 16, 'major', 9)"
+p1314
+S'END_OF_SEQUENCE'
+p1315
+S'BEGINNING_OF_SEQUENCE'
+p1316
+S"(0, 0, 14, 'major', 9)"
+p1317
+S'END_OF_SEQUENCE'
+p1318
+S'BEGINNING_OF_SEQUENCE'
+p1319
+S"(0, 0, 14, 'major', 9)"
+p1320
+S'END_OF_SEQUENCE'
+p1321
+S'BEGINNING_OF_SEQUENCE'
+p1322
+S"(0, 0, 14, 'major', 9)"
+p1323
+S'END_OF_SEQUENCE'
+p1324
+S'BEGINNING_OF_SEQUENCE'
+p1325
+S"(0, 0, 14, 'major', 9)"
+p1326
+S'END_OF_SEQUENCE'
+p1327
+S'BEGINNING_OF_SEQUENCE'
+p1328
+S"(0, 0, 16, 'major', 9)"
+p1329
+S'END_OF_SEQUENCE'
+p1330
+S'BEGINNING_OF_SEQUENCE'
+p1331
+S"(0, 0, 16, 'major', 9)"
+p1332
+S'END_OF_SEQUENCE'
+p1333
+S'BEGINNING_OF_SEQUENCE'
+p1334
+S"(0, 0, 9, 'major', 9)"
+p1335
+S'END_OF_SEQUENCE'
+p1336
+S'BEGINNING_OF_SEQUENCE'
+p1337
+S"(0, 0, 16, 'major', 9)"
+p1338
+S'END_OF_SEQUENCE'
+p1339
+S'BEGINNING_OF_SEQUENCE'
+p1340
+S"(0, 0, 16, 'major', 9)"
+p1341
+S'END_OF_SEQUENCE'
+p1342
+S'BEGINNING_OF_SEQUENCE'
+p1343
+S"(0, 0, 16, 'major', 9)"
+p1344
+S'END_OF_SEQUENCE'
+p1345
+S'BEGINNING_OF_SEQUENCE'
+p1346
+S"(0, 0, 9, 'major', 9)"
+p1347
+S"(0, -2, 7, 'major', 9)"
+p1348
+S'END_OF_SEQUENCE'
+p1349
+S'BEGINNING_OF_SEQUENCE'
+p1350
+S"(0, 0, 16, 'major', 9)"
+p1351
+S'END_OF_SEQUENCE'
+p1352
+S'BEGINNING_OF_SEQUENCE'
+p1353
+S"(0, 0, 16, 'major', 9)"
+p1354
+S'END_OF_SEQUENCE'
+p1355
+S'BEGINNING_OF_SEQUENCE'
+p1356
+S"(0, 0, 14, 'major', 9)"
+p1357
+S"(0, -5, 9, 'major', 9)"
+p1358
+S'END_OF_SEQUENCE'
+p1359
+S'BEGINNING_OF_SEQUENCE'
+p1360
+S"(0, 0, 16, 'major', 9)"
+p1361
+S'END_OF_SEQUENCE'
+p1362
+S'BEGINNING_OF_SEQUENCE'
+p1363
+S"(0, 0, 16, 'major', 9)"
+p1364
+S'END_OF_SEQUENCE'
+p1365
+S'BEGINNING_OF_SEQUENCE'
+p1366
+S"(0, 0, 9, 'major', 9)"
+p1367
+S'END_OF_SEQUENCE'
+p1368
+S'BEGINNING_OF_SEQUENCE'
+p1369
+S"(0, 0, 16, 'major', 9)"
+p1370
+S'END_OF_SEQUENCE'
+p1371
+S'BEGINNING_OF_SEQUENCE'
+p1372
+S"(0, 0, 16, 'major', 9)"
+p1373
+S'END_OF_SEQUENCE'
+p1374
+S'BEGINNING_OF_SEQUENCE'
+p1375
+S"(0, 0, 9, 'major', 9)"
+p1376
+S'END_OF_SEQUENCE'
+p1377
+S'BEGINNING_OF_SEQUENCE'
+p1378
+S"(0, 0, 16, 'major', 9)"
+p1379
+S'END_OF_SEQUENCE'
+p1380
+S'BEGINNING_OF_SEQUENCE'
+p1381
+S"(0, 0, 16, 'major', 9)"
+p1382
+S'END_OF_SEQUENCE'
+p1383
+S'BEGINNING_OF_SEQUENCE'
+p1384
+S"(0, 0, 9, 'major', 9)"
+p1385
+S'END_OF_SEQUENCE'
+p1386
+S'BEGINNING_OF_SEQUENCE'
+p1387
+S"(0, 0, 16, 'major', 9)"
+p1388
+S'END_OF_SEQUENCE'
+p1389
+S'BEGINNING_OF_SEQUENCE'
+p1390
+S"(0, 0, 16, 'major', 9)"
+p1391
+S'END_OF_SEQUENCE'
+p1392
+S'BEGINNING_OF_SEQUENCE'
+p1393
+S"(0, 0, 9, 'major', 9)"
+p1394
+S'END_OF_SEQUENCE'
+p1395
+S'BEGINNING_OF_SEQUENCE'
+p1396
+S"(0, 0, 16, 'major', 9)"
+p1397
+S'END_OF_SEQUENCE'
+p1398
+S'BEGINNING_OF_SEQUENCE'
+p1399
+S"(0, 0, 16, 'major', 9)"
+p1400
+S'END_OF_SEQUENCE'
+p1401
+S'BEGINNING_OF_SEQUENCE'
+p1402
+S"(0, 0, 9, 'major', 9)"
+p1403
+S'END_OF_SEQUENCE'
+p1404
+S'BEGINNING_OF_SEQUENCE'
+p1405
+S"(0, 0, 16, 'major', 9)"
+p1406
+S'END_OF_SEQUENCE'
+p1407
+S'BEGINNING_OF_SEQUENCE'
+p1408
+S"(0, 0, 16, 'major', 9)"
+p1409
+S'END_OF_SEQUENCE'
+p1410
+S'BEGINNING_OF_SEQUENCE'
+p1411
+S"(0, 0, 14, 'major', 9)"
+p1412
+S'END_OF_SEQUENCE'
+p1413
+S'BEGINNING_OF_SEQUENCE'
+p1414
+S"(0, 0, 14, 'major', 9)"
+p1415
+S'END_OF_SEQUENCE'
+p1416
+S'BEGINNING_OF_SEQUENCE'
+p1417
+S"(0, 0, 14, 'major', 9)"
+p1418
+S'END_OF_SEQUENCE'
+p1419
+S'BEGINNING_OF_SEQUENCE'
+p1420
+S"(0, 0, 14, 'major', 9)"
+p1421
+S'END_OF_SEQUENCE'
+p1422
+S'BEGINNING_OF_SEQUENCE'
+p1423
+S"(0, 0, 16, 'major', 9)"
+p1424
+S'END_OF_SEQUENCE'
+p1425
+S'BEGINNING_OF_SEQUENCE'
+p1426
+S"(0, 0, 16, 'major', 9)"
+p1427
+S'END_OF_SEQUENCE'
+p1428
+S'BEGINNING_OF_SEQUENCE'
+p1429
+S"(0, 0, 9, 'major', 9)"
+p1430
+S'END_OF_SEQUENCE'
+p1431
+S'BEGINNING_OF_SEQUENCE'
+p1432
+S"(0, 0, 16, 'major', 9)"
+p1433
+S'END_OF_SEQUENCE'
+p1434
+S'BEGINNING_OF_SEQUENCE'
+p1435
+S"(0, 0, 16, 'major', 9)"
+p1436
+S'END_OF_SEQUENCE'
+p1437
+S'BEGINNING_OF_SEQUENCE'
+p1438
+S"(0, 0, 16, 'major', 9)"
+p1439
+S'END_OF_SEQUENCE'
+p1440
+S'BEGINNING_OF_SEQUENCE'
+p1441
+S"(0, 0, 9, 'major', 9)"
+p1442
+S"(0, -2, 7, 'major', 9)"
+p1443
+S'END_OF_SEQUENCE'
+p1444
+S'BEGINNING_OF_SEQUENCE'
+p1445
+S"(0, 0, 16, 'major', 9)"
+p1446
+S'END_OF_SEQUENCE'
+p1447
+S'BEGINNING_OF_SEQUENCE'
+p1448
+S"(0, 0, 16, 'major', 9)"
+p1449
+S'END_OF_SEQUENCE'
+p1450
+S'BEGINNING_OF_SEQUENCE'
+p1451
+S"(0, 0, 14, 'major', 9)"
+p1452
+S"(0, -5, 9, 'major', 9)"
+p1453
+S'END_OF_SEQUENCE'
+p1454
+S'BEGINNING_OF_SEQUENCE'
+p1455
+S"(0, 0, 16, 'major', 9)"
+p1456
+S'END_OF_SEQUENCE'
+p1457
+S'BEGINNING_OF_SEQUENCE'
+p1458
+S"(0, 0, 16, 'major', 9)"
+p1459
+S'END_OF_SEQUENCE'
+p1460
+S'BEGINNING_OF_SEQUENCE'
+p1461
+S"(0, 0, 9, 'major', 9)"
+p1462
+S'END_OF_SEQUENCE'
+p1463
+S'BEGINNING_OF_SEQUENCE'
+p1464
+S"(0, 0, 16, 'major', 9)"
+p1465
+S'END_OF_SEQUENCE'
+p1466
+S'BEGINNING_OF_SEQUENCE'
+p1467
+S"(0, 0, 16, 'major', 9)"
+p1468
+S'END_OF_SEQUENCE'
+p1469
+S'BEGINNING_OF_SEQUENCE'
+p1470
+S"(0, 0, 9, 'major', 9)"
+p1471
+S'END_OF_SEQUENCE'
+p1472
+S'BEGINNING_OF_SEQUENCE'
+p1473
+S"(0, 0, 16, 'major', 9)"
+p1474
+S'END_OF_SEQUENCE'
+p1475
+S'BEGINNING_OF_SEQUENCE'
+p1476
+S"(0, 0, 16, 'major', 9)"
+p1477
+S'END_OF_SEQUENCE'
+p1478
+S'BEGINNING_OF_SEQUENCE'
+p1479
+S"(0, 0, 9, 'major', 9)"
+p1480
+S'END_OF_SEQUENCE'
+p1481
+S'BEGINNING_OF_SEQUENCE'
+p1482
+S"(0, 0, 16, 'major', 9)"
+p1483
+S'END_OF_SEQUENCE'
+p1484
+S'BEGINNING_OF_SEQUENCE'
+p1485
+S"(0, 0, 16, 'major', 9)"
+p1486
+S'END_OF_SEQUENCE'
+p1487
+S'BEGINNING_OF_SEQUENCE'
+p1488
+S"(0, 0, 9, 'major', 9)"
+p1489
+S'END_OF_SEQUENCE'
+p1490
+S'BEGINNING_OF_SEQUENCE'
+p1491
+S"(0, 0, 16, 'major', 9)"
+p1492
+S'END_OF_SEQUENCE'
+p1493
+S'BEGINNING_OF_SEQUENCE'
+p1494
+S"(0, 0, 16, 'major', 9)"
+p1495
+S'END_OF_SEQUENCE'
+p1496
+S'BEGINNING_OF_SEQUENCE'
+p1497
+S"(0, 0, 9, 'major', 9)"
+p1498
+S'END_OF_SEQUENCE'
+p1499
+S'BEGINNING_OF_SEQUENCE'
+p1500
+S"(0, 0, 16, 'major', 9)"
+p1501
+S'END_OF_SEQUENCE'
+p1502
+S'BEGINNING_OF_SEQUENCE'
+p1503
+S"(0, 0, 16, 'major', 9)"
+p1504
+S'END_OF_SEQUENCE'
+p1505
+S'BEGINNING_OF_SEQUENCE'
+p1506
+S"(0, 0, 14, 'major', 9)"
+p1507
+S'END_OF_SEQUENCE'
+p1508
+S'BEGINNING_OF_SEQUENCE'
+p1509
+S"(0, 0, 14, 'major', 9)"
+p1510
+S'END_OF_SEQUENCE'
+p1511
+S'BEGINNING_OF_SEQUENCE'
+p1512
+S"(0, 0, 14, 'major', 9)"
+p1513
+S'END_OF_SEQUENCE'
+p1514
+S'BEGINNING_OF_SEQUENCE'
+p1515
+S"(0, 0, 14, 'major', 9)"
+p1516
+S'END_OF_SEQUENCE'
+p1517
+S'BEGINNING_OF_SEQUENCE'
+p1518
+S"(0, 0, 16, 'major', 9)"
+p1519
+S'END_OF_SEQUENCE'
+p1520
+S'BEGINNING_OF_SEQUENCE'
+p1521
+S"(0, 0, 16, 'major', 9)"
+p1522
+S'END_OF_SEQUENCE'
+p1523
+S'BEGINNING_OF_SEQUENCE'
+p1524
+S"(0, 0, 9, 'major', 9)"
+p1525
+S'END_OF_SEQUENCE'
+p1526
+S'BEGINNING_OF_SEQUENCE'
+p1527
+S"(0, 0, 16, 'major', 9)"
+p1528
+S'END_OF_SEQUENCE'
+p1529
+S'BEGINNING_OF_SEQUENCE'
+p1530
+S"(0, 0, 16, 'major', 9)"
+p1531
+S'END_OF_SEQUENCE'
+p1532
+S'BEGINNING_OF_SEQUENCE'
+p1533
+S"(0, 0, 16, 'major', 9)"
+p1534
+S'END_OF_SEQUENCE'
+p1535
+S'BEGINNING_OF_SEQUENCE'
+p1536
+S"(0, 0, 9, 'major', 9)"
+p1537
+S"(0, -2, 7, 'major', 9)"
+p1538
+S'END_OF_SEQUENCE'
+p1539
+S'BEGINNING_OF_SEQUENCE'
+p1540
+S"(0, 0, 16, 'major', 9)"
+p1541
+S'END_OF_SEQUENCE'
+p1542
+S'BEGINNING_OF_SEQUENCE'
+p1543
+S"(0, 0, 16, 'major', 9)"
+p1544
+S'END_OF_SEQUENCE'
+p1545
+S'BEGINNING_OF_SEQUENCE'
+p1546
+S"(0, 0, 14, 'major', 9)"
+p1547
+S"(0, -5, 9, 'major', 9)"
+p1548
+S'END_OF_SEQUENCE'
+p1549
+S'BEGINNING_OF_SEQUENCE'
+p1550
+S"(0, 0, 16, 'major', 9)"
+p1551
+S'END_OF_SEQUENCE'
+p1552
+S'BEGINNING_OF_SEQUENCE'
+p1553
+S"(0, 0, 16, 'major', 9)"
+p1554
+S'END_OF_SEQUENCE'
+p1555
+S'BEGINNING_OF_SEQUENCE'
+p1556
+S"(0, 0, 9, 'major', 9)"
+p1557
+S'END_OF_SEQUENCE'
+p1558
+S'BEGINNING_OF_SEQUENCE'
+p1559
+S"(0, 0, 16, 'major', 9)"
+p1560
+S'END_OF_SEQUENCE'
+p1561
+S'BEGINNING_OF_SEQUENCE'
+p1562
+S"(0, 0, 16, 'major', 9)"
+p1563
+S'END_OF_SEQUENCE'
+p1564
+S'BEGINNING_OF_SEQUENCE'
+p1565
+S"(0, 0, 9, 'major', 9)"
+p1566
+S'END_OF_SEQUENCE'
+p1567
+S'BEGINNING_OF_SEQUENCE'
+p1568
+S"(0, 0, 16, 'major', 9)"
+p1569
+S'END_OF_SEQUENCE'
+p1570
+S'BEGINNING_OF_SEQUENCE'
+p1571
+S"(0, 0, 16, 'major', 9)"
+p1572
+S'END_OF_SEQUENCE'
+p1573
+S'BEGINNING_OF_SEQUENCE'
+p1574
+S"(0, 0, 9, 'major', 9)"
+p1575
+S'END_OF_SEQUENCE'
+p1576
+S'BEGINNING_OF_SEQUENCE'
+p1577
+S"(0, 0, 16, 'major', 9)"
+p1578
+S'END_OF_SEQUENCE'
+p1579
+S'BEGINNING_OF_SEQUENCE'
+p1580
+S"(0, 0, 16, 'major', 9)"
+p1581
+S'END_OF_SEQUENCE'
+p1582
+S'BEGINNING_OF_SEQUENCE'
+p1583
+S"(0, 0, 9, 'major', 9)"
+p1584
+S'END_OF_SEQUENCE'
+p1585
+S'BEGINNING_OF_SEQUENCE'
+p1586
+S"(0, 0, 16, 'major', 9)"
+p1587
+S'END_OF_SEQUENCE'
+p1588
+S'BEGINNING_OF_SEQUENCE'
+p1589
+S"(0, 0, 16, 'major', 9)"
+p1590
+S'END_OF_SEQUENCE'
+p1591
+S'BEGINNING_OF_SEQUENCE'
+p1592
+S"(0, 0, 9, 'major', 9)"
+p1593
+S'END_OF_SEQUENCE'
+p1594
+S'BEGINNING_OF_SEQUENCE'
+p1595
+S"(0, 0, 16, 'major', 9)"
+p1596
+S'END_OF_SEQUENCE'
+p1597
+S'BEGINNING_OF_SEQUENCE'
+p1598
+S"(0, 0, 16, 'major', 9)"
+p1599
+S'END_OF_SEQUENCE'
+p1600
+S'BEGINNING_OF_SEQUENCE'
+p1601
+S"(0, 0, 14, 'major', 9)"
+p1602
+S'END_OF_SEQUENCE'
+p1603
+S'BEGINNING_OF_SEQUENCE'
+p1604
+S"(0, 0, 14, 'major', 9)"
+p1605
+S'END_OF_SEQUENCE'
+p1606
+S'BEGINNING_OF_SEQUENCE'
+p1607
+S"(0, 0, 14, 'major', 9)"
+p1608
+S'END_OF_SEQUENCE'
+p1609
+S'BEGINNING_OF_SEQUENCE'
+p1610
+S"(0, 0, 14, 'major', 9)"
+p1611
+S'END_OF_SEQUENCE'
+p1612
+S'BEGINNING_OF_SEQUENCE'
+p1613
+S"(0, 0, 16, 'major', 9)"
+p1614
+S'END_OF_SEQUENCE'
+p1615
+S'BEGINNING_OF_SEQUENCE'
+p1616
+S"(0, 0, 16, 'major', 9)"
+p1617
+S'END_OF_SEQUENCE'
+p1618
+S'BEGINNING_OF_SEQUENCE'
+p1619
+S"(0, 0, 9, 'major', 9)"
+p1620
+S'END_OF_SEQUENCE'
+p1621
+S'BEGINNING_OF_SEQUENCE'
+p1622
+S"(0, 0, 16, 'major', 9)"
+p1623
+S'END_OF_SEQUENCE'
+p1624
+S'BEGINNING_OF_SEQUENCE'
+p1625
+S"(0, 0, 16, 'major', 9)"
+p1626
+S'END_OF_SEQUENCE'
+p1627
+S'BEGINNING_OF_SEQUENCE'
+p1628
+S"(0, 0, 16, 'major', 9)"
+p1629
+S'END_OF_SEQUENCE'
+p1630
+S'BEGINNING_OF_SEQUENCE'
+p1631
+S"(0, 0, 9, 'major', 9)"
+p1632
+S"(0, -2, 7, 'major', 9)"
+p1633
+S'END_OF_SEQUENCE'
+p1634
+S'BEGINNING_OF_SEQUENCE'
+p1635
+S"(0, 0, 16, 'major', 9)"
+p1636
+S'END_OF_SEQUENCE'
+p1637
+S'BEGINNING_OF_SEQUENCE'
+p1638
+S"(0, 0, 16, 'major', 9)"
+p1639
+S'END_OF_SEQUENCE'
+p1640
+S'BEGINNING_OF_SEQUENCE'
+p1641
+S"(0, 0, 14, 'major', 9)"
+p1642
+S"(0, -5, 9, 'major', 9)"
+p1643
+S'END_OF_SEQUENCE'
+p1644
+S'BEGINNING_OF_SEQUENCE'
+p1645
+S"(0, 0, 16, 'major', 9)"
+p1646
+S'END_OF_SEQUENCE'
+p1647
+S'BEGINNING_OF_SEQUENCE'
+p1648
+S"(0, 0, 16, 'major', 9)"
+p1649
+S'END_OF_SEQUENCE'
+p1650
+S'BEGINNING_OF_SEQUENCE'
+p1651
+S"(0, 0, 9, 'major', 9)"
+p1652
+S'END_OF_SEQUENCE'
+p1653
+S'BEGINNING_OF_SEQUENCE'
+p1654
+S"(0, 0, 16, 'major', 9)"
+p1655
+S'END_OF_SEQUENCE'
+p1656
+S'BEGINNING_OF_SEQUENCE'
+p1657
+S"(0, 0, 16, 'major', 9)"
+p1658
+S'END_OF_SEQUENCE'
+p1659
+S'BEGINNING_OF_SEQUENCE'
+p1660
+S"(0, 0, 9, 'major', 9)"
+p1661
+S'END_OF_SEQUENCE'
+p1662
+S'BEGINNING_OF_SEQUENCE'
+p1663
+S"(0, 0, 16, 'major', 9)"
+p1664
+S'END_OF_SEQUENCE'
+p1665
+S'BEGINNING_OF_SEQUENCE'
+p1666
+S"(0, 0, 16, 'major', 9)"
+p1667
+S'END_OF_SEQUENCE'
+p1668
+S'BEGINNING_OF_SEQUENCE'
+p1669
+S"(0, 0, 9, 'major', 9)"
+p1670
+S'END_OF_SEQUENCE'
+p1671
+S'BEGINNING_OF_SEQUENCE'
+p1672
+S"(0, 0, 16, 'major', 9)"
+p1673
+S'END_OF_SEQUENCE'
+p1674
+S'BEGINNING_OF_SEQUENCE'
+p1675
+S"(0, 0, 16, 'major', 9)"
+p1676
+S'END_OF_SEQUENCE'
+p1677
+S'BEGINNING_OF_SEQUENCE'
+p1678
+S"(0, 0, 9, 'major', 9)"
+p1679
+S'END_OF_SEQUENCE'
+p1680
+S'BEGINNING_OF_SEQUENCE'
+p1681
+S"(0, 0, 16, 'major', 9)"
+p1682
+S'END_OF_SEQUENCE'
+p1683
+S'BEGINNING_OF_SEQUENCE'
+p1684
+S"(0, 0, 16, 'major', 9)"
+p1685
+S'END_OF_SEQUENCE'
+p1686
+S'BEGINNING_OF_SEQUENCE'
+p1687
+S"(0, 0, 9, 'major', 9)"
+p1688
+S'END_OF_SEQUENCE'
+p1689
+S'BEGINNING_OF_SEQUENCE'
+p1690
+S"(0, 0, 16, 'major', 9)"
+p1691
+S'END_OF_SEQUENCE'
+p1692
+S'BEGINNING_OF_SEQUENCE'
+p1693
+S"(0, 0, 16, 'major', 9)"
+p1694
+S'END_OF_SEQUENCE'
+p1695
+S'BEGINNING_OF_SEQUENCE'
+p1696
+S"(0, 0, 14, 'major', 9)"
+p1697
+S'END_OF_SEQUENCE'
+p1698
+S'BEGINNING_OF_SEQUENCE'
+p1699
+S"(0, 0, 14, 'major', 9)"
+p1700
+S'END_OF_SEQUENCE'
+p1701
+S'BEGINNING_OF_SEQUENCE'
+p1702
+S"(0, 0, 14, 'major', 9)"
+p1703
+S'END_OF_SEQUENCE'
+p1704
+S'BEGINNING_OF_SEQUENCE'
+p1705
+S"(0, 0, 14, 'major', 9)"
+p1706
+S'END_OF_SEQUENCE'
+p1707
+S'BEGINNING_OF_SEQUENCE'
+p1708
+S"(0, 0, 16, 'major', 9)"
+p1709
+S'END_OF_SEQUENCE'
+p1710
+S'BEGINNING_OF_SEQUENCE'
+p1711
+S"(0, 0, 16, 'major', 9)"
+p1712
+S'END_OF_SEQUENCE'
+p1713
+S'BEGINNING_OF_SEQUENCE'
+p1714
+S"(0, 0, 9, 'major', 9)"
+p1715
+S'END_OF_SEQUENCE'
+p1716
+S'BEGINNING_OF_SEQUENCE'
+p1717
+S"(0, 0, 16, 'major', 9)"
+p1718
+S'END_OF_SEQUENCE'
+p1719
+S'BEGINNING_OF_SEQUENCE'
+p1720
+S"(0, 0, 16, 'major', 9)"
+p1721
+S'END_OF_SEQUENCE'
+p1722
+S'BEGINNING_OF_SEQUENCE'
+p1723
+S"(0, 0, 16, 'major', 9)"
+p1724
+S'END_OF_SEQUENCE'
+p1725
+S'BEGINNING_OF_SEQUENCE'
+p1726
+S"(0, 0, 9, 'major', 9)"
+p1727
+S"(0, -2, 7, 'major', 9)"
+p1728
+S'END_OF_SEQUENCE'
+p1729
+S'BEGINNING_OF_SEQUENCE'
+p1730
+S"(0, 0, 16, 'major', 9)"
+p1731
+S'END_OF_SEQUENCE'
+p1732
+S'BEGINNING_OF_SEQUENCE'
+p1733
+S"(0, 0, 16, 'major', 9)"
+p1734
+S'END_OF_SEQUENCE'
+p1735
+S'BEGINNING_OF_SEQUENCE'
+p1736
+S"(0, 0, 14, 'major', 9)"
+p1737
+S"(0, -5, 9, 'major', 9)"
+p1738
+S'END_OF_SEQUENCE'
+p1739
+S'BEGINNING_OF_SEQUENCE'
+p1740
+S"(0, 0, 16, 'major', 9)"
+p1741
+S'END_OF_SEQUENCE'
+p1742
+S'BEGINNING_OF_SEQUENCE'
+p1743
+S"(0, 0, 16, 'major', 9)"
+p1744
+S'END_OF_SEQUENCE'
+p1745
+S'BEGINNING_OF_SEQUENCE'
+p1746
+S"(0, 0, 9, 'major', 9)"
+p1747
+S'END_OF_SEQUENCE'
+p1748
+S'BEGINNING_OF_SEQUENCE'
+p1749
+S"(0, 0, 16, 'major', 9)"
+p1750
+S'END_OF_SEQUENCE'
+p1751
+S'BEGINNING_OF_SEQUENCE'
+p1752
+S"(0, 0, 19, 'major', 9)"
+p1753
+S"(0, -3, 16, 'major', 9)"
+p1754
+S'END_OF_SEQUENCE'
+p1755
+S'BEGINNING_OF_SEQUENCE'
+p1756
+S"(0, 0, 9, 'major', 9)"
+p1757
+S'END_OF_SEQUENCE'
+p1758
+S'BEGINNING_OF_SEQUENCE'
+p1759
+S"(0, 0, 16, 'major', 9)"
+p1760
+S"(0, 1, 17, 'major', 9)"
+p1761
+S'END_OF_SEQUENCE'
+p1762
+S'BEGINNING_OF_SEQUENCE'
+p1763
+S"(0, 0, 9, 'major', 9)"
+p1764
+S'END_OF_SEQUENCE'
+p1765
+S'BEGINNING_OF_SEQUENCE'
+p1766
+S"(0, 0, 16, 'major', 9)"
+p1767
+S'END_OF_SEQUENCE'
+p1768
+S'BEGINNING_OF_SEQUENCE'
+p1769
+S"(0, 0, 16, 'major', 9)"
+p1770
+S'END_OF_SEQUENCE'
+p1771
+S'BEGINNING_OF_SEQUENCE'
+p1772
+S"(0, 0, 9, 'major', 9)"
+p1773
+S'END_OF_SEQUENCE'
+p1774
+S'BEGINNING_OF_SEQUENCE'
+p1775
+S"(0, 0, 16, 'major', 9)"
+p1776
+S'END_OF_SEQUENCE'
+p1777
+S'BEGINNING_OF_SEQUENCE'
+p1778
+S"(0, 0, 7, 'major', 9)"
+p1779
+S"(0, 0, 7, 'major', 9)"
+p1780
+S'END_OF_SEQUENCE'
+p1781
+S'BEGINNING_OF_SEQUENCE'
+p1782
+S"(0, 0, 14, 'major', 9)"
+p1783
+S'END_OF_SEQUENCE'
+p1784
+S'BEGINNING_OF_SEQUENCE'
+p1785
+S"(0, 0, 24, 'major', 9)"
+p1786
+S"(0, 0, 24, 'major', 9)"
+p1787
+S"(0, 0, 24, 'major', 9)"
+p1788
+S"(0, 0, 24, 'major', 9)"
+p1789
+S"(0, -3, 21, 'major', 9)"
+p1790
+S"(-3, 5, 26, 'major', 9)"
+p1791
+S"(5, 0, 26, 'major', 9)"
+p1792
+S"(0, -2, 24, 'major', 9)"
+p1793
+S"(-2, -3, 21, 'major', 9)"
+p1794
+S"(-3, 0, 21, 'major', 9)"
+p1795
+S"(0, -2, 19, 'major', 9)"
+p1796
+S"(-2, 2, 21, 'major', 9)"
+p1797
+S"(2, -7, 14, 'major', 9)"
+p1798
+S"(-7, 0, 14, 'major', 9)"
+p1799
+S"(0, 0, 14, 'major', 9)"
+p1800
+S"(0, -2, 12, 'major', 9)"
+p1801
+S"(-2, 9, 21, 'major', 9)"
+p1802
+S"(9, 0, 21, 'major', 9)"
+p1803
+S'END_OF_SEQUENCE'
+p1804
+S'BEGINNING_OF_SEQUENCE'
+p1805
+S"(0, 0, 16, 'major', 9)"
+p1806
+S"(0, 7, 23, 'major', 9)"
+p1807
+S"(7, 0, 23, 'major', 9)"
+p1808
+S"(0, -2, 21, 'major', 9)"
+p1809
+S"(-2, -2, 19, 'major', 9)"
+p1810
+S"(-2, 2, 21, 'major', 9)"
+p1811
+S"(2, 3, 24, 'major', 9)"
+p1812
+S"(3, 0, 24, 'major', 9)"
+p1813
+S"(0, 0, 24, 'major', 9)"
+p1814
+S"(0, 0, 24, 'major', 9)"
+p1815
+S"(0, 0, 24, 'major', 9)"
+p1816
+S"(0, -3, 21, 'major', 9)"
+p1817
+S"(-3, -5, 16, 'major', 9)"
+p1818
+S"(-5, 3, 19, 'major', 9)"
+p1819
+S"(3, 0, 19, 'major', 9)"
+p1820
+S'END_OF_SEQUENCE'
+p1821
+S'BEGINNING_OF_SEQUENCE'
+p1822
+S"(0, 0, 28, 'major', 9)"
+p1823
+S"(0, 0, 28, 'major', 9)"
+p1824
+S"(0, 0, 28, 'major', 9)"
+p1825
+S"(0, -2, 26, 'major', 9)"
+p1826
+S"(-2, 0, 26, 'major', 9)"
+p1827
+S"(0, 0, 26, 'major', 9)"
+p1828
+S"(0, -2, 24, 'major', 9)"
+p1829
+S"(-2, -3, 21, 'major', 9)"
+p1830
+S"(-3, 5, 26, 'major', 9)"
+p1831
+S"(5, 0, 26, 'major', 9)"
+p1832
+S"(0, -2, 24, 'major', 9)"
+p1833
+S"(-2, -10, 14, 'major', 9)"
+p1834
+S"(-10, 0, 14, 'major', 9)"
+p1835
+S"(0, -2, 12, 'major', 9)"
+p1836
+S"(-2, 2, 14, 'major', 9)"
+p1837
+S"(2, 0, 14, 'major', 9)"
+p1838
+S"(0, -2, 12, 'major', 9)"
+p1839
+S"(-2, 4, 16, 'major', 9)"
+p1840
+S"(4, 3, 19, 'major', 9)"
+p1841
+S"(3, 2, 21, 'major', 9)"
+p1842
+S"(2, -9, 12, 'major', 9)"
+p1843
+S'END_OF_SEQUENCE'
+p1844
+S'BEGINNING_OF_SEQUENCE'
+p1845
+S"(0, 0, 14, 'major', 9)"
+p1846
+S"(0, 2, 16, 'major', 9)"
+p1847
+S"(2, 0, 16, 'major', 9)"
+p1848
+S"(0, -2, 14, 'major', 9)"
+p1849
+S"(-2, 2, 16, 'major', 9)"
+p1850
+S"(2, 0, 16, 'major', 9)"
+p1851
+S"(0, -2, 14, 'major', 9)"
+p1852
+S"(-2, 0, 14, 'major', 9)"
+p1853
+S"(0, 0, 14, 'major', 9)"
+p1854
+S"(0, 0, 14, 'major', 9)"
+p1855
+S"(0, 0, 14, 'major', 9)"
+p1856
+S"(0, 0, 14, 'major', 9)"
+p1857
+S"(0, 12, 26, 'major', 9)"
+p1858
+S"(12, 0, 26, 'major', 9)"
+p1859
+S"(0, 0, 26, 'major', 9)"
+p1860
+S"(0, -2, 24, 'major', 9)"
+p1861
+S"(-2, 2, 26, 'major', 9)"
+p1862
+S"(2, 0, 26, 'major', 9)"
+p1863
+S"(0, -2, 24, 'major', 9)"
+p1864
+S"(-2, -3, 21, 'major', 9)"
+p1865
+S"(-3, 0, 21, 'major', 9)"
+p1866
+S"(0, 0, 21, 'major', 9)"
+p1867
+S"(0, 3, 24, 'major', 9)"
+p1868
+S"(3, 0, 24, 'major', 9)"
+p1869
+S'END_OF_SEQUENCE'
+p1870
+S'BEGINNING_OF_SEQUENCE'
+p1871
+S"(0, 0, 21, 'major', 9)"
+p1872
+S"(0, 5, 26, 'major', 9)"
+p1873
+S"(5, 0, 26, 'major', 9)"
+p1874
+S"(0, -2, 24, 'major', 9)"
+p1875
+S"(-2, -3, 21, 'major', 9)"
+p1876
+S"(-3, 5, 26, 'major', 9)"
+p1877
+S"(5, -5, 21, 'major', 9)"
+p1878
+S"(-5, 0, 21, 'major', 9)"
+p1879
+S"(0, 0, 21, 'major', 9)"
+p1880
+S"(0, 3, 24, 'major', 9)"
+p1881
+S"(3, -3, 21, 'major', 9)"
+p1882
+S"(-3, 3, 24, 'major', 9)"
+p1883
+S"(3, -3, 21, 'major', 9)"
+p1884
+S"(-3, -2, 19, 'major', 9)"
+p1885
+S"(-2, -3, 16, 'major', 9)"
+p1886
+S"(-3, 3, 19, 'major', 9)"
+p1887
+S"(3, -3, 16, 'major', 9)"
+p1888
+S"(-3, -2, 14, 'major', 9)"
+p1889
+S"(-2, -2, 12, 'major', 9)"
+p1890
+S"(-2, 2, 14, 'major', 9)"
+p1891
+S"(2, -2, 12, 'major', 9)"
+p1892
+S"(-2, 9, 21, 'major', 9)"
+p1893
+S"(9, -2, 19, 'major', 9)"
+p1894
+S"(-2, 2, 21, 'major', 9)"
+p1895
+S"(2, -5, 16, 'major', 9)"
+p1896
+S"(-5, 0, 16, 'major', 9)"
+p1897
+S"(0, -2, 14, 'major', 9)"
+p1898
+S"(-2, 0, 14, 'major', 9)"
+p1899
+S"(0, 0, 14, 'major', 9)"
+p1900
+S"(0, 10, 24, 'major', 9)"
+p1901
+S"(10, -3, 21, 'major', 9)"
+p1902
+S"(-3, 3, 24, 'major', 9)"
+p1903
+S"(3, -3, 21, 'major', 9)"
+p1904
+S'END_OF_SEQUENCE'
+p1905
+S'BEGINNING_OF_SEQUENCE'
+p1906
+S"(0, 0, 21, 'major', 9)"
+p1907
+S"(0, -5, 16, 'major', 9)"
+p1908
+S"(-5, 3, 19, 'major', 9)"
+p1909
+S"(3, -3, 16, 'major', 9)"
+p1910
+S"(-3, -2, 14, 'major', 9)"
+p1911
+S"(-2, 2, 16, 'major', 9)"
+p1912
+S"(2, 5, 21, 'major', 9)"
+p1913
+S"(5, -2, 19, 'major', 9)"
+p1914
+S"(-2, -3, 16, 'major', 9)"
+p1915
+S"(-3, 3, 19, 'major', 9)"
+p1916
+S"(3, -3, 16, 'major', 9)"
+p1917
+S"(-3, -1, 15, 'major', 9)"
+p1918
+S"(-1, 1, 16, 'major', 9)"
+p1919
+S"(1, 12, 28, 'major', 9)"
+p1920
+S"(12, -4, 24, 'major', 9)"
+p1921
+S"(-4, 0, 24, 'major', 9)"
+p1922
+S"(0, -3, 21, 'major', 9)"
+p1923
+S"(-3, -2, 19, 'major', 9)"
+p1924
+S"(-2, -3, 16, 'major', 9)"
+p1925
+S"(-3, 5, 21, 'major', 9)"
+p1926
+S"(5, -2, 19, 'major', 9)"
+p1927
+S"(-2, -3, 16, 'major', 9)"
+p1928
+S"(-3, 3, 19, 'major', 9)"
+p1929
+S"(3, -3, 16, 'major', 9)"
+p1930
+S"(-3, 3, 19, 'major', 9)"
+p1931
+S"(3, -3, 16, 'major', 9)"
+p1932
+S"(-3, 12, 28, 'major', 9)"
+p1933
+S"(12, 0, 28, 'major', 9)"
+p1934
+S"(0, -4, 24, 'major', 9)"
+p1935
+S"(-4, -6, 18, 'major', 9)"
+p1936
+S"(-6, 6, 24, 'major', 9)"
+p1937
+S"(6, 0, 24, 'major', 9)"
+p1938
+S"(0, -3, 21, 'major', 9)"
+p1939
+S"(-3, -2, 19, 'major', 9)"
+p1940
+S"(-2, 2, 21, 'major', 9)"
+p1941
+S"(2, 0, 21, 'major', 9)"
+p1942
+S"(0, -2, 19, 'major', 9)"
+p1943
+S"(-2, -3, 16, 'major', 9)"
+p1944
+S"(-3, 3, 19, 'major', 9)"
+p1945
+S"(3, 0, 19, 'major', 9)"
+p1946
+S"(0, -3, 16, 'major', 9)"
+p1947
+S"(-3, -2, 14, 'major', 9)"
+p1948
+S"(-2, -2, 12, 'major', 9)"
+p1949
+S"(-2, 9, 21, 'major', 9)"
+p1950
+S"(9, -7, 14, 'major', 9)"
+p1951
+S'END_OF_SEQUENCE'
+p1952
+S'BEGINNING_OF_SEQUENCE'
+p1953
+S"(0, 0, 16, 'major', 9)"
+p1954
+S"(0, 5, 21, 'major', 9)"
+p1955
+S"(5, -5, 16, 'major', 9)"
+p1956
+S"(-5, 5, 21, 'major', 9)"
+p1957
+S"(5, 3, 24, 'major', 9)"
+p1958
+S"(3, 0, 24, 'major', 9)"
+p1959
+S"(0, -3, 21, 'major', 9)"
+p1960
+S"(-3, -14, 7, 'major', 9)"
+p1961
+S"(-14, 21, 28, 'major', 9)"
+p1962
+S"(21, 3, 31, 'major', 9)"
+p1963
+S"(3, 0, 31, 'major', 9)"
+p1964
+S"(0, -3, 28, 'major', 9)"
+p1965
+S"(-3, -2, 26, 'major', 9)"
+p1966
+S"(-2, -2, 24, 'major', 9)"
+p1967
+S"(-2, -3, 21, 'major', 9)"
+p1968
+S"(-3, 3, 24, 'major', 9)"
+p1969
+S"(3, 2, 26, 'major', 9)"
+p1970
+S"(2, 0, 26, 'major', 9)"
+p1971
+S"(0, 0, 26, 'major', 9)"
+p1972
+S"(0, 0, 26, 'major', 9)"
+p1973
+S"(0, 5, 31, 'major', 9)"
+p1974
+S"(5, -5, 26, 'major', 9)"
+p1975
+S"(-5, 0, 26, 'major', 9)"
+p1976
+S"(0, 5, 31, 'major', 9)"
+p1977
+S"(5, -5, 26, 'major', 9)"
+p1978
+S"(-5, 0, 26, 'major', 9)"
+p1979
+S"(0, 5, 31, 'major', 9)"
+p1980
+S"(5, -5, 26, 'major', 9)"
+p1981
+S"(-5, 5, 31, 'major', 9)"
+p1982
+S"(5, -5, 26, 'major', 9)"
+p1983
+S"(-5, 5, 31, 'major', 9)"
+p1984
+S"(5, 0, 31, 'major', 9)"
+p1985
+S"(0, -5, 26, 'major', 9)"
+p1986
+S"(-5, 5, 31, 'major', 9)"
+p1987
+S"(5, 2, 33, 'major', 9)"
+p1988
+S"(2, 3, 36, 'major', 9)"
+p1989
+S"(3, 0, 36, 'major', 9)"
+p1990
+S"(0, 0, 36, 'major', 9)"
+p1991
+S"(0, 0, 36, 'major', 9)"
+p1992
+S"(0, 0, 36, 'major', 9)"
+p1993
+S"(0, 0, 36, 'major', 9)"
+p1994
+S"(0, 0, 36, 'major', 9)"
+p1995
+S"(0, 0, 36, 'major', 9)"
+p1996
+S"(0, 0, 36, 'major', 9)"
+p1997
+S"(0, 0, 36, 'major', 9)"
+p1998
+S"(0, 0, 36, 'major', 9)"
+p1999
+S"(0, -5, 31, 'major', 9)"
+p2000
+S"(-5, 2, 33, 'major', 9)"
+p2001
+S"(2, 4, 37, 'major', 9)"
+p2002
+S"(4, 0, 37, 'major', 9)"
+p2003
+S"(0, -1, 36, 'major', 9)"
+p2004
+S"(-1, 0, 36, 'major', 9)"
+p2005
+S"(0, -3, 33, 'major', 9)"
+p2006
+S"(-3, 3, 36, 'major', 9)"
+p2007
+S"(3, -20, 16, 'major', 9)"
+p2008
+S"(-20, 0, 16, 'major', 9)"
+p2009
+S"(0, 0, 16, 'major', 9)"
+p2010
+S"(0, 12, 28, 'major', 9)"
+p2011
+S"(12, 3, 31, 'major', 9)"
+p2012
+S"(3, 2, 33, 'major', 9)"
+p2013
+S"(2, 3, 36, 'major', 9)"
+p2014
+S"(3, 0, 36, 'major', 9)"
+p2015
+S"(0, -3, 33, 'major', 9)"
+p2016
+S"(-3, -2, 31, 'major', 9)"
+p2017
+S"(-2, -3, 28, 'major', 9)"
+p2018
+S"(-3, 3, 31, 'major', 9)"
+p2019
+S"(3, 0, 31, 'major', 9)"
+p2020
+S"(0, 2, 33, 'major', 9)"
+p2021
+S"(2, -2, 31, 'major', 9)"
+p2022
+S"(-2, -3, 28, 'major', 9)"
+p2023
+S"(-3, -1, 27, 'major', 9)"
+p2024
+S"(-1, -1, 26, 'major', 9)"
+p2025
+S"(-1, -2, 24, 'major', 9)"
+p2026
+S"(-2, 9, 33, 'major', 9)"
+p2027
+S"(9, -2, 31, 'major', 9)"
+p2028
+S"(-2, -3, 28, 'major', 9)"
+p2029
+S"(-3, -1, 27, 'major', 9)"
+p2030
+S"(-1, -1, 26, 'major', 9)"
+p2031
+S"(-1, -2, 24, 'major', 9)"
+p2032
+S"(-2, 0, 24, 'major', 9)"
+p2033
+S"(0, 9, 33, 'major', 9)"
+p2034
+S"(9, -7, 26, 'major', 9)"
+p2035
+S"(-7, 7, 33, 'major', 9)"
+p2036
+S"(7, -2, 31, 'major', 9)"
+p2037
+S"(-2, 0, 31, 'major', 9)"
+p2038
+S"(0, -3, 28, 'major', 9)"
+p2039
+S"(-3, -2, 26, 'major', 9)"
+p2040
+S"(-2, 7, 33, 'major', 9)"
+p2041
+S"(7, -2, 31, 'major', 9)"
+p2042
+S"(-2, -3, 28, 'major', 9)"
+p2043
+S"(-3, 0, 28, 'major', 9)"
+p2044
+S"(0, -2, 26, 'major', 9)"
+p2045
+S"(-2, 7, 33, 'major', 9)"
+p2046
+S"(7, -2, 31, 'major', 9)"
+p2047
+S"(-2, 0, 31, 'major', 9)"
+p2048
+S"(0, 2, 33, 'major', 9)"
+p2049
+S"(2, -7, 26, 'major', 9)"
+p2050
+S"(-7, 2, 28, 'major', 9)"
+p2051
+S"(2, 5, 33, 'major', 9)"
+p2052
+S"(5, -2, 31, 'major', 9)"
+p2053
+S"(-2, 2, 33, 'major', 9)"
+p2054
+S"(2, 3, 36, 'major', 9)"
+p2055
+S"(3, 0, 36, 'major', 9)"
+p2056
+S"(0, -3, 33, 'major', 9)"
+p2057
+S"(-3, -2, 31, 'major', 9)"
+p2058
+S"(-2, -3, 28, 'major', 9)"
+p2059
+S'END_OF_SEQUENCE'
+p2060
+S'BEGINNING_OF_SEQUENCE'
+p2061
+S"(0, 0, 33, 'major', 9)"
+p2062
+S"(0, -2, 31, 'major', 9)"
+p2063
+S"(-2, -3, 28, 'major', 9)"
+p2064
+S"(-3, -2, 26, 'major', 9)"
+p2065
+S"(-2, 0, 26, 'major', 9)"
+p2066
+S"(0, -2, 24, 'major', 9)"
+p2067
+S"(-2, 9, 33, 'major', 9)"
+p2068
+S"(9, -7, 26, 'major', 9)"
+p2069
+S"(-7, -2, 24, 'major', 9)"
+p2070
+S"(-2, 9, 33, 'major', 9)"
+p2071
+S"(9, -5, 28, 'major', 9)"
+p2072
+S"(-5, 0, 28, 'major', 9)"
+p2073
+S"(0, 0, 28, 'major', 9)"
+p2074
+S"(0, 0, 28, 'major', 9)"
+p2075
+S"(0, -2, 26, 'major', 9)"
+p2076
+S"(-2, 2, 28, 'major', 9)"
+p2077
+S"(2, -4, 24, 'major', 9)"
+p2078
+S"(-4, 9, 33, 'major', 9)"
+p2079
+S"(9, -2, 31, 'major', 9)"
+p2080
+S"(-2, 2, 33, 'major', 9)"
+p2081
+S"(2, 0, 33, 'major', 9)"
+p2082
+S"(0, 0, 33, 'major', 9)"
+p2083
+S"(0, 0, 33, 'major', 9)"
+p2084
+S'END_OF_SEQUENCE'
+p2085
+S'BEGINNING_OF_SEQUENCE'
+p2086
+S"(0, 0, 31, 'major', 9)"
+p2087
+S"(0, 0, 31, 'major', 9)"
+p2088
+S"(0, 0, 31, 'major', 9)"
+p2089
+S"(0, 0, 31, 'major', 9)"
+p2090
+S"(0, -3, 28, 'major', 9)"
+p2091
+S"(-3, 3, 31, 'major', 9)"
+p2092
+S"(3, 0, 31, 'major', 9)"
+p2093
+S"(0, 0, 31, 'major', 9)"
+p2094
+S'END_OF_SEQUENCE'
+p2095
+S'BEGINNING_OF_SEQUENCE'
+p2096
+S"(0, 0, 26, 'major', 9)"
+p2097
+S"(0, 0, 26, 'major', 9)"
+p2098
+S"(0, 0, 26, 'major', 9)"
+p2099
+S"(0, -2, 24, 'major', 9)"
+p2100
+S"(-2, 2, 26, 'major', 9)"
+p2101
+S"(2, 0, 26, 'major', 9)"
+p2102
+S"(0, 0, 26, 'major', 9)"
+p2103
+S"(0, -12, 14, 'major', 9)"
+p2104
+S"(-12, 0, 14, 'major', 9)"
+p2105
+S"(0, -2, 12, 'major', 9)"
+p2106
+S"(-2, 9, 21, 'major', 9)"
+p2107
+S"(9, -7, 14, 'major', 9)"
+p2108
+S'END_OF_SEQUENCE'
+p2109
+S'BEGINNING_OF_SEQUENCE'
+p2110
+S"(0, 0, 21, 'major', 9)"
+p2111
+S"(0, -5, 16, 'major', 9)"
+p2112
+S"(-5, 10, 26, 'major', 9)"
+p2113
+S"(10, -2, 24, 'major', 9)"
+p2114
+S"(-2, -3, 21, 'major', 9)"
+p2115
+S"(-3, -2, 19, 'major', 9)"
+p2116
+S"(-2, 2, 21, 'major', 9)"
+p2117
+S"(2, 0, 21, 'major', 9)"
+p2118
+S"(0, 3, 24, 'major', 9)"
+p2119
+S"(3, -10, 14, 'major', 9)"
+p2120
+S"(-10, -2, 12, 'major', 9)"
+p2121
+S"(-2, 5, 17, 'major', 9)"
+p2122
+S"(5, -3, 14, 'major', 9)"
+p2123
+S"(-3, 0, 14, 'major', 9)"
+p2124
+S"(0, 4, 18, 'major', 9)"
+p2125
+S"(4, -6, 12, 'major', 9)"
+p2126
+S"(-6, 9, 21, 'major', 9)"
+p2127
+S"(9, -9, 12, 'major', 9)"
+p2128
+S'END_OF_SEQUENCE'
+p2129
+S'BEGINNING_OF_SEQUENCE'
+p2130
+S"(0, 0, 26, 'major', 9)"
+p2131
+S"(0, 0, 26, 'major', 9)"
+p2132
+S"(0, -2, 24, 'major', 9)"
+p2133
+S"(-2, -3, 21, 'major', 9)"
+p2134
+S'END_OF_SEQUENCE'
+p2135
+S'BEGINNING_OF_SEQUENCE'
+p2136
+S"(0, 0, 24, 'major', 9)"
+p2137
+S"(0, -3, 21, 'major', 9)"
+p2138
+S"(-3, 4, 25, 'major', 9)"
+p2139
+S"(4, 3, 28, 'major', 9)"
+p2140
+S"(3, 0, 28, 'major', 9)"
+p2141
+S"(0, -2, 26, 'major', 9)"
+p2142
+S"(-2, 0, 26, 'major', 9)"
+p2143
+S"(0, -2, 24, 'major', 9)"
+p2144
+S"(-2, 0, 24, 'major', 9)"
+p2145
+S"(0, -3, 21, 'major', 9)"
+p2146
+S"(-3, -2, 19, 'major', 9)"
+p2147
+S"(-2, 0, 19, 'major', 9)"
+p2148
+S'END_OF_SEQUENCE'
+p2149
+S'BEGINNING_OF_SEQUENCE'
+p2150
+S"(0, 0, 19, 'major', 9)"
+p2151
+S"(0, 2, 21, 'major', 9)"
+p2152
+S"(2, 3, 24, 'major', 9)"
+p2153
+S"(3, 0, 24, 'major', 9)"
+p2154
+S"(0, -3, 21, 'major', 9)"
+p2155
+S"(-3, 0, 21, 'major', 9)"
+p2156
+S"(0, -2, 19, 'major', 9)"
+p2157
+S"(-2, -5, 14, 'major', 9)"
+p2158
+S"(-5, 0, 14, 'major', 9)"
+p2159
+S"(0, 0, 14, 'major', 9)"
+p2160
+S"(0, 0, 14, 'major', 9)"
+p2161
+S"(0, 0, 14, 'major', 9)"
+p2162
+S"(0, 0, 14, 'major', 9)"
+p2163
+S"(0, 0, 14, 'major', 9)"
+p2164
+S"(0, -2, 12, 'major', 9)"
+p2165
+S"(-2, 9, 21, 'major', 9)"
+p2166
+S"(9, -9, 12, 'major', 9)"
+p2167
+S"(-9, 2, 14, 'major', 9)"
+p2168
+S"(2, -2, 12, 'major', 9)"
+p2169
+S'END_OF_SEQUENCE'
+p2170
+S'BEGINNING_OF_SEQUENCE'
+p2171
+S"(0, 0, 21, 'major', 9)"
+p2172
+S"(0, 0, 21, 'major', 9)"
+p2173
+S"(0, 0, 21, 'major', 9)"
+p2174
+S"(0, 0, 21, 'major', 9)"
+p2175
+S"(0, 2, 23, 'major', 9)"
+p2176
+S"(2, 0, 23, 'major', 9)"
+p2177
+S"(0, -3, 20, 'major', 9)"
+p2178
+S"(-3, 0, 20, 'major', 9)"
+p2179
+S"(0, -2, 18, 'major', 9)"
+p2180
+S"(-2, 0, 18, 'major', 9)"
+p2181
+S"(0, 3, 21, 'major', 9)"
+p2182
+S"(3, -7, 14, 'major', 9)"
+p2183
+S"(-7, 0, 14, 'major', 9)"
+p2184
+S"(0, 0, 14, 'major', 9)"
+p2185
+S"(0, -2, 12, 'major', 9)"
+p2186
+S"(-2, 9, 21, 'major', 9)"
+p2187
+S"(9, -9, 12, 'major', 9)"
+p2188
+S"(-9, 2, 14, 'major', 9)"
+p2189
+S"(2, -2, 12, 'major', 9)"
+p2190
+S'END_OF_SEQUENCE'
+p2191
+S'BEGINNING_OF_SEQUENCE'
+p2192
+S"(0, 0, 24, 'major', 9)"
+p2193
+S"(0, 0, 24, 'major', 9)"
+p2194
+S"(0, 0, 24, 'major', 9)"
+p2195
+S"(0, -3, 21, 'major', 9)"
+p2196
+S"(-3, 5, 26, 'major', 9)"
+p2197
+S"(5, 0, 26, 'major', 9)"
+p2198
+S"(0, 0, 26, 'major', 9)"
+p2199
+S"(0, 0, 26, 'major', 9)"
+p2200
+S"(0, -2, 24, 'major', 9)"
+p2201
+S"(-2, -3, 21, 'major', 9)"
+p2202
+S"(-3, 3, 24, 'major', 9)"
+p2203
+S"(3, 0, 24, 'major', 9)"
+p2204
+S"(0, -3, 21, 'major', 9)"
+p2205
+S"(-3, -5, 16, 'major', 9)"
+p2206
+S"(-5, 3, 19, 'major', 9)"
+p2207
+S'END_OF_SEQUENCE'
+p2208
+S'BEGINNING_OF_SEQUENCE'
+p2209
+S"(0, 0, 19, 'major', 9)"
+p2210
+S'END_OF_SEQUENCE'
+p2211
+S'BEGINNING_OF_SEQUENCE'
+p2212
+S"(0, 0, 21, 'major', 9)"
+p2213
+S"(0, 0, 21, 'major', 9)"
+p2214
+S"(0, 0, 21, 'major', 9)"
+p2215
+S"(0, 7, 28, 'major', 9)"
+p2216
+S"(7, -4, 24, 'major', 9)"
+p2217
+S"(-4, -3, 21, 'major', 9)"
+p2218
+S"(-3, -2, 19, 'major', 9)"
+p2219
+S"(-2, 0, 19, 'major', 9)"
+p2220
+S"(0, 2, 21, 'major', 9)"
+p2221
+S"(2, -2, 19, 'major', 9)"
+p2222
+S"(-2, -3, 16, 'major', 9)"
+p2223
+S"(-3, -2, 14, 'major', 9)"
+p2224
+S"(-2, 0, 14, 'major', 9)"
+p2225
+S"(0, -2, 12, 'major', 9)"
+p2226
+S"(-2, 0, 12, 'major', 9)"
+p2227
+S"(0, 0, 12, 'major', 9)"
+p2228
+S"(0, 0, 12, 'major', 9)"
+p2229
+S"(0, 0, 12, 'major', 9)"
+p2230
+S"(0, 9, 21, 'major', 9)"
+p2231
+S"(9, -7, 14, 'major', 9)"
+p2232
+S"(-7, 10, 24, 'major', 9)"
+p2233
+S"(10, 0, 24, 'major', 9)"
+p2234
+S"(0, 0, 24, 'major', 9)"
+p2235
+S"(0, 0, 24, 'major', 9)"
+p2236
+S"(0, -3, 21, 'major', 9)"
+p2237
+S"(-3, -5, 16, 'major', 9)"
+p2238
+S"(-5, 8, 24, 'major', 9)"
+p2239
+S"(8, -3, 21, 'major', 9)"
+p2240
+S"(-3, 3, 24, 'major', 9)"
+p2241
+S"(3, -3, 21, 'major', 9)"
+p2242
+S"(-3, -2, 19, 'major', 9)"
+p2243
+S"(-2, 2, 21, 'major', 9)"
+p2244
+S"(2, -2, 19, 'major', 9)"
+p2245
+S"(-2, -3, 16, 'major', 9)"
+p2246
+S"(-3, -2, 14, 'major', 9)"
+p2247
+S"(-2, 0, 14, 'major', 9)"
+p2248
+S"(0, 0, 14, 'major', 9)"
+p2249
+S"(0, -2, 12, 'major', 9)"
+p2250
+S"(-2, 0, 12, 'major', 9)"
+p2251
+S"(0, 7, 19, 'major', 9)"
+p2252
+S"(7, -3, 16, 'major', 9)"
+p2253
+S"(-3, 3, 19, 'major', 9)"
+p2254
+S"(3, -3, 16, 'major', 9)"
+p2255
+S"(-3, -2, 14, 'major', 9)"
+p2256
+S"(-2, -2, 12, 'major', 9)"
+p2257
+S"(-2, 2, 14, 'major', 9)"
+p2258
+S"(2, -2, 12, 'major', 9)"
+p2259
+S"(-2, 12, 24, 'major', 9)"
+p2260
+S"(12, -3, 21, 'major', 9)"
+p2261
+S"(-3, 3, 24, 'major', 9)"
+p2262
+S"(3, -3, 21, 'major', 9)"
+p2263
+S"(-3, -2, 19, 'major', 9)"
+p2264
+S"(-2, -3, 16, 'major', 9)"
+p2265
+S"(-3, 3, 19, 'major', 9)"
+p2266
+S"(3, -3, 16, 'major', 9)"
+p2267
+S"(-3, -2, 14, 'major', 9)"
+p2268
+S"(-2, 0, 14, 'major', 9)"
+p2269
+S"(0, 0, 14, 'major', 9)"
+p2270
+S"(0, 0, 14, 'major', 9)"
+p2271
+S"(0, -2, 12, 'major', 9)"
+p2272
+S"(-2, 2, 14, 'major', 9)"
+p2273
+S"(2, -2, 12, 'major', 9)"
+p2274
+S"(-2, 0, 12, 'major', 9)"
+p2275
+S'END_OF_SEQUENCE'
+p2276
+S'BEGINNING_OF_SEQUENCE'
+p2277
+S"(0, 0, 14, 'major', 0)"
+p2278
+S"(0, -10, 4, 'major', 0)"
+p2279
+S"(-10, 8, 12, 'major', 0)"
+p2280
+S"(8, -12, 0, 'major', 0)"
+p2281
+S'END_OF_SEQUENCE'
+p2282
+S'BEGINNING_OF_SEQUENCE'
+p2283
+S"(0, 0, 14, 'major', 0)"
+p2284
+S'END_OF_SEQUENCE'
+p2285
+S'BEGINNING_OF_SEQUENCE'
+p2286
+S"(0, 0, 12, 'major', 0)"
+p2287
+S"(0, -19, -7, 'major', 0)"
+p2288
+S"(-19, 12, 5, 'major', 0)"
+p2289
+S"(12, -12, -7, 'major', 0)"
+p2290
+S'END_OF_SEQUENCE'
+p2291
+S'BEGINNING_OF_SEQUENCE'
+p2292
+S"(0, 0, 12, 'major', 0)"
+p2293
+S"(0, -19, -7, 'major', 0)"
+p2294
+S"(-19, 6, -1, 'major', 0)"
+p2295
+S"(6, 1, 0, 'major', 0)"
+p2296
+S'END_OF_SEQUENCE'
+p2297
+S'BEGINNING_OF_SEQUENCE'
+p2298
+S"(0, 0, 7, 'major', 0)"
+p2299
+S"(0, -12, -5, 'major', 0)"
+p2300
+S"(-12, 24, 19, 'major', 0)"
+p2301
+S"(24, -15, 4, 'major', 0)"
+p2302
+S"(-15, 8, 12, 'major', 0)"
+p2303
+S'END_OF_SEQUENCE'
+p2304
+S'BEGINNING_OF_SEQUENCE'
+p2305
+S"(0, 0, 12, 'major', 0)"
+p2306
+S"(0, -8, 4, 'major', 0)"
+p2307
+S"(-8, 8, 12, 'major', 0)"
+p2308
+S'END_OF_SEQUENCE'
+p2309
+S'BEGINNING_OF_SEQUENCE'
+p2310
+S"(0, 0, 14, 'major', 0)"
+p2311
+S"(0, -10, 4, 'major', 0)"
+p2312
+S'END_OF_SEQUENCE'
+p2313
+S'BEGINNING_OF_SEQUENCE'
+p2314
+S"(0, 0, 12, 'major', 0)"
+p2315
+S"(0, -19, -7, 'major', 0)"
+p2316
+S"(-19, 12, 5, 'major', 0)"
+p2317
+S"(12, -12, -7, 'major', 0)"
+p2318
+S'END_OF_SEQUENCE'
+p2319
+S'BEGINNING_OF_SEQUENCE'
+p2320
+S"(0, 0, 12, 'major', 0)"
+p2321
+S"(0, -19, -7, 'major', 0)"
+p2322
+S"(-19, 6, -1, 'major', 0)"
+p2323
+S"(6, 1, 0, 'major', 0)"
+p2324
+S'END_OF_SEQUENCE'
+p2325
+S'BEGINNING_OF_SEQUENCE'
+p2326
+S"(0, 0, 7, 'major', 0)"
+p2327
+S"(0, -12, -5, 'major', 0)"
+p2328
+S"(-12, 24, 19, 'major', 0)"
+p2329
+S"(24, -15, 4, 'major', 0)"
+p2330
+S'END_OF_SEQUENCE'
+p2331
+S'BEGINNING_OF_SEQUENCE'
+p2332
+S"(0, 0, 12, 'major', 0)"
+p2333
+S"(0, -8, 4, 'major', 0)"
+p2334
+S"(-8, 15, 19, 'major', 0)"
+p2335
+S"(15, -24, -5, 'major', 0)"
+p2336
+S'END_OF_SEQUENCE'
+p2337
+S'BEGINNING_OF_SEQUENCE'
+p2338
+S"(0, 0, 8, 'major', 0)"
+p2339
+S"(0, -16, -8, 'major', 0)"
+p2340
+S'END_OF_SEQUENCE'
+p2341
+S'BEGINNING_OF_SEQUENCE'
+p2342
+S"(0, 0, -8, 'major', 0)"
+p2343
+S"(0, 24, 16, 'major', 0)"
+p2344
+S"(24, -12, 4, 'major', 0)"
+p2345
+S"(-12, 7, 11, 'major', 0)"
+p2346
+S'END_OF_SEQUENCE'
+p2347
+S'BEGINNING_OF_SEQUENCE'
+p2348
+S"(0, 0, 11, 'major', 0)"
+p2349
+S"(0, -7, 4, 'major', 0)"
+p2350
+S"(-7, 12, 16, 'major', 0)"
+p2351
+S"(12, -24, -8, 'major', 0)"
+p2352
+S"(-24, 22, 14, 'major', 0)"
+p2353
+S"(22, -10, 4, 'major', 0)"
+p2354
+S'END_OF_SEQUENCE'
+p2355
+S'BEGINNING_OF_SEQUENCE'
+p2356
+S"(0, 0, 12, 'major', 0)"
+p2357
+S"(0, -19, -7, 'major', 0)"
+p2358
+S"(-19, 12, 5, 'major', 0)"
+p2359
+S"(12, -12, -7, 'major', 0)"
+p2360
+S'END_OF_SEQUENCE'
+p2361
+S'BEGINNING_OF_SEQUENCE'
+p2362
+S"(0, 0, 12, 'major', 0)"
+p2363
+S"(0, -19, -7, 'major', 0)"
+p2364
+S"(-19, 21, 14, 'major', 0)"
+p2365
+S"(21, -9, 5, 'major', 0)"
+p2366
+S"(-9, -5, 0, 'major', 0)"
+p2367
+S"(-5, 16, 16, 'major', 0)"
+p2368
+S'END_OF_SEQUENCE'
+p2369
+S'BEGINNING_OF_SEQUENCE'
+p2370
+S"(0, 0, 19, 'major', 0)"
+p2371
+S"(0, -24, -5, 'major', 0)"
+p2372
+S"(-24, 9, 4, 'major', 0)"
+p2373
+S"(9, -9, -5, 'major', 0)"
+p2374
+S"(-9, 16, 11, 'major', 0)"
+p2375
+S'END_OF_SEQUENCE'
+p2376
+S'BEGINNING_OF_SEQUENCE'
+p2377
+S"(0, 0, 11, 'major', 0)"
+p2378
+S'END_OF_SEQUENCE'
+p2379
+S'BEGINNING_OF_SEQUENCE'
+p2380
+S"(0, 0, 14, 'major', 0)"
+p2381
+S"(0, -12, 2, 'major', 0)"
+p2382
+S"(-12, 10, 12, 'major', 0)"
+p2383
+S"(10, -12, 0, 'major', 0)"
+p2384
+S"(-12, -5, -5, 'major', 0)"
+p2385
+S"(-5, 2, -3, 'major', 0)"
+p2386
+S"(2, 10, 7, 'major', 0)"
+p2387
+S"(10, -8, -1, 'major', 0)"
+p2388
+S'END_OF_SEQUENCE'
+p2389
+S'BEGINNING_OF_SEQUENCE'
+p2390
+S"(0, 0, -12, 'major', 0)"
+p2391
+S'END_OF_SEQUENCE'
+p2392
+S'BEGINNING_OF_SEQUENCE'
+p2393
+S"(0, 0, -12, 'major', 0)"
+p2394
+S"(0, 19, 7, 'major', 0)"
+p2395
+S'END_OF_SEQUENCE'
+p2396
+S'BEGINNING_OF_SEQUENCE'
+p2397
+S"(0, 0, -12, 'major', 0)"
+p2398
+S"(0, 24, 12, 'major', 0)"
+p2399
+S"(24, -17, -5, 'major', 0)"
+p2400
+S"(-17, 17, 12, 'major', 0)"
+p2401
+S"(17, -24, -12, 'major', 0)"
+p2402
+S"(-24, 19, 7, 'major', 0)"
+p2403
+S'END_OF_SEQUENCE'
+p2404
+S'BEGINNING_OF_SEQUENCE'
+p2405
+S"(0, 0, -12, 'major', 0)"
+p2406
+S"(0, 24, 12, 'major', 0)"
+p2407
+S"(24, -17, -5, 'major', 0)"
+p2408
+S"(-17, 15, 10, 'major', 0)"
+p2409
+S"(15, -22, -12, 'major', 0)"
+p2410
+S"(-22, 7, -5, 'major', 0)"
+p2411
+S"(7, -7, -12, 'major', 0)"
+p2412
+S"(-7, 21, 9, 'major', 0)"
+p2413
+S'END_OF_SEQUENCE'
+p2414
+S'BEGINNING_OF_SEQUENCE'
+p2415
+S"(0, 0, 9, 'major', 0)"
+p2416
+S'END_OF_SEQUENCE'
+p2417
+S'BEGINNING_OF_SEQUENCE'
+p2418
+S"(0, 0, -7, 'major', 0)"
+p2419
+S"(0, -5, -12, 'major', 0)"
+p2420
+S"(-5, 21, 9, 'major', 0)"
+p2421
+S'END_OF_SEQUENCE'
+p2422
+S'BEGINNING_OF_SEQUENCE'
+p2423
+S"(0, 0, 9, 'major', 0)"
+p2424
+S'END_OF_SEQUENCE'
+p2425
+S'BEGINNING_OF_SEQUENCE'
+p2426
+S"(0, 0, 9, 'major', 0)"
+p2427
+S"(0, -16, -7, 'major', 0)"
+p2428
+S"(-16, 10, 3, 'major', 0)"
+p2429
+S'END_OF_SEQUENCE'
+p2430
+S'BEGINNING_OF_SEQUENCE'
+p2431
+S"(0, 0, -12, 'major', 0)"
+p2432
+S"(0, 19, 7, 'major', 0)"
+p2433
+S'END_OF_SEQUENCE'
+p2434
+S'BEGINNING_OF_SEQUENCE'
+p2435
+S"(0, 0, -12, 'major', 0)"
+p2436
+S"(0, 24, 12, 'major', 0)"
+p2437
+S"(24, -17, -5, 'major', 0)"
+p2438
+S"(-17, 15, 10, 'major', 0)"
+p2439
+S"(15, -22, -12, 'major', 0)"
+p2440
+S"(-22, 7, -5, 'major', 0)"
+p2441
+S"(7, -7, -12, 'major', 0)"
+p2442
+S"(-7, 21, 9, 'major', 0)"
+p2443
+S'END_OF_SEQUENCE'
+p2444
+S'BEGINNING_OF_SEQUENCE'
+p2445
+S"(0, 0, 9, 'major', 0)"
+p2446
+S'END_OF_SEQUENCE'
+p2447
+S'BEGINNING_OF_SEQUENCE'
+p2448
+S"(0, 0, -7, 'major', 0)"
+p2449
+S"(0, -5, -12, 'major', 0)"
+p2450
+S"(-5, 21, 9, 'major', 0)"
+p2451
+S'END_OF_SEQUENCE'
+p2452
+S'BEGINNING_OF_SEQUENCE'
+p2453
+S"(0, 0, 9, 'major', 0)"
+p2454
+S'END_OF_SEQUENCE'
+p2455
+S'BEGINNING_OF_SEQUENCE'
+p2456
+S"(0, 0, 9, 'major', 0)"
+p2457
+S"(0, -16, -7, 'major', 0)"
+p2458
+S"(-16, 10, 3, 'major', 0)"
+p2459
+S'END_OF_SEQUENCE'
+p2460
+S'BEGINNING_OF_SEQUENCE'
+p2461
+S"(0, 0, -12, 'major', 0)"
+p2462
+S"(0, 19, 7, 'major', 0)"
+p2463
+S'END_OF_SEQUENCE'
+p2464
+S'BEGINNING_OF_SEQUENCE'
+p2465
+S"(0, 0, -12, 'major', 0)"
+p2466
+S"(0, 24, 12, 'major', 0)"
+p2467
+S"(24, -17, -5, 'major', 0)"
+p2468
+S"(-17, 15, 10, 'major', 0)"
+p2469
+S"(15, -22, -12, 'major', 0)"
+p2470
+S"(-22, 7, -5, 'major', 0)"
+p2471
+S"(7, -12, -17, 'major', 0)"
+p2472
+S"(-12, 12, -5, 'major', 0)"
+p2473
+S"(12, 12, 7, 'major', 0)"
+p2474
+S"(12, -24, -17, 'major', 0)"
+p2475
+S"(-24, 12, -5, 'major', 0)"
+p2476
+S"(12, 12, 7, 'major', 0)"
+p2477
+S"(12, -24, -17, 'major', 0)"
+p2478
+S"(-24, 22, 5, 'major', 0)"
+p2479
+S"(22, -10, -5, 'major', 0)"
+p2480
+S'END_OF_SEQUENCE'
+p2481
+S'BEGINNING_OF_SEQUENCE'
+p2482
+S"(0, 0, 7, 'major', 0)"
+p2483
+S"(0, -12, -5, 'major', 0)"
+p2484
+S"(-12, 5, 0, 'major', 0)"
+p2485
+S"(5, -12, -12, 'major', 0)"
+p2486
+S'END_OF_SEQUENCE'
+p2487
+S'BEGINNING_OF_SEQUENCE'
+p2488
+S"(0, 0, 0, 'major', 0)"
+p2489
+S"(0, -17, -17, 'major', 0)"
+p2490
+S"(-17, 22, 5, 'major', 0)"
+p2491
+S"(22, -10, -5, 'major', 0)"
+p2492
+S"(-10, 5, 0, 'major', 0)"
+p2493
+S"(5, -12, -12, 'major', 0)"
+p2494
+S'END_OF_SEQUENCE'
+p2495
+S'BEGINNING_OF_SEQUENCE'
+p2496
+S"(0, 0, 7, 'major', 0)"
+p2497
+S'END_OF_SEQUENCE'
+p2498
+tp2499
+.

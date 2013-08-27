@@ -1,0 +1,6958 @@
+(S'(0, None, None)'
+p0
+S'(1.0, 0.5, True)'
+p1
+S'(1.5, 0.5, True)'
+p2
+S'(2.0, 0.5, True)'
+p3
+S'(2.5, 0.5, True)'
+p4
+S'(3.0, 0.5, True)'
+p5
+S'(3.5, 0.5, True)'
+p6
+S'(4.0, 0.5, True)'
+p7
+S'(4.5, 0.5, True)'
+p8
+S'END_OF_MEASURE'
+p9
+S'(0, None, None)'
+p10
+S'(1.0, 0.5, True)'
+p11
+S'(1.5, 0.5, True)'
+p12
+S'(2.0, 0.5, True)'
+p13
+S'(2.5, 0.5, True)'
+p14
+S'(3.0, 0.5, True)'
+p15
+S'(3.5, 0.5, True)'
+p16
+S'(4.0, 0.5, True)'
+p17
+S'(4.5, 0.5, True)'
+p18
+S'END_OF_MEASURE'
+p19
+S'(0, None, None)'
+p20
+S'(1.0, 1.0, True)'
+p21
+S'(2.0, 1.0, True)'
+p22
+S'(3.0, 0.5, True)'
+p23
+S'(3.5, 1.0, True)'
+p24
+S'(4.5, 0.5, False)'
+p25
+S'END_OF_MEASURE'
+p26
+S'(0, None, None)'
+p27
+S'(1.0, 2.0, False)'
+p28
+S'(3.0, 0.5, False)'
+p29
+S'(3.5, 0.5, True)'
+p30
+S'(4.0, 0.5, True)'
+p31
+S'(4.5, 0.5, True)'
+p32
+S'END_OF_MEASURE'
+p33
+S'(0, None, None)'
+p34
+S'(1.0, 0.5, True)'
+p35
+S'(1.5, 0.5, True)'
+p36
+S'(2.0, 0.5, True)'
+p37
+S'(2.5, 0.5, False)'
+p38
+S'(3.0, 0.5, True)'
+p39
+S'(3.5, 1.0, True)'
+p40
+S'(4.5, 0.5, False)'
+p41
+S'END_OF_MEASURE'
+p42
+S'(0, None, None)'
+p43
+S'(1.0, 2.0, False)'
+p44
+S'(3.0, 1.0, False)'
+p45
+S'(4.0, 1.0, True)'
+p46
+S'END_OF_MEASURE'
+p47
+S'(0, None, None)'
+p48
+S'(1.0, 2.0, False)'
+p49
+S'(3.0, 0.375, False)'
+p50
+S'(3.375, 0.25, True)'
+p51
+S'(3.625, 1.0, True)'
+p52
+S'(4.625, 0.25, True)'
+p53
+S'(4.875, 0.125, True)'
+p54
+S'END_OF_MEASURE'
+p55
+S'(0, None, None)'
+p56
+S'(1.0, 0.25, True)'
+p57
+S'(1.25, 0.25, True)'
+p58
+S'(1.5, 0.25, True)'
+p59
+S'(1.75, 0.25, True)'
+p60
+S'(2.0, 0.25, True)'
+p61
+S'(2.25, 0.25, True)'
+p62
+S'(2.5, 0.25, True)'
+p63
+S'(2.75, 0.25, True)'
+p64
+S'(3.0, 0.25, True)'
+p65
+S'(3.25, 0.25, True)'
+p66
+S'(3.5, 0.25, True)'
+p67
+S'(3.75, 0.25, True)'
+p68
+S'(4.0, 0.25, True)'
+p69
+S'(4.25, 0.25, True)'
+p70
+S'(4.5, 0.25, True)'
+p71
+S'(4.75, 0.25, True)'
+p72
+S'END_OF_MEASURE'
+p73
+S'(0, None, None)'
+p74
+S'(1.0, 0.5, True)'
+p75
+S'(1.5, 0.5, True)'
+p76
+S'(2.0, 0.5, True)'
+p77
+S'(2.5, 1.0, True)'
+p78
+S'(3.5, 1.0, True)'
+p79
+S'(4.5, 0.5, False)'
+p80
+S'END_OF_MEASURE'
+p81
+S'(0, None, None)'
+p82
+S'(1.0, 0.5, True)'
+p83
+S'(1.5, 0.5, True)'
+p84
+S'(2.0, 0.5, True)'
+p85
+S'(2.5, 0.5, True)'
+p86
+S'(3.0, 0.5, True)'
+p87
+S'(3.5, 0.5, True)'
+p88
+S'(4.0, 0.5, True)'
+p89
+S'(4.5, 0.5, True)'
+p90
+S'END_OF_MEASURE'
+p91
+S'(0, None, None)'
+p92
+S'(1.0, 1.0, False)'
+p93
+S'(2.0, 0.5, False)'
+p94
+S'(2.5, 0.25, True)'
+p95
+S'(2.75, 2.0, False)'
+p96
+S'(4.75, 0.25, False)'
+p97
+S'END_OF_MEASURE'
+p98
+S'(0, None, None)'
+p99
+S'(1.0, 0.5, False)'
+p100
+S'(1.5, 0.5, True)'
+p101
+S'(2.0, 0.5, False)'
+p102
+S'(2.5, 0.5, True)'
+p103
+S'(3.0, 0.5, False)'
+p104
+S'(3.5, 0.5, True)'
+p105
+S'(4.0, 0.5, False)'
+p106
+S'(4.5, 0.5, True)'
+p107
+S'END_OF_MEASURE'
+p108
+S'(0, None, None)'
+p109
+S'(1.0, 0.5, True)'
+p110
+S'(1.5, 0.5, True)'
+p111
+S'(2.0, 0.5, True)'
+p112
+S'(2.5, 0.5, True)'
+p113
+S'(3.0, 0.5, True)'
+p114
+S'(3.5, 0.5, True)'
+p115
+S'(4.0, 0.5, True)'
+p116
+S'(4.5, 0.5, True)'
+p117
+S'END_OF_MEASURE'
+p118
+S'(0, None, None)'
+p119
+S'(1.0, 0.5, True)'
+p120
+S'(1.5, 0.5, True)'
+p121
+S'(2.0, 0.5, True)'
+p122
+S'(2.5, 0.5, True)'
+p123
+S'(3.0, 0.5, True)'
+p124
+S'(3.5, 0.5, True)'
+p125
+S'(4.0, 0.5, True)'
+p126
+S'(4.5, 0.5, True)'
+p127
+S'END_OF_MEASURE'
+p128
+S'(0, None, None)'
+p129
+S'(1.0, 0.5, True)'
+p130
+S'(1.5, 0.5, True)'
+p131
+S'(2.0, 0.5, True)'
+p132
+S'(2.5, 0.5, True)'
+p133
+S'(3.0, 0.5, True)'
+p134
+S'(3.5, 1.0, True)'
+p135
+S'(4.5, 0.5, False)'
+p136
+S'END_OF_MEASURE'
+p137
+S'(0, None, None)'
+p138
+S'(1.0, 2.0, False)'
+p139
+S'(3.0, 0.5, True)'
+p140
+S'(3.5, 0.5, True)'
+p141
+S'(4.0, 0.5, True)'
+p142
+S'(4.5, 0.5, True)'
+p143
+S'END_OF_MEASURE'
+p144
+S'(0, None, None)'
+p145
+S'(1.0, 0.5, True)'
+p146
+S'(1.5, 0.5, True)'
+p147
+S'(2.0, 0.5, True)'
+p148
+S'(2.5, 0.5, False)'
+p149
+S'(3.0, 0.5, True)'
+p150
+S'(3.5, 1.0, True)'
+p151
+S'(4.5, 0.5, False)'
+p152
+S'END_OF_MEASURE'
+p153
+S'(0, None, None)'
+p154
+S'(1.0, 0.5, True)'
+p155
+S'(1.5, 0.5, True)'
+p156
+S'(2.0, 0.5, True)'
+p157
+S'(2.5, 0.5, True)'
+p158
+S'(3.0, 0.5, True)'
+p159
+S'(3.5, 0.5, True)'
+p160
+S'(4.0, 0.5, True)'
+p161
+S'(4.5, 0.5, True)'
+p162
+S'END_OF_MEASURE'
+p163
+S'(0, None, None)'
+p164
+S'(1.0, 1.0, True)'
+p165
+S'(2.0, 1.0, True)'
+p166
+S'(3.0, 0.5, True)'
+p167
+S'(3.5, 1.0, True)'
+p168
+S'(4.5, 0.5, False)'
+p169
+S'END_OF_MEASURE'
+p170
+S'(0, None, None)'
+p171
+S'(1.0, 0.5, True)'
+p172
+S'(1.5, 0.5, True)'
+p173
+S'(2.0, 0.5, True)'
+p174
+S'(2.5, 0.5, True)'
+p175
+S'(3.0, 0.5, True)'
+p176
+S'(3.5, 0.5, True)'
+p177
+S'(4.0, 0.5, True)'
+p178
+S'(4.5, 0.5, True)'
+p179
+S'END_OF_MEASURE'
+p180
+S'(0, None, None)'
+p181
+S'(1.0, 2.0, False)'
+p182
+S'(3.0, 0.5, False)'
+p183
+S'(3.5, 0.5, True)'
+p184
+S'(4.0, 0.5, False)'
+p185
+S'(4.5, 0.5, True)'
+p186
+S'END_OF_MEASURE'
+p187
+S'(0, None, None)'
+p188
+S'(1.0, 0.5, True)'
+p189
+S'(1.5, 0.5, True)'
+p190
+S'(2.0, 0.5, True)'
+p191
+S'(2.5, 0.5, True)'
+p192
+S'(3.0, 0.5, True)'
+p193
+S'(3.5, 0.5, True)'
+p194
+S'(4.0, 0.5, True)'
+p195
+S'(4.5, 0.5, True)'
+p196
+S'END_OF_MEASURE'
+p197
+S'(0, None, None)'
+p198
+S'(1.0, 0.5, True)'
+p199
+S'(1.5, 0.5, True)'
+p200
+S'(2.0, 0.5, True)'
+p201
+S'(2.5, 0.5, False)'
+p202
+S'(3.0, 0.5, True)'
+p203
+S'(3.5, 1.0, True)'
+p204
+S'(4.5, 0.5, False)'
+p205
+S'END_OF_MEASURE'
+p206
+S'(0, None, None)'
+p207
+S'(1.0, 0.5, True)'
+p208
+S'(1.5, 0.5, True)'
+p209
+S'(2.0, 0.5, True)'
+p210
+S'(2.5, 0.5, True)'
+p211
+S'(3.0, 0.5, True)'
+p212
+S'(3.5, 0.5, True)'
+p213
+S'(4.0, 0.5, True)'
+p214
+S'(4.5, 0.5, True)'
+p215
+S'END_OF_MEASURE'
+p216
+S'(0, None, None)'
+p217
+S'(1.0, 0.5, True)'
+p218
+S'(1.5, 0.5, True)'
+p219
+S'(2.0, 0.5, True)'
+p220
+S'(2.5, 0.5, False)'
+p221
+S'(3.0, 0.5, True)'
+p222
+S'(3.5, 1.0, True)'
+p223
+S'(4.5, 0.5, False)'
+p224
+S'END_OF_MEASURE'
+p225
+S'(0, None, None)'
+p226
+S'(1.0, 0.5, True)'
+p227
+S'(1.5, 0.5, True)'
+p228
+S'(2.0, 0.5, True)'
+p229
+S'(2.5, 0.5, True)'
+p230
+S'(3.0, 0.5, True)'
+p231
+S'(3.5, 0.5, True)'
+p232
+S'(4.0, 0.5, True)'
+p233
+S'(4.5, 0.5, True)'
+p234
+S'END_OF_MEASURE'
+p235
+S'(0, None, None)'
+p236
+S'(1.0, 0.5, True)'
+p237
+S'(1.5, 0.5, True)'
+p238
+S'(2.0, 0.5, True)'
+p239
+S'(2.5, 0.5, False)'
+p240
+S'(3.0, 0.5, True)'
+p241
+S'(3.5, 1.0, True)'
+p242
+S'(4.5, 0.5, False)'
+p243
+S'END_OF_MEASURE'
+p244
+S'(0, None, None)'
+p245
+S'(1.0, 0.5, True)'
+p246
+S'(1.5, 0.5, True)'
+p247
+S'(2.0, 0.5, True)'
+p248
+S'(2.5, 1.0, True)'
+p249
+S'(3.5, 1.0, True)'
+p250
+S'(4.5, 0.5, False)'
+p251
+S'END_OF_MEASURE'
+p252
+S'(0, None, None)'
+p253
+S'(1.0, 1.0, False)'
+p254
+S'(2.0, 0.5, False)'
+p255
+S'(2.5, 1.0, True)'
+p256
+S'(3.5, 1.0, False)'
+p257
+S'(4.5, 0.5, False)'
+p258
+S'END_OF_MEASURE'
+p259
+S'(0, None, None)'
+p260
+S'(1.0, 0.5, True)'
+p261
+S'(1.5, 0.5, True)'
+p262
+S'(2.0, 0.5, True)'
+p263
+S'(2.5, 0.5, True)'
+p264
+S'(3.0, 0.5, True)'
+p265
+S'(3.5, 0.5, True)'
+p266
+S'(4.0, 0.5, True)'
+p267
+S'(4.5, 0.5, True)'
+p268
+S'END_OF_MEASURE'
+p269
+S'(0, None, None)'
+p270
+S'(1.0, 0.5, True)'
+p271
+S'(1.5, 0.5, True)'
+p272
+S'(2.0, 0.5, True)'
+p273
+S'(2.5, 0.5, True)'
+p274
+S'(3.0, 0.5, True)'
+p275
+S'(3.5, 1.0, True)'
+p276
+S'(4.5, 0.5, False)'
+p277
+S'END_OF_MEASURE'
+p278
+S'(0, None, None)'
+p279
+S'(1.0, 0.5, True)'
+p280
+S'(1.5, 0.5, True)'
+p281
+S'(2.0, 0.5, True)'
+p282
+S'(2.5, 0.5, True)'
+p283
+S'(3.0, 0.5, True)'
+p284
+S'(3.5, 0.5, True)'
+p285
+S'(4.0, 0.5, True)'
+p286
+S'(4.5, 0.5, True)'
+p287
+S'END_OF_MEASURE'
+p288
+S'(0, None, None)'
+p289
+S'(1.0, 0.5, True)'
+p290
+S'(1.5, 0.5, True)'
+p291
+S'(2.0, 0.5, True)'
+p292
+S'(2.5, 0.5, True)'
+p293
+S'(3.0, 0.5, True)'
+p294
+S'(3.5, 0.5, True)'
+p295
+S'(4.0, 0.5, True)'
+p296
+S'(4.5, 0.5, True)'
+p297
+S'END_OF_MEASURE'
+p298
+S'(0, None, None)'
+p299
+S'(1.0, 0.5, False)'
+p300
+S'(1.5, 0.5, True)'
+p301
+S'(2.0, 0.5, False)'
+p302
+S'(2.5, 0.5, True)'
+p303
+S'(3.0, 0.5, False)'
+p304
+S'(3.5, 0.5, True)'
+p305
+S'(4.0, 0.5, True)'
+p306
+S'(4.5, 0.5, True)'
+p307
+S'END_OF_MEASURE'
+p308
+S'(0, None, None)'
+p309
+S'(1.0, 0.5, True)'
+p310
+S'(1.5, 0.5, True)'
+p311
+S'(2.0, 0.5, True)'
+p312
+S'(2.5, 0.5, True)'
+p313
+S'(3.0, 0.5, True)'
+p314
+S'(3.5, 0.5, True)'
+p315
+S'(4.0, 0.5, True)'
+p316
+S'(4.5, 0.5, True)'
+p317
+S'END_OF_MEASURE'
+p318
+S'(0, None, None)'
+p319
+S'(1.0, 0.5, False)'
+p320
+S'(1.5, 0.5, True)'
+p321
+S'(2.0, 0.5, False)'
+p322
+S'(2.5, 0.5, True)'
+p323
+S'(3.0, 0.5, False)'
+p324
+S'(3.5, 0.5, True)'
+p325
+S'(4.0, 0.5, False)'
+p326
+S'(4.5, 0.5, True)'
+p327
+S'END_OF_MEASURE'
+p328
+S'(0, None, None)'
+p329
+S'(1.0, 0.5, True)'
+p330
+S'(1.5, 0.5, True)'
+p331
+S'(2.0, 0.5, True)'
+p332
+S'(2.5, 0.5, False)'
+p333
+S'(3.0, 0.5, True)'
+p334
+S'(3.5, 1.0, True)'
+p335
+S'(4.5, 0.5, False)'
+p336
+S'END_OF_MEASURE'
+p337
+S'(0, None, None)'
+p338
+S'(1.0, 0.5, True)'
+p339
+S'(1.5, 0.5, True)'
+p340
+S'(2.0, 0.5, True)'
+p341
+S'(2.5, 0.5, True)'
+p342
+S'(3.0, 0.5, True)'
+p343
+S'(3.5, 0.5, True)'
+p344
+S'(4.0, 0.5, True)'
+p345
+S'(4.5, 0.5, True)'
+p346
+S'END_OF_MEASURE'
+p347
+S'(0, None, None)'
+p348
+S'(1.0, 1.0, True)'
+p349
+S'(2.0, 0.25, True)'
+p350
+S'(2.25, 0.25, True)'
+p351
+S'(2.5, 0.25, True)'
+p352
+S'(2.75, 0.25, True)'
+p353
+S'(3.0, 0.25, True)'
+p354
+S'(3.25, 1.0, False)'
+p355
+S'(4.25, 0.5, False)'
+p356
+S'(4.75, 0.25, False)'
+p357
+S'END_OF_MEASURE'
+p358
+S'(0, None, None)'
+p359
+S'(1.0, 0.5, False)'
+p360
+S'(1.5, 0.5, True)'
+p361
+S'(2.0, 0.5, False)'
+p362
+S'(2.5, 0.5, True)'
+p363
+S'(3.0, 0.5, False)'
+p364
+S'(3.5, 0.5, True)'
+p365
+S'(4.0, 0.5, False)'
+p366
+S'(4.5, 0.5, True)'
+p367
+S'END_OF_MEASURE'
+p368
+S'(0, None, None)'
+p369
+S'(1.0, 0.5, True)'
+p370
+S'(1.5, 0.5, True)'
+p371
+S'(2.0, 0.5, True)'
+p372
+S'(2.5, 0.5, True)'
+p373
+S'(3.0, 0.5, True)'
+p374
+S'(3.5, 1.0, True)'
+p375
+S'(4.5, 0.5, False)'
+p376
+S'END_OF_MEASURE'
+p377
+S'(0, None, None)'
+p378
+S'(1.0, 1.0, False)'
+p379
+S'(2.0, 0.5, False)'
+p380
+S'(2.5, 0.25, True)'
+p381
+S'(2.75, 0.25, True)'
+p382
+S'(3.0, 0.25, True)'
+p383
+S'(3.25, 0.25, True)'
+p384
+S'(3.5, 0.25, True)'
+p385
+S'(3.75, 0.25, True)'
+p386
+S'(4.0, 1.0, False)'
+p387
+S'END_OF_MEASURE'
+p388
+S'(0, None, None)'
+p389
+S'(1.0, 0.5, True)'
+p390
+S'(1.5, 0.5, True)'
+p391
+S'(2.0, 0.5, True)'
+p392
+S'(2.5, 0.5, True)'
+p393
+S'(3.0, 0.5, True)'
+p394
+S'(3.5, 0.5, True)'
+p395
+S'(4.0, 0.5, True)'
+p396
+S'(4.5, 0.5, True)'
+p397
+S'END_OF_MEASURE'
+p398
+S'(0, None, None)'
+p399
+S'(1.0, 0.5, True)'
+p400
+S'(1.5, 0.5, True)'
+p401
+S'(2.0, 0.5, True)'
+p402
+S'(2.5, 1.0, True)'
+p403
+S'(3.5, 1.0, True)'
+p404
+S'(4.5, 0.5, False)'
+p405
+S'END_OF_MEASURE'
+p406
+S'(0, None, None)'
+p407
+S'(1.0, 0.5, True)'
+p408
+S'(1.5, 0.5, True)'
+p409
+S'(2.0, 0.5, True)'
+p410
+S'(2.5, 1.0, True)'
+p411
+S'(3.5, 1.0, True)'
+p412
+S'(4.5, 0.5, False)'
+p413
+S'END_OF_MEASURE'
+p414
+S'(0, None, None)'
+p415
+S'(1.0, 0.5, True)'
+p416
+S'(1.5, 0.5, True)'
+p417
+S'(2.0, 0.5, True)'
+p418
+S'(2.5, 0.5, False)'
+p419
+S'(3.0, 0.5, True)'
+p420
+S'(3.5, 1.0, True)'
+p421
+S'(4.5, 0.5, False)'
+p422
+S'END_OF_MEASURE'
+p423
+S'(0, None, None)'
+p424
+S'(1.0, 0.5, True)'
+p425
+S'(1.5, 0.5, True)'
+p426
+S'(2.0, 0.5, True)'
+p427
+S'(2.5, 0.5, True)'
+p428
+S'(3.0, 0.5, True)'
+p429
+S'(3.5, 0.5, True)'
+p430
+S'(4.0, 0.5, True)'
+p431
+S'(4.5, 0.5, True)'
+p432
+S'END_OF_MEASURE'
+p433
+S'(0, None, None)'
+p434
+S'(1.0, 0.25, True)'
+p435
+S'(1.25, 0.25, True)'
+p436
+S'(1.5, 0.25, True)'
+p437
+S'(1.75, 0.25, True)'
+p438
+S'(2.0, 0.25, True)'
+p439
+S'(2.25, 0.25, True)'
+p440
+S'(2.5, 0.25, True)'
+p441
+S'(2.75, 0.25, True)'
+p442
+S'(3.0, 0.25, True)'
+p443
+S'(3.25, 0.25, True)'
+p444
+S'(3.5, 0.25, True)'
+p445
+S'(3.75, 0.25, True)'
+p446
+S'(4.0, 0.25, True)'
+p447
+S'(4.25, 0.25, True)'
+p448
+S'(4.5, 0.25, True)'
+p449
+S'(4.75, 0.25, True)'
+p450
+S'END_OF_MEASURE'
+p451
+S'(0, None, None)'
+p452
+S'(1.0, 0.5, True)'
+p453
+S'(1.5, 0.5, True)'
+p454
+S'(2.0, 0.5, True)'
+p455
+S'(2.5, 0.5, True)'
+p456
+S'(3.0, 0.5, True)'
+p457
+S'(3.5, 1.0, True)'
+p458
+S'(4.5, 0.5, False)'
+p459
+S'END_OF_MEASURE'
+p460
+S'(0, None, None)'
+p461
+S'(1.0, 0.5, True)'
+p462
+S'(1.5, 0.5, True)'
+p463
+S'(2.0, 0.5, True)'
+p464
+S'(2.5, 0.5, False)'
+p465
+S'(3.0, 0.5, True)'
+p466
+S'(3.5, 1.0, True)'
+p467
+S'(4.5, 0.5, False)'
+p468
+S'END_OF_MEASURE'
+p469
+S'(0, None, None)'
+p470
+S'(1.0, 0.75, False)'
+p471
+S'(1.75, 0.25, False)'
+p472
+S'(2.0, 1.0, True)'
+p473
+S'(3.0, 0.25, True)'
+p474
+S'(3.25, 0.25, True)'
+p475
+S'(3.5, 0.25, True)'
+p476
+S'(3.75, 0.25, True)'
+p477
+S'(4.0, 0.5, True)'
+p478
+S'(4.5, 0.25, True)'
+p479
+S'(4.75, 0.25, True)'
+p480
+S'END_OF_MEASURE'
+p481
+S'(0, None, None)'
+p482
+S'(1.0, 0.5, True)'
+p483
+S'(1.5, 0.5, True)'
+p484
+S'(2.0, 0.5, True)'
+p485
+S'(2.5, 0.5, True)'
+p486
+S'(3.0, 0.5, True)'
+p487
+S'(3.5, 1.0, True)'
+p488
+S'(4.5, 0.5, False)'
+p489
+S'END_OF_MEASURE'
+p490
+S'(0, None, None)'
+p491
+S'(1.0, 0.5, True)'
+p492
+S'(1.5, 0.5, True)'
+p493
+S'(2.0, 0.5, True)'
+p494
+S'(2.5, 0.5, True)'
+p495
+S'(3.0, 0.5, True)'
+p496
+S'(3.5, 0.5, True)'
+p497
+S'(4.0, 0.5, True)'
+p498
+S'(4.5, 0.5, True)'
+p499
+S'END_OF_MEASURE'
+p500
+S'(0, None, None)'
+p501
+S'(1.0, 0.5, True)'
+p502
+S'(1.5, 0.5, True)'
+p503
+S'(2.0, 0.5, True)'
+p504
+S'(2.5, 0.5, True)'
+p505
+S'(3.0, 0.5, True)'
+p506
+S'(3.5, 1.0, True)'
+p507
+S'(4.5, 0.5, False)'
+p508
+S'END_OF_MEASURE'
+p509
+S'(0, None, None)'
+p510
+S'(1.0, 0.5, True)'
+p511
+S'(1.5, 0.5, True)'
+p512
+S'(2.0, 0.5, True)'
+p513
+S'(2.5, 1.0, True)'
+p514
+S'(3.5, 1.0, True)'
+p515
+S'(4.5, 0.5, False)'
+p516
+S'END_OF_MEASURE'
+p517
+S'(0, None, None)'
+p518
+S'(1.0, 0.5, False)'
+p519
+S'(1.5, 0.5, True)'
+p520
+S'(2.0, 0.5, True)'
+p521
+S'(2.5, 1.0, True)'
+p522
+S'(3.5, 1.0, True)'
+p523
+S'(4.5, 0.5, False)'
+p524
+S'END_OF_MEASURE'
+p525
+S'(0, None, None)'
+p526
+S'(1.0, 0.5, False)'
+p527
+S'(1.5, 0.5, True)'
+p528
+S'(2.0, 0.5, True)'
+p529
+S'(2.5, 1.0, True)'
+p530
+S'(3.5, 1.0, True)'
+p531
+S'(4.5, 0.5, False)'
+p532
+S'END_OF_MEASURE'
+p533
+S'(0, None, None)'
+p534
+S'(1.0, 0.5, True)'
+p535
+S'(1.5, 0.5, True)'
+p536
+S'(2.0, 0.5, True)'
+p537
+S'(2.5, 1.0, True)'
+p538
+S'(3.5, 1.0, True)'
+p539
+S'(4.5, 0.5, False)'
+p540
+S'END_OF_MEASURE'
+p541
+S'(0, None, None)'
+p542
+S'(1.0, 0.5, True)'
+p543
+S'(1.5, 0.5, True)'
+p544
+S'(2.0, 0.5, True)'
+p545
+S'(2.5, 0.5, True)'
+p546
+S'(3.0, 0.5, True)'
+p547
+S'(3.5, 1.0, True)'
+p548
+S'(4.5, 0.5, False)'
+p549
+S'END_OF_MEASURE'
+p550
+S'(0, None, None)'
+p551
+S'(1.0, 0.5, True)'
+p552
+S'(1.5, 0.5, True)'
+p553
+S'(2.0, 0.5, True)'
+p554
+S'(2.5, 0.5, False)'
+p555
+S'(3.0, 0.5, True)'
+p556
+S'(3.5, 1.0, True)'
+p557
+S'(4.5, 0.5, False)'
+p558
+S'END_OF_MEASURE'
+p559
+S'(0, None, None)'
+p560
+S'(1.0, 0.5, True)'
+p561
+S'(1.5, 0.5, True)'
+p562
+S'(2.0, 0.5, True)'
+p563
+S'(2.5, 1.0, True)'
+p564
+S'(3.5, 1.0, True)'
+p565
+S'(4.5, 0.5, False)'
+p566
+S'END_OF_MEASURE'
+p567
+S'(0, None, None)'
+p568
+S'(1.0, 0.5, True)'
+p569
+S'(1.5, 0.5, True)'
+p570
+S'(2.0, 0.5, True)'
+p571
+S'(2.5, 0.5, False)'
+p572
+S'(3.0, 0.5, True)'
+p573
+S'(3.5, 1.0, True)'
+p574
+S'(4.5, 0.5, False)'
+p575
+S'END_OF_MEASURE'
+p576
+S'(0, None, None)'
+p577
+S'(1.0, 0.5, True)'
+p578
+S'(1.5, 0.5, True)'
+p579
+S'(2.0, 0.5, True)'
+p580
+S'(2.5, 0.5, True)'
+p581
+S'(3.0, 0.5, True)'
+p582
+S'(3.5, 0.5, True)'
+p583
+S'(4.0, 0.5, True)'
+p584
+S'(4.5, 0.5, True)'
+p585
+S'END_OF_MEASURE'
+p586
+S'(0, None, None)'
+p587
+S'(1.0, 0.5, True)'
+p588
+S'(1.5, 0.5, True)'
+p589
+S'(2.0, 0.5, True)'
+p590
+S'(2.5, 0.5, False)'
+p591
+S'(3.0, 0.5, True)'
+p592
+S'(3.5, 1.0, True)'
+p593
+S'(4.5, 0.5, False)'
+p594
+S'END_OF_MEASURE'
+p595
+S'(0, None, None)'
+p596
+S'(1.0, 0.5, True)'
+p597
+S'(1.5, 0.5, True)'
+p598
+S'(2.0, 0.5, True)'
+p599
+S'(2.5, 0.5, True)'
+p600
+S'(3.0, 0.5, True)'
+p601
+S'(3.5, 0.5, True)'
+p602
+S'(4.0, 0.5, True)'
+p603
+S'(4.5, 0.5, True)'
+p604
+S'END_OF_MEASURE'
+p605
+S'(0, None, None)'
+p606
+S'(1.0, 2.0, False)'
+p607
+S'(3.0, 0.5, True)'
+p608
+S'(3.5, 1.0, True)'
+p609
+S'(4.5, 0.5, False)'
+p610
+S'END_OF_MEASURE'
+p611
+S'(0, None, None)'
+p612
+S'(1.0, 0.5, True)'
+p613
+S'(1.5, 0.5, True)'
+p614
+S'(2.0, 0.5, True)'
+p615
+S'(2.5, 0.5, True)'
+p616
+S'(3.0, 0.5, True)'
+p617
+S'(3.5, 1.0, True)'
+p618
+S'(4.5, 0.5, False)'
+p619
+S'END_OF_MEASURE'
+p620
+S'(0, None, None)'
+p621
+S'(1.0, 0.5, True)'
+p622
+S'(1.5, 0.5, True)'
+p623
+S'(2.0, 0.5, True)'
+p624
+S'(2.5, 0.5, True)'
+p625
+S'(3.0, 0.5, True)'
+p626
+S'(3.5, 1.0, True)'
+p627
+S'(4.5, 0.5, False)'
+p628
+S'END_OF_MEASURE'
+p629
+S'(0, None, None)'
+p630
+S'(1.0, 0.5, True)'
+p631
+S'(1.5, 0.5, True)'
+p632
+S'(2.0, 0.5, True)'
+p633
+S'(2.5, 0.5, True)'
+p634
+S'(3.0, 0.5, True)'
+p635
+S'(3.5, 1.0, True)'
+p636
+S'(4.5, 0.5, False)'
+p637
+S'END_OF_MEASURE'
+p638
+S'(0, None, None)'
+p639
+S'(1.0, 0.5, True)'
+p640
+S'(1.5, 0.5, True)'
+p641
+S'(2.0, 0.5, True)'
+p642
+S'(2.5, 0.5, True)'
+p643
+S'(3.0, 0.5, True)'
+p644
+S'(3.5, 0.5, True)'
+p645
+S'(4.0, 0.5, True)'
+p646
+S'(4.5, 0.5, True)'
+p647
+S'END_OF_MEASURE'
+p648
+S'(0, None, None)'
+p649
+S'(1.0, 0.5, True)'
+p650
+S'(1.5, 0.5, True)'
+p651
+S'(2.0, 0.5, True)'
+p652
+S'(2.5, 1.0, True)'
+p653
+S'(3.5, 1.0, True)'
+p654
+S'(4.5, 0.5, False)'
+p655
+S'END_OF_MEASURE'
+p656
+S'(0, None, None)'
+p657
+S'(1.0, 0.5, False)'
+p658
+S'(1.5, 0.5, True)'
+p659
+S'(2.0, 0.5, True)'
+p660
+S'(2.5, 1.0, True)'
+p661
+S'(3.5, 1.0, True)'
+p662
+S'(4.5, 0.5, False)'
+p663
+S'END_OF_MEASURE'
+p664
+S'(0, None, None)'
+p665
+S'(1.0, 0.5, True)'
+p666
+S'(1.5, 0.5, True)'
+p667
+S'(2.0, 0.5, True)'
+p668
+S'(2.5, 1.0, True)'
+p669
+S'(3.5, 1.0, True)'
+p670
+S'(4.5, 0.5, False)'
+p671
+S'END_OF_MEASURE'
+p672
+S'(0, None, None)'
+p673
+S'(1.0, 0.5, True)'
+p674
+S'(1.5, 0.5, True)'
+p675
+S'(2.0, 0.5, True)'
+p676
+S'(2.5, 0.5, True)'
+p677
+S'(3.0, 0.5, True)'
+p678
+S'(3.5, 0.5, True)'
+p679
+S'(4.0, 0.5, True)'
+p680
+S'(4.5, 0.5, True)'
+p681
+S'END_OF_MEASURE'
+p682
+S'(0, None, None)'
+p683
+S'(1.0, 0.5, True)'
+p684
+S'(1.5, 0.5, True)'
+p685
+S'(2.0, 0.5, True)'
+p686
+S'(2.5, 0.5, True)'
+p687
+S'(3.0, 0.5, True)'
+p688
+S'(3.5, 0.5, True)'
+p689
+S'(4.0, 0.5, True)'
+p690
+S'(4.5, 0.5, True)'
+p691
+S'END_OF_MEASURE'
+p692
+S'(0, None, None)'
+p693
+S'(1.0, 0.5, True)'
+p694
+S'(1.5, 0.5, True)'
+p695
+S'(2.0, 0.5, True)'
+p696
+S'(2.5, 0.5, True)'
+p697
+S'(3.0, 0.5, True)'
+p698
+S'(3.5, 1.0, True)'
+p699
+S'(4.5, 0.5, False)'
+p700
+S'END_OF_MEASURE'
+p701
+S'(0, None, None)'
+p702
+S'(1.0, 0.5, True)'
+p703
+S'(1.5, 0.5, True)'
+p704
+S'(2.0, 0.5, True)'
+p705
+S'(2.5, 0.5, True)'
+p706
+S'(3.0, 0.5, True)'
+p707
+S'(3.5, 1.0, True)'
+p708
+S'(4.5, 0.5, False)'
+p709
+S'END_OF_MEASURE'
+p710
+S'(0, None, None)'
+p711
+S'(1.0, 0.5, True)'
+p712
+S'(1.5, 0.5, True)'
+p713
+S'(2.0, 0.5, True)'
+p714
+S'(2.5, 0.5, True)'
+p715
+S'(3.0, 0.5, True)'
+p716
+S'(3.5, 0.5, True)'
+p717
+S'(4.0, 0.5, True)'
+p718
+S'(4.5, 0.5, True)'
+p719
+S'END_OF_MEASURE'
+p720
+S'(0, None, None)'
+p721
+S'(1.0, 0.5, True)'
+p722
+S'(1.5, 0.5, True)'
+p723
+S'(2.0, 0.5, True)'
+p724
+S'(2.5, 0.5, True)'
+p725
+S'(3.0, 0.5, True)'
+p726
+S'(3.5, 0.5, True)'
+p727
+S'(4.0, 0.5, True)'
+p728
+S'(4.5, 0.5, True)'
+p729
+S'END_OF_MEASURE'
+p730
+S'(0, None, None)'
+p731
+S'(1.0, 0.25, True)'
+p732
+S'(1.25, 0.25, True)'
+p733
+S'(1.5, 0.25, True)'
+p734
+S'(1.75, 0.25, True)'
+p735
+S'(2.0, 0.25, True)'
+p736
+S'(2.25, 0.25, True)'
+p737
+S'(2.5, 0.25, True)'
+p738
+S'(2.75, 0.25, True)'
+p739
+S'(3.0, 0.25, True)'
+p740
+S'(3.25, 0.25, True)'
+p741
+S'(3.5, 0.25, True)'
+p742
+S'(3.75, 0.25, True)'
+p743
+S'(4.0, 0.25, True)'
+p744
+S'(4.25, 0.25, True)'
+p745
+S'(4.5, 0.25, True)'
+p746
+S'(4.75, 0.25, True)'
+p747
+S'END_OF_MEASURE'
+p748
+S'(0, None, None)'
+p749
+S'(1.0, 0.5, True)'
+p750
+S'(1.5, 0.5, True)'
+p751
+S'(2.0, 0.5, True)'
+p752
+S'(2.5, 0.5, True)'
+p753
+S'(3.0, 0.5, True)'
+p754
+S'(3.5, 0.5, True)'
+p755
+S'(4.0, 0.5, True)'
+p756
+S'(4.5, 0.5, True)'
+p757
+S'END_OF_MEASURE'
+p758
+S'(0, None, None)'
+p759
+S'(1.0, 0.5, True)'
+p760
+S'(1.5, 0.5, True)'
+p761
+S'(2.0, 0.5, True)'
+p762
+S'(2.5, 0.5, False)'
+p763
+S'(3.0, 0.5, True)'
+p764
+S'(3.5, 1.0, True)'
+p765
+S'(4.5, 0.5, False)'
+p766
+S'END_OF_MEASURE'
+p767
+S'(0, None, None)'
+p768
+S'(1.0, 0.5, True)'
+p769
+S'(1.5, 0.5, True)'
+p770
+S'(2.0, 0.5, True)'
+p771
+S'(2.5, 1.0, True)'
+p772
+S'(3.5, 1.0, True)'
+p773
+S'(4.5, 0.5, False)'
+p774
+S'END_OF_MEASURE'
+p775
+S'(0, None, None)'
+p776
+S'(1.0, 0.5, True)'
+p777
+S'(1.5, 0.5, True)'
+p778
+S'(2.0, 0.5, True)'
+p779
+S'(2.5, 0.5, True)'
+p780
+S'(3.0, 0.5, True)'
+p781
+S'(3.5, 0.5, True)'
+p782
+S'(4.0, 0.5, True)'
+p783
+S'(4.5, 0.5, True)'
+p784
+S'END_OF_MEASURE'
+p785
+S'(0, None, None)'
+p786
+S'(1.0, 1.0, False)'
+p787
+S'(2.0, 0.5, False)'
+p788
+S'(2.5, 1.0, True)'
+p789
+S'(3.5, 1.0, False)'
+p790
+S'(4.5, 0.5, False)'
+p791
+S'END_OF_MEASURE'
+p792
+S'(0, None, None)'
+p793
+S'(1.0, 0.5, True)'
+p794
+S'(1.5, 0.5, True)'
+p795
+S'(2.0, 0.5, True)'
+p796
+S'(2.5, 0.5, True)'
+p797
+S'(3.0, 0.5, True)'
+p798
+S'(3.5, 0.5, True)'
+p799
+S'(4.0, 0.5, True)'
+p800
+S'(4.5, 0.5, True)'
+p801
+S'END_OF_MEASURE'
+p802
+S'(0, None, None)'
+p803
+S'(1.0, 2.0, False)'
+p804
+S'(3.0, 0.5, False)'
+p805
+S'(3.5, 0.125, True)'
+p806
+S'(3.625, 1.0, False)'
+p807
+S'(4.625, 0.25, False)'
+p808
+S'(4.875, 0.125, False)'
+p809
+S'END_OF_MEASURE'
+p810
+S'(0, None, None)'
+p811
+S'(1.0, 0.5, True)'
+p812
+S'(1.5, 0.5, True)'
+p813
+S'(2.0, 0.5, True)'
+p814
+S'(2.5, 0.5, True)'
+p815
+S'(3.0, 0.5, True)'
+p816
+S'(3.5, 0.5, True)'
+p817
+S'(4.0, 0.5, True)'
+p818
+S'(4.5, 0.5, True)'
+p819
+S'END_OF_MEASURE'
+p820
+S'(0, None, None)'
+p821
+S'(1.0, 0.5, True)'
+p822
+S'(1.5, 0.5, True)'
+p823
+S'(2.0, 0.5, True)'
+p824
+S'(2.5, 0.5, False)'
+p825
+S'(3.0, 0.5, True)'
+p826
+S'(3.5, 1.0, True)'
+p827
+S'(4.5, 0.5, False)'
+p828
+S'END_OF_MEASURE'
+p829
+S'(0, None, None)'
+p830
+S'(1.0, 0.5, True)'
+p831
+S'(1.5, 0.5, True)'
+p832
+S'(2.0, 0.5, True)'
+p833
+S'(2.5, 0.5, True)'
+p834
+S'(3.0, 0.5, True)'
+p835
+S'(3.5, 1.0, True)'
+p836
+S'(4.5, 0.5, False)'
+p837
+S'END_OF_MEASURE'
+p838
+S'(0, None, None)'
+p839
+S'(1.0, 0.5, True)'
+p840
+S'(1.5, 0.5, True)'
+p841
+S'(2.0, 0.5, True)'
+p842
+S'(2.5, 0.5, True)'
+p843
+S'(3.0, 0.5, True)'
+p844
+S'(3.5, 1.0, True)'
+p845
+S'(4.5, 0.5, False)'
+p846
+S'END_OF_MEASURE'
+p847
+S'(0, None, None)'
+p848
+S'(1.0, 0.25, True)'
+p849
+S'(1.25, 0.25, True)'
+p850
+S'(1.5, 0.25, True)'
+p851
+S'(1.75, 2.0, False)'
+p852
+S'(3.75, 1.0, False)'
+p853
+S'(4.75, 0.25, False)'
+p854
+S'END_OF_MEASURE'
+p855
+S'(0, None, None)'
+p856
+S'(1.0, 0.5, True)'
+p857
+S'(1.5, 0.5, True)'
+p858
+S'(2.0, 0.5, True)'
+p859
+S'(2.5, 0.5, True)'
+p860
+S'(3.0, 0.5, True)'
+p861
+S'(3.5, 1.0, True)'
+p862
+S'(4.5, 0.5, False)'
+p863
+S'END_OF_MEASURE'
+p864
+S'(0, None, None)'
+p865
+S'(1.0, 0.5, False)'
+p866
+S'(1.5, 0.5, True)'
+p867
+S'(2.0, 0.5, True)'
+p868
+S'(2.5, 1.0, True)'
+p869
+S'(3.5, 1.0, True)'
+p870
+S'(4.5, 0.5, False)'
+p871
+S'END_OF_MEASURE'
+p872
+S'(0, None, None)'
+p873
+S'(1.0, 0.5, True)'
+p874
+S'(1.5, 0.5, True)'
+p875
+S'(2.0, 0.5, True)'
+p876
+S'(2.5, 0.5, True)'
+p877
+S'(3.0, 0.5, True)'
+p878
+S'(3.5, 0.5, True)'
+p879
+S'(4.0, 0.5, True)'
+p880
+S'(4.5, 0.5, True)'
+p881
+S'END_OF_MEASURE'
+p882
+S'(0, None, None)'
+p883
+S'(1.0, 0.5, True)'
+p884
+S'(1.5, 0.5, True)'
+p885
+S'(2.0, 0.5, True)'
+p886
+S'(2.5, 0.5, True)'
+p887
+S'(3.0, 0.5, True)'
+p888
+S'(3.5, 0.5, True)'
+p889
+S'(4.0, 0.5, True)'
+p890
+S'(4.5, 0.5, True)'
+p891
+S'END_OF_MEASURE'
+p892
+S'(0, None, None)'
+p893
+S'(1.0, 0.25, True)'
+p894
+S'(1.25, 0.25, True)'
+p895
+S'(1.5, 0.25, True)'
+p896
+S'(1.75, 0.25, True)'
+p897
+S'(2.0, 0.25, True)'
+p898
+S'(2.25, 0.25, True)'
+p899
+S'(2.5, 0.25, True)'
+p900
+S'(2.75, 0.25, True)'
+p901
+S'(3.0, 0.25, True)'
+p902
+S'(3.25, 0.25, True)'
+p903
+S'(3.5, 0.25, True)'
+p904
+S'(3.75, 0.25, True)'
+p905
+S'(4.0, 0.25, True)'
+p906
+S'(4.25, 0.25, True)'
+p907
+S'(4.5, 0.25, True)'
+p908
+S'(4.75, 0.25, True)'
+p909
+S'END_OF_MEASURE'
+p910
+S'(0, None, None)'
+p911
+S'(1.0, 0.25, True)'
+p912
+S'(1.25, 0.25, True)'
+p913
+S'(1.5, 0.25, True)'
+p914
+S'(1.75, 0.25, True)'
+p915
+S'(2.0, 0.25, True)'
+p916
+S'(2.25, 0.25, True)'
+p917
+S'(2.5, 0.25, True)'
+p918
+S'(2.75, 0.25, True)'
+p919
+S'(3.0, 0.25, True)'
+p920
+S'(3.25, 0.25, True)'
+p921
+S'(3.5, 0.25, True)'
+p922
+S'(3.75, 0.25, True)'
+p923
+S'(4.0, 0.25, True)'
+p924
+S'(4.25, 0.25, True)'
+p925
+S'(4.5, 0.25, True)'
+p926
+S'(4.75, 0.25, True)'
+p927
+S'END_OF_MEASURE'
+p928
+S'(0, None, None)'
+p929
+S'(1.0, 0.5, False)'
+p930
+S'(1.5, 0.5, True)'
+p931
+S'(2.0, 0.5, True)'
+p932
+S'(2.5, 0.5, True)'
+p933
+S'(3.0, 0.5, True)'
+p934
+S'(3.5, 0.5, True)'
+p935
+S'(4.0, 0.5, True)'
+p936
+S'(4.5, 0.5, True)'
+p937
+S'END_OF_MEASURE'
+p938
+S'(0, None, None)'
+p939
+S'(1.0, 0.5, True)'
+p940
+S'(1.5, 0.5, True)'
+p941
+S'(2.0, 0.5, True)'
+p942
+S'(2.5, 0.5, True)'
+p943
+S'(3.0, 0.5, True)'
+p944
+S'(3.5, 0.5, True)'
+p945
+S'(4.0, 0.5, True)'
+p946
+S'(4.5, 0.5, True)'
+p947
+S'END_OF_MEASURE'
+p948
+S'(0, None, None)'
+p949
+S'(1.0, 0.5, True)'
+p950
+S'(1.5, 0.5, True)'
+p951
+S'(2.0, 0.5, True)'
+p952
+S'(2.5, 0.5, False)'
+p953
+S'(3.0, 0.5, True)'
+p954
+S'(3.5, 1.0, True)'
+p955
+S'(4.5, 0.5, False)'
+p956
+S'END_OF_MEASURE'
+p957
+S'(0, None, None)'
+p958
+S'(1.0, 0.5, True)'
+p959
+S'(1.5, 0.5, True)'
+p960
+S'(2.0, 0.5, True)'
+p961
+S'(2.5, 0.5, False)'
+p962
+S'(3.0, 0.5, True)'
+p963
+S'(3.5, 1.0, True)'
+p964
+S'(4.5, 0.5, False)'
+p965
+S'END_OF_MEASURE'
+p966
+S'(0, None, None)'
+p967
+S'(1.0, 0.5, True)'
+p968
+S'(1.5, 0.5, True)'
+p969
+S'(2.0, 0.5, True)'
+p970
+S'(2.5, 1.0, True)'
+p971
+S'(3.5, 1.0, True)'
+p972
+S'(4.5, 0.5, False)'
+p973
+S'END_OF_MEASURE'
+p974
+S'(0, None, None)'
+p975
+S'(1.0, 1.0, True)'
+p976
+S'(2.0, 1.0, True)'
+p977
+S'(3.0, 0.5, True)'
+p978
+S'(3.5, 1.0, True)'
+p979
+S'(4.5, 0.5, False)'
+p980
+S'END_OF_MEASURE'
+p981
+S'(0, None, None)'
+p982
+S'(1.0, 0.5, True)'
+p983
+S'(1.5, 0.5, True)'
+p984
+S'(2.0, 0.5, True)'
+p985
+S'(2.5, 0.5, True)'
+p986
+S'(3.0, 0.5, True)'
+p987
+S'(3.5, 1.0, True)'
+p988
+S'(4.5, 0.5, False)'
+p989
+S'END_OF_MEASURE'
+p990
+S'(0, None, None)'
+p991
+S'(1.0, 0.5, True)'
+p992
+S'(1.5, 0.5, True)'
+p993
+S'(2.0, 0.5, True)'
+p994
+S'(2.5, 0.5, True)'
+p995
+S'(3.0, 0.5, True)'
+p996
+S'(3.5, 1.0, True)'
+p997
+S'(4.5, 0.5, False)'
+p998
+S'END_OF_MEASURE'
+p999
+S'(0, None, None)'
+p1000
+S'(1.0, 0.5, True)'
+p1001
+S'(1.5, 0.5, True)'
+p1002
+S'(2.0, 0.5, True)'
+p1003
+S'(2.5, 0.5, True)'
+p1004
+S'(3.0, 0.5, True)'
+p1005
+S'(3.5, 0.5, True)'
+p1006
+S'(4.0, 0.5, True)'
+p1007
+S'(4.5, 0.5, True)'
+p1008
+S'END_OF_MEASURE'
+p1009
+S'(0, None, None)'
+p1010
+S'(1.0, 0.5, True)'
+p1011
+S'(1.5, 0.5, True)'
+p1012
+S'(2.0, 0.5, True)'
+p1013
+S'(2.5, 0.5, True)'
+p1014
+S'(3.0, 0.5, True)'
+p1015
+S'(3.5, 0.5, True)'
+p1016
+S'(4.0, 0.5, True)'
+p1017
+S'(4.5, 0.5, True)'
+p1018
+S'END_OF_MEASURE'
+p1019
+S'(0, None, None)'
+p1020
+S'(1.0, 0.25, True)'
+p1021
+S'(1.25, 0.25, True)'
+p1022
+S'(1.5, 0.25, True)'
+p1023
+S'(1.75, 0.25, True)'
+p1024
+S'(2.0, 0.25, True)'
+p1025
+S'(2.25, 0.25, True)'
+p1026
+S'(2.5, 0.25, True)'
+p1027
+S'(2.75, 0.25, True)'
+p1028
+S'(3.0, 0.25, True)'
+p1029
+S'(3.25, 0.25, True)'
+p1030
+S'(3.5, 0.25, True)'
+p1031
+S'(3.75, 0.25, True)'
+p1032
+S'(4.0, 0.25, True)'
+p1033
+S'(4.25, 0.25, True)'
+p1034
+S'(4.5, 0.25, True)'
+p1035
+S'(4.75, 0.25, True)'
+p1036
+S'END_OF_MEASURE'
+p1037
+S'(0, None, None)'
+p1038
+S'(1.0, 0.5, True)'
+p1039
+S'(1.5, 0.5, True)'
+p1040
+S'(2.0, 0.5, True)'
+p1041
+S'(2.5, 0.5, True)'
+p1042
+S'(3.0, 0.5, True)'
+p1043
+S'(3.5, 1.0, True)'
+p1044
+S'(4.5, 0.5, False)'
+p1045
+S'END_OF_MEASURE'
+p1046
+S'(0, None, None)'
+p1047
+S'(1.0, 0.5, True)'
+p1048
+S'(1.5, 0.5, True)'
+p1049
+S'(2.0, 0.5, True)'
+p1050
+S'(2.5, 0.5, False)'
+p1051
+S'(3.0, 0.5, True)'
+p1052
+S'(3.5, 1.0, True)'
+p1053
+S'(4.5, 0.5, False)'
+p1054
+S'END_OF_MEASURE'
+p1055
+S'(0, None, None)'
+p1056
+S'(1.0, 0.5, True)'
+p1057
+S'(1.5, 0.5, True)'
+p1058
+S'(2.0, 0.5, True)'
+p1059
+S'(2.5, 0.5, True)'
+p1060
+S'(3.0, 0.5, True)'
+p1061
+S'(3.5, 0.5, True)'
+p1062
+S'(4.0, 0.5, True)'
+p1063
+S'(4.5, 0.5, True)'
+p1064
+S'END_OF_MEASURE'
+p1065
+S'(0, None, None)'
+p1066
+S'(1.0, 0.5, True)'
+p1067
+S'(1.5, 0.5, True)'
+p1068
+S'(2.0, 0.5, True)'
+p1069
+S'(2.5, 0.5, True)'
+p1070
+S'(3.0, 0.5, True)'
+p1071
+S'(3.5, 0.5, True)'
+p1072
+S'(4.0, 0.5, True)'
+p1073
+S'(4.5, 0.5, True)'
+p1074
+S'END_OF_MEASURE'
+p1075
+S'(0, None, None)'
+p1076
+S'(1.0, 0.5, True)'
+p1077
+S'(1.5, 0.5, True)'
+p1078
+S'(2.0, 0.5, True)'
+p1079
+S'(2.5, 1.0, True)'
+p1080
+S'(3.5, 1.0, True)'
+p1081
+S'(4.5, 0.5, False)'
+p1082
+S'END_OF_MEASURE'
+p1083
+S'(0, None, None)'
+p1084
+S'(1.0, 0.5, True)'
+p1085
+S'(1.5, 0.5, True)'
+p1086
+S'(2.0, 0.5, True)'
+p1087
+S'(2.5, 0.5, True)'
+p1088
+S'(3.0, 0.5, True)'
+p1089
+S'(3.5, 0.5, True)'
+p1090
+S'(4.0, 0.5, True)'
+p1091
+S'(4.5, 0.5, True)'
+p1092
+S'END_OF_MEASURE'
+p1093
+S'(0, None, None)'
+p1094
+S'(1.0, 0.5, True)'
+p1095
+S'(1.5, 0.5, True)'
+p1096
+S'(2.0, 0.5, True)'
+p1097
+S'(2.5, 0.5, False)'
+p1098
+S'(3.0, 0.5, True)'
+p1099
+S'(3.5, 1.0, True)'
+p1100
+S'(4.5, 0.5, False)'
+p1101
+S'END_OF_MEASURE'
+p1102
+S'(0, None, None)'
+p1103
+S'(1.0, 0.5, True)'
+p1104
+S'(1.5, 0.5, True)'
+p1105
+S'(2.0, 0.5, True)'
+p1106
+S'(2.5, 0.5, True)'
+p1107
+S'(3.0, 0.5, True)'
+p1108
+S'(3.5, 1.0, True)'
+p1109
+S'(4.5, 0.5, False)'
+p1110
+S'END_OF_MEASURE'
+p1111
+S'(0, None, None)'
+p1112
+S'(1.0, 0.5, True)'
+p1113
+S'(1.5, 0.5, True)'
+p1114
+S'(2.0, 0.5, True)'
+p1115
+S'(2.5, 0.5, True)'
+p1116
+S'(3.0, 0.5, True)'
+p1117
+S'(3.5, 0.5, True)'
+p1118
+S'(4.0, 0.5, True)'
+p1119
+S'(4.5, 0.5, True)'
+p1120
+S'END_OF_MEASURE'
+p1121
+S'(0, None, None)'
+p1122
+S'(1.0, 2.0, False)'
+p1123
+S'(3.0, 0.5, False)'
+p1124
+S'(3.5, 0.125, True)'
+p1125
+S'(3.625, 1.0, False)'
+p1126
+S'(4.625, 0.375, False)'
+p1127
+S'END_OF_MEASURE'
+p1128
+S'(0, None, None)'
+p1129
+S'(1.0, 0.5, True)'
+p1130
+S'(1.5, 0.5, True)'
+p1131
+S'(2.0, 0.5, True)'
+p1132
+S'(2.5, 0.5, True)'
+p1133
+S'(3.0, 0.5, True)'
+p1134
+S'(3.5, 1.0, True)'
+p1135
+S'(4.5, 0.5, False)'
+p1136
+S'END_OF_MEASURE'
+p1137
+S'(0, None, None)'
+p1138
+S'(1.0, 0.25, True)'
+p1139
+S'(1.25, 0.25, True)'
+p1140
+S'(1.5, 0.25, True)'
+p1141
+S'(1.75, 1.0, False)'
+p1142
+S'(2.75, 1.0, False)'
+p1143
+S'(3.75, 0.25, False)'
+p1144
+S'(4.0, 0.5, True)'
+p1145
+S'(4.5, 0.5, True)'
+p1146
+S'END_OF_MEASURE'
+p1147
+S'(0, None, None)'
+p1148
+S'(1.0, 0.5, True)'
+p1149
+S'(1.5, 0.5, True)'
+p1150
+S'(2.0, 0.5, True)'
+p1151
+S'(2.5, 0.5, False)'
+p1152
+S'(3.0, 0.5, True)'
+p1153
+S'(3.5, 1.0, True)'
+p1154
+S'(4.5, 0.5, False)'
+p1155
+S'END_OF_MEASURE'
+p1156
+S'(0, None, None)'
+p1157
+S'(1.0, 0.5, True)'
+p1158
+S'(1.5, 0.5, True)'
+p1159
+S'(2.0, 0.5, True)'
+p1160
+S'(2.5, 0.5, True)'
+p1161
+S'(3.0, 0.5, True)'
+p1162
+S'(3.5, 0.5, True)'
+p1163
+S'(4.0, 0.5, True)'
+p1164
+S'(4.5, 0.5, True)'
+p1165
+S'END_OF_MEASURE'
+p1166
+S'(0, None, None)'
+p1167
+S'(1.0, 0.5, True)'
+p1168
+S'(1.5, 0.5, True)'
+p1169
+S'(2.0, 0.5, True)'
+p1170
+S'(2.5, 0.5, True)'
+p1171
+S'(3.0, 0.5, True)'
+p1172
+S'(3.5, 1.0, True)'
+p1173
+S'(4.5, 0.5, False)'
+p1174
+S'END_OF_MEASURE'
+p1175
+S'(0, None, None)'
+p1176
+S'(1.0, 0.5, True)'
+p1177
+S'(1.5, 0.5, True)'
+p1178
+S'(2.0, 0.5, True)'
+p1179
+S'(2.5, 0.5, True)'
+p1180
+S'(3.0, 0.5, True)'
+p1181
+S'(3.5, 0.5, True)'
+p1182
+S'(4.0, 0.5, True)'
+p1183
+S'(4.5, 0.5, True)'
+p1184
+S'END_OF_MEASURE'
+p1185
+S'(0, None, None)'
+p1186
+S'(1.0, 1.0, False)'
+p1187
+S'(2.0, 0.5, False)'
+p1188
+S'(2.5, 0.25, True)'
+p1189
+S'(2.75, 0.25, True)'
+p1190
+S'(3.0, 0.25, True)'
+p1191
+S'(3.25, 0.25, True)'
+p1192
+S'(3.5, 0.25, True)'
+p1193
+S'(3.75, 0.25, True)'
+p1194
+S'(4.0, 1.0, False)'
+p1195
+S'END_OF_MEASURE'
+p1196
+S'(0, None, None)'
+p1197
+S'(1.0, 0.5, True)'
+p1198
+S'(1.5, 0.5, True)'
+p1199
+S'(2.0, 0.5, True)'
+p1200
+S'(2.5, 0.5, True)'
+p1201
+S'(3.0, 0.5, True)'
+p1202
+S'(3.5, 0.5, True)'
+p1203
+S'(4.0, 0.5, True)'
+p1204
+S'(4.5, 0.5, True)'
+p1205
+S'END_OF_MEASURE'
+p1206
+S'(0, None, None)'
+p1207
+S'(1.0, 0.25, True)'
+p1208
+S'(1.25, 0.5, True)'
+p1209
+S'(1.75, 1.0, False)'
+p1210
+S'(2.75, 0.75, False)'
+p1211
+S'(3.5, 1.5, True)'
+p1212
+S'END_OF_MEASURE'
+p1213
+S'(0, None, None)'
+p1214
+S'(1.0, 0.5, True)'
+p1215
+S'(1.5, 0.5, True)'
+p1216
+S'(2.0, 0.5, True)'
+p1217
+S'(2.5, 0.5, True)'
+p1218
+S'(3.0, 0.5, True)'
+p1219
+S'(3.5, 0.5, True)'
+p1220
+S'(4.0, 0.5, True)'
+p1221
+S'(4.5, 0.5, True)'
+p1222
+S'END_OF_MEASURE'
+p1223
+S'(0, None, None)'
+p1224
+S'(1.0, 0.5, True)'
+p1225
+S'(1.5, 0.5, True)'
+p1226
+S'(2.0, 0.5, True)'
+p1227
+S'(2.5, 0.5, False)'
+p1228
+S'(3.0, 0.5, True)'
+p1229
+S'(3.5, 1.0, True)'
+p1230
+S'(4.5, 0.5, False)'
+p1231
+S'END_OF_MEASURE'
+p1232
+S'(0, None, None)'
+p1233
+S'(1.0, 0.5, True)'
+p1234
+S'(1.5, 0.5, True)'
+p1235
+S'(2.0, 0.5, True)'
+p1236
+S'(2.5, 0.5, True)'
+p1237
+S'(3.0, 0.5, True)'
+p1238
+S'(3.5, 0.5, True)'
+p1239
+S'(4.0, 0.5, True)'
+p1240
+S'(4.5, 0.5, True)'
+p1241
+S'END_OF_MEASURE'
+p1242
+S'(0, None, None)'
+p1243
+S'(1.0, 0.5, True)'
+p1244
+S'(1.5, 0.5, True)'
+p1245
+S'(2.0, 0.5, True)'
+p1246
+S'(2.5, 0.5, True)'
+p1247
+S'(3.0, 0.5, True)'
+p1248
+S'(3.5, 0.5, True)'
+p1249
+S'(4.0, 0.5, True)'
+p1250
+S'(4.5, 0.5, True)'
+p1251
+S'END_OF_MEASURE'
+p1252
+S'(0, None, None)'
+p1253
+S'(1.0, 0.5, True)'
+p1254
+S'(1.5, 0.5, True)'
+p1255
+S'(2.0, 0.5, True)'
+p1256
+S'(2.5, 0.5, False)'
+p1257
+S'(3.0, 0.5, True)'
+p1258
+S'(3.5, 1.0, True)'
+p1259
+S'(4.5, 0.5, False)'
+p1260
+S'END_OF_MEASURE'
+p1261
+S'(0, None, None)'
+p1262
+S'(1.0, 0.5, True)'
+p1263
+S'(1.5, 0.5, True)'
+p1264
+S'(2.0, 0.5, True)'
+p1265
+S'(2.5, 0.5, True)'
+p1266
+S'(3.0, 0.5, True)'
+p1267
+S'(3.5, 0.5, True)'
+p1268
+S'(4.0, 0.5, True)'
+p1269
+S'(4.5, 0.5, True)'
+p1270
+S'END_OF_MEASURE'
+p1271
+S'(0, None, None)'
+p1272
+S'(1.0, 1.0, True)'
+p1273
+S'(2.0, 0.25, True)'
+p1274
+S'(2.25, 0.25, False)'
+p1275
+S'(2.5, 0.25, True)'
+p1276
+S'(2.75, 0.25, False)'
+p1277
+S'(3.0, 0.25, True)'
+p1278
+S'(3.25, 0.25, False)'
+p1279
+S'(3.5, 1.0, True)'
+p1280
+S'(4.5, 0.25, True)'
+p1281
+S'(4.75, 0.25, True)'
+p1282
+S'END_OF_MEASURE'
+p1283
+S'(0, None, None)'
+p1284
+S'(1.0, 1.0, False)'
+p1285
+S'(2.0, 0.5, False)'
+p1286
+S'(2.5, 0.25, True)'
+p1287
+S'(2.75, 2.0, False)'
+p1288
+S'(4.75, 0.25, False)'
+p1289
+S'END_OF_MEASURE'
+p1290
+S'(0, None, None)'
+p1291
+S'(1.0, 0.5, True)'
+p1292
+S'(1.5, 0.5, True)'
+p1293
+S'(2.0, 0.5, True)'
+p1294
+S'(2.5, 0.5, False)'
+p1295
+S'(3.0, 0.5, True)'
+p1296
+S'(3.5, 1.0, True)'
+p1297
+S'(4.5, 0.5, False)'
+p1298
+S'END_OF_MEASURE'
+p1299
+S'(0, None, None)'
+p1300
+S'(1.0, 0.5, True)'
+p1301
+S'(1.5, 0.25, True)'
+p1302
+S'(1.75, 0.5, True)'
+p1303
+S'(2.25, 0.25, True)'
+p1304
+S'(2.5, 0.25, True)'
+p1305
+S'(2.75, 2.0, False)'
+p1306
+S'(4.75, 0.25, False)'
+p1307
+S'END_OF_MEASURE'
+p1308
+S'(0, None, None)'
+p1309
+S'(1.0, 0.5, True)'
+p1310
+S'(1.5, 0.5, True)'
+p1311
+S'(2.0, 0.5, True)'
+p1312
+S'(2.5, 1.0, True)'
+p1313
+S'(3.5, 1.0, True)'
+p1314
+S'(4.5, 0.5, False)'
+p1315
+S'END_OF_MEASURE'
+p1316
+S'(0, None, None)'
+p1317
+S'(1.0, 0.5, True)'
+p1318
+S'(1.5, 0.5, True)'
+p1319
+S'(2.0, 0.5, True)'
+p1320
+S'(2.5, 0.5, False)'
+p1321
+S'(3.0, 0.5, True)'
+p1322
+S'(3.5, 1.0, True)'
+p1323
+S'(4.5, 0.5, False)'
+p1324
+S'END_OF_MEASURE'
+p1325
+S'(0, None, None)'
+p1326
+S'(1.0, 0.5, True)'
+p1327
+S'(1.5, 0.5, True)'
+p1328
+S'(2.0, 0.5, True)'
+p1329
+S'(2.5, 0.5, True)'
+p1330
+S'(3.0, 0.5, True)'
+p1331
+S'(3.5, 0.5, True)'
+p1332
+S'(4.0, 0.5, True)'
+p1333
+S'(4.5, 0.5, True)'
+p1334
+S'END_OF_MEASURE'
+p1335
+S'(0, None, None)'
+p1336
+S'(1.0, 0.5, True)'
+p1337
+S'(1.5, 0.5, True)'
+p1338
+S'(2.0, 0.5, True)'
+p1339
+S'(2.5, 0.5, False)'
+p1340
+S'(3.0, 0.5, True)'
+p1341
+S'(3.5, 1.0, True)'
+p1342
+S'(4.5, 0.5, False)'
+p1343
+S'END_OF_MEASURE'
+p1344
+S'(0, None, None)'
+p1345
+S'(1.0, 0.5, True)'
+p1346
+S'(1.5, 0.5, True)'
+p1347
+S'(2.0, 0.5, True)'
+p1348
+S'(2.5, 0.5, True)'
+p1349
+S'(3.0, 0.5, True)'
+p1350
+S'(3.5, 1.0, True)'
+p1351
+S'(4.5, 0.5, False)'
+p1352
+S'END_OF_MEASURE'
+p1353
+S'(0, None, None)'
+p1354
+S'(1.0, 0.5, False)'
+p1355
+S'(1.5, 0.5, True)'
+p1356
+S'(2.0, 1.0, True)'
+p1357
+S'(3.0, 0.5, True)'
+p1358
+S'(3.5, 1.0, True)'
+p1359
+S'(4.5, 0.5, False)'
+p1360
+S'END_OF_MEASURE'
+p1361
+S'(0, None, None)'
+p1362
+S'(1.0, 0.5, True)'
+p1363
+S'(1.5, 0.5, True)'
+p1364
+S'(2.0, 0.5, True)'
+p1365
+S'(2.5, 0.5, True)'
+p1366
+S'(3.0, 0.5, True)'
+p1367
+S'(3.5, 0.5, True)'
+p1368
+S'(4.0, 0.5, True)'
+p1369
+S'(4.5, 0.5, True)'
+p1370
+S'END_OF_MEASURE'
+p1371
+S'(0, None, None)'
+p1372
+S'(1.0, 0.5, True)'
+p1373
+S'(1.5, 0.5, True)'
+p1374
+S'(2.0, 0.5, True)'
+p1375
+S'(2.5, 0.5, True)'
+p1376
+S'(3.0, 0.5, True)'
+p1377
+S'(3.5, 0.5, True)'
+p1378
+S'(4.0, 0.5, True)'
+p1379
+S'(4.5, 0.5, True)'
+p1380
+S'END_OF_MEASURE'
+p1381
+S'(0, None, None)'
+p1382
+S'(1.0, 0.5, True)'
+p1383
+S'(1.5, 0.5, True)'
+p1384
+S'(2.0, 0.5, True)'
+p1385
+S'(2.5, 0.5, True)'
+p1386
+S'(3.0, 0.5, True)'
+p1387
+S'(3.5, 1.0, True)'
+p1388
+S'(4.5, 0.5, False)'
+p1389
+S'END_OF_MEASURE'
+p1390
+S'(0, None, None)'
+p1391
+S'(1.0, 0.5, True)'
+p1392
+S'(1.5, 0.5, True)'
+p1393
+S'(2.0, 0.5, True)'
+p1394
+S'(2.5, 1.0, True)'
+p1395
+S'(3.5, 1.0, True)'
+p1396
+S'(4.5, 0.5, False)'
+p1397
+S'END_OF_MEASURE'
+p1398
+S'(0, None, None)'
+p1399
+S'(1.0, 0.5, True)'
+p1400
+S'(1.5, 0.5, True)'
+p1401
+S'(2.0, 0.5, True)'
+p1402
+S'(2.5, 0.5, True)'
+p1403
+S'(3.0, 0.5, True)'
+p1404
+S'(3.5, 0.5, True)'
+p1405
+S'(4.0, 0.5, True)'
+p1406
+S'(4.5, 0.5, True)'
+p1407
+S'END_OF_MEASURE'
+p1408
+S'(0, None, None)'
+p1409
+S'(1.0, 2.0, False)'
+p1410
+S'(3.0, 0.5, False)'
+p1411
+S'(3.5, 0.125, True)'
+p1412
+S'(3.625, 1.0, False)'
+p1413
+S'(4.625, 0.25, False)'
+p1414
+S'(4.875, 0.125, False)'
+p1415
+S'END_OF_MEASURE'
+p1416
+S'(0, None, None)'
+p1417
+S'(1.0, 0.5, True)'
+p1418
+S'(1.5, 0.5, True)'
+p1419
+S'(2.0, 0.5, True)'
+p1420
+S'(2.5, 0.5, True)'
+p1421
+S'(3.0, 0.5, True)'
+p1422
+S'(3.5, 0.5, True)'
+p1423
+S'(4.0, 0.5, True)'
+p1424
+S'(4.5, 0.5, True)'
+p1425
+S'END_OF_MEASURE'
+p1426
+S'(0, None, None)'
+p1427
+S'(1.0, 0.5, True)'
+p1428
+S'(1.5, 0.5, True)'
+p1429
+S'(2.0, 0.5, True)'
+p1430
+S'(2.5, 1.0, True)'
+p1431
+S'(3.5, 1.0, True)'
+p1432
+S'(4.5, 0.5, False)'
+p1433
+S'END_OF_MEASURE'
+p1434
+S'(0, None, None)'
+p1435
+S'(1.0, 0.25, True)'
+p1436
+S'(1.25, 0.5, True)'
+p1437
+S'(1.75, 0.25, True)'
+p1438
+S'(2.0, 0.5, True)'
+p1439
+S'(2.5, 0.25, True)'
+p1440
+S'(2.75, 0.25, True)'
+p1441
+S'(3.0, 0.5, True)'
+p1442
+S'(3.5, 1.0, True)'
+p1443
+S'(4.5, 0.5, False)'
+p1444
+S'END_OF_MEASURE'
+p1445
+S'(0, None, None)'
+p1446
+S'(1.0, 2.0, False)'
+p1447
+S'(3.0, 0.5, False)'
+p1448
+S'(3.5, 0.125, True)'
+p1449
+S'(3.625, 1.0, False)'
+p1450
+S'(4.625, 0.25, False)'
+p1451
+S'(4.875, 0.125, False)'
+p1452
+S'END_OF_MEASURE'
+p1453
+S'(0, None, None)'
+p1454
+S'(1.0, 0.5, True)'
+p1455
+S'(1.5, 0.5, True)'
+p1456
+S'(2.0, 0.5, True)'
+p1457
+S'(2.5, 0.5, True)'
+p1458
+S'(3.0, 0.5, True)'
+p1459
+S'(3.5, 1.0, True)'
+p1460
+S'(4.5, 0.5, False)'
+p1461
+S'END_OF_MEASURE'
+p1462
+S'(0, None, None)'
+p1463
+S'(1.0, 0.5, True)'
+p1464
+S'(1.5, 0.5, True)'
+p1465
+S'(2.0, 0.5, True)'
+p1466
+S'(2.5, 0.5, True)'
+p1467
+S'(3.0, 0.5, True)'
+p1468
+S'(3.5, 0.5, True)'
+p1469
+S'(4.0, 0.5, True)'
+p1470
+S'(4.5, 0.5, True)'
+p1471
+S'END_OF_MEASURE'
+p1472
+S'(0, None, None)'
+p1473
+S'(1.0, 0.5, True)'
+p1474
+S'(1.5, 0.5, True)'
+p1475
+S'(2.0, 0.5, True)'
+p1476
+S'(2.5, 1.0, True)'
+p1477
+S'(3.5, 1.0, True)'
+p1478
+S'(4.5, 0.5, False)'
+p1479
+S'END_OF_MEASURE'
+p1480
+S'(0, None, None)'
+p1481
+S'(1.0, 1.0, True)'
+p1482
+S'(2.0, 1.0, True)'
+p1483
+S'(3.0, 0.5, True)'
+p1484
+S'(3.5, 1.0, True)'
+p1485
+S'(4.5, 0.5, False)'
+p1486
+S'END_OF_MEASURE'
+p1487
+S'(0, None, None)'
+p1488
+S'(1.0, 0.5, True)'
+p1489
+S'(1.5, 0.5, True)'
+p1490
+S'(2.0, 0.5, True)'
+p1491
+S'(2.5, 0.5, True)'
+p1492
+S'(3.0, 0.5, True)'
+p1493
+S'(3.5, 0.5, True)'
+p1494
+S'(4.0, 0.5, True)'
+p1495
+S'(4.5, 0.5, True)'
+p1496
+S'END_OF_MEASURE'
+p1497
+S'(0, None, None)'
+p1498
+S'(1.0, 0.5, True)'
+p1499
+S'(1.5, 0.5, True)'
+p1500
+S'(2.0, 0.5, True)'
+p1501
+S'(2.5, 0.5, False)'
+p1502
+S'(3.0, 0.5, True)'
+p1503
+S'(3.5, 1.0, True)'
+p1504
+S'(4.5, 0.5, False)'
+p1505
+S'END_OF_MEASURE'
+p1506
+S'(0, None, None)'
+p1507
+S'(1.0, 0.5, True)'
+p1508
+S'(1.5, 0.5, True)'
+p1509
+S'(2.0, 0.5, True)'
+p1510
+S'(2.5, 0.5, True)'
+p1511
+S'(3.0, 0.5, True)'
+p1512
+S'(3.5, 0.5, True)'
+p1513
+S'(4.0, 0.5, True)'
+p1514
+S'(4.5, 0.5, True)'
+p1515
+S'END_OF_MEASURE'
+p1516
+S'(0, None, None)'
+p1517
+S'(1.0, 0.5, True)'
+p1518
+S'(1.5, 0.5, True)'
+p1519
+S'(2.0, 0.5, True)'
+p1520
+S'(2.5, 1.0, True)'
+p1521
+S'(3.5, 1.0, True)'
+p1522
+S'(4.5, 0.5, False)'
+p1523
+S'END_OF_MEASURE'
+p1524
+S'(0, None, None)'
+p1525
+S'(1.0, 0.5, True)'
+p1526
+S'(1.5, 0.5, True)'
+p1527
+S'(2.0, 0.5, True)'
+p1528
+S'(2.5, 0.5, True)'
+p1529
+S'(3.0, 0.5, True)'
+p1530
+S'(3.5, 0.5, True)'
+p1531
+S'(4.0, 0.5, True)'
+p1532
+S'(4.5, 0.5, True)'
+p1533
+S'END_OF_MEASURE'
+p1534
+S'(0, None, None)'
+p1535
+S'(1.0, 0.5, True)'
+p1536
+S'(1.5, 0.5, True)'
+p1537
+S'(2.0, 0.5, True)'
+p1538
+S'(2.5, 0.5, True)'
+p1539
+S'(3.0, 0.5, True)'
+p1540
+S'(3.5, 0.5, True)'
+p1541
+S'(4.0, 0.5, True)'
+p1542
+S'(4.5, 0.5, True)'
+p1543
+S'END_OF_MEASURE'
+p1544
+S'(0, None, None)'
+p1545
+S'(1.0, 0.5, True)'
+p1546
+S'(1.5, 0.5, True)'
+p1547
+S'(2.0, 0.5, True)'
+p1548
+S'(2.5, 0.5, True)'
+p1549
+S'(3.0, 0.5, True)'
+p1550
+S'(3.5, 1.0, True)'
+p1551
+S'(4.5, 0.5, False)'
+p1552
+S'END_OF_MEASURE'
+p1553
+S'(0, None, None)'
+p1554
+S'(1.0, 2.0, False)'
+p1555
+S'(3.0, 0.5, True)'
+p1556
+S'(3.5, 1.0, True)'
+p1557
+S'(4.5, 0.5, False)'
+p1558
+S'END_OF_MEASURE'
+p1559
+S'(0, None, None)'
+p1560
+S'(1.0, 0.5, False)'
+p1561
+S'(1.5, 0.5, True)'
+p1562
+S'(2.0, 0.5, True)'
+p1563
+S'(2.5, 1.0, True)'
+p1564
+S'(3.5, 1.0, True)'
+p1565
+S'(4.5, 0.5, False)'
+p1566
+S'END_OF_MEASURE'
+p1567
+S'(0, None, None)'
+p1568
+S'(1.0, 0.5, True)'
+p1569
+S'(1.5, 0.5, True)'
+p1570
+S'(2.0, 0.5, True)'
+p1571
+S'(2.5, 0.5, False)'
+p1572
+S'(3.0, 0.5, True)'
+p1573
+S'(3.5, 1.0, True)'
+p1574
+S'(4.5, 0.5, False)'
+p1575
+S'END_OF_MEASURE'
+p1576
+S'(0, None, None)'
+p1577
+S'(1.0, 0.5, False)'
+p1578
+S'(1.5, 0.5, True)'
+p1579
+S'(2.0, 0.5, True)'
+p1580
+S'(2.5, 1.0, True)'
+p1581
+S'(3.5, 1.0, True)'
+p1582
+S'(4.5, 0.5, False)'
+p1583
+S'END_OF_MEASURE'
+p1584
+S'(0, None, None)'
+p1585
+S'(1.0, 1.0, False)'
+p1586
+S'(2.0, 0.5, False)'
+p1587
+S'(2.5, 0.25, True)'
+p1588
+S'(2.75, 0.25, True)'
+p1589
+S'(3.0, 0.25, True)'
+p1590
+S'(3.25, 0.25, True)'
+p1591
+S'(3.5, 0.25, True)'
+p1592
+S'(3.75, 0.25, True)'
+p1593
+S'(4.0, 1.0, False)'
+p1594
+S'END_OF_MEASURE'
+p1595
+S'(0, None, None)'
+p1596
+S'(1.0, 0.5, True)'
+p1597
+S'(1.5, 0.5, True)'
+p1598
+S'(2.0, 0.5, True)'
+p1599
+S'(2.5, 1.0, True)'
+p1600
+S'(3.5, 1.0, True)'
+p1601
+S'(4.5, 0.5, False)'
+p1602
+S'END_OF_MEASURE'
+p1603
+S'(0, None, None)'
+p1604
+S'(1.0, 0.5, True)'
+p1605
+S'(1.5, 0.5, True)'
+p1606
+S'(2.0, 0.5, True)'
+p1607
+S'(2.5, 0.5, True)'
+p1608
+S'(3.0, 0.5, True)'
+p1609
+S'(3.5, 0.5, True)'
+p1610
+S'(4.0, 0.5, True)'
+p1611
+S'(4.5, 0.5, True)'
+p1612
+S'END_OF_MEASURE'
+p1613
+S'(0, None, None)'
+p1614
+S'(1.0, 0.5, False)'
+p1615
+S'(1.5, 0.5, True)'
+p1616
+S'(2.0, 0.5, True)'
+p1617
+S'(2.5, 1.0, True)'
+p1618
+S'(3.5, 1.0, True)'
+p1619
+S'(4.5, 0.5, False)'
+p1620
+S'END_OF_MEASURE'
+p1621
+S'(0, None, None)'
+p1622
+S'(1.0, 0.5, True)'
+p1623
+S'(1.5, 0.5, True)'
+p1624
+S'(2.0, 0.5, True)'
+p1625
+S'(2.5, 0.5, True)'
+p1626
+S'(3.0, 0.5, True)'
+p1627
+S'(3.5, 0.5, True)'
+p1628
+S'(4.0, 0.5, True)'
+p1629
+S'(4.5, 0.5, True)'
+p1630
+S'END_OF_MEASURE'
+p1631
+S'(0, None, None)'
+p1632
+S'(1.0, 0.5, True)'
+p1633
+S'(1.5, 0.5, True)'
+p1634
+S'(2.0, 0.5, True)'
+p1635
+S'(2.5, 0.5, False)'
+p1636
+S'(3.0, 0.5, True)'
+p1637
+S'(3.5, 1.0, True)'
+p1638
+S'(4.5, 0.5, False)'
+p1639
+S'END_OF_MEASURE'
+p1640
+S'(0, None, None)'
+p1641
+S'(1.0, 0.5, True)'
+p1642
+S'(1.5, 0.5, True)'
+p1643
+S'(2.0, 0.5, True)'
+p1644
+S'(2.5, 0.5, True)'
+p1645
+S'(3.0, 0.5, True)'
+p1646
+S'(3.5, 0.5, True)'
+p1647
+S'(4.0, 0.5, True)'
+p1648
+S'(4.5, 0.5, True)'
+p1649
+S'END_OF_MEASURE'
+p1650
+S'(0, None, None)'
+p1651
+S'(1.0, 2.0, False)'
+p1652
+S'(3.0, 0.5, False)'
+p1653
+S'(3.5, 0.25, True)'
+p1654
+S'(3.75, 0.25, True)'
+p1655
+S'(4.0, 0.25, True)'
+p1656
+S'(4.25, 0.25, True)'
+p1657
+S'(4.5, 0.25, True)'
+p1658
+S'(4.75, 0.25, True)'
+p1659
+S'END_OF_MEASURE'
+p1660
+S'(0, None, None)'
+p1661
+S'(1.0, 0.5, True)'
+p1662
+S'(1.5, 0.5, True)'
+p1663
+S'(2.0, 0.5, True)'
+p1664
+S'(2.5, 0.5, False)'
+p1665
+S'(3.0, 0.5, True)'
+p1666
+S'(3.5, 1.0, True)'
+p1667
+S'(4.5, 0.5, False)'
+p1668
+S'END_OF_MEASURE'
+p1669
+S'(0, None, None)'
+p1670
+S'(1.0, 0.5, True)'
+p1671
+S'(1.5, 0.5, True)'
+p1672
+S'(2.0, 0.5, True)'
+p1673
+S'(2.5, 0.5, True)'
+p1674
+S'(3.0, 0.5, True)'
+p1675
+S'(3.5, 0.5, True)'
+p1676
+S'(4.0, 0.5, True)'
+p1677
+S'(4.5, 0.5, True)'
+p1678
+S'END_OF_MEASURE'
+p1679
+S'(0, None, None)'
+p1680
+S'(1.0, 0.5, True)'
+p1681
+S'(1.5, 0.5, True)'
+p1682
+S'(2.0, 0.5, True)'
+p1683
+S'(2.5, 0.5, True)'
+p1684
+S'(3.0, 0.5, True)'
+p1685
+S'(3.5, 0.5, True)'
+p1686
+S'(4.0, 0.5, True)'
+p1687
+S'(4.5, 0.5, True)'
+p1688
+S'END_OF_MEASURE'
+p1689
+S'(0, None, None)'
+p1690
+S'(1.0, 0.5, True)'
+p1691
+S'(1.5, 0.5, True)'
+p1692
+S'(2.0, 0.5, True)'
+p1693
+S'(2.5, 0.5, True)'
+p1694
+S'(3.0, 0.5, True)'
+p1695
+S'(3.5, 0.5, True)'
+p1696
+S'(4.0, 0.5, True)'
+p1697
+S'(4.5, 0.5, True)'
+p1698
+S'END_OF_MEASURE'
+p1699
+S'(0, None, None)'
+p1700
+S'(1.0, 0.5, True)'
+p1701
+S'(1.5, 0.5, True)'
+p1702
+S'(2.0, 0.5, True)'
+p1703
+S'(2.5, 0.5, True)'
+p1704
+S'(3.0, 0.5, True)'
+p1705
+S'(3.5, 0.5, True)'
+p1706
+S'(4.0, 0.5, True)'
+p1707
+S'(4.5, 0.5, True)'
+p1708
+S'END_OF_MEASURE'
+p1709
+S'(0, None, None)'
+p1710
+S'(1.0, 0.5, True)'
+p1711
+S'(1.5, 0.5, True)'
+p1712
+S'(2.0, 0.5, True)'
+p1713
+S'(2.5, 0.5, True)'
+p1714
+S'(3.0, 0.5, True)'
+p1715
+S'(3.5, 0.5, True)'
+p1716
+S'(4.0, 0.5, True)'
+p1717
+S'(4.5, 0.5, True)'
+p1718
+S'END_OF_MEASURE'
+p1719
+S'(0, None, None)'
+p1720
+S'(1.0, 0.5, True)'
+p1721
+S'(1.5, 0.5, True)'
+p1722
+S'(2.0, 0.5, True)'
+p1723
+S'(2.5, 0.5, False)'
+p1724
+S'(3.0, 0.5, True)'
+p1725
+S'(3.5, 1.0, True)'
+p1726
+S'(4.5, 0.5, False)'
+p1727
+S'END_OF_MEASURE'
+p1728
+S'(0, None, None)'
+p1729
+S'(1.0, 0.5, True)'
+p1730
+S'(1.5, 0.5, True)'
+p1731
+S'(2.0, 0.5, True)'
+p1732
+S'(2.5, 0.5, False)'
+p1733
+S'(3.0, 0.5, True)'
+p1734
+S'(3.5, 1.0, True)'
+p1735
+S'(4.5, 0.5, False)'
+p1736
+S'END_OF_MEASURE'
+p1737
+S'(0, None, None)'
+p1738
+S'(1.0, 0.5, True)'
+p1739
+S'(1.5, 0.5, True)'
+p1740
+S'(2.0, 0.5, True)'
+p1741
+S'(2.5, 0.5, True)'
+p1742
+S'(3.0, 0.5, True)'
+p1743
+S'(3.5, 1.0, True)'
+p1744
+S'(4.5, 0.5, False)'
+p1745
+S'END_OF_MEASURE'
+p1746
+S'(0, None, None)'
+p1747
+S'(1.0, 0.5, False)'
+p1748
+S'(1.5, 0.5, True)'
+p1749
+S'(2.0, 0.5, True)'
+p1750
+S'(2.5, 1.0, True)'
+p1751
+S'(3.5, 1.0, True)'
+p1752
+S'(4.5, 0.5, False)'
+p1753
+S'END_OF_MEASURE'
+p1754
+S'(0, None, None)'
+p1755
+S'(1.0, 0.5, True)'
+p1756
+S'(1.5, 0.5, True)'
+p1757
+S'(2.0, 0.5, True)'
+p1758
+S'(2.5, 0.5, True)'
+p1759
+S'(3.0, 0.5, True)'
+p1760
+S'(3.5, 1.0, True)'
+p1761
+S'(4.5, 0.5, False)'
+p1762
+S'END_OF_MEASURE'
+p1763
+S'(0, None, None)'
+p1764
+S'(1.0, 0.5, True)'
+p1765
+S'(1.5, 0.5, True)'
+p1766
+S'(2.0, 0.5, True)'
+p1767
+S'(2.5, 0.5, False)'
+p1768
+S'(3.0, 0.5, True)'
+p1769
+S'(3.5, 1.0, True)'
+p1770
+S'(4.5, 0.5, False)'
+p1771
+S'END_OF_MEASURE'
+p1772
+S'(0, None, None)'
+p1773
+S'(1.0, 0.5, True)'
+p1774
+S'(1.5, 0.5, True)'
+p1775
+S'(2.0, 0.5, True)'
+p1776
+S'(2.5, 0.5, True)'
+p1777
+S'(3.0, 0.5, True)'
+p1778
+S'(3.5, 1.0, True)'
+p1779
+S'(4.5, 0.5, False)'
+p1780
+S'END_OF_MEASURE'
+p1781
+S'(0, None, None)'
+p1782
+S'(1.0, 0.5, True)'
+p1783
+S'(1.5, 0.5, True)'
+p1784
+S'(2.0, 0.25, True)'
+p1785
+S'(2.25, 0.25, True)'
+p1786
+S'(2.5, 0.25, True)'
+p1787
+S'(2.75, 0.25, True)'
+p1788
+S'(3.0, 0.5, True)'
+p1789
+S'(3.5, 0.5, True)'
+p1790
+S'(4.0, 0.5, True)'
+p1791
+S'(4.5, 0.5, True)'
+p1792
+S'END_OF_MEASURE'
+p1793
+S'(0, None, None)'
+p1794
+S'(1.0, 1.5, True)'
+p1795
+S'(2.5, 0.5, True)'
+p1796
+S'(3.0, 0.5, True)'
+p1797
+S'(3.5, 1.0, True)'
+p1798
+S'(4.5, 0.5, False)'
+p1799
+S'END_OF_MEASURE'
+p1800
+S'(0, None, None)'
+p1801
+S'(1.0, 0.5, True)'
+p1802
+S'(1.5, 0.5, True)'
+p1803
+S'(2.0, 0.5, True)'
+p1804
+S'(2.5, 0.5, True)'
+p1805
+S'(3.0, 0.5, True)'
+p1806
+S'(3.5, 0.5, True)'
+p1807
+S'(4.0, 0.5, True)'
+p1808
+S'(4.5, 0.5, True)'
+p1809
+S'END_OF_MEASURE'
+p1810
+S'(0, None, None)'
+p1811
+S'(1.0, 0.5, True)'
+p1812
+S'(1.5, 0.5, True)'
+p1813
+S'(2.0, 0.5, True)'
+p1814
+S'(2.5, 0.5, True)'
+p1815
+S'(3.0, 0.5, True)'
+p1816
+S'(3.5, 1.0, True)'
+p1817
+S'(4.5, 0.5, False)'
+p1818
+S'END_OF_MEASURE'
+p1819
+S'(0, None, None)'
+p1820
+S'(1.0, 0.5, True)'
+p1821
+S'(1.5, 0.5, True)'
+p1822
+S'(2.0, 0.5, True)'
+p1823
+S'(2.5, 0.5, True)'
+p1824
+S'(3.0, 0.5, True)'
+p1825
+S'(3.5, 0.5, True)'
+p1826
+S'(4.0, 0.5, True)'
+p1827
+S'(4.5, 0.5, True)'
+p1828
+S'END_OF_MEASURE'
+p1829
+S'(0, None, None)'
+p1830
+S'(1.0, 2.0, False)'
+p1831
+S'(3.0, 0.5, True)'
+p1832
+S'(3.5, 0.5, True)'
+p1833
+S'(4.0, 0.5, True)'
+p1834
+S'(4.5, 0.5, True)'
+p1835
+S'END_OF_MEASURE'
+p1836
+S'(0, None, None)'
+p1837
+S'(1.0, 0.5, True)'
+p1838
+S'(1.5, 0.5, True)'
+p1839
+S'(2.0, 0.5, True)'
+p1840
+S'(2.5, 0.5, True)'
+p1841
+S'(3.0, 0.5, True)'
+p1842
+S'(3.5, 0.5, True)'
+p1843
+S'(4.0, 0.5, True)'
+p1844
+S'(4.5, 0.5, True)'
+p1845
+S'END_OF_MEASURE'
+p1846
+S'(0, None, None)'
+p1847
+S'(1.0, 0.5, True)'
+p1848
+S'(1.5, 0.5, True)'
+p1849
+S'(2.0, 0.5, True)'
+p1850
+S'(2.5, 0.5, True)'
+p1851
+S'(3.0, 0.5, True)'
+p1852
+S'(3.5, 0.5, True)'
+p1853
+S'(4.0, 0.5, True)'
+p1854
+S'(4.5, 0.5, True)'
+p1855
+S'END_OF_MEASURE'
+p1856
+S'(0, None, None)'
+p1857
+S'(1.0, 0.5, True)'
+p1858
+S'(1.5, 0.5, True)'
+p1859
+S'(2.0, 0.5, True)'
+p1860
+S'(2.5, 1.0, True)'
+p1861
+S'(3.5, 1.0, True)'
+p1862
+S'(4.5, 0.5, False)'
+p1863
+S'END_OF_MEASURE'
+p1864
+S'(0, None, None)'
+p1865
+S'(1.0, 0.5, True)'
+p1866
+S'(1.5, 0.5, True)'
+p1867
+S'(2.0, 0.5, True)'
+p1868
+S'(2.5, 0.5, True)'
+p1869
+S'(3.0, 0.5, True)'
+p1870
+S'(3.5, 0.5, True)'
+p1871
+S'(4.0, 0.5, True)'
+p1872
+S'(4.5, 0.5, True)'
+p1873
+S'END_OF_MEASURE'
+p1874
+S'(0, None, None)'
+p1875
+S'(1.0, 0.5, True)'
+p1876
+S'(1.5, 0.5, True)'
+p1877
+S'(2.0, 0.5, True)'
+p1878
+S'(2.5, 0.5, False)'
+p1879
+S'(3.0, 0.5, True)'
+p1880
+S'(3.5, 1.0, True)'
+p1881
+S'(4.5, 0.5, False)'
+p1882
+S'END_OF_MEASURE'
+p1883
+S'(0, None, None)'
+p1884
+S'(1.0, 1.0, False)'
+p1885
+S'(2.0, 0.5, False)'
+p1886
+S'(2.5, 0.25, True)'
+p1887
+S'(2.75, 2.0, False)'
+p1888
+S'(4.75, 0.25, False)'
+p1889
+S'END_OF_MEASURE'
+p1890
+S'(0, None, None)'
+p1891
+S'(1.0, 1.0, True)'
+p1892
+S'(2.0, 0.25, True)'
+p1893
+S'(2.25, 0.25, True)'
+p1894
+S'(2.5, 0.25, True)'
+p1895
+S'(2.75, 0.25, True)'
+p1896
+S'(3.0, 0.25, True)'
+p1897
+S'(3.25, 1.0, False)'
+p1898
+S'(4.25, 0.5, False)'
+p1899
+S'(4.75, 0.25, False)'
+p1900
+S'END_OF_MEASURE'
+p1901
+S'(0, None, None)'
+p1902
+S'(1.0, 2.0, False)'
+p1903
+S'(3.0, 0.5, False)'
+p1904
+S'(3.5, 0.5, True)'
+p1905
+S'(4.0, 0.5, True)'
+p1906
+S'(4.5, 0.5, True)'
+p1907
+S'END_OF_MEASURE'
+p1908
+S'(0, None, None)'
+p1909
+S'(1.0, 0.5, True)'
+p1910
+S'(1.5, 0.5, True)'
+p1911
+S'(2.0, 0.5, True)'
+p1912
+S'(2.5, 0.5, True)'
+p1913
+S'(3.0, 0.5, True)'
+p1914
+S'(3.5, 0.5, True)'
+p1915
+S'(4.0, 0.5, True)'
+p1916
+S'(4.5, 0.5, True)'
+p1917
+S'END_OF_MEASURE'
+p1918
+S'(0, None, None)'
+p1919
+S'(1.0, 0.5, True)'
+p1920
+S'(1.5, 0.5, True)'
+p1921
+S'(2.0, 0.5, True)'
+p1922
+S'(2.5, 0.5, False)'
+p1923
+S'(3.0, 0.5, True)'
+p1924
+S'(3.5, 1.0, True)'
+p1925
+S'(4.5, 0.5, False)'
+p1926
+S'END_OF_MEASURE'
+p1927
+S'(0, None, None)'
+p1928
+S'(1.0, 1.0, False)'
+p1929
+S'(2.0, 0.25, True)'
+p1930
+S'(2.25, 0.25, True)'
+p1931
+S'(2.5, 0.25, True)'
+p1932
+S'(2.75, 0.25, True)'
+p1933
+S'(3.0, 0.5, True)'
+p1934
+S'(3.5, 1.0, False)'
+p1935
+S'(4.5, 0.5, False)'
+p1936
+S'END_OF_MEASURE'
+p1937
+S'(0, None, None)'
+p1938
+S'(1.0, 2.0, False)'
+p1939
+S'(3.0, 0.5, False)'
+p1940
+S'(3.5, 0.5, True)'
+p1941
+S'(4.0, 0.5, True)'
+p1942
+S'(4.5, 0.5, True)'
+p1943
+S'END_OF_MEASURE'
+p1944
+S'(0, None, None)'
+p1945
+S'(1.0, 0.5, True)'
+p1946
+S'(1.5, 0.5, True)'
+p1947
+S'(2.0, 0.5, True)'
+p1948
+S'(2.5, 0.5, True)'
+p1949
+S'(3.0, 0.5, True)'
+p1950
+S'(3.5, 0.5, True)'
+p1951
+S'(4.0, 0.5, True)'
+p1952
+S'(4.5, 0.5, True)'
+p1953
+S'END_OF_MEASURE'
+p1954
+S'(0, None, None)'
+p1955
+S'(1.0, 0.5, True)'
+p1956
+S'(1.5, 0.5, True)'
+p1957
+S'(2.0, 0.5, True)'
+p1958
+S'(2.5, 0.5, False)'
+p1959
+S'(3.0, 0.5, True)'
+p1960
+S'(3.5, 1.0, True)'
+p1961
+S'(4.5, 0.5, False)'
+p1962
+S'END_OF_MEASURE'
+p1963
+S'(0, None, None)'
+p1964
+S'(1.0, 0.5, True)'
+p1965
+S'(1.5, 0.5, True)'
+p1966
+S'(2.0, 0.5, True)'
+p1967
+S'(2.5, 0.5, True)'
+p1968
+S'(3.0, 0.5, True)'
+p1969
+S'(3.5, 0.5, True)'
+p1970
+S'(4.0, 0.5, True)'
+p1971
+S'(4.5, 0.5, True)'
+p1972
+S'END_OF_MEASURE'
+p1973
+S'(0, None, None)'
+p1974
+S'(1.0, 0.5, True)'
+p1975
+S'(1.5, 0.5, True)'
+p1976
+S'(2.0, 0.5, True)'
+p1977
+S'(2.5, 0.5, True)'
+p1978
+S'(3.0, 0.5, True)'
+p1979
+S'(3.5, 0.5, True)'
+p1980
+S'(4.0, 0.5, True)'
+p1981
+S'(4.5, 0.5, True)'
+p1982
+S'END_OF_MEASURE'
+p1983
+S'(0, None, None)'
+p1984
+S'(1.0, 0.5, True)'
+p1985
+S'(1.5, 0.5, True)'
+p1986
+S'(2.0, 0.5, True)'
+p1987
+S'(2.5, 0.5, True)'
+p1988
+S'(3.0, 0.5, True)'
+p1989
+S'(3.5, 1.0, True)'
+p1990
+S'(4.5, 0.5, False)'
+p1991
+S'END_OF_MEASURE'
+p1992
+S'(0, None, None)'
+p1993
+S'(1.0, 2.0, False)'
+p1994
+S'(3.0, 0.5, False)'
+p1995
+S'(3.5, 0.125, True)'
+p1996
+S'(3.625, 1.0, False)'
+p1997
+S'(4.625, 0.25, False)'
+p1998
+S'(4.875, 0.125, False)'
+p1999
+S'END_OF_MEASURE'
+p2000
+S'(0, None, None)'
+p2001
+S'(1.0, 0.5, False)'
+p2002
+S'(1.5, 0.5, True)'
+p2003
+S'(2.0, 1.0, True)'
+p2004
+S'(3.0, 0.5, True)'
+p2005
+S'(3.5, 1.0, True)'
+p2006
+S'(4.5, 0.5, False)'
+p2007
+S'END_OF_MEASURE'
+p2008
+S'(0, None, None)'
+p2009
+S'(1.0, 0.5, True)'
+p2010
+S'(1.5, 0.5, True)'
+p2011
+S'(2.0, 0.5, True)'
+p2012
+S'(2.5, 0.5, True)'
+p2013
+S'(3.0, 0.5, True)'
+p2014
+S'(3.5, 0.5, True)'
+p2015
+S'(4.0, 0.5, True)'
+p2016
+S'(4.5, 0.5, True)'
+p2017
+S'END_OF_MEASURE'
+p2018
+S'(0, None, None)'
+p2019
+S'(1.0, 0.5, True)'
+p2020
+S'(1.5, 0.5, True)'
+p2021
+S'(2.0, 0.5, True)'
+p2022
+S'(2.5, 0.5, True)'
+p2023
+S'(3.0, 0.5, True)'
+p2024
+S'(3.5, 1.0, True)'
+p2025
+S'(4.5, 0.5, False)'
+p2026
+S'END_OF_MEASURE'
+p2027
+S'(0, None, None)'
+p2028
+S'(1.0, 0.25, True)'
+p2029
+S'(1.25, 0.25, True)'
+p2030
+S'(1.5, 0.25, True)'
+p2031
+S'(1.75, 0.25, True)'
+p2032
+S'(2.0, 0.25, True)'
+p2033
+S'(2.25, 0.25, True)'
+p2034
+S'(2.5, 0.25, True)'
+p2035
+S'(2.75, 0.25, True)'
+p2036
+S'(3.0, 0.25, True)'
+p2037
+S'(3.25, 0.25, True)'
+p2038
+S'(3.5, 0.25, True)'
+p2039
+S'(3.75, 0.25, True)'
+p2040
+S'(4.0, 0.25, True)'
+p2041
+S'(4.25, 0.25, True)'
+p2042
+S'(4.5, 0.25, True)'
+p2043
+S'(4.75, 0.25, True)'
+p2044
+S'END_OF_MEASURE'
+p2045
+S'(0, None, None)'
+p2046
+S'(1.0, 0.5, False)'
+p2047
+S'(1.5, 0.5, True)'
+p2048
+S'(2.0, 0.5, False)'
+p2049
+S'(2.5, 0.5, True)'
+p2050
+S'(3.0, 0.5, False)'
+p2051
+S'(3.5, 0.5, True)'
+p2052
+S'(4.0, 0.5, False)'
+p2053
+S'(4.5, 0.5, True)'
+p2054
+S'END_OF_MEASURE'
+p2055
+S'(0, None, None)'
+p2056
+S'(1.0, 0.5, True)'
+p2057
+S'(1.5, 0.5, True)'
+p2058
+S'(2.0, 0.5, True)'
+p2059
+S'(2.5, 0.5, False)'
+p2060
+S'(3.0, 0.5, True)'
+p2061
+S'(3.5, 1.0, True)'
+p2062
+S'(4.5, 0.5, False)'
+p2063
+S'END_OF_MEASURE'
+p2064
+S'(0, None, None)'
+p2065
+S'(1.0, 2.0, False)'
+p2066
+S'(3.0, 0.5, False)'
+p2067
+S'(3.5, 0.5, True)'
+p2068
+S'(4.0, 0.5, True)'
+p2069
+S'(4.5, 0.5, True)'
+p2070
+S'END_OF_MEASURE'
+p2071
+S'(0, None, None)'
+p2072
+S'(1.0, 0.5, True)'
+p2073
+S'(1.5, 0.5, True)'
+p2074
+S'(2.0, 0.5, True)'
+p2075
+S'(2.5, 0.5, True)'
+p2076
+S'(3.0, 0.5, True)'
+p2077
+S'(3.5, 1.0, True)'
+p2078
+S'(4.5, 0.5, False)'
+p2079
+S'END_OF_MEASURE'
+p2080
+S'(0, None, None)'
+p2081
+S'(1.0, 0.5, True)'
+p2082
+S'(1.5, 0.5, True)'
+p2083
+S'(2.0, 0.5, True)'
+p2084
+S'(2.5, 0.5, True)'
+p2085
+S'(3.0, 0.5, True)'
+p2086
+S'(3.5, 0.5, True)'
+p2087
+S'(4.0, 0.5, True)'
+p2088
+S'(4.5, 0.5, True)'
+p2089
+S'END_OF_MEASURE'
+p2090
+S'(0, None, None)'
+p2091
+S'(1.0, 0.5, True)'
+p2092
+S'(1.5, 0.5, True)'
+p2093
+S'(2.0, 0.5, True)'
+p2094
+S'(2.5, 0.5, False)'
+p2095
+S'(3.0, 0.5, True)'
+p2096
+S'(3.5, 1.0, True)'
+p2097
+S'(4.5, 0.5, False)'
+p2098
+S'END_OF_MEASURE'
+p2099
+S'(0, None, None)'
+p2100
+S'(1.0, 1.0, True)'
+p2101
+S'(2.0, 0.25, True)'
+p2102
+S'(2.25, 0.25, True)'
+p2103
+S'(2.5, 0.25, True)'
+p2104
+S'(2.75, 0.25, True)'
+p2105
+S'(3.0, 0.25, True)'
+p2106
+S'(3.25, 1.0, False)'
+p2107
+S'(4.25, 0.5, False)'
+p2108
+S'(4.75, 0.25, False)'
+p2109
+S'END_OF_MEASURE'
+p2110
+S'(0, None, None)'
+p2111
+S'(1.0, 0.5, True)'
+p2112
+S'(1.5, 0.5, True)'
+p2113
+S'(2.0, 0.5, True)'
+p2114
+S'(2.5, 0.5, True)'
+p2115
+S'(3.0, 0.5, True)'
+p2116
+S'(3.5, 1.0, True)'
+p2117
+S'(4.5, 0.5, False)'
+p2118
+S'END_OF_MEASURE'
+p2119
+S'(0, None, None)'
+p2120
+S'(1.0, 0.5, True)'
+p2121
+S'(1.5, 0.5, True)'
+p2122
+S'(2.0, 0.5, True)'
+p2123
+S'(2.5, 0.5, True)'
+p2124
+S'(3.0, 0.5, True)'
+p2125
+S'(3.5, 1.0, True)'
+p2126
+S'(4.5, 0.5, False)'
+p2127
+S'END_OF_MEASURE'
+p2128
+S'(0, None, None)'
+p2129
+S'(1.0, 0.5, True)'
+p2130
+S'(1.5, 0.5, True)'
+p2131
+S'(2.0, 0.5, True)'
+p2132
+S'(2.5, 0.5, True)'
+p2133
+S'(3.0, 0.5, True)'
+p2134
+S'(3.5, 0.5, True)'
+p2135
+S'(4.0, 0.5, True)'
+p2136
+S'(4.5, 0.5, True)'
+p2137
+S'END_OF_MEASURE'
+p2138
+S'(0, None, None)'
+p2139
+S'(1.0, 0.5, True)'
+p2140
+S'(1.5, 0.5, True)'
+p2141
+S'(2.0, 0.5, True)'
+p2142
+S'(2.5, 0.5, True)'
+p2143
+S'(3.0, 0.5, True)'
+p2144
+S'(3.5, 1.0, True)'
+p2145
+S'(4.5, 0.5, False)'
+p2146
+S'END_OF_MEASURE'
+p2147
+S'(0, None, None)'
+p2148
+S'(1.0, 2.0, False)'
+p2149
+S'(3.0, 0.5, False)'
+p2150
+S'(3.5, 1.5, True)'
+p2151
+S'END_OF_MEASURE'
+p2152
+S'(0, None, None)'
+p2153
+S'(1.0, 0.5, True)'
+p2154
+S'(1.5, 0.5, True)'
+p2155
+S'(2.0, 0.5, True)'
+p2156
+S'(2.5, 1.0, True)'
+p2157
+S'(3.5, 1.0, True)'
+p2158
+S'(4.5, 0.5, False)'
+p2159
+S'END_OF_MEASURE'
+p2160
+S'(0, None, None)'
+p2161
+S'(1.0, 0.5, True)'
+p2162
+S'(1.5, 0.5, True)'
+p2163
+S'(2.0, 0.5, True)'
+p2164
+S'(2.5, 0.5, True)'
+p2165
+S'(3.0, 0.5, True)'
+p2166
+S'(3.5, 0.5, True)'
+p2167
+S'(4.0, 0.5, True)'
+p2168
+S'(4.5, 0.5, True)'
+p2169
+S'END_OF_MEASURE'
+p2170
+S'(0, None, None)'
+p2171
+S'(1.0, 0.5, True)'
+p2172
+S'(1.5, 0.5, True)'
+p2173
+S'(2.0, 0.5, True)'
+p2174
+S'(2.5, 0.5, False)'
+p2175
+S'(3.0, 0.5, True)'
+p2176
+S'(3.5, 1.0, True)'
+p2177
+S'(4.5, 0.5, False)'
+p2178
+S'END_OF_MEASURE'
+p2179
+S'(0, None, None)'
+p2180
+S'(1.0, 0.5, True)'
+p2181
+S'(1.5, 0.25, True)'
+p2182
+S'(1.75, 0.25, True)'
+p2183
+S'(2.0, 0.25, True)'
+p2184
+S'(2.25, 0.5, True)'
+p2185
+S'(2.75, 0.25, True)'
+p2186
+S'(3.0, 0.25, True)'
+p2187
+S'(3.25, 0.25, True)'
+p2188
+S'(3.5, 0.0625, False)'
+p2189
+S'(3.5625, 1.0, True)'
+p2190
+S'(4.5625, 0.0625, True)'
+p2191
+S'(4.625, 0.0625, True)'
+p2192
+S'(4.6875, 0.0625, True)'
+p2193
+S'(4.75, 0.0625, True)'
+p2194
+S'(4.8125, 0.125, False)'
+p2195
+S'(4.9375, 0.0625, False)'
+p2196
+S'END_OF_MEASURE'
+p2197
+S'(0, None, None)'
+p2198
+S'(1.0, 0.5, True)'
+p2199
+S'(1.5, 0.5, True)'
+p2200
+S'(2.0, 0.5, True)'
+p2201
+S'(2.5, 0.5, True)'
+p2202
+S'(3.0, 0.5, True)'
+p2203
+S'(3.5, 0.5, True)'
+p2204
+S'(4.0, 0.5, True)'
+p2205
+S'(4.5, 0.5, True)'
+p2206
+S'END_OF_MEASURE'
+p2207
+S'(0, None, None)'
+p2208
+S'(1.0, 0.5, True)'
+p2209
+S'(1.5, 0.5, True)'
+p2210
+S'(2.0, 0.5, True)'
+p2211
+S'(2.5, 0.5, True)'
+p2212
+S'(3.0, 0.5, True)'
+p2213
+S'(3.5, 0.5, True)'
+p2214
+S'(4.0, 0.5, True)'
+p2215
+S'(4.5, 0.5, True)'
+p2216
+S'END_OF_MEASURE'
+p2217
+S'(0, None, None)'
+p2218
+S'(1.0, 0.5, True)'
+p2219
+S'(1.5, 0.5, True)'
+p2220
+S'(2.0, 0.5, True)'
+p2221
+S'(2.5, 0.5, True)'
+p2222
+S'(3.0, 0.5, True)'
+p2223
+S'(3.5, 1.0, True)'
+p2224
+S'(4.5, 0.5, False)'
+p2225
+S'END_OF_MEASURE'
+p2226
+S'(0, None, None)'
+p2227
+S'(1.0, 0.5, True)'
+p2228
+S'(1.5, 0.5, True)'
+p2229
+S'(2.0, 0.5, True)'
+p2230
+S'(2.5, 1.0, True)'
+p2231
+S'(3.5, 1.0, True)'
+p2232
+S'(4.5, 0.5, False)'
+p2233
+S'END_OF_MEASURE'
+p2234
+S'(0, None, None)'
+p2235
+S'(1.0, 0.5, True)'
+p2236
+S'(1.5, 0.5, True)'
+p2237
+S'(2.0, 0.5, True)'
+p2238
+S'(2.5, 0.5, True)'
+p2239
+S'(3.0, 0.5, True)'
+p2240
+S'(3.5, 0.5, True)'
+p2241
+S'(4.0, 0.5, True)'
+p2242
+S'(4.5, 0.5, True)'
+p2243
+S'END_OF_MEASURE'
+p2244
+S'(0, None, None)'
+p2245
+S'(1.0, 2.0, False)'
+p2246
+S'(3.0, 0.5, False)'
+p2247
+S'(3.5, 0.125, True)'
+p2248
+S'(3.625, 1.0, False)'
+p2249
+S'(4.625, 0.25, False)'
+p2250
+S'(4.875, 0.125, False)'
+p2251
+S'END_OF_MEASURE'
+p2252
+S'(0, None, None)'
+p2253
+S'(1.0, 0.5, True)'
+p2254
+S'(1.5, 0.5, True)'
+p2255
+S'(2.0, 0.5, True)'
+p2256
+S'(2.5, 0.5, True)'
+p2257
+S'(3.0, 0.5, True)'
+p2258
+S'(3.5, 1.0, True)'
+p2259
+S'(4.5, 0.5, False)'
+p2260
+S'END_OF_MEASURE'
+p2261
+S'(0, None, None)'
+p2262
+S'(1.0, 0.5, True)'
+p2263
+S'(1.5, 0.5, True)'
+p2264
+S'(2.0, 0.5, True)'
+p2265
+S'(2.5, 0.5, True)'
+p2266
+S'(3.0, 0.5, True)'
+p2267
+S'(3.5, 0.5, True)'
+p2268
+S'(4.0, 0.5, True)'
+p2269
+S'(4.5, 0.5, True)'
+p2270
+S'END_OF_MEASURE'
+p2271
+S'(0, None, None)'
+p2272
+S'(1.0, 0.5, True)'
+p2273
+S'(1.5, 0.5, True)'
+p2274
+S'(2.0, 0.5, True)'
+p2275
+S'(2.5, 0.5, True)'
+p2276
+S'(3.0, 0.5, True)'
+p2277
+S'(3.5, 1.0, True)'
+p2278
+S'(4.5, 0.5, False)'
+p2279
+S'END_OF_MEASURE'
+p2280
+S'(0, None, None)'
+p2281
+S'(1.0, 0.5, True)'
+p2282
+S'(1.5, 0.5, True)'
+p2283
+S'(2.0, 0.5, True)'
+p2284
+S'(2.5, 0.5, True)'
+p2285
+S'(3.0, 0.5, True)'
+p2286
+S'(3.5, 0.5, True)'
+p2287
+S'(4.0, 0.5, True)'
+p2288
+S'(4.5, 0.5, True)'
+p2289
+S'END_OF_MEASURE'
+p2290
+S'(0, None, None)'
+p2291
+S'(1.0, 0.5, True)'
+p2292
+S'(1.5, 0.5, True)'
+p2293
+S'(2.0, 0.5, True)'
+p2294
+S'(2.5, 0.5, False)'
+p2295
+S'(3.0, 0.5, True)'
+p2296
+S'(3.5, 1.0, True)'
+p2297
+S'(4.5, 0.5, False)'
+p2298
+S'END_OF_MEASURE'
+p2299
+S'(0, None, None)'
+p2300
+S'(1.0, 0.5, True)'
+p2301
+S'(1.5, 0.5, True)'
+p2302
+S'(2.0, 0.5, True)'
+p2303
+S'(2.5, 0.5, True)'
+p2304
+S'(3.0, 0.5, True)'
+p2305
+S'(3.5, 0.5, True)'
+p2306
+S'(4.0, 0.5, True)'
+p2307
+S'(4.5, 0.5, True)'
+p2308
+S'END_OF_MEASURE'
+p2309
+S'(0, None, None)'
+p2310
+S'(1.0, 2.0, False)'
+p2311
+S'(3.0, 0.5, False)'
+p2312
+S'(3.5, 0.5, True)'
+p2313
+S'(4.0, 0.5, False)'
+p2314
+S'(4.5, 0.5, True)'
+p2315
+S'END_OF_MEASURE'
+p2316
+S'(0, None, None)'
+p2317
+S'(1.0, 0.5, True)'
+p2318
+S'(1.5, 0.5, True)'
+p2319
+S'(2.0, 0.5, True)'
+p2320
+S'(2.5, 0.5, False)'
+p2321
+S'(3.0, 0.5, True)'
+p2322
+S'(3.5, 1.0, True)'
+p2323
+S'(4.5, 0.5, False)'
+p2324
+S'END_OF_MEASURE'
+p2325
+S'(0, None, None)'
+p2326
+S'(1.0, 0.5, True)'
+p2327
+S'(1.5, 0.5, True)'
+p2328
+S'(2.0, 0.5, True)'
+p2329
+S'(2.5, 0.5, False)'
+p2330
+S'(3.0, 0.5, True)'
+p2331
+S'(3.5, 1.0, True)'
+p2332
+S'(4.5, 0.5, False)'
+p2333
+S'END_OF_MEASURE'
+p2334
+S'(0, None, None)'
+p2335
+S'(1.0, 1.0, False)'
+p2336
+S'(2.0, 0.5, False)'
+p2337
+S'(2.5, 0.25, True)'
+p2338
+S'(2.75, 2.0, False)'
+p2339
+S'(4.75, 0.25, False)'
+p2340
+S'END_OF_MEASURE'
+p2341
+S'(0, None, None)'
+p2342
+S'(1.0, 0.5, True)'
+p2343
+S'(1.5, 0.5, True)'
+p2344
+S'(2.0, 0.5, True)'
+p2345
+S'(2.5, 0.5, False)'
+p2346
+S'(3.0, 0.5, True)'
+p2347
+S'(3.5, 1.0, True)'
+p2348
+S'(4.5, 0.5, False)'
+p2349
+S'END_OF_MEASURE'
+p2350
+S'(0, None, None)'
+p2351
+S'(1.0, 0.5, True)'
+p2352
+S'(1.5, 0.5, True)'
+p2353
+S'(2.0, 0.5, True)'
+p2354
+S'(2.5, 1.0, True)'
+p2355
+S'(3.5, 1.0, True)'
+p2356
+S'(4.5, 0.5, False)'
+p2357
+S'END_OF_MEASURE'
+p2358
+S'(0, None, None)'
+p2359
+S'(1.0, 0.5, True)'
+p2360
+S'(1.5, 0.5, True)'
+p2361
+S'(2.0, 0.5, True)'
+p2362
+S'(2.5, 0.5, False)'
+p2363
+S'(3.0, 0.5, True)'
+p2364
+S'(3.5, 1.0, True)'
+p2365
+S'(4.5, 0.5, False)'
+p2366
+S'END_OF_MEASURE'
+p2367
+S'(0, None, None)'
+p2368
+S'(1.0, 0.5, True)'
+p2369
+S'(1.5, 0.5, True)'
+p2370
+S'(2.0, 0.5, True)'
+p2371
+S'(2.5, 1.0, True)'
+p2372
+S'(3.5, 1.0, True)'
+p2373
+S'(4.5, 0.5, False)'
+p2374
+S'END_OF_MEASURE'
+p2375
+S'(0, None, None)'
+p2376
+S'(1.0, 0.5, True)'
+p2377
+S'(1.5, 0.5, True)'
+p2378
+S'(2.0, 0.5, True)'
+p2379
+S'(2.5, 0.5, False)'
+p2380
+S'(3.0, 0.5, True)'
+p2381
+S'(3.5, 1.0, True)'
+p2382
+S'(4.5, 0.5, False)'
+p2383
+S'END_OF_MEASURE'
+p2384
+S'(0, None, None)'
+p2385
+S'(1.0, 0.5, True)'
+p2386
+S'(1.5, 0.5, True)'
+p2387
+S'(2.0, 0.5, True)'
+p2388
+S'(2.5, 0.5, True)'
+p2389
+S'(3.0, 0.5, True)'
+p2390
+S'(3.5, 0.5, True)'
+p2391
+S'(4.0, 0.5, True)'
+p2392
+S'(4.5, 0.5, True)'
+p2393
+S'END_OF_MEASURE'
+p2394
+S'(0, None, None)'
+p2395
+S'(1.0, 0.5, True)'
+p2396
+S'(1.5, 0.5, True)'
+p2397
+S'(2.0, 0.5, True)'
+p2398
+S'(2.5, 0.5, True)'
+p2399
+S'(3.0, 0.5, True)'
+p2400
+S'(3.5, 0.5, True)'
+p2401
+S'(4.0, 0.5, True)'
+p2402
+S'(4.5, 0.5, True)'
+p2403
+S'END_OF_MEASURE'
+p2404
+S'(0, None, None)'
+p2405
+S'(1.0, 0.5, False)'
+p2406
+S'(1.5, 0.5, True)'
+p2407
+S'(2.0, 0.5, False)'
+p2408
+S'(2.5, 0.5, True)'
+p2409
+S'(3.0, 0.5, False)'
+p2410
+S'(3.5, 0.5, True)'
+p2411
+S'(4.0, 0.5, False)'
+p2412
+S'(4.5, 0.5, True)'
+p2413
+S'END_OF_MEASURE'
+p2414
+S'(0, None, None)'
+p2415
+S'(1.0, 0.75, False)'
+p2416
+S'(1.75, 0.25, False)'
+p2417
+S'(2.0, 1.0, True)'
+p2418
+S'(3.0, 0.25, True)'
+p2419
+S'(3.25, 0.25, True)'
+p2420
+S'(3.5, 0.25, True)'
+p2421
+S'(3.75, 0.25, True)'
+p2422
+S'(4.0, 0.5, True)'
+p2423
+S'(4.5, 0.25, True)'
+p2424
+S'(4.75, 0.25, True)'
+p2425
+S'END_OF_MEASURE'
+p2426
+S'(0, None, None)'
+p2427
+S'(1.0, 0.75, False)'
+p2428
+S'(1.75, 0.25, False)'
+p2429
+S'(2.0, 1.0, True)'
+p2430
+S'(3.0, 0.25, True)'
+p2431
+S'(3.25, 0.25, True)'
+p2432
+S'(3.5, 0.25, True)'
+p2433
+S'(3.75, 0.25, True)'
+p2434
+S'(4.0, 0.5, True)'
+p2435
+S'(4.5, 0.25, True)'
+p2436
+S'(4.75, 0.25, True)'
+p2437
+S'END_OF_MEASURE'
+p2438
+S'(0, None, None)'
+p2439
+S'(1.0, 2.0, False)'
+p2440
+S'(3.0, 0.5, False)'
+p2441
+S'(3.5, 0.5, True)'
+p2442
+S'(4.0, 0.5, False)'
+p2443
+S'(4.5, 0.5, True)'
+p2444
+S'END_OF_MEASURE'
+p2445
+S'(0, None, None)'
+p2446
+S'(1.0, 0.5, True)'
+p2447
+S'(1.5, 0.5, True)'
+p2448
+S'(2.0, 0.5, True)'
+p2449
+S'(2.5, 0.5, False)'
+p2450
+S'(3.0, 0.5, True)'
+p2451
+S'(3.5, 1.0, True)'
+p2452
+S'(4.5, 0.5, False)'
+p2453
+S'END_OF_MEASURE'
+p2454
+S'(0, None, None)'
+p2455
+S'(1.0, 0.5, True)'
+p2456
+S'(1.5, 0.5, True)'
+p2457
+S'(2.0, 0.5, True)'
+p2458
+S'(2.5, 0.5, True)'
+p2459
+S'(3.0, 0.5, True)'
+p2460
+S'(3.5, 0.5, True)'
+p2461
+S'(4.0, 0.25, True)'
+p2462
+S'(4.25, 0.25, True)'
+p2463
+S'(4.5, 0.25, True)'
+p2464
+S'(4.75, 0.25, False)'
+p2465
+S'END_OF_MEASURE'
+p2466
+S'(0, None, None)'
+p2467
+S'(1.0, 1.0, True)'
+p2468
+S'(2.0, 1.0, True)'
+p2469
+S'(3.0, 0.5, True)'
+p2470
+S'(3.5, 1.0, True)'
+p2471
+S'(4.5, 0.5, False)'
+p2472
+S'END_OF_MEASURE'
+p2473
+S'(0, None, None)'
+p2474
+S'(1.0, 0.5, True)'
+p2475
+S'(1.5, 0.5, True)'
+p2476
+S'(2.0, 0.5, True)'
+p2477
+S'(2.5, 1.0, True)'
+p2478
+S'(3.5, 1.0, True)'
+p2479
+S'(4.5, 0.5, False)'
+p2480
+S'END_OF_MEASURE'
+p2481
+S'(0, None, None)'
+p2482
+S'(1.0, 0.5, True)'
+p2483
+S'(1.5, 0.5, True)'
+p2484
+S'(2.0, 0.5, True)'
+p2485
+S'(2.5, 1.0, True)'
+p2486
+S'(3.5, 1.0, True)'
+p2487
+S'(4.5, 0.5, False)'
+p2488
+S'END_OF_MEASURE'
+p2489
+S'(0, None, None)'
+p2490
+S'(1.0, 0.5, False)'
+p2491
+S'(1.5, 0.25, True)'
+p2492
+S'(1.75, 0.75, True)'
+p2493
+S'(2.5, 0.25, True)'
+p2494
+S'(2.75, 0.75, True)'
+p2495
+S'(3.5, 1.5, False)'
+p2496
+S'END_OF_MEASURE'
+p2497
+S'(0, None, None)'
+p2498
+S'(1.0, 0.5, True)'
+p2499
+S'(1.5, 0.5, True)'
+p2500
+S'(2.0, 0.5, True)'
+p2501
+S'(2.5, 0.5, False)'
+p2502
+S'(3.0, 0.5, True)'
+p2503
+S'(3.5, 1.0, True)'
+p2504
+S'(4.5, 0.5, False)'
+p2505
+S'END_OF_MEASURE'
+p2506
+S'(0, None, None)'
+p2507
+S'(1.0, 0.5, True)'
+p2508
+S'(1.5, 0.5, True)'
+p2509
+S'(2.0, 0.5, True)'
+p2510
+S'(2.5, 1.0, True)'
+p2511
+S'(3.5, 1.0, True)'
+p2512
+S'(4.5, 0.5, False)'
+p2513
+S'END_OF_MEASURE'
+p2514
+S'(0, None, None)'
+p2515
+S'(1.0, 0.5, True)'
+p2516
+S'(1.5, 0.5, True)'
+p2517
+S'(2.0, 0.5, True)'
+p2518
+S'(2.5, 0.5, True)'
+p2519
+S'(3.0, 0.5, True)'
+p2520
+S'(3.5, 0.5, True)'
+p2521
+S'(4.0, 0.5, True)'
+p2522
+S'(4.5, 0.5, True)'
+p2523
+S'END_OF_MEASURE'
+p2524
+S'(0, None, None)'
+p2525
+S'(1.0, 0.5, True)'
+p2526
+S'(1.5, 0.5, True)'
+p2527
+S'(2.0, 0.5, True)'
+p2528
+S'(2.5, 0.5, False)'
+p2529
+S'(3.0, 0.5, True)'
+p2530
+S'(3.5, 1.0, True)'
+p2531
+S'(4.5, 0.5, False)'
+p2532
+S'END_OF_MEASURE'
+p2533
+S'(0, None, None)'
+p2534
+S'(1.0, 0.5, True)'
+p2535
+S'(1.5, 0.5, True)'
+p2536
+S'(2.0, 0.5, True)'
+p2537
+S'(2.5, 0.5, False)'
+p2538
+S'(3.0, 0.5, True)'
+p2539
+S'(3.5, 1.0, True)'
+p2540
+S'(4.5, 0.5, False)'
+p2541
+S'END_OF_MEASURE'
+p2542
+S'(0, None, None)'
+p2543
+S'(1.0, 0.5, True)'
+p2544
+S'(1.5, 0.5, True)'
+p2545
+S'(2.0, 0.5, True)'
+p2546
+S'(2.5, 0.5, True)'
+p2547
+S'(3.0, 0.5, True)'
+p2548
+S'(3.5, 0.5, True)'
+p2549
+S'(4.0, 0.5, True)'
+p2550
+S'(4.5, 0.5, True)'
+p2551
+S'END_OF_MEASURE'
+p2552
+S'(0, None, None)'
+p2553
+S'(1.0, 0.5, False)'
+p2554
+S'(1.5, 0.5, True)'
+p2555
+S'(2.0, 0.5, True)'
+p2556
+S'(2.5, 1.0, True)'
+p2557
+S'(3.5, 1.0, True)'
+p2558
+S'(4.5, 0.5, False)'
+p2559
+S'END_OF_MEASURE'
+p2560
+S'(0, None, None)'
+p2561
+S'(1.0, 0.5, True)'
+p2562
+S'(1.5, 0.5, True)'
+p2563
+S'(2.0, 0.5, True)'
+p2564
+S'(2.5, 0.5, False)'
+p2565
+S'(3.0, 0.5, True)'
+p2566
+S'(3.5, 1.0, True)'
+p2567
+S'(4.5, 0.5, False)'
+p2568
+S'END_OF_MEASURE'
+p2569
+S'(0, None, None)'
+p2570
+S'(1.0, 0.5, True)'
+p2571
+S'(1.5, 0.5, True)'
+p2572
+S'(2.0, 0.5, True)'
+p2573
+S'(2.5, 0.5, True)'
+p2574
+S'(3.0, 0.5, True)'
+p2575
+S'(3.5, 0.5, True)'
+p2576
+S'(4.0, 0.5, True)'
+p2577
+S'(4.5, 0.5, True)'
+p2578
+S'END_OF_MEASURE'
+p2579
+S'(0, None, None)'
+p2580
+S'(1.0, 0.5, True)'
+p2581
+S'(1.5, 0.5, True)'
+p2582
+S'(2.0, 0.5, True)'
+p2583
+S'(2.5, 0.5, True)'
+p2584
+S'(3.0, 0.5, True)'
+p2585
+S'(3.5, 0.5, True)'
+p2586
+S'(4.0, 0.5, True)'
+p2587
+S'(4.5, 0.5, True)'
+p2588
+S'END_OF_MEASURE'
+p2589
+S'(0, None, None)'
+p2590
+S'(1.0, 0.5, True)'
+p2591
+S'(1.5, 0.5, True)'
+p2592
+S'(2.0, 0.5, True)'
+p2593
+S'(2.5, 0.5, False)'
+p2594
+S'(3.0, 0.5, True)'
+p2595
+S'(3.5, 1.0, True)'
+p2596
+S'(4.5, 0.5, False)'
+p2597
+S'END_OF_MEASURE'
+p2598
+S'(0, None, None)'
+p2599
+S'(1.0, 0.5, True)'
+p2600
+S'(1.5, 0.5, True)'
+p2601
+S'(2.0, 0.5, True)'
+p2602
+S'(2.5, 0.5, True)'
+p2603
+S'(3.0, 0.5, True)'
+p2604
+S'(3.5, 0.5, True)'
+p2605
+S'(4.0, 0.5, True)'
+p2606
+S'(4.5, 0.5, True)'
+p2607
+S'END_OF_MEASURE'
+p2608
+S'(0, None, None)'
+p2609
+S'(1.0, 0.5, True)'
+p2610
+S'(1.5, 0.5, True)'
+p2611
+S'(2.0, 0.5, True)'
+p2612
+S'(2.5, 0.5, True)'
+p2613
+S'(3.0, 0.5, True)'
+p2614
+S'(3.5, 0.5, True)'
+p2615
+S'(4.0, 0.5, True)'
+p2616
+S'(4.5, 0.5, True)'
+p2617
+S'END_OF_MEASURE'
+p2618
+S'(0, None, None)'
+p2619
+S'(1.0, 1.0, True)'
+p2620
+S'(2.0, 1.0, True)'
+p2621
+S'(3.0, 0.5, True)'
+p2622
+S'(3.5, 1.0, True)'
+p2623
+S'(4.5, 0.5, False)'
+p2624
+S'END_OF_MEASURE'
+p2625
+S'(0, None, None)'
+p2626
+S'(1.0, 0.5, True)'
+p2627
+S'(1.5, 0.5, True)'
+p2628
+S'(2.0, 0.5, True)'
+p2629
+S'(2.5, 0.5, True)'
+p2630
+S'(3.0, 0.5, True)'
+p2631
+S'(3.5, 0.5, True)'
+p2632
+S'(4.0, 0.5, True)'
+p2633
+S'(4.5, 0.5, True)'
+p2634
+S'END_OF_MEASURE'
+p2635
+S'(0, None, None)'
+p2636
+S'(1.0, 0.5, True)'
+p2637
+S'(1.5, 0.5, True)'
+p2638
+S'(2.0, 0.5, True)'
+p2639
+S'(2.5, 0.5, False)'
+p2640
+S'(3.0, 0.5, True)'
+p2641
+S'(3.5, 1.0, True)'
+p2642
+S'(4.5, 0.5, False)'
+p2643
+S'END_OF_MEASURE'
+p2644
+S'(0, None, None)'
+p2645
+S'(1.0, 1.0, False)'
+p2646
+S'(2.0, 0.5, False)'
+p2647
+S'(2.5, 1.0, True)'
+p2648
+S'(3.5, 1.0, False)'
+p2649
+S'(4.5, 0.5, False)'
+p2650
+S'END_OF_MEASURE'
+p2651
+S'(0, None, None)'
+p2652
+S'(1.0, 0.5, True)'
+p2653
+S'(1.5, 0.5, True)'
+p2654
+S'(2.0, 0.5, True)'
+p2655
+S'(2.5, 0.5, True)'
+p2656
+S'(3.0, 0.5, True)'
+p2657
+S'(3.5, 0.5, True)'
+p2658
+S'(4.0, 0.5, True)'
+p2659
+S'(4.5, 0.5, True)'
+p2660
+S'END_OF_MEASURE'
+p2661
+S'(0, None, None)'
+p2662
+S'(1.0, 0.5, False)'
+p2663
+S'(1.5, 0.5, True)'
+p2664
+S'(2.0, 0.5, False)'
+p2665
+S'(2.5, 0.5, True)'
+p2666
+S'(3.0, 0.5, False)'
+p2667
+S'(3.5, 0.5, True)'
+p2668
+S'(4.0, 0.5, False)'
+p2669
+S'(4.5, 0.5, True)'
+p2670
+S'END_OF_MEASURE'
+p2671
+S'(0, None, None)'
+p2672
+S'(1.0, 0.5, True)'
+p2673
+S'(1.5, 0.5, True)'
+p2674
+S'(2.0, 0.5, True)'
+p2675
+S'(2.5, 1.0, True)'
+p2676
+S'(3.5, 1.0, True)'
+p2677
+S'(4.5, 0.5, False)'
+p2678
+S'END_OF_MEASURE'
+p2679
+S'(0, None, None)'
+p2680
+S'(1.0, 1.0, False)'
+p2681
+S'(2.0, 1.0, True)'
+p2682
+S'(3.0, 0.25, True)'
+p2683
+S'(3.25, 0.25, True)'
+p2684
+S'(3.5, 0.25, True)'
+p2685
+S'(3.75, 0.25, True)'
+p2686
+S'(4.0, 0.5, True)'
+p2687
+S'(4.5, 0.25, True)'
+p2688
+S'(4.75, 0.25, True)'
+p2689
+S'END_OF_MEASURE'
+p2690
+S'(0, None, None)'
+p2691
+S'(1.0, 0.5, True)'
+p2692
+S'(1.5, 0.5, True)'
+p2693
+S'(2.0, 0.5, True)'
+p2694
+S'(2.5, 0.5, True)'
+p2695
+S'(3.0, 0.5, True)'
+p2696
+S'(3.5, 0.5, True)'
+p2697
+S'(4.0, 0.5, True)'
+p2698
+S'(4.5, 0.5, True)'
+p2699
+S'END_OF_MEASURE'
+p2700
+S'(0, None, None)'
+p2701
+S'(1.0, 0.5, True)'
+p2702
+S'(1.5, 0.5, True)'
+p2703
+S'(2.0, 0.5, True)'
+p2704
+S'(2.5, 0.5, True)'
+p2705
+S'(3.0, 0.5, True)'
+p2706
+S'(3.5, 0.5, True)'
+p2707
+S'(4.0, 0.5, True)'
+p2708
+S'(4.5, 0.5, True)'
+p2709
+S'END_OF_MEASURE'
+p2710
+S'(0, None, None)'
+p2711
+S'(1.0, 0.75, False)'
+p2712
+S'(1.75, 0.25, False)'
+p2713
+S'(2.0, 1.0, True)'
+p2714
+S'(3.0, 0.25, True)'
+p2715
+S'(3.25, 0.25, True)'
+p2716
+S'(3.5, 0.25, True)'
+p2717
+S'(3.75, 0.25, True)'
+p2718
+S'(4.0, 0.5, True)'
+p2719
+S'(4.5, 0.25, True)'
+p2720
+S'(4.75, 0.25, True)'
+p2721
+S'END_OF_MEASURE'
+p2722
+S'(0, None, None)'
+p2723
+S'(1.0, 0.5, True)'
+p2724
+S'(1.5, 0.5, True)'
+p2725
+S'(2.0, 0.5, True)'
+p2726
+S'(2.5, 0.5, True)'
+p2727
+S'(3.0, 0.5, True)'
+p2728
+S'(3.5, 0.5, True)'
+p2729
+S'(4.0, 0.5, True)'
+p2730
+S'(4.5, 0.5, True)'
+p2731
+S'END_OF_MEASURE'
+p2732
+S'(0, None, None)'
+p2733
+S'(1.0, 0.5, True)'
+p2734
+S'(1.5, 0.5, True)'
+p2735
+S'(2.0, 0.5, True)'
+p2736
+S'(2.5, 0.5, True)'
+p2737
+S'(3.0, 0.5, True)'
+p2738
+S'(3.5, 1.0, True)'
+p2739
+S'(4.5, 0.5, False)'
+p2740
+S'END_OF_MEASURE'
+p2741
+S'(0, None, None)'
+p2742
+S'(1.0, 0.5, True)'
+p2743
+S'(1.5, 0.5, True)'
+p2744
+S'(2.0, 0.5, True)'
+p2745
+S'(2.5, 0.5, False)'
+p2746
+S'(3.0, 0.5, True)'
+p2747
+S'(3.5, 1.0, True)'
+p2748
+S'(4.5, 0.5, False)'
+p2749
+S'END_OF_MEASURE'
+p2750
+S'(0, None, None)'
+p2751
+S'(1.0, 0.5, True)'
+p2752
+S'(1.5, 0.5, True)'
+p2753
+S'(2.0, 0.5, True)'
+p2754
+S'(2.5, 0.5, True)'
+p2755
+S'(3.0, 0.5, True)'
+p2756
+S'(3.5, 0.5, True)'
+p2757
+S'(4.0, 0.5, True)'
+p2758
+S'(4.5, 0.5, True)'
+p2759
+S'END_OF_MEASURE'
+p2760
+S'(0, None, None)'
+p2761
+S'(1.0, 2.0, False)'
+p2762
+S'(3.0, 0.5, False)'
+p2763
+S'(3.5, 0.5, True)'
+p2764
+S'(4.0, 0.5, True)'
+p2765
+S'(4.5, 0.5, True)'
+p2766
+S'END_OF_MEASURE'
+p2767
+S'(0, None, None)'
+p2768
+S'(1.0, 0.5, True)'
+p2769
+S'(1.5, 0.5, True)'
+p2770
+S'(2.0, 0.5, True)'
+p2771
+S'(2.5, 1.0, True)'
+p2772
+S'(3.5, 1.0, True)'
+p2773
+S'(4.5, 0.5, False)'
+p2774
+S'END_OF_MEASURE'
+p2775
+S'(0, None, None)'
+p2776
+S'(1.0, 0.5, True)'
+p2777
+S'(1.5, 0.5, True)'
+p2778
+S'(2.0, 0.5, True)'
+p2779
+S'(2.5, 1.0, True)'
+p2780
+S'(3.5, 1.0, True)'
+p2781
+S'(4.5, 0.5, False)'
+p2782
+S'END_OF_MEASURE'
+p2783
+S'(0, None, None)'
+p2784
+S'(1.0, 0.5, True)'
+p2785
+S'(1.5, 0.5, True)'
+p2786
+S'(2.0, 0.5, True)'
+p2787
+S'(2.5, 1.0, True)'
+p2788
+S'(3.5, 1.0, True)'
+p2789
+S'(4.5, 0.5, False)'
+p2790
+S'END_OF_MEASURE'
+p2791
+S'(0, None, None)'
+p2792
+S'(1.0, 0.5, True)'
+p2793
+S'(1.5, 0.5, True)'
+p2794
+S'(2.0, 0.5, True)'
+p2795
+S'(2.5, 1.0, True)'
+p2796
+S'(3.5, 1.0, True)'
+p2797
+S'(4.5, 0.5, False)'
+p2798
+S'END_OF_MEASURE'
+p2799
+S'(0, None, None)'
+p2800
+S'(1.0, 0.5, True)'
+p2801
+S'(1.5, 0.5, True)'
+p2802
+S'(2.0, 0.5, True)'
+p2803
+S'(2.5, 0.5, False)'
+p2804
+S'(3.0, 0.5, True)'
+p2805
+S'(3.5, 1.0, True)'
+p2806
+S'(4.5, 0.5, False)'
+p2807
+S'END_OF_MEASURE'
+p2808
+S'(0, None, None)'
+p2809
+S'(1.0, 0.5, True)'
+p2810
+S'(1.5, 0.5, True)'
+p2811
+S'(2.0, 0.5, True)'
+p2812
+S'(2.5, 0.5, True)'
+p2813
+S'(3.0, 0.5, True)'
+p2814
+S'(3.5, 0.5, True)'
+p2815
+S'(4.0, 0.5, True)'
+p2816
+S'(4.5, 0.5, True)'
+p2817
+S'END_OF_MEASURE'
+p2818
+S'(0, None, None)'
+p2819
+S'(1.0, 0.5, False)'
+p2820
+S'(1.5, 0.5, True)'
+p2821
+S'(2.0, 0.5, False)'
+p2822
+S'(2.5, 0.5, True)'
+p2823
+S'(3.0, 0.5, False)'
+p2824
+S'(3.5, 0.5, True)'
+p2825
+S'(4.0, 0.5, True)'
+p2826
+S'(4.5, 0.5, True)'
+p2827
+S'END_OF_MEASURE'
+p2828
+S'(0, None, None)'
+p2829
+S'(1.0, 0.5, True)'
+p2830
+S'(1.5, 0.5, True)'
+p2831
+S'(2.0, 0.5, True)'
+p2832
+S'(2.5, 0.5, True)'
+p2833
+S'(3.0, 0.5, True)'
+p2834
+S'(3.5, 0.5, True)'
+p2835
+S'(4.0, 0.5, True)'
+p2836
+S'(4.5, 0.5, True)'
+p2837
+S'END_OF_MEASURE'
+p2838
+S'(0, None, None)'
+p2839
+S'(1.0, 0.5, False)'
+p2840
+S'(1.5, 0.5, True)'
+p2841
+S'(2.0, 0.5, True)'
+p2842
+S'(2.5, 1.0, True)'
+p2843
+S'(3.5, 1.0, True)'
+p2844
+S'(4.5, 0.5, False)'
+p2845
+S'END_OF_MEASURE'
+p2846
+S'(0, None, None)'
+p2847
+S'(1.0, 0.5, True)'
+p2848
+S'(1.5, 0.5, True)'
+p2849
+S'(2.0, 0.5, True)'
+p2850
+S'(2.5, 0.5, False)'
+p2851
+S'(3.0, 0.5, True)'
+p2852
+S'(3.5, 1.0, True)'
+p2853
+S'(4.5, 0.5, False)'
+p2854
+S'END_OF_MEASURE'
+p2855
+S'(0, None, None)'
+p2856
+S'(1.0, 0.5, True)'
+p2857
+S'(1.5, 0.5, True)'
+p2858
+S'(2.0, 0.5, True)'
+p2859
+S'(2.5, 0.5, False)'
+p2860
+S'(3.0, 0.5, True)'
+p2861
+S'(3.5, 1.0, True)'
+p2862
+S'(4.5, 0.5, False)'
+p2863
+S'END_OF_MEASURE'
+p2864
+S'(0, None, None)'
+p2865
+S'(1.0, 0.5, True)'
+p2866
+S'(1.5, 0.5, True)'
+p2867
+S'(2.0, 0.5, True)'
+p2868
+S'(2.5, 0.5, True)'
+p2869
+S'(3.0, 0.5, True)'
+p2870
+S'(3.5, 1.0, True)'
+p2871
+S'(4.5, 0.5, False)'
+p2872
+S'END_OF_MEASURE'
+p2873
+S'(0, None, None)'
+p2874
+S'(1.0, 0.5, True)'
+p2875
+S'(1.5, 0.5, True)'
+p2876
+S'(2.0, 0.5, True)'
+p2877
+S'(2.5, 0.5, True)'
+p2878
+S'(3.0, 0.5, True)'
+p2879
+S'(3.5, 0.5, True)'
+p2880
+S'(4.0, 0.5, True)'
+p2881
+S'(4.5, 0.5, True)'
+p2882
+S'END_OF_MEASURE'
+p2883
+S'(0, None, None)'
+p2884
+S'(1.0, 0.5, True)'
+p2885
+S'(1.5, 0.5, True)'
+p2886
+S'(2.0, 0.5, True)'
+p2887
+S'(2.5, 0.5, False)'
+p2888
+S'(3.0, 0.5, True)'
+p2889
+S'(3.5, 1.0, True)'
+p2890
+S'(4.5, 0.5, False)'
+p2891
+S'END_OF_MEASURE'
+p2892
+S'(0, None, None)'
+p2893
+S'(1.0, 0.5, True)'
+p2894
+S'(1.5, 0.5, True)'
+p2895
+S'(2.0, 0.5, True)'
+p2896
+S'(2.5, 0.5, True)'
+p2897
+S'(3.0, 0.5, True)'
+p2898
+S'(3.5, 1.0, True)'
+p2899
+S'(4.5, 0.5, False)'
+p2900
+S'END_OF_MEASURE'
+p2901
+S'(0, None, None)'
+p2902
+S'(1.0, 0.5, True)'
+p2903
+S'(1.5, 0.5, True)'
+p2904
+S'(2.0, 0.5, True)'
+p2905
+S'(2.5, 0.5, True)'
+p2906
+S'(3.0, 0.5, True)'
+p2907
+S'(3.5, 1.0, True)'
+p2908
+S'(4.5, 0.5, False)'
+p2909
+S'END_OF_MEASURE'
+p2910
+S'(0, None, None)'
+p2911
+S'(1.0, 0.5, True)'
+p2912
+S'(1.5, 0.5, True)'
+p2913
+S'(2.0, 0.5, True)'
+p2914
+S'(2.5, 0.5, True)'
+p2915
+S'(3.0, 0.5, True)'
+p2916
+S'(3.5, 0.5, True)'
+p2917
+S'(4.0, 0.5, True)'
+p2918
+S'(4.5, 0.5, True)'
+p2919
+S'END_OF_MEASURE'
+p2920
+S'(0, None, None)'
+p2921
+S'(1.0, 0.5, True)'
+p2922
+S'(1.5, 0.5, True)'
+p2923
+S'(2.0, 0.5, True)'
+p2924
+S'(2.5, 0.5, False)'
+p2925
+S'(3.0, 0.5, True)'
+p2926
+S'(3.5, 1.0, True)'
+p2927
+S'(4.5, 0.5, False)'
+p2928
+S'END_OF_MEASURE'
+p2929
+S'(0, None, None)'
+p2930
+S'(1.0, 0.5, False)'
+p2931
+S'(1.5, 0.5, False)'
+p2932
+S'(2.0, 0.5, False)'
+p2933
+S'(2.5, 0.5, False)'
+p2934
+S'(3.0, 0.5, False)'
+p2935
+S'(3.5, 0.5, True)'
+p2936
+S'(4.0, 0.5, True)'
+p2937
+S'(4.5, 0.5, True)'
+p2938
+S'END_OF_MEASURE'
+p2939
+S'(0, None, None)'
+p2940
+S'(1.0, 0.5, False)'
+p2941
+S'(1.5, 0.5, True)'
+p2942
+S'(2.0, 0.5, True)'
+p2943
+S'(2.5, 1.0, True)'
+p2944
+S'(3.5, 1.0, True)'
+p2945
+S'(4.5, 0.5, False)'
+p2946
+S'END_OF_MEASURE'
+p2947
+S'(0, None, None)'
+p2948
+S'(1.0, 0.5, True)'
+p2949
+S'(1.5, 0.5, True)'
+p2950
+S'(2.0, 0.5, True)'
+p2951
+S'(2.5, 0.5, False)'
+p2952
+S'(3.0, 0.5, True)'
+p2953
+S'(3.5, 1.0, True)'
+p2954
+S'(4.5, 0.5, False)'
+p2955
+S'END_OF_MEASURE'
+p2956
+S'(0, None, None)'
+p2957
+S'(1.0, 1.0, True)'
+p2958
+S'(2.0, 1.0, True)'
+p2959
+S'(3.0, 0.5, True)'
+p2960
+S'(3.5, 1.0, True)'
+p2961
+S'(4.5, 0.5, False)'
+p2962
+S'END_OF_MEASURE'
+p2963
+S'(0, None, None)'
+p2964
+S'(1.0, 0.25, True)'
+p2965
+S'(1.25, 0.25, True)'
+p2966
+S'(1.5, 0.25, True)'
+p2967
+S'(1.75, 0.25, True)'
+p2968
+S'(2.0, 0.25, True)'
+p2969
+S'(2.25, 0.25, True)'
+p2970
+S'(2.5, 0.25, True)'
+p2971
+S'(2.75, 0.25, True)'
+p2972
+S'(3.0, 0.25, True)'
+p2973
+S'(3.25, 0.25, True)'
+p2974
+S'(3.5, 0.25, True)'
+p2975
+S'(3.75, 0.25, True)'
+p2976
+S'(4.0, 0.25, True)'
+p2977
+S'(4.25, 0.25, True)'
+p2978
+S'(4.5, 0.25, True)'
+p2979
+S'(4.75, 0.25, True)'
+p2980
+S'END_OF_MEASURE'
+p2981
+S'(0, None, None)'
+p2982
+S'(1.0, 0.5, True)'
+p2983
+S'(1.5, 0.5, True)'
+p2984
+S'(2.0, 0.5, True)'
+p2985
+S'(2.5, 0.5, True)'
+p2986
+S'(3.0, 0.5, True)'
+p2987
+S'(3.5, 0.5, True)'
+p2988
+S'(4.0, 0.5, True)'
+p2989
+S'(4.5, 0.5, True)'
+p2990
+S'END_OF_MEASURE'
+p2991
+S'(0, None, None)'
+p2992
+S'(1.0, 0.5, True)'
+p2993
+S'(1.5, 0.5, True)'
+p2994
+S'(2.0, 0.5, True)'
+p2995
+S'(2.5, 0.5, True)'
+p2996
+S'(3.0, 0.5, True)'
+p2997
+S'(3.5, 0.5, True)'
+p2998
+S'(4.0, 0.5, True)'
+p2999
+S'(4.5, 0.5, True)'
+p3000
+S'END_OF_MEASURE'
+p3001
+S'(0, None, None)'
+p3002
+S'(1.0, 1.0, True)'
+p3003
+S'(2.0, 1.0, True)'
+p3004
+S'(3.0, 0.5, True)'
+p3005
+S'(3.5, 1.0, True)'
+p3006
+S'(4.5, 0.5, False)'
+p3007
+S'END_OF_MEASURE'
+p3008
+S'(0, None, None)'
+p3009
+S'(1.0, 0.5, False)'
+p3010
+S'(1.5, 0.5, True)'
+p3011
+S'(2.0, 0.5, False)'
+p3012
+S'(2.5, 0.5, True)'
+p3013
+S'(3.0, 0.5, False)'
+p3014
+S'(3.5, 0.5, True)'
+p3015
+S'(4.0, 0.5, False)'
+p3016
+S'(4.5, 0.5, True)'
+p3017
+S'END_OF_MEASURE'
+p3018
+S'(0, None, None)'
+p3019
+S'(1.0, 0.5, True)'
+p3020
+S'(1.5, 0.5, True)'
+p3021
+S'(2.0, 0.5, True)'
+p3022
+S'(2.5, 0.5, False)'
+p3023
+S'(3.0, 0.5, True)'
+p3024
+S'(3.5, 1.0, True)'
+p3025
+S'(4.5, 0.5, False)'
+p3026
+S'END_OF_MEASURE'
+p3027
+S'(0, None, None)'
+p3028
+S'(1.0, 1.0, True)'
+p3029
+S'(2.0, 1.0, True)'
+p3030
+S'(3.0, 0.5, True)'
+p3031
+S'(3.5, 1.0, True)'
+p3032
+S'(4.5, 0.5, False)'
+p3033
+S'END_OF_MEASURE'
+p3034
+S'(0, None, None)'
+p3035
+S'(1.0, 0.5, False)'
+p3036
+S'(1.5, 0.5, True)'
+p3037
+S'(2.0, 0.5, False)'
+p3038
+S'(2.5, 0.5, True)'
+p3039
+S'(3.0, 0.5, False)'
+p3040
+S'(3.5, 0.5, True)'
+p3041
+S'(4.0, 0.5, False)'
+p3042
+S'(4.5, 0.5, True)'
+p3043
+S'END_OF_MEASURE'
+p3044
+S'(0, None, None)'
+p3045
+S'(1.0, 0.5, True)'
+p3046
+S'(1.5, 0.5, True)'
+p3047
+S'(2.0, 0.5, True)'
+p3048
+S'(2.5, 0.5, True)'
+p3049
+S'(3.0, 0.5, True)'
+p3050
+S'(3.5, 0.5, True)'
+p3051
+S'(4.0, 0.5, True)'
+p3052
+S'(4.5, 0.5, True)'
+p3053
+S'END_OF_MEASURE'
+p3054
+S'(0, None, None)'
+p3055
+S'(1.0, 0.5, False)'
+p3056
+S'(1.5, 0.5, True)'
+p3057
+S'(2.0, 0.5, False)'
+p3058
+S'(2.5, 0.5, True)'
+p3059
+S'(3.0, 0.5, False)'
+p3060
+S'(3.5, 0.5, True)'
+p3061
+S'(4.0, 0.5, True)'
+p3062
+S'(4.5, 0.5, True)'
+p3063
+S'END_OF_MEASURE'
+p3064
+S'(0, None, None)'
+p3065
+S'(1.0, 0.5, True)'
+p3066
+S'(1.5, 0.5, True)'
+p3067
+S'(2.0, 0.5, True)'
+p3068
+S'(2.5, 0.5, True)'
+p3069
+S'(3.0, 0.5, True)'
+p3070
+S'(3.5, 0.5, True)'
+p3071
+S'(4.0, 0.5, True)'
+p3072
+S'(4.5, 0.5, True)'
+p3073
+S'END_OF_MEASURE'
+p3074
+S'(0, None, None)'
+p3075
+S'(1.0, 0.5, True)'
+p3076
+S'(1.5, 0.5, True)'
+p3077
+S'(2.0, 0.5, True)'
+p3078
+S'(2.5, 0.5, True)'
+p3079
+S'(3.0, 0.5, True)'
+p3080
+S'(3.5, 1.0, True)'
+p3081
+S'(4.5, 0.5, False)'
+p3082
+S'END_OF_MEASURE'
+p3083
+S'(0, None, None)'
+p3084
+S'(1.0, 0.5, True)'
+p3085
+S'(1.5, 0.5, True)'
+p3086
+S'(2.0, 0.5, True)'
+p3087
+S'(2.5, 0.5, True)'
+p3088
+S'(3.0, 0.5, True)'
+p3089
+S'(3.5, 0.5, True)'
+p3090
+S'(4.0, 0.5, True)'
+p3091
+S'(4.5, 0.5, True)'
+p3092
+S'END_OF_MEASURE'
+p3093
+S'(0, None, None)'
+p3094
+S'(1.0, 0.5, True)'
+p3095
+S'(1.5, 0.5, True)'
+p3096
+S'(2.0, 0.5, True)'
+p3097
+S'(2.5, 0.5, True)'
+p3098
+S'(3.0, 0.5, True)'
+p3099
+S'(3.5, 0.5, True)'
+p3100
+S'(4.0, 0.5, True)'
+p3101
+S'(4.5, 0.5, True)'
+p3102
+S'END_OF_MEASURE'
+p3103
+S'(0, None, None)'
+p3104
+S'(1.0, 0.5, True)'
+p3105
+S'(1.5, 0.5, True)'
+p3106
+S'(2.0, 0.5, True)'
+p3107
+S'(2.5, 0.5, True)'
+p3108
+S'(3.0, 0.5, True)'
+p3109
+S'(3.5, 0.5, True)'
+p3110
+S'(4.0, 0.5, True)'
+p3111
+S'(4.5, 0.5, True)'
+p3112
+S'END_OF_MEASURE'
+p3113
+S'(0, None, None)'
+p3114
+S'(1.0, 0.5, True)'
+p3115
+S'(1.5, 0.5, True)'
+p3116
+S'(2.0, 0.5, True)'
+p3117
+S'(2.5, 1.0, True)'
+p3118
+S'(3.5, 1.0, True)'
+p3119
+S'(4.5, 0.5, False)'
+p3120
+S'END_OF_MEASURE'
+p3121
+S'(0, None, None)'
+p3122
+S'(1.0, 0.5, True)'
+p3123
+S'(1.5, 0.5, True)'
+p3124
+S'(2.0, 0.5, True)'
+p3125
+S'(2.5, 0.5, False)'
+p3126
+S'(3.0, 0.5, True)'
+p3127
+S'(3.5, 1.0, True)'
+p3128
+S'(4.5, 0.5, False)'
+p3129
+S'END_OF_MEASURE'
+p3130
+S'(0, None, None)'
+p3131
+S'(1.0, 2.0, False)'
+p3132
+S'(3.0, 0.5, False)'
+p3133
+S'(3.5, 1.5, True)'
+p3134
+S'END_OF_MEASURE'
+p3135
+S'(0, None, None)'
+p3136
+S'(1.0, 0.5, True)'
+p3137
+S'(1.5, 0.5, True)'
+p3138
+S'(2.0, 0.5, True)'
+p3139
+S'(2.5, 0.5, False)'
+p3140
+S'(3.0, 0.5, True)'
+p3141
+S'(3.5, 1.0, True)'
+p3142
+S'(4.5, 0.5, False)'
+p3143
+S'END_OF_MEASURE'
+p3144
+S'(0, None, None)'
+p3145
+S'(1.0, 0.5, True)'
+p3146
+S'(1.5, 0.5, True)'
+p3147
+S'(2.0, 0.5, True)'
+p3148
+S'(2.5, 0.5, True)'
+p3149
+S'(3.0, 0.5, True)'
+p3150
+S'(3.5, 0.5, True)'
+p3151
+S'(4.0, 0.5, True)'
+p3152
+S'(4.5, 0.5, True)'
+p3153
+S'END_OF_MEASURE'
+p3154
+S'(0, None, None)'
+p3155
+S'(1.0, 2.0, False)'
+p3156
+S'(3.0, 0.5, False)'
+p3157
+S'(3.5, 0.125, True)'
+p3158
+S'(3.625, 1.0, False)'
+p3159
+S'(4.625, 0.25, False)'
+p3160
+S'(4.875, 0.125, False)'
+p3161
+S'END_OF_MEASURE'
+p3162
+S'(0, None, None)'
+p3163
+S'(1.0, 0.5, False)'
+p3164
+S'(1.5, 0.5, True)'
+p3165
+S'(2.0, 0.5, True)'
+p3166
+S'(2.5, 1.0, True)'
+p3167
+S'(3.5, 1.0, True)'
+p3168
+S'(4.5, 0.5, False)'
+p3169
+S'END_OF_MEASURE'
+p3170
+S'(0, None, None)'
+p3171
+S'(1.0, 0.5, True)'
+p3172
+S'(1.5, 0.5, True)'
+p3173
+S'(2.0, 0.5, True)'
+p3174
+S'(2.5, 0.5, True)'
+p3175
+S'(3.0, 0.5, True)'
+p3176
+S'(3.5, 0.5, True)'
+p3177
+S'(4.0, 0.5, True)'
+p3178
+S'(4.5, 0.5, True)'
+p3179
+S'END_OF_MEASURE'
+p3180
+S'(0, None, None)'
+p3181
+S'(1.0, 1.0, True)'
+p3182
+S'(2.0, 1.0, True)'
+p3183
+S'(3.0, 0.5, True)'
+p3184
+S'(3.5, 1.0, True)'
+p3185
+S'(4.5, 0.5, False)'
+p3186
+S'END_OF_MEASURE'
+p3187
+S'(0, None, None)'
+p3188
+S'(1.0, 0.5, True)'
+p3189
+S'(1.5, 0.5, True)'
+p3190
+S'(2.0, 0.5, True)'
+p3191
+S'(2.5, 0.5, False)'
+p3192
+S'(3.0, 0.5, True)'
+p3193
+S'(3.5, 1.0, True)'
+p3194
+S'(4.5, 0.5, False)'
+p3195
+S'END_OF_MEASURE'
+p3196
+S'(0, None, None)'
+p3197
+S'(1.0, 0.5, True)'
+p3198
+S'(1.5, 0.5, True)'
+p3199
+S'(2.0, 0.5, True)'
+p3200
+S'(2.5, 0.5, True)'
+p3201
+S'(3.0, 0.5, True)'
+p3202
+S'(3.5, 0.5, True)'
+p3203
+S'(4.0, 0.5, True)'
+p3204
+S'(4.5, 0.5, True)'
+p3205
+S'END_OF_MEASURE'
+p3206
+S'(0, None, None)'
+p3207
+S'(1.0, 0.5, True)'
+p3208
+S'(1.5, 0.5, True)'
+p3209
+S'(2.0, 0.5, True)'
+p3210
+S'(2.5, 0.5, True)'
+p3211
+S'(3.0, 0.5, True)'
+p3212
+S'(3.5, 0.5, True)'
+p3213
+S'(4.0, 0.5, True)'
+p3214
+S'(4.5, 0.5, True)'
+p3215
+S'END_OF_MEASURE'
+p3216
+S'(0, None, None)'
+p3217
+S'(1.0, 0.5, True)'
+p3218
+S'(1.5, 0.5, True)'
+p3219
+S'(2.0, 0.5, True)'
+p3220
+S'(2.5, 0.5, True)'
+p3221
+S'(3.0, 0.5, True)'
+p3222
+S'(3.5, 0.5, True)'
+p3223
+S'(4.0, 0.5, True)'
+p3224
+S'(4.5, 0.5, True)'
+p3225
+S'END_OF_MEASURE'
+p3226
+S'(0, None, None)'
+p3227
+S'(1.0, 0.5, True)'
+p3228
+S'(1.5, 0.5, True)'
+p3229
+S'(2.0, 0.5, True)'
+p3230
+S'(2.5, 0.5, True)'
+p3231
+S'(3.0, 0.5, True)'
+p3232
+S'(3.5, 0.5, True)'
+p3233
+S'(4.0, 0.5, True)'
+p3234
+S'(4.5, 0.5, True)'
+p3235
+S'END_OF_MEASURE'
+p3236
+S'(0, None, None)'
+p3237
+S'(1.0, 0.5, True)'
+p3238
+S'(1.5, 0.5, True)'
+p3239
+S'(2.0, 0.5, True)'
+p3240
+S'(2.5, 0.5, True)'
+p3241
+S'(3.0, 0.5, True)'
+p3242
+S'(3.5, 0.5, True)'
+p3243
+S'(4.0, 0.5, True)'
+p3244
+S'(4.5, 0.5, True)'
+p3245
+S'END_OF_MEASURE'
+p3246
+S'(0, None, None)'
+p3247
+S'(1.0, 0.75, False)'
+p3248
+S'(1.75, 0.25, False)'
+p3249
+S'(2.0, 1.0, True)'
+p3250
+S'(3.0, 0.25, True)'
+p3251
+S'(3.25, 0.25, True)'
+p3252
+S'(3.5, 0.25, True)'
+p3253
+S'(3.75, 0.25, True)'
+p3254
+S'(4.0, 0.5, True)'
+p3255
+S'(4.5, 0.25, True)'
+p3256
+S'(4.75, 0.25, True)'
+p3257
+S'END_OF_MEASURE'
+p3258
+S'(0, None, None)'
+p3259
+S'(1.0, 0.5, True)'
+p3260
+S'(1.5, 0.5, True)'
+p3261
+S'(2.0, 0.5, True)'
+p3262
+S'(2.5, 0.5, True)'
+p3263
+S'(3.0, 0.5, True)'
+p3264
+S'(3.5, 0.5, True)'
+p3265
+S'(4.0, 0.5, True)'
+p3266
+S'(4.5, 0.5, True)'
+p3267
+S'END_OF_MEASURE'
+p3268
+S'(0, None, None)'
+p3269
+S'(1.0, 0.75, False)'
+p3270
+S'(1.75, 1.5, True)'
+p3271
+S'(3.25, 0.25, False)'
+p3272
+S'(3.5, 1.0, True)'
+p3273
+S'(4.5, 0.25, False)'
+p3274
+S'(4.75, 0.25, True)'
+p3275
+S'END_OF_MEASURE'
+p3276
+S'(0, None, None)'
+p3277
+S'(1.0, 0.5, False)'
+p3278
+S'(1.5, 0.5, True)'
+p3279
+S'(2.0, 0.5, False)'
+p3280
+S'(2.5, 0.5, True)'
+p3281
+S'(3.0, 0.5, False)'
+p3282
+S'(3.5, 0.5, True)'
+p3283
+S'(4.0, 0.5, False)'
+p3284
+S'(4.5, 0.5, True)'
+p3285
+S'END_OF_MEASURE'
+p3286
+S'(0, None, None)'
+p3287
+S'(1.0, 0.5, True)'
+p3288
+S'(1.5, 0.5, True)'
+p3289
+S'(2.0, 0.5, True)'
+p3290
+S'(2.5, 0.5, True)'
+p3291
+S'(3.0, 0.5, True)'
+p3292
+S'(3.5, 0.5, True)'
+p3293
+S'(4.0, 0.5, True)'
+p3294
+S'(4.5, 0.5, True)'
+p3295
+S'END_OF_MEASURE'
+p3296
+S'(0, None, None)'
+p3297
+S'(1.0, 0.5, True)'
+p3298
+S'(1.5, 0.5, True)'
+p3299
+S'(2.0, 0.5, True)'
+p3300
+S'(2.5, 0.5, True)'
+p3301
+S'(3.0, 0.5, True)'
+p3302
+S'(3.5, 0.5, True)'
+p3303
+S'(4.0, 0.5, True)'
+p3304
+S'(4.5, 0.5, True)'
+p3305
+S'END_OF_MEASURE'
+p3306
+S'(0, None, None)'
+p3307
+S'(1.0, 0.5, True)'
+p3308
+S'(1.5, 0.5, True)'
+p3309
+S'(2.0, 0.5, True)'
+p3310
+S'(2.5, 0.5, True)'
+p3311
+S'(3.0, 0.5, True)'
+p3312
+S'(3.5, 1.0, True)'
+p3313
+S'(4.5, 0.5, False)'
+p3314
+S'END_OF_MEASURE'
+p3315
+S'(0, None, None)'
+p3316
+S'(1.0, 2.0, False)'
+p3317
+S'(3.0, 0.5, False)'
+p3318
+S'(3.5, 0.5, True)'
+p3319
+S'(4.0, 0.5, True)'
+p3320
+S'(4.5, 0.5, True)'
+p3321
+S'END_OF_MEASURE'
+p3322
+S'(0, None, None)'
+p3323
+S'(1.0, 0.5, True)'
+p3324
+S'(1.5, 0.5, True)'
+p3325
+S'(2.0, 0.5, True)'
+p3326
+S'(2.5, 0.5, True)'
+p3327
+S'(3.0, 0.5, True)'
+p3328
+S'(3.5, 0.5, True)'
+p3329
+S'(4.0, 0.5, True)'
+p3330
+S'(4.5, 0.5, True)'
+p3331
+S'END_OF_MEASURE'
+p3332
+S'(0, None, None)'
+p3333
+S'(1.0, 0.5, True)'
+p3334
+S'(1.5, 0.5, True)'
+p3335
+S'(2.0, 0.5, True)'
+p3336
+S'(2.5, 0.5, False)'
+p3337
+S'(3.0, 0.5, True)'
+p3338
+S'(3.5, 1.0, True)'
+p3339
+S'(4.5, 0.5, False)'
+p3340
+S'END_OF_MEASURE'
+p3341
+S'(0, None, None)'
+p3342
+S'(1.0, 0.5, True)'
+p3343
+S'(1.5, 0.5, True)'
+p3344
+S'(2.0, 0.5, True)'
+p3345
+S'(2.5, 1.0, True)'
+p3346
+S'(3.5, 1.0, True)'
+p3347
+S'(4.5, 0.5, False)'
+p3348
+S'END_OF_MEASURE'
+p3349
+S'(0, None, None)'
+p3350
+S'(1.0, 0.5, True)'
+p3351
+S'(1.5, 0.5, True)'
+p3352
+S'(2.0, 0.5, True)'
+p3353
+S'(2.5, 0.5, True)'
+p3354
+S'(3.0, 0.5, True)'
+p3355
+S'(3.5, 1.0, True)'
+p3356
+S'(4.5, 0.5, False)'
+p3357
+S'END_OF_MEASURE'
+p3358
+S'(0, None, None)'
+p3359
+S'(1.0, 0.5, True)'
+p3360
+S'(1.5, 0.5, True)'
+p3361
+S'(2.0, 0.5, True)'
+p3362
+S'(2.5, 0.5, False)'
+p3363
+S'(3.0, 0.5, True)'
+p3364
+S'(3.5, 1.0, True)'
+p3365
+S'(4.5, 0.5, False)'
+p3366
+S'END_OF_MEASURE'
+p3367
+S'(0, None, None)'
+p3368
+S'(1.0, 0.25, True)'
+p3369
+S'(1.25, 0.25, True)'
+p3370
+S'(1.5, 0.25, True)'
+p3371
+S'(1.75, 0.25, True)'
+p3372
+S'(2.0, 0.25, True)'
+p3373
+S'(2.25, 0.25, True)'
+p3374
+S'(2.5, 0.25, True)'
+p3375
+S'(2.75, 0.25, True)'
+p3376
+S'(3.0, 0.25, True)'
+p3377
+S'(3.25, 0.25, True)'
+p3378
+S'(3.5, 0.25, True)'
+p3379
+S'(3.75, 0.25, True)'
+p3380
+S'(4.0, 0.25, True)'
+p3381
+S'(4.25, 0.25, True)'
+p3382
+S'(4.5, 0.25, True)'
+p3383
+S'(4.75, 0.25, True)'
+p3384
+S'END_OF_MEASURE'
+p3385
+S'(0, None, None)'
+p3386
+S'(1.0, 0.5, True)'
+p3387
+S'(1.5, 0.5, True)'
+p3388
+S'(2.0, 0.5, True)'
+p3389
+S'(2.5, 0.5, True)'
+p3390
+S'(3.0, 0.5, True)'
+p3391
+S'(3.5, 0.5, True)'
+p3392
+S'(4.0, 0.5, True)'
+p3393
+S'(4.5, 0.5, True)'
+p3394
+S'END_OF_MEASURE'
+p3395
+S'(0, None, None)'
+p3396
+S'(1.0, 2.0, False)'
+p3397
+S'(3.0, 1.0, False)'
+p3398
+S'(4.0, 1.0, True)'
+p3399
+S'END_OF_MEASURE'
+p3400
+S'(0, None, None)'
+p3401
+S'(1.0, 0.5, True)'
+p3402
+S'(1.5, 0.5, True)'
+p3403
+S'(2.0, 0.5, True)'
+p3404
+S'(2.5, 0.5, True)'
+p3405
+S'(3.0, 0.5, True)'
+p3406
+S'(3.5, 0.5, True)'
+p3407
+S'(4.0, 0.5, True)'
+p3408
+S'(4.5, 0.5, True)'
+p3409
+S'END_OF_MEASURE'
+p3410
+S'(0, None, None)'
+p3411
+S'(1.0, 0.5, True)'
+p3412
+S'(1.5, 0.5, True)'
+p3413
+S'(2.0, 0.5, True)'
+p3414
+S'(2.5, 0.5, True)'
+p3415
+S'(3.0, 0.5, True)'
+p3416
+S'(3.5, 0.5, True)'
+p3417
+S'(4.0, 0.5, True)'
+p3418
+S'(4.5, 0.5, True)'
+p3419
+S'END_OF_MEASURE'
+p3420
+S'(0, None, None)'
+p3421
+S'(1.0, 0.5, True)'
+p3422
+S'(1.5, 0.5, True)'
+p3423
+S'(2.0, 0.5, True)'
+p3424
+S'(2.5, 0.5, True)'
+p3425
+S'(3.0, 0.5, True)'
+p3426
+S'(3.5, 0.5, True)'
+p3427
+S'(4.0, 0.5, True)'
+p3428
+S'(4.5, 0.5, True)'
+p3429
+S'END_OF_MEASURE'
+p3430
+S'(0, None, None)'
+p3431
+S'(1.0, 0.5, True)'
+p3432
+S'(1.5, 0.5, True)'
+p3433
+S'(2.0, 0.5, True)'
+p3434
+S'(2.5, 0.5, True)'
+p3435
+S'(3.0, 0.5, True)'
+p3436
+S'(3.5, 0.5, True)'
+p3437
+S'(4.0, 0.5, True)'
+p3438
+S'(4.5, 0.5, True)'
+p3439
+S'END_OF_MEASURE'
+p3440
+S'(0, None, None)'
+p3441
+S'(1.0, 0.5, True)'
+p3442
+S'(1.5, 0.5, True)'
+p3443
+S'(2.0, 0.5, True)'
+p3444
+S'(2.5, 0.5, True)'
+p3445
+S'(3.0, 0.5, True)'
+p3446
+S'(3.5, 0.5, True)'
+p3447
+S'(4.0, 0.5, True)'
+p3448
+S'(4.5, 0.5, True)'
+p3449
+S'END_OF_MEASURE'
+p3450
+S'(0, None, None)'
+p3451
+S'(1.0, 0.5, True)'
+p3452
+S'(1.5, 0.5, True)'
+p3453
+S'(2.0, 0.5, True)'
+p3454
+S'(2.5, 0.5, True)'
+p3455
+S'(3.0, 0.5, True)'
+p3456
+S'(3.5, 0.5, True)'
+p3457
+S'(4.0, 0.5, True)'
+p3458
+S'(4.5, 0.5, True)'
+p3459
+S'END_OF_MEASURE'
+p3460
+S'(0, None, None)'
+p3461
+S'(1.0, 0.5, True)'
+p3462
+S'(1.5, 0.5, True)'
+p3463
+S'(2.0, 0.5, True)'
+p3464
+S'(2.5, 0.5, False)'
+p3465
+S'(3.0, 0.5, True)'
+p3466
+S'(3.5, 1.0, True)'
+p3467
+S'(4.5, 0.5, False)'
+p3468
+S'END_OF_MEASURE'
+p3469
+S'(0, None, None)'
+p3470
+S'(1.0, 2.0, False)'
+p3471
+S'(3.0, 1.0, False)'
+p3472
+S'(4.0, 0.25, True)'
+p3473
+S'(4.25, 0.25, True)'
+p3474
+S'(4.5, 0.25, True)'
+p3475
+S'(4.75, 0.25, True)'
+p3476
+S'END_OF_MEASURE'
+p3477
+tp3478
+.
