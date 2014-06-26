@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 import argparse
 import ConfigParser
 import os
@@ -8,7 +9,7 @@ from itertools import product
 
 from pykov import maximum_likelihood_probabilities
 
-from sight_reading.synthesis.apopcaleaps_interface import compose
+from .synthesis.apopcaleaps_interface import compose
 
 
 def _get_dependencies(mode, key_mode):

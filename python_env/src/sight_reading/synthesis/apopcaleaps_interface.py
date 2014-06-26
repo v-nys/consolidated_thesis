@@ -69,7 +69,7 @@ def _cleanup(gui_subpath, gui_path):
     file and the result file.
     """
     #os.remove(gui_subpath(GOAL_FN)) no real need
-    with open(gui_subpath(RESULT_FN), mode='w') as result_fh:
+    with open(gui_subpath(RESULT_FN), mode='w+') as result_fh:
         pass
     for maybe_midi in os.listdir(gui_path):
         if '.midi' in maybe_midi:
