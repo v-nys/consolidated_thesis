@@ -68,8 +68,8 @@ def _cleanup(gui_subpath, gui_path):
     The other arguments are the full paths of the goal
     file and the result file.
     """
-    #os.remove(gui_subpath(GOAL_FN)) no real need
-    with open(gui_subpath(RESULT_FN), mode='w+') as result_fh:
+    os.remove(gui_subpath(GOAL_FN))
+    with open(gui_subpath(RESULT_FN), mode='w') as result_fh:
         pass
     for maybe_midi in os.listdir(gui_path):
         if '.midi' in maybe_midi:
@@ -197,7 +197,7 @@ def _process_goal(goal, gui_subpath, gui_path, name):
     only for the sake of giving demonstrations and may be
     removed later.
     """
-    new_goal_lines = ['\n', goal]
+    new_goal_lines = [goal]
     LOG.debug('Executing: {0}'.format(goal))
     with open(gui_subpath(GOAL_FN), 'w') as goal_fh:
         goal_fh.writelines(new_goal_lines)
@@ -288,6 +288,7 @@ def _generate_pre_test(gui_subpath, gui_path, result_path, total_measures, measu
     LOG.debug('Commencing generation')
     if measure_num == 1:
         goal = _construct_goal(gui_subpath, total_measures, initial=True, key_mode=key_mode)
+        LOG.info("Initial goal: {goal}".format(**locals()))
     else:
         thematic_structure = _parse_themes(result_path, total_measures)
         completed_measures = _completed_measures(thematic_structure, measure_num)
